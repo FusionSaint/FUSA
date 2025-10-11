@@ -1,0 +1,765 @@
+---
+title: Competitive Settings
+---
+
+import Callout from "@/components/Callout.astro";
+
+<div class="space-y-6 mb-8">
+
+**Competitive Battlefield 6 settings** prioritize performance, clarity, and tactical advantage over visual fidelity. These configurations are designed for high-end PC players who want maximum FPS, lowest input lag, and the clearest possible sight lines.
+
+Every setting here is chosen to give you an edge: better visibility through reduced clutter, faster reactions through optimized controls, and superior awareness through dialed-in audio.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Graphics Settings: Optimize for Clarity & Performance
+
+<div class="space-y-6 mb-8">
+
+On a high-end PC, Battlefield 6 can look gorgeous, but for competitive play we prioritize **performance and visibility** over pure fidelity. The goal is high, steady FPS and clear line of sight on enemies by reducing unnecessary visual clutter.
+
+BF6's developers focused on optimization (even avoiding ray tracing to favor performance), so you have flexibility—but turning down certain settings still gives you a tactical edge.
+
+</div>
+
+### Key Video Settings
+
+<div class="space-y-4 mb-8">
+
+**Texture Quality: High**
+- Keep textures high for clear visuals
+- High-res textures help spot enemies more easily
+- Minimal impact on strong GPUs
+
+**Texture Filtering: High**
+- Sharpens textures at distance
+- Makes distant enemies and objects more defined
+- Minimal performance cost
+
+**Mesh Quality: Low (or Medium)**
+- Lower detail on distant objects frees up CPU/GPU
+- Boosts FPS and reduces clutter in far-off scenery
+- Makes distant players easier to see against simplified terrain
+
+**Terrain Quality: Medium**
+- Decent ground detail without heavy FPS cost
+- Keeps map geography clear while gaining performance
+
+**Undergrowth (Vegetation) Quality: Low**
+- Thins out grass and bushes
+- Prevents enemies from hiding in dense foliage
+- Prone players stand out more on low settings
+
+**Effects Quality: Low**
+- Reduces particle effects (explosions, smoke, sparks)
+- Prevents FPS drops during heavy action
+- Improves visibility by making explosions less obscuring
+
+**Volumetric Quality (Fog/Clouds): Low**
+- Lowers density of fog, smoke, and cloud effects
+- Clearer view through environmental obscuration
+- Gains FPS
+
+**Lighting Quality: Low (or Medium)**
+- Simplifies lighting and shadows for performance
+- Doesn't hinder enemy spotting ability
+- Dynamic lighting detail isn't a priority in competitive play
+
+</div>
+
+<Callout variant="tip">
+Combining these "low" settings can easily boost FPS by 30%+ while making enemies stand out more against simplified environments.
+</Callout>
+
+### Shadow Configuration
+
+<div class="space-y-4 mb-8">
+
+**All Shadow Settings: Low**
+- Set Local Shadow Quality to **Low**
+- Set Sun Shadow Quality to **Low/Medium**
+- Lower shadow resolution boosts FPS significantly
+- Makes dimly lit enemies more visible (fewer super-dark areas)
+
+**Shadow Filtering: PCF (not PCSS)**
+- PCF (Percentage-Closer Filtering) gives simpler, stable shadow edges with less GPU cost
+- PCSS looks nicer but can flicker and doesn't help gameplay
+- PCF on low-quality shadows is the least distracting option
+
+</div>
+
+<Callout variant="warning">
+Avoid the "Ultra + Overkill" shadow preset—tests found it almost halves FPS with virtually no visual improvement over Ultra. Stick to low/medium shadows.
+</Callout>
+
+### Reflection & Post-Processing
+
+<div class="space-y-4 mb-8">
+
+**Reflection Quality: Low**
+- Reflections are pretty but not worth the performance hit
+- Removes some distracting glare
+
+**Screen Space Reflections: Off**
+- SSR in BF6 is noisy and pixelated
+- Turning it off boosts performance and cleans up the image
+- You won't miss puddle reflections tactically
+
+**Post-Process Quality: Low**
+- Minimizes bloom, lens flares, and HDR glows
+- Makes the image sharper and more "raw"
+- Better for spotting opponents
+
+**Ambient Occlusion (AO) & Global Illumination: Off**
+- Turn off both SSAO and SSDO/GI
+- Removes shadowing in corners that can obscure enemies
+- Increases visibility in dark corners
+- Provides performance uplift
+
+**High Fidelity Objects (LOD): Medium**
+- Keeps important objects visible without overloading GPU
+- Fewer clutter objects means cleaner view at range
+
+</div>
+
+### Disable Visual Effects & Clutter
+
+<div class="space-y-4 mb-8">
+
+**Motion Blur (World and Weapon): Off**
+- Always disable for competitive play
+- Keeps image crisp when moving or sprinting
+- Much easier to track moving targets
+- Set both to 0%
+
+**Film Grain: Off**
+- Disables noisy overlay that reduces clarity
+- Clean image is better for spotting enemies at distance
+
+**Chromatic Aberration: Off**
+- Disables lens distortion that blurs colors at screen edges
+- Purely cosmetic and only hurts clarity
+
+**Vignette: Off**
+- Removes darkening at screen edges
+- Uniform brightness across screen prevents missing peripheral detail
+
+**Lens Flares: Off**
+- Bright light streaks can obscure view when looking toward sun
+- Low post-process preset minimizes them
+
+**Bloom: Off/Low**
+- Minimizes glow around lights
+- Prevents enemies from being obscured near light sources
+
+**Camera Shake: Minimal (20% or lowest)**
+- Reduces screen shake from explosions and impacts
+- Maintains better aim control
+- Still feel explosions but maintain control
+
+</div>
+
+### Advanced Performance Tweaks
+
+<div class="space-y-4 mb-8">
+
+**Anti-Aliasing: Personal preference (Off or TAA)**
+- **Off**: Crispest image, minimum input lag (some jagged edges)
+- **TAA Low**: Smooth edges with slight blur and tiny latency
+- Many competitive players use AA Off for maximum sharpness
+- If using AA Off, keep Resolution Scale at 100%+ and use PCF shadows
+
+**Resolution Scale: 100% (Native)**
+- Never drop below 100% on high-end rigs
+- Sub-sampling blurs the game and hurts target visibility
+- Native 100% for crisp image
+
+**Framerate Limiter: On (cap to monitor refresh)**
+- Cap to your monitor's refresh rate (e.g., 144 FPS for 144 Hz)
+- Prevents extreme FPS swings
+- More consistent frame times
+- Reduces screen tearing
+
+**Vertical Sync: Off**
+- Always disable in competitive shooters
+- V-Sync adds significant input lag
+- Tearing is better handled via FPS cap and G-Sync/FreeSync
+
+**NVIDIA Reflex / AMD Anti-Lag: Enabled (On + Boost)**
+- Drastically reduces render queue and GPU buffering
+- Cuts down input latency significantly
+- "Boost" keeps GPU clocks higher to avoid latency spikes
+- Essential for competitive edge
+
+**Future Frame Rendering: Off**
+- Reduces buffer and input lag
+- Trade-off is slightly lower max FPS
+- Responsiveness is king in competitive play
+
+**Upscaling (DLSS/FSR/XeSS): Use if needed**
+- On RTX cards, use DLSS Quality mode for FPS boost
+- FSR 3 works on AMD and other GPUs
+- Prefer upscaling over dropping resolution
+- If already hitting high refresh FPS, native is clearest
+
+**NVIDIA Frame Generation: Off**
+- Do not enable in competitive multiplayer
+- Adds latency despite boosting framerate
+- Generated frames aren't based on new input
+
+</div>
+
+<Callout variant="info">
+Update GPU drivers regularly. Game-Ready drivers for Battlefield 6 often include performance improvements and stability fixes.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Control Settings: Sensitivity, Aiming & Keybinds
+
+<div class="space-y-6 mb-8">
+
+Dialing in your control settings can dramatically improve your aim and reaction speed. Battlefield 6 offers extensive customization for mouse, keyboard, and general controls. All recommendations assume mouse & keyboard on PC (since aim assist is disabled for mouse input).
+
+</div>
+
+### Sensitivity & Aim Configuration
+
+<div class="space-y-4 mb-8">
+
+**Mouse DPI & In-Game Sensitivity**
+- Use 400–800 DPI with moderate in-game sensitivity (5–15% in BF6)
+- Result should be ~30–40 cm of mouse movement for 360° turn
+- Many pros favor lower sensitivities for finer precision
+- Pick a sensitivity and stick with it for muscle memory
+- Battlefield pros often use 25–50 cm/360 range
+
+**Uniform Soldier Aiming: On**
+- Essential for competitive play
+- Scales aim sensitivity consistently across different zoom levels
+- Normalizes ADS sensitivity relative to hipfire
+- Helps develop muscle memory
+- Similar turn angle for given mouse movement across all scopes
+
+**ADS Sensitivity Coefficient: 178**
+- Default might be 133—adjust to 178%
+- Recommended value for 16:9 monitors
+- Makes 2D distance aiming consistent
+- Creates "perfect 1:1 movement between hipfire and ADS"
+- No sensitivity mismatch when aiming down sights
+
+**Vertical Aim Ratio: ~56**
+- Increase from default 40% to 56%
+- Ensures vertical sensitivity matches horizontal on 16:9 displays
+- Makes aiming at targets above/below more intuitive
+- Prevents sluggish vertical aim feeling
+
+**General Sensitivity (Hipfire): Moderate**
+- Example: 800 DPI with 5–8% in-game sensitivity
+- Consistency and control matter more than raw speed
+- Fine-tune with aim drills
+- Lower if you overshoot targets, raise if turning feels slow
+
+**ADS Sensitivity: 85–100% (of hipfire)**
+- Common recommendation: 0.85–0.90 (85–90%) of hipfire
+- Slightly slower when zoomed for precision
+- Try 88% as compromise
+- 100% for 1× sights, 80–90% for high magnifications
+
+**Aim Acceleration: Off/0 for Mouse**
+- Ensure any aim acceleration or smoothing is disabled
+- Mouse input should be raw and unfiltered
+
+**FOV-Based Sensitivity Scaling**
+- With USA on and coefficient 178, this is handled automatically
+- Keep USA On rather than manual calculations
+
+</div>
+
+<Callout variant="success">
+The big ones—USA On, Coefficient 178, Vertical 56—will make your aiming feel consistent across different guns and scopes. This is crucial when you might snipe one life and run-n-gun the next.
+</Callout>
+
+### Keybinds & Ergonomics
+
+<div class="space-y-4 mb-8">
+
+**Customize Keybindings for Comfort**
+- Bind most-used actions to easiest-to-reach keys
+- Jump on Space is standard
+- Crouch/Slide: Ctrl or C (whichever is easier to hit quickly)
+- Melee and Grenade: Mouse side buttons or F for melee
+- Interact: E (ensure no conflict with critical actions)
+- Minimal finger travel from movement keys
+
+**Sprint Settings**
+- Disable "Double-Tap Forward to Sprint"
+- Rely on holding Shift to sprint only
+- Double-movements can trigger unintentionally
+- More precise control over when you sprint
+
+**Crouch and Prone**
+- **Crouch: Hold** (Hold Ctrl to stay crouched, release to stand)
+- Allows quick "drop shot" or crouch-spam
+- **Prone: Toggle** (rarely go prone accidentally)
+- Pick what feels comfortable
+
+**Slide**
+- Tap crouch while sprinting to slide
+- If using hold-to-crouch, just press during sprint
+- Disable "Double-Tap to Slide" if it causes accidental slides
+
+**Auto Sprint: Off (Manual)**
+- Saves finger but can make you sprint when you don't want to
+- Manual gives more control around corners
+
+**Aiming Down Sight: Hold to Aim**
+- Hold right-click for immediate reversion to hipfire on release
+- Toggle ADS can lead to confusion
+- Fastest reactions with hold
+
+**Leaning/Peeking: Disable Auto Lean**
+- Auto-lean can inadvertently expose you
+- With it off, you won't lean unless commanded
+- Manual strafing replaces lean
+- More control over positioning
+
+**Inventory and Gadget Keys**
+- Number row for weapons (1 primary, 2 sidearm, 3-4 gadgets)
+- Bind frequently used gadgets to extra mouse buttons or X/Z
+- Quick access to medkit or repair tool
+- Separate keys for Gadget 1 and 2 faster than cycling
+
+</div>
+
+### Vehicle Controls
+
+<div class="space-y-4 mb-8">
+
+**Vehicle Control Schemes**
+- Use "Alternate" preset for more intuitive controls
+- Throttle on W/S, separate key for free look
+- Decouple aim from turning for tanks (mouse only turns turret)
+- Know your seat swap keys (F1-F4 or number keys)
+
+**Vehicle Sensitivity**
+- Vehicle Aim Sens: ~36% (turrets, for stability)
+- Aircraft/Helicopter: ~47% (quicker turning for maneuvers)
+- Vehicle Aim Relative Control: Off
+- Helicopter Control Assist: On (helps stabilize flight)
+
+**Misc. Options**
+- **Reload/Interact Priority: Prioritize Interact** (prevents reloading when entering vehicles)
+- **HUD Preferences**: Set enemy icons to bright color (red/pink), friendlies duller
+- **Larger Minimap**: Scale to largest size for easier glances
+- **Crosshair Style**: Increase thickness/size, enable outline for visibility
+- **Hitmarkers**: Keep Hit Indicator Sound On for feedback
+
+</div>
+
+<Callout variant="tip">
+Set your mouse polling rate to 1000 Hz for the most responsive input. Use a large mousepad for those big swipes, and adjust your chair/monitor so your forearm is level to prevent fatigue.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Field of View (FOV): Maximize Situational Awareness
+
+<div class="space-y-6 mb-8">
+
+Setting your Field of View correctly is crucial in competitive FPS. A wider FOV lets you see more of your surroundings at once, which in Battlefield's large maps means better awareness of flanking enemies or vehicles approaching from the sides.
+
+</div>
+
+<div class="space-y-4 mb-8">
+
+**Use a Wide FOV: 105–110 (within reason)**
+- Most competitive players use 90–110 horizontal degrees
+- Commonly recommended: 105–110 on 16:9 screens
+- Broad view without extreme fisheye distortion
+- Some go to maximum (120) for every bit of peripheral vision
+- Higher FOV = more awareness
+
+**Trade-off: Target Size**
+- Very high FOV makes enemies appear slightly smaller
+- Find your comfort spot: try 100 first, then adjust
+- Many settle around 90–100 vertical FOV (~120 horizontal)
+
+**Default/Minimum FOV**
+- BF6 minimum is around 85
+- Most likely defaults to ~90
+- Increasing to 100–110 will feel "zoomed out"
+
+**Monitor & Resolution Considerations**
+- Larger monitors or closer sitting can handle higher FOV
+- Recommended: 110 FOV for 27" monitor at ~30 cm distance
+- Ultrawide users: already have more horizontal FOV, may need to adjust down
+
+**Vertical vs Horizontal FOV**
+- Sources mention "120"—likely horizontal FOV
+- Push toward upper end of slider
+- Max out or just below maximum
+
+**Vehicle FOV: Max (~83)**
+- Separate FOV for third-person vehicle camera
+- Wide view around vehicle critical for awareness
+- See enemies trying to C4 you or aircraft diving sooner
+
+**Weapon FOV: Wide**
+- Set Weapon Field of View to Wide
+- Makes gun model appear smaller and further from screen
+- Frees up screen real estate for viewing world
+- Especially useful with bulky launchers or LMGs
+
+**Performance Impact**
+- Higher FOV slightly reduces performance (minor on high-end rigs)
+- Usually worth the trade for awareness
+- Can reduce setting slightly if needed
+
+**Getting Used to Wide FOV**
+- Initial jump can be disorienting
+- Give it a few matches to adapt
+- Increased awareness is huge—catch flankers earlier
+- High FOV can reduce perceived recoil
+
+</div>
+
+<Callout variant="tip">
+Wide FOV helps spot enemies on the edges—often the difference between life and death in 64+ player chaos. You might miss a little detail at extreme distances, but seeing the other guy first is what matters.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## System Tweaks: OS & Driver Optimizations
+
+<div class="space-y-6 mb-8">
+
+Even with in-game settings perfected, system-level tweaks ensure you're getting the absolute best performance and lowest input lag from your hardware.
+
+</div>
+
+<div class="space-y-4 mb-8">
+
+**Update Your Drivers**
+- Check for latest graphics drivers (NVIDIA GeForce or AMD Adrenaline)
+- Game-Ready drivers for BF6 improve stability and performance
+- Update Windows for game mode improvements
+- Driver updates can fix hitching and improve DLSS/Reflex
+
+**Windows Power Settings**
+- Set to **High Performance** (or Ultimate Performance on Win11)
+- Prevents CPU downclocking when it shouldn't
+- CPU stays ready at high frequencies
+- NVIDIA Control Panel: Power Management Mode = **Prefer Maximum Performance**
+- AMD: Similar setting in Radeon software or use High Performance Windows plan
+
+**Disable Unnecessary Background Apps**
+- Close browsers, music players, recording software before launching
+- Check Task Manager for resource hogs
+- Disable Xbox Game Bar DVR if not using Windows capture
+- Cloud backups, torrent clients can steal bandwidth and CPU
+
+**Windows Game Mode: On**
+- Prioritizes game process
+- Reduces background activity
+- Prevents Windows Update during gaming
+
+**HAGS (Hardware Accelerated GPU Scheduling): On**
+- Available on Windows 10 2004+ or Windows 11
+- Reduces latency by few milliseconds
+- Test if stable, otherwise disable
+
+**In-Game vs. Control Panel Settings**
+- NVIDIA Low Latency Mode: Leave off (Reflex overrides it)
+- AMD Anti-Lag: Enabled
+- Vertical Sync (Driver): App-controlled or Off
+- G-Sync/FreeSync: Enable for tear-free visuals with ~1ms lag
+- Cap FPS to monitor refresh or just below for G-Sync range (e.g., 141 for 144 Hz)
+
+**Fullscreen vs Borderless**
+- **Fullscreen** ideal for lowest latency
+- Borderless more convenient (instant Alt-Tab)
+- Windows 11: borderless nearly on par with fullscreen
+- Enable VRR (G-Sync/FreeSync) if using borderless
+
+**SSD and System**
+- Ensure BF6 installed on fast SSD (NVMe preferred)
+- Faster level loads and texture streaming
+- Prevents hitching
+
+**CPU & GPU Temps**
+- Monitor temperatures during play
+- Thermal throttling reduces performance
+- Aim for CPU less than 85°C, GPU less than 80°C under load
+- Adjust fan curves or lower overclocks if needed
+
+**Background Processes (Advanced)**
+- Disable unused overlays (Origin/EA, Steam, Discord, GeForce)
+- Keep Discord for voice but disable in-game overlay
+- Add BF6 to antivirus exceptions
+
+**Memory**
+- 16GB+ is fine
+- Close Chrome tabs and unnecessary programs
+- Only increase virtual memory if seeing out-of-memory errors
+
+**Overclocking**
+- Mild GPU overclock/undervolt can give extra FPS
+- CPU boost clocks help 1% low FPS
+- Only OC within stable margins—crashes worse than lower FPS
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Network & Latency: Optimizing Ping and Reducing Lag
+
+<div class="space-y-6 mb-8">
+
+High graphics performance is one side of the coin; the other is network performance. In competitive online play, a low and stable ping can be the deciding factor in winning gunfights.
+
+</div>
+
+<div class="space-y-4 mb-8">
+
+**Use Wired Ethernet Connection**
+- Rule #1 for online gaming
+- Ditch Wi-Fi and plug in via Ethernet
+- Knocks 10–20ms off ping on average
+- Eliminates random spikes and jitter
+- Ensures consistent throughput
+
+**Optimize Wi-Fi (if you must)**
+- Use 5&nbsp;GHz over 2.4&nbsp;GHz (use the higher frequency band)
+- Clear line of sight between PC and router
+- Connect to closest access point
+- Check signal strength
+
+**Choose Nearest Server/Region**
+- Ensure correct data center in matchmaking
+- Aim for ping &lt;50ms (excellent)
+- 50-100ms okay but may notice peeker's advantage issues
+- &gt;100ms significantly impacts hit registration
+
+**Consistent Ping Over Low Ping**
+- Prefer stable 40ms over jittery 20–80ms swing
+- Reduce network congestion and interference
+
+**Router Configuration**
+- Enable QoS (Quality of Service) to prioritize gaming traffic
+- Configure anti-bufferbloat features
+- Set bandwidth limit to ~90% of max
+- Ensure NAT type is Open (enable UPnP)
+- Update router firmware
+
+**Minimize Local Network Traffic**
+- Schedule large downloads for off times
+- Disable auto-updates during gaming
+- Ask housemates to avoid heavy usage or use QoS
+- Close bandwidth-hogging apps (OneDrive, Windows Updates, cloud backups)
+
+**Monitor Ping In-Game**
+- Use BF6's network performance graph
+- Watch for ping spikes or packet loss
+- Identify patterns (e.g., spikes at certain times)
+
+**Plan for Server Tickrate & Netcode**
+- BF6 uses high tickrate servers (60Hz or 120Hz)
+- High tickrate favors low ping players
+- Control what you can to be that low-ping player
+
+**Network Smoothing Factor: Low (0–20%)**
+- If available, set to 0–20% for competitive play
+- Reduces interpolation delay
+- See freshest data from server
+- May see choppy movement for high-ping enemies
+
+**Manage Packet Loss & ISP Issues**
+- Check router logs and cables
+- Consider gaming VPN (WTFast, ExitLag, NoPing) if routing issues persist
+- Use ISP with low jitter (Fiber > Cable > DSL)
+- Use fast DNS (Google 8.8.8.8, Cloudflare 1.1.1.1)
+
+**Network Hardware**
+- Ensure gigabit router with proper buffer management
+- Consider quality gaming router or custom firmware (OpenWRT)
+- NetDuma routers allow geo-filtering for nearest servers
+
+**In-Game Voice Chat**
+- Uses minimal bandwidth on broadband
+- Discord may be better quality
+- Balance voice volume so it doesn't overpower game sounds
+
+</div>
+
+<Callout variant="warning">
+A 20ms vs 80ms ping difference is huge in competitive play. The low-ping player's shots and movements register a fraction of a second sooner. Keep your ping low and stable.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Audio Settings: Hear Every Footstep and Cue
+
+<div class="space-y-6 mb-8">
+
+Being able to hear and pinpoint enemies is a massive advantage in Battlefield. With all the explosions and chaos, configuring audio to highlight important sounds will improve your reaction time and situational awareness.
+
+</div>
+
+<div class="space-y-4 mb-8">
+
+**Use a Good Headset**
+- Decent stereo gaming headset or headphones essential
+- Over-ear with good soundstage for positional audio
+- Many pros prefer stereo with quality headset over virtual surround
+- Required for competitive play
+
+**Sound Output Settings**
+- **Stereo Headphones**: Choose Headphones (or Stereo)
+- **Surround System**: Select Dolby Atmos if enabled in Windows
+- Generally Headphones is right choice for normal stereo gaming headset
+
+**Master Volume: High (80–100%)**
+- Keep at 100% or near it for full dynamic range
+- Adjust overall loudness via OS volume or physical knob
+- Avoid very low master volume (reduces dynamic range)
+
+**Music Volume: Low (0–30%)**
+- Turn way down to 20% or 0%
+- Music masks important cues
+- Many competitive players mute entirely
+
+**Sound Effects Volume: 100%**
+- Crucial: includes gunfire, footsteps, explosions
+- Set to 100% to hear everything at full volume
+- Adjust other categories if needed
+
+**Dialogue/Voice-Over Volume: High (80–100%)**
+- Covers announcer, character callouts, objective info
+- Keep high to catch valuable information
+- Hearing "Grenade!" can tip you off
+
+**UI Volume / Hit Indicator: 100%**
+- UI sounds should be audible (spotting, objectives)
+- Hit Indicator Sound: On at full volume
+- Immediate feedback on hits
+
+**Tinnitus (Ringing) Effect: Off**
+- Simulates ringing ears after explosion
+- Very detrimental to competitive play
+- Muffles all sounds temporarily
+- Turn off or to 0%
+
+</div>
+
+### Audio Mix (Dynamic Range)
+
+<div class="space-y-4 mb-8">
+
+**Default Mix**
+- Balanced mix for general play
+- Moderate dynamic range
+- Safe competitive choice if unsure
+- Retains explosive impact while giving footstep detail
+
+**High Dynamic Range**
+- Makes loud sounds louder, quiet sounds quieter
+- Best for high volume on quality headset in quiet room
+- Preserves realism and positional accuracy
+- Loud gunfire might drown out footsteps during intense fights
+- Most detailed sound picture for hardcore players
+
+**Night Mode**
+- Compresses dynamic range (loudness equalization)
+- Makes footsteps easier to hear even during gunfire/vehicles
+- Useful for lower volume or avoiding ear damage
+- Lose some sense of distance (everything medium loud)
+- Pure competitive advantage for hearing everything consistently
+
+**War Tapes**
+- Cinematic mode with bass, reverb, distortion
+- Emphasizes explosions and gunfire heavily
+- Footsteps get lost in the boom
+- Directional audio less clear due to reverb
+- Not recommended for competitive play
+
+**War Tapes V.A.L (Very Aggressive Listening)**
+- Extreme version with everything cranked up
+- Incredibly immersive but pinpointing enemies harder
+- Distance cues get muddled
+- Avoid for serious play—novelty/cinematic experience
+
+**Recommendation: Default or Night Mode**
+- Default (or High Dynamic) with quality headset and loud volume
+- Night Mode if sounds often drown footsteps
+- Avoid War Tapes modes for serious sessions
+
+</div>
+
+<div class="space-y-4 mb-8">
+
+**Spatial Audio (Windows Sonic / Dolby Atmos)**
+- Experiment with it
+- Sometimes improves verticality/depth
+- Can muddy sound in some cases
+- BF6's stereo mix already quite spatial
+- Test what gives clearest positional awareness
+
+**EQ and Enhancements**
+- Use EQ to boost footstep frequencies (~200-1000 Hz)
+- Lower booming explosion frequencies
+- Some headsets have "Footstep" presets
+- Subtle tweaks best—preserve directional integrity
+
+**Volume Balancing**
+- Fine-tune in live match
+- Ensure you hear footsteps during gunfights
+- Catch reload sounds and gadget cues
+- Differentiate friendly vs enemy sounds (enemy usually louder)
+- Balance distance cues based on mix choice
+
+**Voice Chat**
+- Balance voice chat volume (50-70%)
+- Don't let comms overpower game sounds
+- Route comms to one ear if using advanced audio setups
+
+**Test and Adjust**
+- Use Practice Range or smaller matches to test
+- Intentionally pay attention to specific sounds
+- Watch killcams to see if you should have heard someone
+- Keep tweaking until rarely surprised by sounds you should have heard
+
+</div>
+
+<Callout variant="tip">
+Sound is a cheat that's allowed. A huge portion of high-level play is sound awareness—hearing a footstep can tell you "enemy behind me to the left, on the metal catwalk." That's information you act on before they even see you.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Notes
+
+<div class="space-y-6 mb-10">
+
+With all these settings tuned for competitive play, you're set up to perform your best. We've lowered graphics for clarity and high FPS, optimized controls for precision and speed, maximized FOV to catch all the action, tweaked system settings for stability and low latency, polished network setup for low ping, and configured audio so nothing slips past your ears.
+
+These changes might feel unusual at first if you're used to stock settings or cinematic graphics, but stick with them—soon you'll notice improvements in your reaction time and consistency. You'll spot enemies faster, aim more steadily, and react to audio cues you never noticed before.
+
+All of that contributes to a tactical edge over opponents who might still be playing with sub-optimal settings.
+
+</div>
+
+<Callout variant="success">
+Good luck on the battlefield—with these competitive settings, you'll be ready to dominate in Battlefield 6!
+</Callout>
+
+<div class="flex justify-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary border border-primary/40 hover:border-primary/60 transition-all duration-200 shadow-sm hover:shadow-md"
+  >
+    ↑ Back to Top
+  </a>
+</div>

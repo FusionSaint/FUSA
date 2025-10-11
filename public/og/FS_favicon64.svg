@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FS favicon with halo">
+  <title>FS Neon Halo Favicon</title>
+  <defs>
+    <linearGradient id="blueCore" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8F6FF"/>
+      <stop offset="55%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#007BFF"/>
+    </linearGradient>
+    <filter id="blueGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="goldGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="g1"/>
+      <feMerge>
+        <feMergeNode in="g1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Halo (thin to keep clarity at 16px) -->
+  <ellipse cx="32" cy="15" rx="19" ry="5" fill="none" stroke="#FFD24D" stroke-width="2.6" opacity="0.85" filter="url(#goldGlow)"/>
+  <ellipse cx="32" cy="15" rx="19" ry="5" fill="none" stroke="#B77B00" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- FS (tight spacing for legibility) -->
+  <g style="font-family: Arial Black, sans-serif; text-anchor: middle; letter-spacing: 0.5px;">
+    <text x="32" y="46" font-size="33" font-weight="900" fill="#00E5FF" opacity="0.95" filter="url(#blueGlow)">FS</text>
+    <text x="32" y="46" font-size="33" font-weight="900" fill="none" stroke="#00B9FF" stroke-width="1.2" stroke-linejoin="round" style="paint-order: stroke fill;">FS</text>
+    <text x="32" y="46" font-size="33" font-weight="900" fill="url(#blueCore)">FS</text>
+    <text x="32" y="46" font-size="33" font-weight="900" fill="none" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="0.4" style="paint-order: stroke fill;">FS</text>
+  </g>
+</svg>

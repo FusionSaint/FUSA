@@ -15,6 +15,28 @@ module.exports = {
     },
     extend: {
       colors: {
+        // --- FusionSaint Brand ---
+        fs: {
+          // Near-black canvas for dark mode
+          ink:  "#0B0D12",
+          // Subtle dark surface (cards, sidebars)
+          slate:"#0F131A",
+          // Tron-like blue
+          blue: "#19B1FF",
+          // Soft gold accent
+          gold: "#FFC247",
+          // Blue meant for glows/shadows (use with opacity)
+          glow: "#19B1FF",
+        },
+        // Semantic aliases (useful for quick theming)
+        brand: {
+          background: "#0B0D12",
+          foreground: "#E6EDF5",
+          primary:   "#19B1FF",
+          secondary: "#FFC247",
+        },
+
+        // --- Existing Theme Tokens (kept) ---
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -48,33 +70,15 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        Pink: {
-          DEFAULT: "hsl(var(--Pink))",
-        },
-        Purple: {
-          DEFAULT: "hsl(var(--Purple))",
-        },
-        Red: {
-          DEFAULT: "hsl(var(--Red))",
-        },
-        Orange: {
-          DEFAULT: "hsl(var(--Orange))",
-        },
-        Yellow: {
-          DEFAULT: "hsl(var(--Yellow))",
-        },
-        Green: {
-          DEFAULT: "hsl(var(--Green))",
-        },
-        Teal: {
-          DEFAULT: "hsl(var(--Teal))",
-        },
-        Sky: {
-          DEFAULT: "hsl(var(--Sky))",
-        },
-        Blue: {
-          DEFAULT: "hsl(var(--Blue))",
-        },
+        Pink:   { DEFAULT: "hsl(var(--Pink))" },
+        Purple: { DEFAULT: "hsl(var(--Purple))" },
+        Red:    { DEFAULT: "hsl(var(--Red))" },
+        Orange: { DEFAULT: "hsl(var(--Orange))" },
+        Yellow: { DEFAULT: "hsl(var(--Yellow))" },
+        Green:  { DEFAULT: "hsl(var(--Green))" },
+        Teal:   { DEFAULT: "hsl(var(--Teal))" },
+        Sky:    { DEFAULT: "hsl(var(--Sky))" },
+        Blue:   { DEFAULT: "hsl(var(--Blue))" },
       },
       borderRadius: {
         lg: "var(--radius)",

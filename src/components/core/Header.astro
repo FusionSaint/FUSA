@@ -19,24 +19,17 @@ const { class: className } = Astro.props;
     className,
   ]}
 >
-  <div
+    <div
     class="flex space-x-4 justify-between items-center md:items-center md:space-x-0 md:max-w-8xl"
-  >
+   >
     <div class="font-bold flex flex-row items-center">
-      <a href="/" class="px-4 hidden md:flex no-underline">
-        <Button
-          client:load
-          className="flex gap-2 hover:no-underline text-2xl"
-          variant="link"
-        >
-          <img src="/logo.svg" alt="Logo" class="w-[2rem] h-[2rem]" />
-          {SITE.title}
-        </Button>
-      </a>
-      <a href="/" class="px-4 flex md:hidden">
-        <Button client:load className="" variant="ghost" size="icon">
-          <img src="/logo.svg" alt="Logo" class="w-[2rem] h-[2rem]" />
-        </Button>
+      <a href="/" class="px-4 flex items-center gap-2 no-underline">
+        <img
+          src="/logo.svg"
+          alt="FusionSaint logo"
+          class="w-12 h-12 md:w-14 md:h-14 shrink-0 nav-logo-glow"
+        />
+        <span class="font-semibold hidden sm:inline text-fs-blue">{SITE.title}</span>
       </a>
       <div class="hidden md:block">
         <NavMenu />

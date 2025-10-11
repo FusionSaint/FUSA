@@ -1,16 +1,15 @@
 ---
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import {
-  Terminal,
   PartyPopper,
   Info,
   TriangleAlert,
   Skull,
+  Lightbulb,
   type LucideIcon,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
-type Variant = "info" | "warning" | "danger" | "success";
+type Variant = "info" | "warning" | "danger" | "success" | "tip";
 
 interface Props {
   variant?: Variant;
@@ -21,12 +20,15 @@ interface Props {
 const { variant, title, icon: CustomIcon } = Astro.props as Props;
 
 const variantClasses: Record<Variant, string> = {
-  info: "border-Blue bg-Blue text-background hover:bg-Blue cursor-default",
+  info: "border-2 border-blue-400 bg-blue-950/30 text-foreground hover:bg-blue-950/40 cursor-default",
   warning:
-    "border-Orange bg-Orange text-background hover:bg-Orange cursor-default",
-  danger: "border-Red bg-Red text-background hover:bg-Red cursor-default",
+    "border-2 border-orange-400 bg-orange-900/30 text-foreground hover:bg-orange-900/40 cursor-default",
+  danger:
+    "border-2 border-red-400 bg-red-950/30 text-foreground hover:bg-red-950/40 cursor-default",
   success:
-    "border-Green bg-Green text-background hover:bg-Green cursor-default",
+    "border-2 border-green-400 bg-green-950/30 text-foreground hover:bg-green-950/40 cursor-default",
+  tip:
+    "border-2 border-fs-gold bg-fs-gold/30 text-foreground hover:bg-fs-gold/40 cursor-default",
 };
 
 const variantIcons: Record<Variant, LucideIcon> = {
@@ -34,31 +36,43 @@ const variantIcons: Record<Variant, LucideIcon> = {
   warning: TriangleAlert,
   danger: Skull,
   success: PartyPopper,
+  tip: Lightbulb,
 };
 
 const defaultTitles: Record<Variant, string> = {
-  info: "Info",
-  warning: "Watch Out",
-  danger: "Danger",
-  success: "Success",
+  info: "Info:",
+  warning: "Watch Out:",
+  danger: "Danger:",
+  success: "Success:",
+  tip: "Tip:",
 };
 
 // Check if the provided variant is valid; otherwise, use 'info' as the default
 const validVariant = variant && variantClasses[variant] ? variant : "info";
-
 const Icon = CustomIcon || variantIcons[validVariant];
 const alertTitle = title || defaultTitles[validVariant];
 const alertClasses = variantClasses[validVariant];
+
+// Icon color mapping
+const iconColors: Record<Variant, string> = {
+  info: "text-blue-400",
+  warning: "text-orange-400",
+  danger: "text-red-400",
+  success: "text-green-400",
+  tip: "text-fs-gold",
+};
+
+const iconColor = iconColors[validVariant];
 ---
 
 <div class="callout py-2 w-full">
-  <Alert className={`flex flex-row items-start gap-2 ${alertClasses}`}>
-    <Button variant="ghost" size="icon" className=`${alertClasses}`>
-      <Icon className="h-[1.2rem] w-[1.2rem]" />
-    </Button>
-    <div>
-      <AlertTitle className="m-0">{alertTitle}</AlertTitle>
-      <AlertDescription>
+  <Alert className={`flex flex-row items-start gap-3 ${alertClasses} rounded`}>
+    <div class="flex-shrink-0 pt-0.5">
+      <Icon className={`h-5 w-5 ${iconColor}`} />
+    </div>
+    <div class="flex-1">
+      <AlertTitle className="m-0 text-sm font-semibold">{alertTitle}</AlertTitle>
+      <AlertDescription className="text-sm mt-1">
         <slot />
       </AlertDescription>
     </div>
