@@ -3,6 +3,7 @@ title: Launch Meta - Top Kits & Weapons
 ---
 
 import Callout from "@/components/Callout.astro";
+import { Users, Target, Shield, Crosshair, Swords, Zap } from "lucide-react";
 
 <div class="space-y-6 mb-8">
 
@@ -18,7 +19,7 @@ The open weapon system means you'll often choose your class for its gadget/abili
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Class Meta Overview
+## <Users className="inline-block mr-3 mb-1" size={32} /> Class Meta Overview
 
 <div class="space-y-6 mb-8">
 
@@ -26,16 +27,18 @@ Even though you can mix and match weapons with any class, each kit still has uni
 
 </div>
 
-### Assault
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 
-<div class="space-y-4 mb-8">
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
-**Role: Frontline Attacker**
+### <Swords className="inline-block mr-2 mb-1" size={24} /> Assault
 
-A frontline attacker equipped with breaching tools like grenade launchers and an Adrenaline Injector. Assault was very popular during the beta due to powerful close-range options (the M87A1 shotgun was part of its default kit) and explosive gadget combos.
+**Role:** <span class="text-fs-gold font-semibold">Frontline Attacker</span>
+
+A frontline attacker equipped with breaching tools like grenade launchers and an Adrenaline Injector. Assault was very popular during the beta due to powerful close-range options and explosive gadget combos.
 
 **Launch Changes**
-- Given more team-oriented gadgets (e.g., Spawn Beacon) to balance it out
+- Given more team-oriented gadgets (e.g., Spawn Beacon)
 - Great for aggressive objective play
 - Best when armed with strong assault rifle or carbine
 
@@ -46,13 +49,13 @@ A frontline attacker equipped with breaching tools like grenade launchers and an
 
 </div>
 
-### Engineer
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
-<div class="space-y-4 mb-8">
+### <Shield className="inline-block mr-2 mb-1" size={24} /> Engineer
 
-**Role: Vehicle Destruction & Repair Expert**
+**Role:** <span class="text-fs-gold font-semibold">Vehicle Destruction & Repair Expert</span>
 
-Engineers carry launchers and the repair tool, making them indispensable on vehicle-heavy maps. Their class perk reduces explosive damage taken, so they excel at taking out tanks and fortifications.
+Engineers carry launchers and the repair tool, making them indispensable on vehicle-heavy maps. Their class perk reduces explosive damage taken.
 
 **Strengths**
 - Critical on vehicle-heavy maps
@@ -61,17 +64,17 @@ Engineers carry launchers and the repair tool, making them indispensable on vehi
 
 **Weaknesses**
 - Less dominant in infantry-only fights
-- Relies on having top-tier gun choice to compete in pure gunfights
+- Relies on having top-tier gun choice
 
 </div>
 
-### Support (Medic)
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
-<div class="space-y-4 mb-8">
+### <Crosshair className="inline-block mr-2 mb-1" size={24} /> Support (Medic)
 
-**Role: Combat Medic**
+**Role:** <span class="text-fs-gold font-semibold">Combat Medic</span>
 
-The Support class plays the classic medic role—fast revives, health and ammo supplies. In Battlefield 6's open weapon system, many players expect Support to be a powerhouse because you can take a great assault rifle while still providing healing and revives.
+The Support class plays the classic medic role—fast revives, health and ammo supplies. In Battlefield 6's open weapon system, many players expect Support to be a powerhouse.
 
 **Why It's Strong**
 - No one revives or drags wounded teammates faster
@@ -79,24 +82,17 @@ The Support class plays the classic medic role—fast revives, health and ammo s
 - Extremely valuable for team sustainability
 - Good Support players can carry games
 
-**Meta Status**
-- **Standout general-purpose pick**
-- Combat medic with any gun combination
-- Expected to be highly popular
+**Meta Status:** <span class="text-fs-gold font-semibold">Standout general-purpose pick</span>
 
 </div>
 
-<Callout variant="success">
-Support stands out as a general-purpose pick—you get combat medic capabilities with any top-tier weapon. Expect this to be one of the most popular classes at launch.
-</Callout>
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
-### Recon
+### <Target className="inline-block mr-2 mb-1" size={24} /> Recon
 
-<div class="space-y-4 mb-8">
+**Role:** <span class="text-fs-gold font-semibold">Intel & Long-Range Specialist</span>
 
-**Role: Intel & Long-Range Specialist**
-
-Recon gets tools like motion sensor and even a UAV drone for spotting enemies. In the open beta, Recon proved very strong when used aggressively—equipping close or mid-range weapons (SMG or AR) and using sensor gadgets allowed players to sweep objectives with constant enemy intel.
+Recon gets tools like motion sensor and UAV drone for spotting enemies. Proved very strong when used aggressively in the beta.
 
 **Playstyles**
 - **Aggressive**: SMG/AR with motion sensors for objective play
@@ -110,15 +106,15 @@ Recon gets tools like motion sensor and even a UAV drone for spotting enemies. I
 
 </div>
 
-<div class="space-y-6 mb-8">
-
-**Bottom Line:** All classes have their place, but **Support** stands out as a general-purpose pick (combat medic with any gun) and **Assault** remains a strong choice for spearheading attacks. **Recon** can be a force-multiplier with its intel (especially in smaller modes), and **Engineer** is indispensable when vehicles are involved.
-
 </div>
+
+<Callout variant="success">
+Support stands out as a general-purpose pick—you get combat medic capabilities with any top-tier weapon. Expect this to be one of the most popular classes at launch.
+</Callout>
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Best Weapons by Category
+## <Zap className="inline-block mr-3 mb-1" size={32} /> Best Weapons by Category
 
 <div class="space-y-6 mb-8">
 
@@ -136,19 +132,37 @@ Assault rifles are the backbone of Battlefield 6's weapon meta, offering versati
 
 </div>
 
+<div class="p-6 rounded-lg border-2 border-fs-gold/40 bg-card/30 mb-6">
+
 #### NVO-228E
 
-<div class="space-y-4 mb-8">
-
-**Tier: S-Tier (Meta-Defining)**
+**Tier:** <span class="text-fs-gold font-semibold text-lg">S-Tier (Meta-Defining)</span>
 
 A 7.62mm assault rifle that many are calling **the best gun in the game overall**. It boasts high per-shot damage with a moderate fire rate, allowing for reliable 3-shot kills up close and excellent lethality at mid-range.
 
-**Stats**
-- Damage: 33 per shot
-- Fire Rate: ~654 RPM
-- Magazine: 30 rounds
-- Recoil: Manageable
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-4">
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Damage**  
+<span class="text-fs-gold font-semibold">33</span> per shot
+</div>
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Fire Rate**  
+<span class="text-fs-gold font-semibold">~654 RPM</span>
+</div>
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Magazine**  
+<span class="text-fs-gold font-semibold">30</span> rounds
+</div>
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Recoil**  
+<span class="text-fs-gold font-semibold">Manageable</span>
+</div>
+
+</div>
 
 **Why It's Meta**
 - Packs a punch but still easy to control
@@ -162,19 +176,37 @@ A 7.62mm assault rifle that many are calling **the best gun in the game overall*
 The NVO-228E is widely considered the best overall weapon in Battlefield 6. Its combination of high damage, moderate fire rate, and manageable recoil makes it deadly in almost any scenario.
 </Callout>
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30 mb-6">
+
 #### AK4D
 
-<div class="space-y-4 mb-8">
-
-**Tier: S-Tier**
+**Tier:** <span class="text-fs-gold font-semibold text-lg">S-Tier</span>
 
 A high-damage battle rifle in the AR category, essentially a modernized AK. The AK4D hits as hard as the NVO but with a slower rate of fire and smaller magazine.
 
-**Stats**
-- Damage: 33 per shot
-- Fire Rate: ~514 RPM
-- Magazine: 20 rounds
-- Recoil: Very controllable
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-4">
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Damage**  
+<span class="text-fs-gold font-semibold">33</span> per shot
+</div>
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Fire Rate**  
+<span class="text-fs-gold font-semibold">~514 RPM</span>
+</div>
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Magazine**  
+<span class="text-fs-gold font-semibold">20</span> rounds
+</div>
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Recoil**  
+<span class="text-fs-gold font-semibold">Very Controllable</span>
+</div>
+
+</div>
 
 **Best For**
 - Skilled players who value precision
@@ -187,10 +219,14 @@ A high-damage battle rifle in the AR category, essentially a modernized AK. The 
 
 </div>
 
+<div class="p-4 rounded-lg border border-border bg-card/50 mb-8">
+
 **Honorable Mentions**
 - **L85A3**: Superb stability and accuracy for long-range firefights
 - **SOR-556 MK2**: Excellent for longer-range engagements
 - **M433**: Excels in close-range burst damage
+
+</div>
 
 ### Carbines
 
@@ -200,19 +236,21 @@ Carbines offer a balance between assault rifles and SMGs, providing mobility wit
 
 </div>
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 #### AK-205
 
-<div class="space-y-4 mb-8">
-
-**Tier: S-Tier**
+**Tier:** <span class="text-fs-gold font-semibold">S-Tier</span>
 
 Considered the strongest carbine, offering a balance of accuracy and handling. It fires the smaller 5.45×39mm round with laser-like precision and low recoil.
 
 **Stats**
-- Damage: 20 per shot
-- Fire Rate: ~720 RPM
-- Recoil: Very low
-- Accuracy: Exceptional
+- Damage: <span class="text-fs-gold font-semibold">20</span> per shot
+- Fire Rate: <span class="text-fs-gold font-semibold">~720 RPM</span>
+- Recoil: <span class="text-fs-gold font-semibold">Very low</span>
+- Accuracy: <span class="text-fs-gold font-semibold">Exceptional</span>
 
 **Why It's Top Tier**
 - Deadly at mid to long ranges
@@ -222,19 +260,19 @@ Considered the strongest carbine, offering a balance of accuracy and handling. I
 
 </div>
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 #### M4A1
 
-<div class="space-y-4 mb-8">
-
-**Tier: A-Tier**
+**Tier:** <span class="text-fs-gold font-semibold">A-Tier</span>
 
 A fan-favorite carbine that was an "utter terror" in the beta at close range. The M4A1 has a blisteringly high fire rate, making it shred enemies in close quarters.
 
 **Stats**
-- Fire Rate: ~900 RPM
-- Range: Close to mid
-- Recoil: High
-- Accuracy: Lower at long range
+- Fire Rate: <span class="text-fs-gold font-semibold">~900 RPM</span>
+- Range: <span class="text-fs-gold font-semibold">Close to mid</span>
+- Recoil: <span class="text-fs-gold font-semibold">High</span>
+- Accuracy: <span class="text-fs-gold font-semibold">Lower at long range</span>
 
 **Best For**
 - Aggressive players
@@ -244,8 +282,7 @@ A fan-favorite carbine that was an "utter terror" in the beta at close range. Th
 
 </div>
 
-**Honorable Mention**
-- **QBZ-192**: Well-rounded with 40-round mag and decent 771 RPM, offering flexibility for both close and mid-range fights
+</div>
 
 ### Submachine Guns
 
@@ -255,13 +292,15 @@ SMGs dominate close-quarters combat with high fire rates and excellent mobility,
 
 </div>
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 #### PW7A2
 
-<div class="space-y-4 mb-8">
+**Tier:** <span class="text-fs-gold font-semibold">S-Tier</span>
 
-**Tier: S-Tier**
-
-One of the top SMGs in BF6, the PW7A2 provides incredible versatility. It fires at 947 RPM and has very low recoil, meaning it stays on target even when spraying.
+One of the top SMGs in BF6, the PW7A2 provides incredible versatility. It fires at <span class="text-fs-gold font-semibold">947 RPM</span> and has very low recoil, meaning it stays on target even when spraying.
 
 **Why It's Versatile**
 - Effective not just point-blank but even out to mid-range
@@ -271,19 +310,13 @@ One of the top SMGs in BF6, the PW7A2 provides incredible versatility. It fires 
 
 </div>
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 #### KV9
 
-<div class="space-y-4 mb-8">
+**Tier:** <span class="text-fs-gold font-semibold">S-Tier</span>
 
-**Tier: S-Tier**
-
-If you want pure close-range destruction, the KV9 is the SMG for you. It boasts the fastest fire rate of any SMG at **1080 RPM**, essentially melting targets in a heartbeat.
-
-**Stats**
-- Fire Rate: 1080 RPM (fastest SMG)
-- Effective Range: Very short
-- Recoil: High
-- Magazine: Empties very quickly
+If you want pure close-range destruction, the KV9 is the SMG for you. It boasts the fastest fire rate of any SMG at <span class="text-fs-gold font-semibold">1080 RPM</span>, essentially melting targets in a heartbeat.
 
 **Best For**
 - Tight quarters combat
@@ -297,9 +330,7 @@ If you want pure close-range destruction, the KV9 is the SMG for you. It boasts 
 
 </div>
 
-**Honorable Mentions**
-- **SCW-10**: Excellent all-around stats, S-Tier
-- **SGX**: Strong beta performer (now A-Tier), high damage and low recoil when kitted properly
+</div>
 
 ### Light Machine Guns
 
@@ -309,11 +340,13 @@ LMGs excel at sustained fire and area denial, perfect for holding objectives and
 
 </div>
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 #### L110
 
-<div class="space-y-4 mb-8">
-
-**Tier: S-Tier**
+**Tier:** <span class="text-fs-gold font-semibold">S-Tier</span>
 
 The most dependable all-purpose LMG choice. It's a squad automatic weapon chambered in 5.56 that offers a good balance of fire rate, damage, and handling.
 
@@ -326,11 +359,11 @@ The most dependable all-purpose LMG choice. It's a squad automatic weapon chambe
 
 </div>
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 #### DRS-IAR
 
-<div class="space-y-4 mb-8">
-
-**Tier: S-Tier**
+**Tier:** <span class="text-fs-gold font-semibold">S-Tier</span>
 
 The DRS IAR (Infantry Automatic Rifle) blurs the line between an LMG and an assault rifle. It sacrifices a bit of magazine capacity for better mobility and accuracy.
 
@@ -342,14 +375,10 @@ The DRS IAR (Infantry Automatic Rifle) blurs the line between an LMG and an assa
 
 **Best For**
 - Players who want LMG firepower without being stationary
-- Aggressive support roles
-- Squad-based pushes
 
 </div>
 
-**Honorable Mentions**
-- **M240L** (A-Tier): Massive belts and great damage for defending at range
-- **KTS-100 MK8** (A-Tier): Low recoil and accurate suppressive fire
+</div>
 
 ### Designated Marksman Rifles
 
@@ -359,33 +388,44 @@ DMRs reward accuracy and precision, offering devastating power for players who c
 
 </div>
 
+<div class="p-6 rounded-lg border-2 border-fs-gold/40 bg-card/30 mb-8">
+
 #### SVK-8.6
 
-<div class="space-y-4 mb-8">
+**Tier:** <span class="text-fs-gold font-semibold text-lg">S-Tier</span>
 
-**Tier: S-Tier**
+The consensus top DMR in Battlefield 6. This semi-automatic marksman rifle hits extremely hard—about <span class="text-fs-gold font-semibold">66 damage per shot</span>—meaning it can down an enemy with just two hits to the body.
 
-The consensus top DMR in Battlefield 6. This semi-automatic marksman rifle hits extremely hard—about **66 damage per shot**—meaning it can down an enemy with just two hits to the body.
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-4">
 
-**Stats**
-- Damage: 66 per shot (2-shot kill)
-- Magazine: 10 rounds
-- Fire Rate: Low (semi-auto)
-- Accuracy: Exceptional
+<div class="p-3 rounded border border-border bg-card/50">
+**Damage**  
+<span class="text-fs-gold font-semibold">66</span> per shot
+</div>
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Kill Potential**  
+<span class="text-fs-gold font-semibold">2-shot kill</span>
+</div>
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Magazine**  
+<span class="text-fs-gold font-semibold">10</span> rounds
+</div>
+
+<div class="p-3 rounded border border-border bg-card/50">
+**Fire Rate**  
+<span class="text-fs-gold font-semibold">Low (semi-auto)</span>
+</div>
+
+</div>
 
 **Why It's Dominant**
 - Raw stopping power unmatched in DMR category
 - Drops targets faster than any other DMR
 - Skilled marksman weapon
 
-**Trade-offs**
-- Must make your shots count
-- Low magazine capacity
-- Effective rate of fire is low
-
-**Comparison**
-- Other DMRs (M39 EMR, SVDM): ~40 damage, require 3+ shots
-- These are solid A-tier choices but a step below SVK's power
+**Comparison:** Other DMRs (M39 EMR, SVDM) do ~40 damage and require 3+ shots—solid A-tier choices but a step below SVK's power
 
 </div>
 
@@ -397,40 +437,37 @@ Sniper rifles reward precision and patience, capable of one-shot kills at extrem
 
 </div>
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 #### M2010 ESR
 
-<div class="space-y-4 mb-8">
+**Tier:** <span class="text-fs-gold font-semibold">S-Tier</span>
 
-**Tier: S-Tier**
-
-The M2010 Enhanced Sniper Rifle is one of the two top dogs in the sniper category. Firing a .300 Win Mag round, it delivers **100 damage on a hit**—capable of one-shot kills to the torso at typical ranges.
+The M2010 Enhanced Sniper Rifle is one of the two top dogs in the sniper category. Firing a .300 Win Mag round, it delivers <span class="text-fs-gold font-semibold">100 damage on a hit</span>—capable of one-shot kills to the torso at typical ranges.
 
 **Why It's Top Tier**
-- Precision stat maxes out at 100
+- Precision stat maxes out at <span class="text-fs-gold font-semibold">100</span>
 - Extremely high bullet velocity (nearly hitscan-like)
 - Most forgiving sniper rifle
 - Combination of damage and accuracy
 
 **Stats**
-- Damage: 100 (one-shot kill)
-- Magazine: 5 rounds
-- Velocity: Very high
-- Accuracy: Maximum (100)
-
-**Trade-offs**
-- Slow rechamber
-- Can't spam shots
-- Must make each shot count
+- Damage: <span class="text-fs-gold font-semibold">100</span> (one-shot kill)
+- Magazine: <span class="text-fs-gold font-semibold">5</span> rounds
+- Velocity: <span class="text-fs-gold font-semibold">Very high</span>
+- Accuracy: <span class="text-fs-gold font-semibold">Maximum (100)</span>
 
 </div>
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 #### PSR
 
-<div class="space-y-4 mb-8">
+**Tier:** <span class="text-fs-gold font-semibold">S-Tier</span>
 
-**Tier: S-Tier**
-
-The other S-Tier sniper, designed for extreme long range. It also hits for ~100 damage and has even longer effective range than the M2010.
+The other S-Tier sniper, designed for extreme long range. It also hits for <span class="text-fs-gold font-semibold">~100 damage</span> and has even longer effective range than the M2010.
 
 **Best For**
 - Extreme long-range engagements
@@ -438,20 +475,18 @@ The other S-Tier sniper, designed for extreme long range. It also hits for ~100 
 - 100+ meter engagements
 - Maximum-range sniping
 
-**Stats**
-- Damage: ~100
-- Magazine: 7 rounds
-- Range: Extreme
-- Handling: Very slow
-
 **When to Choose**
 - **M2010**: Mid-long range with faster aiming
 - **PSR**: Absolute maximum-range engagements
 
+**Stats**
+- Damage: <span class="text-fs-gold font-semibold">~100</span>
+- Magazine: <span class="text-fs-gold font-semibold">7</span> rounds
+- Range: <span class="text-fs-gold font-semibold">Extreme</span>
+
 </div>
 
-**Honorable Mention**
-- **SV-98** (A-Tier): Classic bolt-action, 100 damage, larger 10-round mag, good "balanced" sniper without extreme specialization
+</div>
 
 ### Shotguns
 
@@ -461,19 +496,21 @@ Shotguns dominate close-quarters combat, capable of one-shot kills at point-blan
 
 </div>
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-fs-gold/40 bg-card/30">
+
 #### M87A1
 
-<div class="space-y-4 mb-8">
+**Tier:** <span class="text-fs-gold font-semibold text-lg">S-Tier (Legendary)</span>
 
-**Tier: S-Tier**
-
-Without question, the best shotgun in Battlefield 6. During the beta it achieved almost mythical status, racking up **337 million kills** due to its ability to one-shot enemies out to surprising ranges.
+Without question, the best shotgun in Battlefield 6. During the beta it achieved almost mythical status, racking up <span class="text-fs-gold font-semibold">337 million kills</span> due to its ability to one-shot enemies out to surprising ranges.
 
 **Stats**
-- Damage: 134 per shot
-- Type: Pump-action
-- Magazine: 8 shells
-- Fire Rate: Slow
+- Damage: <span class="text-fs-gold font-semibold">134</span> per shot
+- Type: <span class="text-fs-gold font-semibold">Pump-action</span>
+- Magazine: <span class="text-fs-gold font-semibold">8</span> shells
+- Fire Rate: <span class="text-fs-gold font-semibold">Slow</span>
 
 **Why It's Legendary**
 - Devastating at close quarters
@@ -481,26 +518,21 @@ Without question, the best shotgun in Battlefield 6. During the beta it achieved
 - Even with nerfs, remains extremely strong
 - Quick work of enemies within 10–15 meters
 
-**Trade-offs**
-- Slower rate of fire due to pump-action
-- Effectiveness falls off dramatically outside close range
-- Was so strong DICE flagged it for nerfs
-
 </div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
 #### M1014
 
-<div class="space-y-4 mb-8">
-
-**Tier: A-Tier**
+**Tier:** <span class="text-fs-gold font-semibold">A-Tier</span>
 
 For those who prefer semi-auto, the M1014 is a strong alternative. It doesn't hit quite as hard but can fire multiple shots in rapid succession.
 
 **Stats**
-- Damage: ~115 per shot
-- Type: Semi-auto
-- Magazine: 7 shells
-- Fire Rate: Fast (for shotgun)
+- Damage: <span class="text-fs-gold font-semibold">~115</span> per shot
+- Type: <span class="text-fs-gold font-semibold">Semi-auto</span>
+- Magazine: <span class="text-fs-gold font-semibold">7</span> shells
+- Fire Rate: <span class="text-fs-gold font-semibold">Fast</span> (for shotgun)
 
 **Advantages**
 - More forgiving if you miss
@@ -508,14 +540,9 @@ For those who prefer semi-auto, the M1014 is a strong alternative. It doesn't hi
 - Faster follow-up shots
 - Edge in sustained fights
 
-**Trade-offs**
-- Won't one-shot armored targets reliably
-- Requires follow-up shots more often
-
 </div>
 
-**Honorable Mention**
-- **18.5 KS-K** (B-Tier): Magazine-fed semi-auto, reloads faster but only ~80 damage per pellet (often needs two shots)
+</div>
 
 ### Sidearms
 
@@ -525,26 +552,38 @@ Sidearms serve as reliable backup weapons when your primary runs dry, with the b
 
 </div>
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30 mb-8">
+
 #### P18 & ES 5.7
 
-<div class="space-y-4 mb-8">
-
-**Tier: S-Tier (Both)**
+**Tier:** <span class="text-fs-gold font-semibold">S-Tier (Both)</span>
 
 Two pistols emerge at the top of the sidearm category, both prioritizing volume of fire and magazine capacity.
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+
+<div class="p-4 rounded border border-border bg-card/50">
+
 **P18**
-- Caliber: 9mm
-- Magazine: 17 rounds
-- Fire Rate: ~400 RPM
-- Handling: Good
+- Caliber: <span class="text-fs-gold font-semibold">9mm</span>
+- Magazine: <span class="text-fs-gold font-semibold">17</span> rounds
+- Fire Rate: <span class="text-fs-gold font-semibold">~400 RPM</span>
+- Handling: <span class="text-fs-gold font-semibold">Good</span>
 - Well-rounded and reliable
 
+</div>
+
+<div class="p-4 rounded border border-border bg-card/50">
+
 **ES 5.7**
-- Magazine: 20 rounds
-- Fire Rate: ~450 RPM (very high)
-- Accuracy: Great
+- Magazine: <span class="text-fs-gold font-semibold">20</span> rounds
+- Fire Rate: <span class="text-fs-gold font-semibold">~450 RPM</span> (very high)
+- Accuracy: <span class="text-fs-gold font-semibold">Great</span>
 - Capacity advantage
+
+</div>
+
+</div>
 
 **Why They're Top Tier**
 - Volume of fire saves lives in close-range fights
@@ -554,43 +593,17 @@ Two pistols emerge at the top of the sidearm category, both prioritizing volume 
 
 </div>
 
-#### M44 Revolver
-
-<div class="space-y-4 mb-8">
-
-**Tier: A-Tier (Honorable Mention)**
-
-The M44 is a modern Magnum revolver that packs **66 damage per shot**—essentially a hand-cannon.
-
-**Stats**
-- Damage: 66 (highest for sidearms)
-- Capacity: 6 shots
-- Fire Rate: Slow
-- Range: Best of all sidearms
-
-**High Risk, High Reward**
-- Devastating if you hit your shots
-- Best range and stopping power
-- Slow rate of fire and low capacity
-- Generally less forgiving than P18/ES 5.7
-
-</div>
-
 <div class="my-12 border-t-2 border-primary/30"></div>
 
 ## Best Overall Weapon
 
-<div class="space-y-6 mb-8">
+<div class="p-8 rounded-lg border-2 border-fs-gold/50 bg-card/30 mb-8">
+
+### <Target className="inline-block mr-2 mb-1" size={28} /> NVO-228E: The Meta King
 
 Which weapon is the absolute best in Battlefield 6 right now? Considering versatility and power, the community consensus points to the **NVO-228E assault rifle** as the top overall gun at launch.
 
 Multiple sources have noted that the NVO-228E "could easily be the best weapon in Battlefield 6" thanks to its combination of high damage, decent rate of fire, and manageable recoil.
-
-</div>
-
-### Why NVO-228E Dominates
-
-<div class="space-y-4 mb-8">
 
 **Very Few Weaknesses**
 - Effective at various ranges
@@ -612,18 +625,26 @@ Prepare to see a lot of NVO-228E assault rifles on the battlefield. This rifle, 
 
 ### Meta Prediction
 
-<div class="space-y-4 mb-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+
+<div class="p-6 rounded-lg border border-primary/20 bg-card/30">
 
 **Expected Loadouts**
-- NVO-228E paired with Support for healing/revives
-- NVO-228E paired with Assault for aggressive objective play
+- NVO-228E paired with <span class="text-fs-gold font-semibold">Support</span> for healing/revives
+- NVO-228E paired with <span class="text-fs-gold font-semibold">Assault</span> for aggressive objective play
 - High popularity across all skill levels
+
+</div>
+
+<div class="p-6 rounded-lg border border-primary/20 bg-card/30">
 
 **Team Balance**
 - Battlefield is about combined arms and team play
 - Balanced squad using mix of weapon types always has edge
 - Sniper, LMG, SMG/shotgun all have roles
-- But for single best general-purpose gun: NVO-228E is the safe bet
+- But for single best general-purpose gun: <span class="text-fs-gold font-semibold">NVO-228E</span> is the safe bet
+
+</div>
 
 </div>
 

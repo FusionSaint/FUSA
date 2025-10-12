@@ -3,6 +3,7 @@ title: Launch Patch Notes (v1.0.1.0)
 ---
 
 import Callout from "@/components/Callout.astro";
+import { User, Truck, Wrench, Crosshair, Map, Monitor, Volume2, Wifi, Gamepad2 } from "lucide-react";
 
 <div class="space-y-6 mb-8">
 
@@ -14,7 +15,7 @@ This breakdown focuses on PC (mouse & keyboard) play and covers everything that 
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Movement & Player Mechanics
+## <User className="inline-block mr-3 mb-1" size={32} /> Movement & Player Mechanics
 
 <div class="space-y-6 mb-8">
 
@@ -24,19 +25,29 @@ Movement has been significantly rebalanced to be less "twitchy" and more grounde
 
 ### Slide/Jump Nerfs
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
 **Momentum Reduction**
-- Speed and momentum from sliding into a jump greatly reduced
+
+- Speed and momentum from sliding into a jump **greatly reduced**
 - Prevents extreme slide-jump chaining seen in beta
-- Repeated bunny-hopping now incurs larger stamina penalty
-- Jump height slightly lowered
+- Repeated bunny-hopping now incurs **larger stamina penalty**
+- Jump height **slightly lowered**
 - Successive jumps slow you down more
 
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Impact on Gameplay**
+
 - Can't spam slide-jumps with beta effectiveness
-- Movement spam is no longer viable
-- Positioning and tactical play rewarded over twitchy movement
+- Movement spam is **no longer viable**
+- **Positioning and tactical play rewarded** over twitchy movement
+
+</div>
 
 </div>
 
@@ -46,19 +57,29 @@ The slide-jump meta is dead. Focus on smart positioning and controlled movement 
 
 ### Accuracy While Moving
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
 **Grounded Gunplay**
-- Shooting while airborne far less accurate
-- Shooting while sliding far less accurate
-- Jump or slide and fire = big accuracy penalty
+
+- Shooting while airborne **far less accurate**
+- Shooting while sliding **far less accurate**
+- Jump or slide and fire = **big accuracy penalty**
 - Discourages mid-air run-and-gun tactics
 
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Improved Stability**
-- General weapon handling while moving normally has been refined
-- ADS transition is smoother
+
+- General weapon handling while moving normally has been **refined**
+- ADS transition is **smoother**
 - Retains accuracy better when strafing
 - More consistent feel for controlled movement
+
+</div>
 
 </div>
 
@@ -66,13 +87,18 @@ The slide-jump meta is dead. Focus on smart positioning and controlled movement 
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Physics Tweaks**
-- Initial acceleration when deploying chute reduced
+
+- Initial acceleration when deploying chute **reduced**
 - No more sudden unrealistic speed boost
-- Landing animations updated to be quicker and smoother
+- Landing animations updated to be **quicker and smoother**
 - No more heavy, drawn-out landing delays after short drops
-- Cutting chute mid-air no longer kills all momentum
+- Cutting chute mid-air **no longer kills all momentum**
 - Movement flow after parachuting feels more natural
+
+</div>
 
 </div>
 
@@ -80,36 +106,51 @@ The slide-jump meta is dead. Focus on smart positioning and controlled movement 
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Responsive Transitions**
-- Sprint to ADS is snappier for better target acquisition
-- Vaulting and climbing animations refined
+
+- Sprint to ADS is **snappier** for better target acquisition
+- Vaulting and climbing animations **refined**
 - Soldier mantles obstacles more fluidly
-- Crouch-to-stand transitions finish faster
+- Crouch-to-stand transitions finish **faster**
 - Overall movement and traversal more responsive and less clunky
+
+</div>
 
 </div>
 
 ### Camera Shake & Bug Fixes
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Camera Improvements**
-- Camera shake toned down in various situations
-- Camera kick when exiting slide reduced
+
+- Camera shake **toned down** in various situations
+- Camera kick when exiting slide **reduced**
 - Less shake when rapidly stopping/starting sprinting
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Major Bugs Fixed**
-- Weapon dispersion randomly spiking extremely high resolved
-- Takedown victims being flung upward fixed
-- Exploit allowing forbidden third-person camera view removed
-- Getting stuck in downed state after revive from headshot fixed
+
+- Weapon dispersion randomly spiking extremely high **resolved**
+- Takedown victims being flung upward **fixed**
+- Exploit allowing forbidden third-person camera view **removed**
+- Getting stuck in downed state after revive from headshot **fixed**
 - Numerous melee takedown, drag-and-revive, and vault detection improvements
+
+</div>
 
 </div>
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Vehicles
+## <Truck className="inline-block mr-3 mb-1" size={32} /> Vehicles
 
 <div class="space-y-6 mb-8">
 
@@ -121,30 +162,45 @@ Vehicles received significant handling improvements and survivability buffs, mak
 
 <div class="space-y-4 mb-8">
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Improved Agility**
-- More engine power and agility
+
+- **More engine power and agility**
 - Easier to control and survive with
 - More responsive altitude adjustment
 - Better strafing capability
-- Helps pilots dodge incoming projectiles more effectively
-- Overall more powerful and maneuverable than beta
+- Helps pilots **dodge incoming projectiles more effectively**
+- Overall **more powerful and maneuverable** than beta
+
+</div>
 
 </div>
 
 ### Tanks & Countermeasures
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
 **Turret Improvements**
-- Tank turrets can turn faster
-- Increased turret rotation speed
+
+- Tank turrets can turn **faster**
+- **Increased turret rotation speed**
 - Tank gunners can track targets more easily
 
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Survivability Boost**
-- Vehicle smoke countermeasures buffed
-- Popping smoke more reliably breaks missile lock-ons
+
+- Vehicle smoke countermeasures **buffed**
+- Popping smoke **more reliably breaks missile lock-ons**
 - Smoke breaks spotting more effectively
 - Helps shake enemies targeting you
+
+</div>
 
 </div>
 
@@ -152,12 +208,17 @@ Vehicles received significant handling improvements and survivability buffs, mak
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Consistency Across Modes**
-- Vehicle aiming now matches soldier aiming sensitivity
+
+- Vehicle aiming now **matches soldier aiming sensitivity**
 - Same default ranges/values as on-foot aiming
 - Works for both mouse and gamepad
 - Less jarring switching between infantry and vehicle aiming
-- Tuned mouse sensitivity transfers to turret control
+- Tuned mouse sensitivity **transfers to turret control**
+
+</div>
 
 </div>
 
@@ -169,26 +230,43 @@ Your infantry sensitivity settings now carry over to vehicles. No more jarring t
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Smarter Missiles**
-- SAM missiles have Navigation Terrain Avoidance enabled
-- AA missiles try to avoid slamming into ground
+
+- SAM missiles have **Navigation Terrain Avoidance enabled**
+- AA missiles **try to avoid slamming into ground**
 - Makes anti-air missiles more reliable against low-flying aircraft
-- MBT-LAW false alarm lock-on warning fixed
+- MBT-LAW false alarm lock-on warning **fixed**
 - No more continued warning sound after being hit
+
+</div>
 
 </div>
 
 ### UI & Feedback
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Better Information**
-- Ground vehicles with boost now display visible boost bar on HUD
+
+- Ground vehicles with boost now display **visible boost bar on HUD**
 - Can tell how much boost energy is left
-- Explosion and hit indicator visuals adjusted
-- Kill-feed icon for explosive kills updated
-- Hit markers when damaging infantry with vehicles clearer
-- Explosion bloom/flash reduced for better visibility
+- Explosion and hit indicator visuals **adjusted**
+- Kill-feed icon for explosive kills **updated**
+
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
+**Visual Clarity**
+
+- Hit markers when damaging infantry with vehicles **clearer**
+- Explosion bloom/flash **reduced** for better visibility
+
+</div>
 
 </div>
 
@@ -196,18 +274,23 @@ Your infantry sensitivity settings now carry over to vehicles. No more jarring t
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Improved Interactions**
-- Leopard tank wreck collision fixed (climbable from behind now)
-- Tank treads and vehicle wheels handle destructible objects more realistically
+
+- Leopard tank wreck collision **fixed** (climbable from behind now)
+- Tank treads and vehicle wheels handle destructible objects **more realistically**
 - Won't get completely stuck on small debris as often
-- Physics for running over things improved
+- Physics for running over things **improved**
 - Jet off-screen flyby sounds tuned (less overly loud boom when far away)
+
+</div>
 
 </div>
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Gadgets & Equipment
+## <Wrench className="inline-block mr-3 mb-1" size={32} /> Gadgets & Equipment
 
 <div class="space-y-6 mb-8">
 
@@ -217,21 +300,31 @@ Extensive balance tuning and bug fixes for explosives and specialist gear, with 
 
 ### Rocket Launcher Balancing
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
 **Spam Reduction**
-- Backblast damage reduced to reasonable level
+
+- Backblast damage reduced to **reasonable level**
 - No longer excessively hurting shooter or friendlies behind you
-- Rockets do less splash damage to infantry unless direct hit
+- Rockets do **less splash damage to infantry** unless direct hit
 - Discourages using rockets as "mini-grenades" against soldiers
 
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Improved Mechanics**
-- Arming distance removed—can detonate at close range
+
+- **Arming distance removed**—can detonate at close range
 - Shooting wall or floor nearby will explode immediately
 - Opens up more destruction indoors
-- Rocket explosions properly check for cover
+- Rocket explosions **properly check for cover**
 - Can no longer abuse splash through thin walls or objects
 - Cover protects more consistently from nearby rocket blasts
+
+</div>
 
 </div>
 
@@ -243,71 +336,126 @@ Rocket launcher spam against infantry has been significantly nerfed. Use them fo
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **RPG-7V2**
-- Iron sight/reticle picture adjusted for better aiming
-- Increased dispersion when ADS to prevent "quick-scoping"
+
+- Iron sight/reticle picture **adjusted** for better aiming
+- **Increased dispersion when ADS** to prevent "quick-scoping"
 - Won't erroneously hit cover when aiming just over an object
 
-**MBT-LAW**
-- Now default Engineer class launcher
-- Uses auto-guided missiles (lock on and fire—missile guides itself)
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+**MBT-LAW** — <span class="text-fs-gold font-semibold">Now Default Engineer Launcher</span>
+
+- Uses **auto-guided missiles** (lock on and fire—missile guides itself)
 - More accurate/predictable missile trajectory
-- Can't hip-fire blindly anymore (must aim)
-- Sight and HUD reticle cleaned up for clearer targeting
+- **Can't hip-fire blindly anymore** (must aim)
+- Sight and HUD reticle **cleaned up** for clearer targeting
 - Blast damage against vehicles now registers properly
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **MAS 148 Glaive**
-- Missile flight path adjusted for realism (no weird curving)
-- Two levels of zoom on scope for better long-range targeting
-- Can lock onto deployable weapons and emplacements
-- Cannot lock onto targets closer than 40m (needs distance)
-- Scope clipping and reticle display issues fixed
+
+- Missile flight path **adjusted** for realism (no weird curving)
+- **Two levels of zoom** on scope for better long-range targeting
+- Can lock onto **deployable weapons and emplacements**
+- **Cannot lock onto targets closer than 40m** (needs distance)
+- Scope clipping and reticle display issues **fixed**
 - Damage against vehicles registers properly
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **AT4**
-- Now uses "aim-guided" missile system
-- Can steer missile after firing
+
+- Now uses **"aim-guided" missile system**
+- Can **steer missile after firing**
 - Gives Engineers another guided option
+
+</div>
 
 </div>
 
 ### Other Gadget Changes
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **SLM-93A Spire**
-- Can no longer lock onto ultra-low flying air vehicles
-- Missiles now properly deal damage on hit
+
+- Can **no longer lock onto ultra-low flying air vehicles**
+- Missiles now **properly deal damage on hit**
+
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Airburst Incendiary**
-- Projectile detonates on impact reliably
+
+- Projectile detonates on impact **reliably**
 - Properly credits kill/damage to firing player
-- Reduced structural damage to buildings
-- Can't ADS while reloading
-- Smoke produced blocks spotting and lock-ons
+- **Reduced structural damage** to buildings
+- **Can't ADS while reloading**
+- Smoke produced **blocks spotting and lock-ons**
+
+</div>
+
+</div>
+
+<div class="space-y-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Thermal Scopes**
-- Prone/dying players show up "colder" (dimmer heat signature)
-- Sprinting players appear "hotter" and more visible
+
+- Prone/dying players show up **"colder"** (dimmer heat signature)
+- Sprinting players appear **"hotter"** and more visible
 - Helps distinguish targets by activity
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Grenades**
-- Smoke grenades no longer fail to detonate
-- Thermobaric grenade stun effect nerfed from 2.5s to 1s
-- Non-lethal grenades have distinct sepia-tinted UI icon
+
+- Smoke grenades **no longer fail to detonate**
+- Thermobaric grenade stun effect **nerfed** from <span class="text-fs-gold font-semibold">2.5s</span> to <span class="text-fs-gold font-semibold">1s</span>
+- Non-lethal grenades have **distinct sepia-tinted UI icon**
+
+</div>
 
 </div>
 
 ### Repair Tool & Defibrillator
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Balance Changes**
-- Repair Tool overheats faster during continuous use
+
+- Repair Tool **overheats faster** during continuous use
 - Can't infinitely repair vehicle under fire
-- Both can now damage enemy equipment
-- Defibrillator melee damage reduced
-- No longer one-shot kill healthy enemy
+- Both can now **damage enemy equipment**
+
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
+**Defibrillator**
+
+- Melee damage **reduced**
+- **No longer one-shot kill** healthy enemy
+
+</div>
 
 </div>
 
@@ -315,15 +463,25 @@ Rocket launcher spam against infantry has been significantly nerfed. Use them fo
 
 <div class="space-y-4 mb-8">
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Major Change: One-Use Per Player**
-- Each player can only spawn on particular beacon once
-- Self-destructs for that player after use
-- Up to 4 spawns total per squad on one beacon
+
+- Each player can **only spawn on particular beacon once**
+- **Self-destructs for that player** after use
+- Up to <span class="text-fs-gold font-semibold">4 spawns total per squad</span> on one beacon
 - Prevents infinite squad spawns from single hidden beacon
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Quality of Life**
-- Enemy beacons show icon on minimap when pinged
-- If spot is invalid, beacon drops at soldier's feet as fallback
+
+- Enemy beacons show **icon on minimap when pinged**
+- If spot is invalid, beacon **drops at soldier's feet** as fallback
+
+</div>
 
 </div>
 
@@ -333,24 +491,34 @@ Spawn beacons are now one-use per player. Place them strategically and communica
 
 ### T-UGS Sensor & Recon Drone
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **T-UGS Persistence**
-- No longer destroyed when owner dies
+
+- **No longer destroyed when owner dies**
 - Stays active until enemies destroy it or time expires
 - More effective for area defense
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Recon Drone**
-- Flies faster while carrying C4
-- Battery drains faster when carrying C4 (fair trade-off)
+
+- Flies **faster while carrying C4**
+- Battery **drains faster** when carrying C4 (fair trade-off)
 - Movement improved to feel more realistic
-- Self-destructs after 3s if flown out of bounds
+- **Self-destructs after 3s** if flown out of bounds
+
+</div>
 
 </div>
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Weapons & Gunplay
+## <Crosshair className="inline-block mr-3 mb-1" size={32} /> Weapons & Gunplay
 
 <div class="space-y-6 mb-8">
 
@@ -362,12 +530,17 @@ Automatic weapons retuned for better balance, with emphasis on rewarding control
 
 <div class="space-y-4 mb-8">
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **General Retuning**
-- Recoil patterns adjusted across many guns
-- Sustained full-auto fire at long range less effective
-- Increased bullet spread when firing automatics while ADS
-- Need burst fire or tap firing for distant targets
+
+- Recoil patterns **adjusted** across many guns
+- Sustained full-auto fire at long range **less effective**
+- **Increased bullet spread** when firing automatics while ADS
+- Need **burst fire or tap firing** for distant targets
 - Rewards controlled fire
+
+</div>
 
 </div>
 
@@ -377,16 +550,26 @@ Full-auto spray is no longer viable at range. Master burst-firing and recoil con
 
 ### Movement Accuracy
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **ADS Movement**
-- Aim more stable when ADS and moving
+
+- Aim **more stable** when ADS and moving
 - Makes tracking targets while strafing smoother
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Jump/Slide Shooting**
-- Shooting mid-jump highly inaccurate
-- Shooting during slide highly inaccurate
+
+- Shooting mid-jump **highly inaccurate**
+- Shooting during slide **highly inaccurate**
 - Need to be on ground to land shots reliably
+
+</div>
 
 </div>
 
@@ -394,27 +577,42 @@ Full-auto spray is no longer viable at range. Master burst-firing and recoil con
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Shotguns**
-- M87A1 requires more pellet hits to secure kill
+
+- M87A1 requires **more pellet hits** to secure kill
 - Rewards accurate center-mass shots
-- Crosshair properly represents pellet spread or slug accuracy
+- Crosshair **properly represents** pellet spread or slug accuracy
+
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Sniper Rifles**
-- "First-shot boost" now applies to every shot
+
+- **"First-shot boost" now applies to every shot**
 - Consistent and easier to predict
 - Each trigger pull behaves the same
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Attachments & Sights**
-- Numerous display bugs fixed
-- Reticles made more visible with slight glow
-- Can preview locked attachments
+
+- Numerous display bugs **fixed**
+- Reticles made **more visible** with slight glow
+- Can **preview locked attachments**
 - Scope zoom levels display correctly
+
+</div>
 
 </div>
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Maps & Modes
+## <Map className="inline-block mr-3 mb-1" size={32} /> Maps & Modes
 
 <div class="space-y-6 mb-8">
 
@@ -426,57 +624,92 @@ Map layouts redesigned for Rush and Breakthrough modes with better balance, plus
 
 <div class="space-y-4 mb-8">
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Layout Changes**
-- Cover placement adjusted
-- Objective locations tweaked
-- Spawn points refined
-- Better balance between attackers and defenders
-- Additional cover at chokepoints
-- Alternate routes added where needed
+
+- Cover placement **adjusted**
+- Objective locations **tweaked**
+- Spawn points **refined**
+- **Better balance** between attackers and defenders
+- **Additional cover** at chokepoints
+- **Alternate routes added** where needed
+
+</div>
 
 </div>
 
 ### Map-Specific Fixes
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Siege of Cairo**
-- Spawn kill problem resolved
-- Out-of-bounds exploits patched
-- Glitched rooftop spots inaccessible
+
+- Spawn kill problem **resolved**
+- Out-of-bounds exploits **patched**
+- Glitched rooftop spots **inaccessible**
+
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Iberian Offensive**
-- Out-of-bounds exploits patched
+
+- Out-of-bounds exploits **patched**
+
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Liberation Peak**
-- Improved Anti-Air balance
+
+- **Improved Anti-Air balance**
 - Jets and helicopters less dominant
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Operation Firestorm**
-- Better framerates and less stutter
+
+- **Better framerates and less stutter**
 - Player traversal improved
-- Indoor areas made brighter
-- Spawn animation bounce effect removed
+- Indoor areas made **brighter**
+- Spawn animation bounce effect **removed**
+
+</div>
 
 </div>
 
 ### Spawn System
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Squad Deathmatch**
-- Simplified to one-button respawn
+
+- Simplified to **one-button respawn**
 - Faster deployment without extra clicks
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **General**
-- Warning prompt if leaving match early
+
+- **Warning prompt** if leaving match early
 - Explains XP progress loss
+
+</div>
 
 </div>
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## UI & HUD Improvements
+## <Monitor className="inline-block mr-3 mb-1" size={32} /> UI & HUD Improvements
 
 <div class="space-y-6 mb-8">
 
@@ -488,11 +721,16 @@ Extensive UI polish with accurate information display, better menus, and improve
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Accurate Information**
-- Weapon and gadget names displayed correctly
-- Class icons and names show properly
-- UI updates correctly after switching class
+
+- Weapon and gadget names displayed **correctly**
+- Class icons and names show **properly**
+- UI updates **correctly after switching class**
 - More accurate and easier to read
+
+</div>
 
 </div>
 
@@ -500,12 +738,17 @@ Extensive UI polish with accurate information display, better menus, and improve
 
 <div class="space-y-4 mb-8">
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Better Organization**
-- Improved organization of attachments and gear
-- Can preview locked attachments
-- Controller navigation improved
-- Mouse navigation smoother
-- Stay on screen feature for continued editing
+
+- **Improved organization** of attachments and gear
+- Can **preview locked attachments**
+- Controller navigation **improved**
+- Mouse navigation **smoother**
+- **Stay on screen** feature for continued editing
+
+</div>
 
 </div>
 
@@ -513,17 +756,32 @@ Extensive UI polish with accurate information display, better menus, and improve
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Friendly Indicators**
-- Nametags show when being resupplied or revived
+
+- Nametags show **when being resupplied or revived**
 - Understand when being helped by teammate
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Ping System**
-- Correctly marks enemies
-- Pings animate and show arrows at screen edge
-- Enemy through smoke shows as red danger icon
+
+- **Correctly marks enemies**
+- Pings **animate and show arrows** at screen edge
+- Enemy through smoke shows as **red danger icon**
+
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Vehicle Feedback**
-- Hit markers and damage indicators more informative
+
+- Hit markers and damage indicators **more informative**
+
+</div>
 
 </div>
 
@@ -531,17 +789,22 @@ Extensive UI polish with accurate information display, better menus, and improve
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Improvements**
-- Geometry layering fixed
-- Size options added (Small/Medium/Large)
-- Objective markers have directional arrows
-- Non-lethal grenades have sepia-tinted icons
+
+- Geometry layering **fixed**
+- Size options added (<span class="text-fs-gold font-semibold">Small/Medium/Large</span>)
+- Objective markers have **directional arrows**
+- Non-lethal grenades have **sepia-tinted icons**
+
+</div>
 
 </div>
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Settings & PC-Specific Changes
+## <Gamepad2 className="inline-block mr-3 mb-1" size={32} /> Settings & PC-Specific Changes
 
 <div class="space-y-6 mb-8">
 
@@ -551,25 +814,45 @@ Settings menu refined with PC-specific options, new toggles, and better organiza
 
 ### New Options
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Voice Over Volume**
-- Separate VOIP volume slider
+
+- **Separate VOIP volume slider**
 - Adjust voice chat independently of game sounds
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Camera & Accessibility**
-- Disable camera roll during combat roll
-- Reduce camera shake/bob while sprinting
+
+- **Disable camera roll** during combat roll
+- **Reduce camera shake/bob** while sprinting
 - Great for motion-sensitive players
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Minimap Size**
-- Adjust in gameplay settings (Small/Medium/Large)
+
+- Adjust in gameplay settings (<span class="text-fs-gold font-semibold">Small/Medium/Large</span>)
 - Perfect for high-res monitors
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Flick Look**
-- Threshold setting for quick turns
+
+- **Threshold setting** for quick turns
 - Adjust or disable on PC
 - Prevents accidental super-fast spins
+
+</div>
 
 </div>
 
@@ -579,24 +862,34 @@ Spend time in settings to tweak new options—especially HUD, VOIP, and camera s
 
 ### Usability Improvements
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Reorganization**
-- V-Sync moved to Display settings
-- Surface customization button added
-- HUD auto-hide now default
-- PC/console settings clearly separated
+
+- V-Sync moved to **Display settings**
+- **Surface customization button** added
+- **HUD auto-hide** now default
+- PC/console settings **clearly separated**
+
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Defaults**
-- Voice chat defaulted to OFF
+
+- Voice chat defaulted to <span class="text-fs-gold font-semibold">OFF</span>
 - Must manually enable VOIP
-- Improved audio mix out-of-box
+- **Improved audio mix** out-of-box
+
+</div>
 
 </div>
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Audio Improvements
+## <Volume2 className="inline-block mr-3 mb-1" size={32} /> Audio Improvements
 
 <div class="space-y-6 mb-8">
 
@@ -608,10 +901,15 @@ Major audio pass for better clarity, awareness, and immersion with improved posi
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Better Awareness**
-- Directional ping sounds more audible
-- Commorose sounds quieter
+
+- Directional ping sounds **more audible**
+- Commorose sounds **quieter**
 - UI sounds balanced to be helpful but not overwhelming
+
+</div>
 
 </div>
 
@@ -619,12 +917,17 @@ Major audio pass for better clarity, awareness, and immersion with improved posi
 
 <div class="space-y-4 mb-8">
 
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Enhanced Audio**
-- Tank cannons and vehicle HMGs sound more powerful
-- Distant explosions balanced
-- Suppression audio effects added
-- Environmental reverb based on location
-- Shotguns have more "punch" and differentiation
+
+- Tank cannons and vehicle HMGs sound **more powerful**
+- Distant explosions **balanced**
+- **Suppression audio effects** added
+- **Environmental reverb** based on location
+- Shotguns have more **"punch" and differentiation**
+
+</div>
 
 </div>
 
@@ -632,11 +935,16 @@ Major audio pass for better clarity, awareness, and immersion with improved posi
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Fixed Issues**
-- Helicopter flare sounds play for all crew
-- Tank Active Protection System triggers on time
-- Vehicle damage states match audio correctly
-- Squad radio chatter plays in exposed vehicle seats
+
+- Helicopter flare sounds play for **all crew**
+- Tank Active Protection System triggers **on time**
+- Vehicle damage states **match audio correctly**
+- Squad radio chatter plays in **exposed vehicle seats**
+
+</div>
 
 </div>
 
@@ -644,17 +952,22 @@ Major audio pass for better clarity, awareness, and immersion with improved posi
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **Refined Experience**
-- First-person weapon sounds louder and more detailed
-- Explosion reverb toned down
+
+- First-person weapon sounds **louder and more detailed**
+- Explosion reverb **toned down**
 - Better clarity without muddiness
-- Volume difference between first/third person reduced
+- Volume difference between first/third person **reduced**
+
+</div>
 
 </div>
 
 <div class="my-12 border-t-2 border-primary/30"></div>
 
-## Network & Performance
+## <Wifi className="inline-block mr-3 mb-1" size={32} /> Network & Performance
 
 <div class="space-y-6 mb-8">
 
@@ -664,20 +977,30 @@ Critical netcode optimizations to address "dying behind cover" issues and improv
 
 ### Netcode Improvements
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
 
 **Fairer Gunfights**
-- Network code optimized for fairer time-to-death
-- Reduces desync issues
+
+- Network code **optimized for fairer time-to-death**
+- **Reduces desync issues**
 - Fewer instances of getting shot after reaching cover
-- Peeker's advantage reduced
+- **Peeker's advantage reduced**
 - Damage matches what you see more closely
 
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
 **Hit Registration**
-- Cases of invisible damage sources minimized
-- Health bar updates immediately
+
+- Cases of **invisible damage sources minimized**
+- Health bar **updates immediately**
 - More reliable hit detection
-- Damage feedback consistent with screen events
+- Damage feedback **consistent with screen events**
+
+</div>
 
 </div>
 
@@ -689,11 +1012,16 @@ The netcode improvements should dramatically reduce frustrating "I was behind co
 
 <div class="space-y-4 mb-8">
 
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **General Improvements**
-- Operation Firestorm runs smoother
-- CPU and GPU optimization work
+
+- Operation Firestorm runs **smoother**
+- **CPU and GPU optimization** work
 - Better stability
-- Server performance improved for 128-player modes
+- Server performance improved for **128-player modes**
+
+</div>
 
 </div>
 
@@ -707,17 +1035,27 @@ Adjustments to cross-play settings and AI behavior for better custom server func
 
 </div>
 
-<div class="space-y-4 mb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
 
 **Cross-Play**
-- Option to toggle cross-play removed for Portal servers
-- Cross-play standardized (likely always on)
+
+- Option to toggle cross-play **removed** for Portal servers
+- Cross-play **standardized** (likely always on)
 - Everyone plays together
 
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+
 **AI Soldiers**
-- Now obey weapon/loadout restrictions
+
+- Now **obey weapon/loadout restrictions**
 - Will follow rules you configure
 - Important for practice modes and PvE scenarios
+
+</div>
 
 </div>
 
