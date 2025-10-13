@@ -1,36 +1,33 @@
 ---
 import SideNavMenu from "@/components/docs/SideNavMenu.astro";
-
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
 import { MenuIcon, X } from "lucide-react";
-
-import { menu } from "@/lib/utils";
-
+import { getCollection } from "astro:content";
+import { buildMenu } from "@/lib/utils";
 import { menu_items, docconfig } from "@/config";
+
+// ✅ Fetch docs and build menu on the server
+const docs = await getCollection("docs");
+const menu = buildMenu(docs);
 
 const pathname: string = new URL(Astro.request.url).pathname;
 const pathname_part: string = pathname.split("/")[1];
 ---
-
 <style>
   .menu-overlay {
     display: none;
   }
-
   .menu-overlay.active {
     display: block;
   }
 </style>
-
 <div onclick="toggleMenu()">
   <Button variant={"ghost"} size="icon" client:load>
     <MenuIcon className="h-[1.2rem] w-[1.2rem]" />
   </Button>
 </div>
-
 <div
   class="menu-overlay z-[100] w-screen h-screen absolute top-0 left-0 px-6 py-4 bg-background flex flex-col"
 >
@@ -65,7 +62,6 @@ const pathname_part: string = pathname.split("/")[1];
     </div>
   </ScrollArea>
 </div>
-
 <script is:inline>
   function toggleMenu() {
     const menuOverlay = document.querySelector(".menu-overlay");
@@ -73,7 +69,6 @@ const pathname_part: string = pathname.split("/")[1];
       menuOverlay.classList.toggle("active");
     }
   }
-
   function closeMenu() {
     const menuOverlay = document.querySelector(".menu-overlay");
     if (menuOverlay) {

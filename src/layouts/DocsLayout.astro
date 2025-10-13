@@ -3,17 +3,18 @@ import HeadSEO from "@/components/core/HeadSEO.astro";
 import Header from "@/components/core/Header.astro";
 import Footer from "@/components/core/Footer.astro";
 import { Copy } from "@/components/core/Copy";
-
 import SideNavMenu from "@/components/docs/SideNavMenu.astro";
 import TableofContent from "@/components/docs/TableofContents.astro";
 import MainContent from "@/components/docs/MainContent.astro";
-
 import { ScrollArea } from "@/components/ui/scroll-area";
-
 import type { DocsLayoutProps } from "@/lib/types";
-import { menu, capitalizeFirstLetter } from "@/lib/utils";
-
+import { getCollection } from "astro:content";
+import { buildMenu, capitalizeFirstLetter } from "@/lib/utils";
 import { LOCALE, SITE, docconfig } from "@/config";
+
+// ✅ Fetch docs and build menu on the server
+const docs = await getCollection("docs");
+const menu = buildMenu(docs);
 
 const {
   title,
@@ -30,7 +31,6 @@ const {
   headings,
 } = Astro.props as DocsLayoutProps;
 ---
-
 <!doctype html>
 <html lang=`${LOCALE.lang ?? "en"}` class="scroll-smooth">
   <head>
@@ -47,7 +47,7 @@ const {
       <Header class="border-b bg-background" />
       <main class="flex flex-1 flex-col md:flex-row container">
         <div
-          class=`py-4 hidden md:flex max-h-static_sidemenu sticky top-[69px] 
+          class=`py-4 hidden md:flex max-h-static_sidemenu sticky top-[69px]
           ${hide_toc && hide_sidenav && max_width ? "w-screen" : "md:px-6 md:w-1/4 lg:w-1/5"}`
         >
           <ScrollArea className="h-full w-full" client:only="react">

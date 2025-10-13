@@ -1,5 +1,4 @@
 import type { MarkdownHeading } from "astro";
-import { getCollection } from "astro:content";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -16,9 +15,6 @@ import { side_nav_menu_order } from "@/config";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-
-// Fetch the collection with type
-const docs: DocsEntry[] = await getCollection("docs");
 
 // Helper function to capitalize the first letter of a string
 export const capitalizeFirstLetter = (str: string) => {
@@ -39,7 +35,8 @@ function sortItems(
 }
 
 // Function to build nested menu structure
-function buildMenu(items: DocsEntry[]): MenuItem[] {
+// ✅ NOW IT ACCEPTS DOCS AS A PARAMETER INSTEAD OF FETCHING THEM!
+export function buildMenu(items: DocsEntry[]): MenuItem[] {
   const menu: MenuItemWithDraft[] = [];
 
   // Create a map to quickly look up the order of all items
@@ -127,8 +124,6 @@ function buildMenu(items: DocsEntry[]): MenuItem[] {
 
   return topLevelMenu;
 }
-
-export const menu = buildMenu(docs);
 
 // Function to build breadcrumb structure
 export function buildBreadcrumbs(

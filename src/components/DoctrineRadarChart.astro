@@ -1,0 +1,389 @@
+---
+// Interactive Doctrine Radar Chart Component for Astro
+// Shows strengths/weaknesses across 7 dimensions
+interface Props {
+  faction?: string;
+  doctrine?: string;
+  showComparison?: boolean;
+}
+
+const { faction, doctrine, showComparison = false } = Astro.props;
+
+// Doctrine data: Artillery, Anti-Tank, Heavy Armor, Elite Infantry, Mobility, Defense, Air Power
+const doctrineData = {
+  // USA
+  "USA Infantry": [0.8, 0.5, 0.2, 0.6, 0.3, 0.7, 0.4],
+  "USA Tank Destroyer": [0.3, 1.0, 0.3, 0.4, 0.6, 0.5, 0.3],
+  "USA Ranger": [0.4, 0.6, 0.3, 0.9, 0.5, 0.4, 0.5],
+  "USA Airborne": [0.3, 0.5, 0.2, 0.8, 0.7, 0.3, 0.9],
+  "USA Mechanized": [0.5, 0.7, 0.5, 0.5, 0.8, 0.4, 0.4],
+  "USA Armored": [0.4, 0.6, 0.9, 0.4, 0.7, 0.3, 0.5],
+  
+  // Wehrmacht
+  "Wehrmacht Ost": [0.6, 0.7, 0.4, 0.3, 0.2, 0.9, 0.3],
+  "Wehrmacht Leichte": [0.4, 0.5, 0.3, 0.5, 0.9, 0.5, 0.4],
+  "Wehrmacht Infanterie": [1.0, 0.8, 0.3, 0.4, 0.4, 0.7, 0.3],
+  "Wehrmacht Fallschirmjäger": [0.3, 0.6, 0.2, 1.0, 0.5, 0.4, 0.8],
+  "Wehrmacht Straf": [0.6, 0.5, 0.5, 0.7, 0.4, 0.3, 0.3],
+  "Wehrmacht Panzer": [0.4, 0.7, 0.9, 0.5, 0.6, 0.4, 0.3],
+  
+  // USSR
+  "USSR Artilleriyskaya": [1.0, 0.4, 0.5, 0.3, 0.3, 0.9, 0.2],
+  "USSR Istrebitel": [0.4, 0.9, 0.6, 0.4, 0.4, 0.5, 0.6],
+  "USSR Strelkovaya": [0.7, 0.5, 0.6, 0.3, 0.3, 0.6, 0.2],
+  "USSR Motostrelkovaya": [0.5, 0.5, 0.5, 0.8, 0.7, 0.4, 0.6],
+  "USSR Udarnaya": [0.7, 0.4, 0.8, 0.9, 0.5, 0.5, 0.3],
+  "USSR Tankovaya": [0.4, 0.6, 0.9, 0.6, 0.6, 0.4, 0.7],
+  
+  // UK
+  "UK Artillery": [1.0, 0.5, 0.4, 0.5, 0.3, 0.8, 0.3],
+  "UK Parachute": [0.3, 0.7, 0.3, 0.9, 0.6, 0.3, 0.9],
+  "UK Guard": [0.7, 0.5, 0.7, 0.8, 0.3, 0.7, 0.4],
+  "UK Armored": [0.4, 0.7, 0.6, 0.6, 0.8, 0.5, 0.4],
+  "UK Commando": [0.5, 0.3, 0.4, 0.9, 0.7, 0.4, 0.5],
+  "UK Tank": [0.5, 0.6, 0.9, 0.7, 0.4, 0.5, 0.3],
+  
+  // Waffen-SS
+  "SS Panzerjäger": [0.3, 0.9, 0.6, 0.7, 0.5, 0.4, 0.9],
+  "SS Propaganda": [0.5, 0.7, 0.5, 0.6, 0.4, 0.7, 0.4],
+  "SS Mechanized": [0.8, 0.5, 0.4, 0.5, 0.3, 0.9, 0.3],
+  "SS Jäger": [0.3, 0.6, 0.7, 0.9, 0.6, 0.4, 0.8],
+  "SS Sturm": [0.7, 0.5, 0.6, 0.8, 0.4, 0.5, 0.3],
+  "SS Panzer": [0.4, 0.7, 0.9, 0.6, 0.6, 0.4, 0.5],
+};
+
+const categories = [
+  "Artillery",
+  "Anti-Tank", 
+  "Heavy Armor",
+  "Elite Infantry",
+  "Mobility",
+  "Defense",
+  "Air Power"
+];
+
+// Color schemes per faction
+const factionColors = {
+  USA: { bg: "rgba(59, 130, 246, 0.2)", border: "rgb(59, 130, 246)" },
+  Wehrmacht: { bg: "rgba(156, 163, 175, 0.2)", border: "rgb(75, 85, 99)" },
+  USSR: { bg: "rgba(239, 68, 68, 0.2)", border: "rgb(220, 38, 38)" },
+  UK: { bg: "rgba(34, 197, 94, 0.2)", border: "rgb(22, 163, 74)" },
+  SS: { bg: "rgba(168, 85, 247, 0.2)", border: "rgb(147, 51, 234)" },
+};
+---
+
+<div class="doctrine-radar-container">
+  <div class="controls mb-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for="faction-select" class="block text-sm font-medium mb-2">Select Faction</label>
+        <select 
+          id="faction-select" 
+          class="w-full px-4 py-2 rounded-md border border-border bg-card text-foreground"
+        >
+          <option value="">All Factions</option>
+          <option value="USA">USA</option>
+          <option value="Wehrmacht">Wehrmacht</option>
+          <option value="USSR">USSR</option>
+          <option value="UK">United Kingdom</option>
+          <option value="SS">Waffen-SS</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="doctrine-select" class="block text-sm font-medium mb-2">Select Doctrine</label>
+        <select 
+          id="doctrine-select" 
+          class="w-full px-4 py-2 rounded-md border border-border bg-card text-foreground"
+        >
+          <option value="">Choose a doctrine...</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="mt-4 flex items-center gap-4">
+      <label class="flex items-center gap-2 cursor-pointer">
+        <input type="checkbox" id="comparison-mode" class="w-4 h-4" />
+        <span class="text-sm">Enable Comparison Mode (select 2-3 doctrines)</span>
+      </label>
+      
+      <button 
+        id="clear-comparison" 
+        class="px-4 py-2 text-sm rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+      >
+        Clear Comparison
+      </button>
+    </div>
+  </div>
+  
+  <div class="chart-wrapper">
+    <canvas id="doctrine-radar-chart"></canvas>
+  </div>
+  
+  <div id="doctrine-info" class="mt-6 p-4 rounded-lg border border-border bg-card/50 hidden">
+    <h3 class="text-lg font-semibold mb-2" id="doctrine-title"></h3>
+    <div id="doctrine-description" class="text-sm opacity-80"></div>
+  </div>
+</div>
+
+<script define:vars={{ doctrineData, categories, factionColors }}>
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', function() {
+    // Import Chart.js from CDN
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js';
+    script.onload = initChart;
+    document.head.appendChild(script);
+  });
+  
+  let chart = null;
+  let comparisonMode = false;
+  let selectedDoctrines = [];
+  
+  const doctrineDescriptions = {
+    "USA Infantry": "Combined arms with strong artillery and defensive capabilities",
+    "USA Tank Destroyer": "Supreme anti-tank specialists with dedicated TDs",
+    "USA Ranger": "Elite light infantry with infiltration and assault capabilities",
+    "USA Airborne": "Rapid deployment paratroopers with strong air support",
+    "USA Mechanized": "Mobile combined arms with versatile halftrack support",
+    "USA Armored": "Heavy tank focus with strong armor penetration",
+    
+    "Wehrmacht Ost": "Static defense with extensive fortifications",
+    "Wehrmacht Leichte": "Mobile warfare with fast-moving light vehicles",
+    "Wehrmacht Infanterie": "Balanced generalist with strong artillery",
+    "Wehrmacht Fallschirmjäger": "Elite airborne with superior infantry",
+    "Wehrmacht Straf": "Aggressive assault doctrine with penal troops",
+    "Wehrmacht Panzer": "Heavy armor spearhead with Panthers and Tigers",
+    
+    "USSR Artilleriyskaya": "Artillery fortress with engineers and KV-8 flamethrowers",
+    "USSR Istrebitel": "Tank destroyer specialists with ISU-152 assault guns",
+    "USSR Strelkovaya": "Mass conscript infantry with affordable KV-1 heavies",
+    "USSR Motostrelkovaya": "ODON special forces with lend-lease mediums",
+    "USSR Udarnaya": "Shock troops with brutal CQC and heavy breakthrough armor",
+    "USSR Tankovaya": "Discounted tank mass with Guards infantry core",
+    
+    "UK Artillery": "Superior indirect fire with Commonwealth infantry",
+    "UK Parachute": "Elite airborne with strong air support and late AT",
+    "UK Guard": "Elite Guards infantry with Churchill heavy armor",
+    "UK Armored": "Flexible medium armor with Polish battlegroup",
+    "UK Commando": "Stealth infiltration with rockets and ambush tactics",
+    "UK Tank": "Churchill breakthrough force with AVRE and Crocodile",
+    
+    "SS Panzerjäger": "Versatile combined arms with Jagdtiger super-heavy TD",
+    "SS Propaganda": "Volkssturm militia with one-shot AT ambushes",
+    "SS Mechanized": "Defensive bunkers with heavy artillery support",
+    "SS Jäger": "Elite specialists with vision dominance and Panthers",
+    "SS Sturm": "Assault breakthrough with Sturmtiger rocket mortar",
+    "SS Panzer": "Heavy armor spearhead with Panthers and Tigers",
+  };
+  
+  function initChart() {
+    const ctx = document.getElementById('doctrine-radar-chart');
+    if (!ctx || typeof Chart === 'undefined') {
+      console.log('Chart.js not loaded yet or canvas not found');
+      return;
+    }
+    
+    chart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: categories,
+        datasets: []
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+          r: {
+            beginAtZero: true,
+            max: 1,
+            ticks: {
+              stepSize: 0.2,
+              color: 'rgba(255, 255, 255, 0.6)'
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.1)'
+            },
+            pointLabels: {
+              color: 'rgba(255, 255, 255, 0.9)',
+              font: {
+                size: 14,
+                weight: 'bold'
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom',
+            labels: {
+              color: 'rgba(255, 255, 255, 0.9)',
+              padding: 15,
+              font: {
+                size: 12
+              }
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const label = context.dataset.label || '';
+                const value = Math.round(context.parsed.r * 100);
+                return `${label}: ${value}%`;
+              }
+            }
+          }
+        }
+      }
+    });
+    
+    setupEventListeners();
+    // Initialize with all doctrines available
+    updateDoctrineOptions('');
+  }
+  
+  function setupEventListeners() {
+    const factionSelect = document.getElementById('faction-select');
+    const doctrineSelect = document.getElementById('doctrine-select');
+    const comparisonCheckbox = document.getElementById('comparison-mode');
+    const clearButton = document.getElementById('clear-comparison');
+    
+    if (!factionSelect || !doctrineSelect || !comparisonCheckbox || !clearButton) {
+      console.error('One or more elements not found');
+      return;
+    }
+    
+    factionSelect.addEventListener('change', (e) => {
+      updateDoctrineOptions(e.target.value);
+      if (!comparisonMode) {
+        selectedDoctrines = [];
+        updateChart();
+      }
+    });
+    
+    doctrineSelect.addEventListener('change', (e) => {
+      if (e.target.value) {
+        if (comparisonMode) {
+          if (!selectedDoctrines.includes(e.target.value) && selectedDoctrines.length < 3) {
+            selectedDoctrines.push(e.target.value);
+            updateChart();
+          }
+        } else {
+          selectedDoctrines = [e.target.value];
+          updateChart();
+          showDoctrineInfo(e.target.value);
+        }
+      }
+    });
+    
+    comparisonCheckbox.addEventListener('change', (e) => {
+      comparisonMode = e.target.checked;
+      if (!comparisonMode && selectedDoctrines.length > 1) {
+        selectedDoctrines = selectedDoctrines.slice(0, 1);
+        updateChart();
+      }
+    });
+    
+    clearButton.addEventListener('click', () => {
+      selectedDoctrines = [];
+      doctrineSelect.value = '';
+      updateChart();
+      hideDoctrineInfo();
+    });
+  }
+  
+  function updateDoctrineOptions(faction) {
+    const doctrineSelect = document.getElementById('doctrine-select');
+    if (!doctrineSelect) return;
+    
+    doctrineSelect.innerHTML = '<option value="">Choose a doctrine...</option>';
+    
+    const doctrines = Object.keys(doctrineData).filter(key => {
+      if (!faction) return true;
+      return key.startsWith(faction);
+    });
+    
+    doctrines.forEach(doctrine => {
+      const option = document.createElement('option');
+      option.value = doctrine;
+      option.textContent = doctrine;
+      doctrineSelect.appendChild(option);
+    });
+    
+    console.log('Updated doctrine options:', doctrines.length, 'doctrines');
+  }
+  
+  function updateChart() {
+    if (!chart) return;
+    
+    chart.data.datasets = selectedDoctrines.map((doctrine, index) => {
+      const faction = doctrine.split(' ')[0];
+      const colors = factionColors[faction] || factionColors.USA;
+      
+      // Vary colors slightly for comparison mode
+      const alpha = comparisonMode ? 0.3 - (index * 0.05) : 0.2;
+      const borderWidth = comparisonMode ? 2 : 3;
+      
+      return {
+        label: doctrine,
+        data: doctrineData[doctrine],
+        backgroundColor: colors.bg.replace('0.2', alpha.toString()),
+        borderColor: colors.border,
+        borderWidth: borderWidth,
+        pointBackgroundColor: colors.border,
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: colors.border
+      };
+    });
+    
+    chart.update();
+  }
+  
+  function showDoctrineInfo(doctrine) {
+    const infoDiv = document.getElementById('doctrine-info');
+    const titleDiv = document.getElementById('doctrine-title');
+    const descDiv = document.getElementById('doctrine-description');
+    
+    if (!infoDiv || !titleDiv || !descDiv) return;
+    
+    titleDiv.textContent = doctrine;
+    descDiv.textContent = doctrineDescriptions[doctrine] || '';
+    infoDiv.classList.remove('hidden');
+  }
+  
+  function hideDoctrineInfo() {
+    const infoDiv = document.getElementById('doctrine-info');
+    if (infoDiv) {
+      infoDiv.classList.add('hidden');
+    }
+  }
+</script>
+
+<style>
+  .doctrine-radar-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  .chart-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .doctrine-radar-container {
+      padding: 1rem;
+    }
+    
+    .chart-wrapper {
+      max-width: 100%;
+    }
+  }
+</style>

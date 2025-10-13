@@ -1,4 +1,3 @@
-import { getCollection } from "astro:content";
 import Fuse, { type FuseResult, type IFuseOptions } from "fuse.js";
 import { useState, useMemo, useEffect } from "react";
 
@@ -30,8 +29,6 @@ function extractHeaders(body: string): string[] {
   }
   return headers;
 }
-
-const docs: DocsEntry[] = await getCollection("docs");
 
 const options: IFuseOptions<DocsEntry> = {
   includeScore: true,
@@ -69,7 +66,12 @@ const options: IFuseOptions<DocsEntry> = {
   ],
 };
 
-export function Search() {
+// ✅ NOW IT ACCEPTS DOCS AS A PROP!
+interface SearchProps {
+  docs: DocsEntry[];
+}
+
+export function Search({ docs }: SearchProps) {
   const [open, setOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const fuse: Fuse<DocsEntry> = useMemo(() => new Fuse(docs, options), [docs]);

@@ -2,17 +2,13 @@
 import { ModeToggle } from "@/components/core/ModeToggle";
 import HamNavMenu from "@/components/core/HamNavMenu.astro";
 import NavMenu from "@/components/core/NavMenu.astro";
-import { Search } from "@/components/core/Search";
-
+import SearchWrapper from "@/components/core/SearchWrapper.astro";
 import { Button } from "@/components/ui/button";
-
 import { docconfig, SITE } from "@/config";
 import { Github } from "lucide-react";
-
 // To pass the tailwindcss classes to the astro component
 const { class: className } = Astro.props;
 ---
-
 <header
   class:list={[
     "py-4 px-6 md:px-16 lg:px-48 w-full sticky top-0 z-50",
@@ -35,9 +31,8 @@ const { class: className } = Astro.props;
         <NavMenu />
       </div>
     </div>
-
     <div class="flex flex-row gap-2 md:px-8">
-      {!docconfig.hide_search && <Search client:only="react" />}
+      {!docconfig.hide_search && <SearchWrapper />}
       {
         !docconfig.hide_repo_button && (
           <a href={SITE.repo} target="_blank">
@@ -51,14 +46,12 @@ const { class: className } = Astro.props;
         <HamNavMenu />
         <ModeToggle client:load transition:persist />
       </div>
-
       <div class="flex-row gap-4 hidden md:flex">
         <ModeToggle client:load transition:persist />
       </div>
     </div>
   </div>
 </header>
-
 <script is:inline>
   function setDarkMode(document) {
     const getThemePreference = () => {
@@ -74,7 +67,6 @@ const { class: className } = Astro.props;
     };
     const isDark = getThemePreference() === "dark";
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");
-
     if (typeof localStorage !== "undefined") {
       const observer = new MutationObserver(() => {
         const isDark = document.documentElement.classList.contains("dark");
@@ -86,9 +78,7 @@ const { class: className } = Astro.props;
       });
     }
   }
-
   setDarkMode(document);
-
   document.addEventListener("astro:before-swap", (ev) => {
     // Pass the incoming document to set the theme on it
     setDarkMode(ev.newDocument);

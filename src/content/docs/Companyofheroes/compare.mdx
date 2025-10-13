@@ -1,0 +1,620 @@
+---
+title: Doctrine Comparison Tool | Interactive Strategy Guide
+description: Compare Spearhead doctrine strengths and weaknesses across all factions with our interactive radar chart visualization tool.
+---
+
+import Callout from "@/components/Callout.astro";
+import DoctrineRadarChart from "@/components/DoctrineRadarChart.astro";
+
+<div class="space-y-6 mb-12">
+
+# Doctrine Comparison Tool
+
+**Visualize and compare doctrine strengths across all five factions.** Use our interactive radar chart to analyze tactical capabilities, identify complementary doctrines for team play, and discover counters to opponent strategies. Perfect for planning your army composition or learning matchup advantages.
+
+</div>
+
+<Callout variant="tip">
+**Quick Start:** Select a faction and doctrine from the dropdowns below to see its capabilities visualized. Enable comparison mode to overlay multiple doctrines and identify strategic differences at a glance.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Interactive Radar Chart
+
+<div class="space-y-6 mb-8">
+
+The radar chart below visualizes doctrine performance across seven critical dimensions. Each axis represents a key battlefield capability, with values ranging from weak (center) to strong (outer edge). Use this tool to understand doctrine identity, find your playstyle match, or analyze opponent weaknesses.
+
+</div>
+
+<DoctrineRadarChart />
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Understanding the Metrics
+
+<div class="space-y-6 mb-8">
+
+Each doctrine is evaluated across seven dimensions that define its battlefield role and strategic capabilities. Here's what each metric represents and why it matters:
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Artillery
+
+**Indirect fire capability and area denial**
+
+Measures the doctrine's ability to deliver devastating indirect fire through mortars, howitzers, rocket artillery, and mobile artillery platforms. High artillery ratings enable:
+
+- Breaking fortified positions
+- Punishing infantry blobs
+- Controlling map zones through constant bombardment
+- Supporting attacks with rolling barrages
+
+**High Artillery Doctrines:** USSR Artilleriyskaya (1.0), Wehrmacht Infanterie (1.0), UK Royal Artillery (1.0)
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Anti-Tank
+
+**Tank destroyer effectiveness and armor denial**
+
+Represents dedicated anti-tank capability through TDs, AT guns, infantry AT weapons, and ambush tactics. Strong anti-tank enables:
+
+- Countering enemy armor pushes
+- Protecting infantry from tank support
+- Controlling fuel points safely
+- Late-game armor duels
+
+**High Anti-Tank Doctrines:** USA Tank Destroyer (1.0), USSR Istrebitel (0.9), SS Panzerjäger (0.9)
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Heavy Armor
+
+**Late-game heavy tank strength**
+
+Evaluates access to powerful late-game armor including Tigers, Panthers, IS-2s, Churchills, and super-heavies. High ratings mean:
+
+- Dominating late-game armor battles
+- Breaking through defensive lines
+- Anchoring sustained pushes
+- High survivability under fire
+
+**High Heavy Armor Doctrines:** USA Armored (0.9), Wehrmacht Panzer (0.9), USSR Tankovaya (0.9), UK Tank (0.9), SS Panzer (0.9)
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Elite Infantry
+
+**Quality of specialist infantry units**
+
+Measures the caliber of elite infantry including Rangers, Fallschirmjäger, Commandos, Shock Troops, and special forces. Elite infantry provides:
+
+- Winning crucial engagements
+- Holding key positions
+- Urban/forest combat superiority
+- Breakthrough assault capability
+
+**High Elite Infantry Doctrines:** Wehrmacht Fallschirmjäger (1.0), USSR Udarnaya (0.9), UK Parachute (0.9), UK Commando (0.9), SS Jäger (0.9)
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Mobility
+
+**Speed, maneuverability, and tempo**
+
+Represents access to fast-moving units including light vehicles, halftracks, mechanized infantry, and mobile tactics. High mobility enables:
+
+- Rapid map control
+- Flanking maneuvers
+- Hit-and-run tactics
+- Quick response to threats
+
+**High Mobility Doctrines:** Wehrmacht Leichte (0.9), USA Mechanized (0.8), UK Armored (0.8)
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/30 bg-card/30">
+
+### Defense
+
+**Fortifications and static defensive power**
+
+Evaluates defensive capabilities through bunkers, emplacements, mines, and static defenses. Strong defense allows:
+
+- Holding territory against aggression
+- Creating kill zones
+- Resource point protection
+- Attrition warfare
+
+**High Defense Doctrines:** Wehrmacht Ost (0.9), USSR Artilleriyskaya (0.9), SS Mechanized (0.9)
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Air Power
+
+**Air support and reconnaissance capabilities**
+
+Measures air superiority through recon planes, fighter strikes, close air support, and bombing runs. Strong air power provides:
+
+- Intelligence gathering
+- Precision strikes on key targets
+- Countering enemy concentrations
+- Breaking stalemates
+
+**High Air Power Doctrines:** USA Airborne (0.9), UK Parachute (0.9), SS Panzerjäger (0.9)
+
+</div>
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## How to Use This Tool
+
+<div class="space-y-6 mb-8">
+
+The doctrine comparison tool serves multiple strategic purposes. Here's how to get the most value from it:
+
+</div>
+
+### Finding Your Playstyle Match
+
+<div class="p-6 rounded-lg border border-border bg-card/50 mb-6">
+
+**1. Identify your preferred capabilities**
+
+Think about your natural playstyle:
+- Do you prefer overwhelming firepower? → Look for high Artillery + Defense
+- Do you like aggressive armor pushes? → Seek high Heavy Armor + Mobility
+- Do you excel at elite micro? → Find high Elite Infantry + Mobility
+- Do you prefer defensive play? → Look for high Defense + Anti-Tank
+
+**2. Select doctrines that match**
+
+Use the faction dropdown to explore options, then select doctrines one at a time to see their radar signature. Doctrines with strong ratings in your preferred areas are natural fits.
+
+**3. Test and refine**
+
+Compare similar doctrines to find subtle differences. For example, USA Armored vs Wehrmacht Panzer both have high Heavy Armor but differ significantly in other areas.
+
+</div>
+
+### Analyzing Matchups
+
+<div class="p-6 rounded-lg border border-border bg-card/50 mb-6">
+
+**Enable comparison mode to overlay opponent doctrines**
+
+1. Check the "Enable Comparison Mode" box
+2. Select your doctrine first
+3. Add opponent's doctrine to overlay
+4. Look for areas where they're weak and you're strong
+
+**Example:** If your opponent is Wehrmacht Ost (high Defense, low Mobility), your USA Mechanized (high Mobility) can exploit their inability to respond quickly to flanks.
+
+**Counter-Strategy Matrix:**
+- High Artillery doctrines → Counter with Mobility to avoid barrages
+- High Heavy Armor → Counter with Anti-Tank specialists
+- High Elite Infantry → Counter with Artillery or Heavy Armor
+- High Mobility → Counter with Defense and static AT
+
+</div>
+
+### Team Game Coordination
+
+<div class="p-6 rounded-lg border border-border bg-card/50 mb-6">
+
+**Compare allied doctrines to ensure coverage**
+
+In team games, complementary doctrines create unstoppable combinations:
+
+**Perfect Pairs:**
+- **Artillery + Heavy Armor** → Soften defenses, then breakthrough with tanks
+- **Anti-Tank + Elite Infantry** → Deny enemy armor, dominate infantry fights
+- **Mobility + Defense** → Fast player flanks while defensive player holds center
+- **Air Power + Heavy Armor** → Recon reveals targets, armor capitalizes
+
+**Example Team Composition:**
+- Player 1: USSR Artilleriyskaya (Artillery/Defense)
+- Player 2: USA Armored (Heavy Armor/AT)
+- **Result:** Player 1 breaks fortifications with artillery, Player 2 exploits with armor
+
+</div>
+
+<Callout variant="success">
+**Pro Tip:** In 2v2 or larger team games, coordinate doctrine selection before the match. Ensure your team has strong coverage across all seven dimensions rather than duplicating capabilities.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Doctrine Archetypes
+
+<div class="space-y-6 mb-8">
+
+Based on radar signatures, doctrines fall into distinct archetypes. Understanding these patterns helps you quickly identify tactical roles:
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Artillery Fortress
+
+**Pattern:** High Artillery + High Defense
+
+Excels at controlling territory through overwhelming firepower and fortifications. Grinds opponents down through attrition.
+
+**Examples:**
+- USSR Artilleriyskaya
+- Wehrmacht Infanterie
+- UK Royal Artillery
+- SS Mechanized
+
+**Best Maps:** Large maps with static points, defensive positions
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Heavy Armor Spearhead
+
+**Pattern:** High Heavy Armor + Moderate AT
+
+Dominates through late-game armor superiority. Builds toward overwhelming tank advantage.
+
+**Examples:**
+- USA Armored
+- Wehrmacht Panzer
+- USSR Tankovaya
+- UK Royal Tank
+- SS Panzer
+
+**Best Maps:** Open terrain, large resource pools
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Elite Airborne
+
+**Pattern:** High Elite Infantry + High Air Power
+
+Seizes early advantages through superior infantry, maintains pressure with air support.
+
+**Examples:**
+- USA Airborne
+- Wehrmacht Fallschirmjäger
+- UK Parachute
+- SS Jäger
+
+**Best Maps:** Multiple VPs, urban combat zones
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Mobile Warfare
+
+**Pattern:** High Mobility + Moderate Armor
+
+Fast-moving combined arms that outmaneuvers opponents. Wins through tempo and positioning.
+
+**Examples:**
+- Wehrmacht Leichte
+- USA Mechanized
+- UK Armored
+- USSR Motostrelkovaya
+
+**Best Maps:** Large open maps, flanking routes
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Tank Destroyer
+
+**Pattern:** High Anti-Tank + Moderate Defense
+
+Specializes in countering armor. Denies enemy tanks while holding ground.
+
+**Examples:**
+- USA Tank Destroyer
+- USSR Istrebitel
+- SS Panzerjäger
+
+**Best Maps:** Chokepoint-heavy maps, armor-focused meta
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### Balanced Combined Arms
+
+**Pattern:** Moderate ratings across multiple areas
+
+Adaptable generalists that handle diverse situations. No major weaknesses but no overwhelming strengths.
+
+**Examples:**
+- USA Infantry
+- Wehrmacht Infanterie
+- USSR Strelkovaya
+
+**Best Maps:** Any map, versatile pick
+
+</div>
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Strategic Insights
+
+<div class="space-y-6 mb-8">
+
+### Identifying Power Spikes
+
+Each doctrine has timing windows where it excels:
+
+</div>
+
+<div class="p-6 rounded-lg border border-border bg-card/50 mb-8">
+
+**Early Game Dominance** (0-10 minutes)
+- High Elite Infantry doctrines (Airborne, Fallschirmjäger, Rangers)
+- High Mobility doctrines (Leichte, Mechanized)
+- Goal: Secure map control before opponents scale
+
+**Mid Game Transitions** (10-20 minutes)
+- Balanced doctrines hit their stride
+- Medium armor becomes available
+- Anti-Tank doctrines begin to shine
+
+**Late Game Dominance** (20+ minutes)
+- High Heavy Armor doctrines (Panzer, Tankovaya, Armored)
+- Artillery Fortress doctrines become impenetrable
+- Tank Destroyer doctrines counter enemy heavies
+
+</div>
+
+### Recognizing Weaknesses
+
+<div class="p-6 rounded-lg border border-border bg-card/50 mb-8">
+
+**Low Artillery Doctrines**
+
+Struggle to break fortified positions. Vulnerable to defensive camping. Must win through maneuver.
+
+**Exploit:** Dig in with bunkers and emplacements. Force them to attack into prepared positions.
+
+**Low Anti-Tank Doctrines**
+
+Cannot handle enemy armor concentrations. Must avoid tank battles or rely on allies.
+
+**Exploit:** Build medium/heavy armor. Pressure their weak AT with tank pushes.
+
+**Low Mobility Doctrines**
+
+Cannot respond quickly to threats. Vulnerable to flanking and hit-and-run tactics.
+
+**Exploit:** Use fast units to backcap and force them to split forces. Avoid frontal assaults.
+
+**Low Defense Doctrines**
+
+Cannot hold territory against sustained pressure. Must stay aggressive to prevent enemy fortification.
+
+**Exploit:** Build defensive positions. Make them attack into your emplacements and AT guns.
+
+</div>
+
+<Callout variant="warning">
+**Critical Rule:** Every doctrine has weaknesses. Use this tool to identify them in opponents, and compensate for your own through smart play or team coordination.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Faction Comparison Overview
+
+<div class="space-y-6 mb-8">
+
+Each faction has a distinct identity reflected in its doctrine options:
+
+</div>
+
+<div class="space-y-6 mb-12">
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### 🇺🇸 USA — Versatile Combined Arms
+
+**Faction Philosophy:** Adaptable, well-rounded forces with options for every situation
+
+**Strengths:** Strong combined arms, excellent mobility options, good air support
+**Doctrines Range:** From defensive Infantry to aggressive Armored to elite Rangers
+**Best For:** Players who value flexibility and combined arms coordination
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### 🇩🇪 Wehrmacht — Tactical Superiority
+
+**Faction Philosophy:** Quality over quantity with strong defensive and elite options
+
+**Strengths:** Best generalist infantry, strong defensive structures, powerful late armor
+**Doctrines Range:** From ultra-defensive Ost to mobile Leichte to elite Fallschirmjäger
+**Best For:** Tactical players who leverage positioning and combined arms
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### 🇷🇺 USSR — Overwhelming Force
+
+**Faction Philosophy:** Numerical superiority and devastating firepower
+
+**Strengths:** Best artillery, most heavy armor options, cost-effective units
+**Doctrines Range:** From mass Strelkovaya to elite Udarnaya to tank-focused Tankovaya
+**Best For:** Aggressive players who leverage superior numbers and firepower
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### 🇬🇧 United Kingdom — Methodical Power
+
+**Faction Philosophy:** Disciplined advances backed by overwhelming firepower
+
+**Strengths:** Best defensive emplacements, superior artillery, Churchill variants
+**Doctrines Range:** From defensive Royal Artillery to mobile Royal Armored to elite Commandos
+**Best For:** Patient players who prefer methodical, firepower-centric advances
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+
+### ⚡ Waffen-SS — Elite Specialists
+
+**Faction Philosophy:** Quality elite forces with unique tactical options
+
+**Strengths:** Most elite infantry, specialized abilities, powerful late-game options
+**Doctrines Range:** From defensive Mechanized to versatile Panzerjäger to assault Sturm
+**Best For:** Skilled players who can leverage elite units and unique abilities
+
+</div>
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Getting Started
+
+<div class="space-y-6 mb-8">
+
+### New Players
+
+**Start with balanced doctrines** that don't require specialized tactics:
+- USA Infantry Company
+- Wehrmacht Infanterie Division
+- USSR Strelkovaya Diviziya
+
+These doctrines provide solid capabilities across all areas and teach fundamental combined arms play.
+
+### Intermediate Players
+
+**Branch into specialized doctrines** that match your developing playstyle:
+- Aggressive → USA Armored, Wehrmacht Panzer, USSR Udarnaya
+- Defensive → UK Royal Artillery, Wehrmacht Ost, USSR Artilleriyskaya
+- Elite Infantry → USA Ranger, Wehrmacht Fallschirmjäger, UK Commando
+
+### Advanced Players
+
+**Master specialized and timing-dependent doctrines** that reward skill:
+- SS Jäger (vision dominance and elite micro)
+- USA Airborne (timing-dependent power spikes)
+- UK Royal Tank (expensive heavy armor management)
+
+</div>
+
+<Callout variant="tip">
+**Learning Path:** Use the radar chart to understand doctrine identity first, then practice in matches. Revisit the tool after playing to deepen your understanding of strengths and weaknesses you experienced firsthand.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Frequently Asked Questions
+
+<div class="space-y-6 mb-8">
+
+### Can I compare doctrines from different factions?
+
+**Yes!** Comparison mode works across factions. This is especially useful for:
+- Understanding what you'll face as an opponent
+- Planning team game compositions
+- Learning matchup advantages and disadvantages
+
+### How many doctrines can I compare at once?
+
+**Up to 3 doctrines** can be compared simultaneously. More than 3 makes the radar chart hard to read. For more extensive comparisons, compare in groups of 2-3, then switch to different combinations.
+
+### Are these ratings official?
+
+**No, these are analytical ratings** based on doctrine capabilities and competitive play patterns. Values represent relative strength in each dimension compared to all other doctrines.
+
+### Why doesn't my favorite doctrine show up stronger?
+
+Remember that **higher isn't always better**. A doctrine with lower overall ratings might be exactly what your playstyle needs, or it might excel in specific matchups. The tool shows capabilities, not overall power.
+
+### How often are these ratings updated?
+
+Ratings may be adjusted based on game balance patches, meta shifts, or community feedback. Check the page periodically for updates.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+<div class="text-center space-y-4">
+
+## Ready to Explore?
+
+Use the interactive chart above to start comparing doctrines. Select your favorite faction, analyze its options, and discover new strategic possibilities.
+
+<div class="flex justify-center gap-4 flex-wrap">
+  <a 
+    href="/usa" 
+    class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors font-semibold"
+  >
+    USA Doctrines →
+  </a>
+  <a 
+    href="/wehrmacht" 
+    class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors font-semibold"
+  >
+    Wehrmacht Doctrines →
+  </a>
+  <a 
+    href="/soviets" 
+    class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors font-semibold"
+  >
+    Soviet Doctrines →
+  </a>
+  <a 
+    href="/uk" 
+    class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors font-semibold"
+  >
+    British Doctrines →
+  </a>
+  <a 
+    href="/waffenss" 
+    class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors font-semibold"
+  >
+    Waffen-SS Doctrines →
+  </a>
+</div>
+
+</div>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
