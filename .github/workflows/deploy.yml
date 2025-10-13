@@ -21,12 +21,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Build with Astro’s official action (it also uploads the Pages artifact)
+      # This installs, builds, and uploads the Pages artifact from "dist/"
       - name: Install, build, and upload
         uses: withastro/action@v2
         with:
           package-manager: pnpm@latest
-          # If you still see lockfile errors, you can add:
+          # uncomment if you ever see the frozen lockfile error again:
           # install-flags: --no-frozen-lockfile
 
   deploy:
@@ -36,6 +36,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # 👇 This prepares the Pages environment (required before deploy)
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
