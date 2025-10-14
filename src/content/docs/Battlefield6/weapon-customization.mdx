@@ -1,0 +1,949 @@
+---
+title: Weapon Customization
+---
+
+import Callout from "@/components/Callout.astro";
+
+<div class="space-y-6 mb-8">
+
+**Master the art of weapon customization in Battlefield 6.** The game's revolutionary Pick 100 attachment system creates meaningful choices between raw firepower, surgical precision, and tactical flexibility. Understanding how each weapon stat influences your performance—and how attachments modify those stats—transforms good players into dominant forces on the battlefield.
+
+This comprehensive guide breaks down every weapon statistic, explains the Pick 100 point system, and provides detailed optimization strategies so you can build effective loadouts for different combat scenarios.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Understanding Weapon Statistics
+
+<div class="space-y-6 mb-8">
+
+Battlefield 6 presents weapon performance through core statistics that determine how a gun handles across different combat scenarios. Each stat measures a distinct aspect of weapon behavior, and understanding these measurements is essential for making informed customization decisions.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Hipfire</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Accuracy when firing without aiming down sights. Higher values create tighter bullet spread for instinct shooting.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best for:</span> <span class="text-foreground/70">CQB, room clearing</span></div>
+      <div><span class="text-fs-gold font-semibold">Weapon types:</span> <span class="text-foreground/70">SMGs, Shotguns</span></div>
+      <div><span class="text-fs-gold font-semibold">Boost with:</span> <span class="text-foreground/70">Laser sights</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        📐
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Precision</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">ADS accuracy per shot. How tightly bullets group around your point of aim when properly sighted in.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best for:</span> <span class="text-foreground/70">Medium-long range</span></div>
+      <div><span class="text-fs-gold font-semibold">Weapon types:</span> <span class="text-foreground/70">DMRs, Snipers</span></div>
+      <div><span class="text-fs-gold font-semibold">Boost with:</span> <span class="text-foreground/70">Extended barrels</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎚️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Control</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Recoil management during sustained fire. Higher values mean less vertical climb and horizontal drift.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best for:</span> <span class="text-foreground/70">Full-auto sprays</span></div>
+      <div><span class="text-fs-gold font-semibold">Weapon types:</span> <span class="text-foreground/70">ARs, LMGs</span></div>
+      <div><span class="text-fs-gold font-semibold">Boost with:</span> <span class="text-foreground/70">Vertical grips, brakes</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⚡
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Mobility</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Movement speed and weapon handling. How quickly you can sprint, strafe, and transition between states.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best for:</span> <span class="text-foreground/70">Aggressive play</span></div>
+      <div><span class="text-fs-gold font-semibold">Weapon types:</span> <span class="text-foreground/70">SMGs, Carbines</span></div>
+      <div><span class="text-fs-gold font-semibold">Boost with:</span> <span class="text-foreground/70">Lightweight stocks</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🚀
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Muzzle Velocity</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Bullet speed in meters per second. Higher velocity means flatter trajectories and less lead time on moving targets.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best for:</span> <span class="text-foreground/70">Long-range shooting</span></div>
+      <div><span class="text-fs-gold font-semibold">Weapon types:</span> <span class="text-foreground/70">Snipers, DMRs</span></div>
+      <div><span class="text-fs-gold font-semibold">Boost with:</span> <span class="text-foreground/70">Long barrels</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⏱️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">ADS Time</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">How fast you can raise sights and fire accurately. Critical for winning surprise encounters and quick reactions.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best for:</span> <span class="text-foreground/70">Fast reactions</span></div>
+      <div><span class="text-fs-gold font-semibold">Weapon types:</span> <span class="text-foreground/70">All weapon types</span></div>
+      <div><span class="text-fs-gold font-semibold">Reduce with:</span> <span class="text-foreground/70">Lightweight optics</span></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Key Insight:** Stats don't exist in isolation. A weapon with high Precision but terrible Control might land its first shot perfectly but spray wildly thereafter. The best loadouts balance multiple characteristics for your specific playstyle and preferred engagement distances.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Stat Priority by Weapon Class
+
+<div class="space-y-4 mb-8">
+
+Different weapon classes benefit from different stat priorities. Understanding these relationships helps you make smart attachment decisions.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <h3 class="text-lg font-semibold text-primary mb-4">Close Range (0-25m)</h3>
+    <div class="space-y-3">
+      <div>
+        <div class="flex items-center justify-between text-sm mb-1">
+          <span class="text-foreground/80">Hipfire Importance</span>
+          <span class="text-fs-gold font-semibold">Critical</span>
+        </div>
+        <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+          <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 95%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center justify-between text-sm mb-1">
+          <span class="text-foreground/80">Mobility Importance</span>
+          <span class="text-fs-gold font-semibold">Very High</span>
+        </div>
+        <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+          <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 90%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center justify-between text-sm mb-1">
+          <span class="text-foreground/80">ADS Speed Importance</span>
+          <span class="text-fs-gold font-semibold">High</span>
+        </div>
+        <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+          <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center justify-between text-sm mb-1">
+          <span class="text-foreground/80">Precision Importance</span>
+          <span class="text-foreground/60 font-semibold">Low</span>
+        </div>
+        <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+          <div class="h-full bg-gradient-to-r from-foreground/30 to-foreground/50" style="width: 35%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 text-xs text-foreground/70">
+      <span class="text-primary font-semibold">Best classes:</span> SMGs, Shotguns, Carbines
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <h3 class="text-lg font-semibold text-primary mb-4">Long Range (75m+)</h3>
+    <div class="space-y-3">
+      <div>
+        <div class="flex items-center justify-between text-sm mb-1">
+          <span class="text-foreground/80">Precision Importance</span>
+          <span class="text-fs-gold font-semibold">Critical</span>
+        </div>
+        <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+          <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 95%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center justify-between text-sm mb-1">
+          <span class="text-foreground/80">Muzzle Velocity Importance</span>
+          <span class="text-fs-gold font-semibold">Very High</span>
+        </div>
+        <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+          <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 90%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center justify-between text-sm mb-1">
+          <span class="text-foreground/80">Control Importance</span>
+          <span class="text-fs-gold font-semibold">High</span>
+        </div>
+        <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+          <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 80%"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center justify-between text-sm mb-1">
+          <span class="text-foreground/80">Hipfire Importance</span>
+          <span class="text-foreground/60 font-semibold">Very Low</span>
+        </div>
+        <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+          <div class="h-full bg-gradient-to-r from-foreground/30 to-foreground/50" style="width: 20%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 text-xs text-foreground/70">
+      <span class="text-primary font-semibold">Best classes:</span> DMRs, Sniper Rifles
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## The Pick 100 Attachment System
+
+<div class="space-y-6 mb-8">
+
+Battlefield 6 revolutionizes weapon customization with the Pick 100 system—a point budget that forces meaningful strategic choices. Primary weapons receive exactly <span class="text-fs-gold font-semibold">100 attachment points</span> to spend across all modification categories, while secondary weapons get <span class="text-fs-gold font-semibold">60 points</span>. Each attachment carries a specific point cost, and you must stay within your budget to deploy your loadout.
+
+</div>
+
+### Attachment Point Costs Reference
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm border-collapse">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Attachment Type</th>
+        <th class="text-center p-3 text-primary font-semibold">Budget Friendly</th>
+        <th class="text-center p-3 text-primary font-semibold">Moderate Cost</th>
+        <th class="text-center p-3 text-primary font-semibold">Premium</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Optics</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0-10pts</div>
+          <div class="text-xs text-foreground/60">Iron Sights, Red Dots</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">12-15pts</div>
+          <div class="text-xs text-foreground/60">2x-3x Scopes</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">18-20pts</div>
+          <div class="text-xs text-foreground/60">4x-6x Scopes</div>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Barrels</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0pts</div>
+          <div class="text-xs text-foreground/60">Standard Barrel</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">20-22pts</div>
+          <div class="text-xs text-foreground/60">Extended, Heavy</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">25pts</div>
+          <div class="text-xs text-foreground/60">Fluted, Carbon</div>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Muzzle Devices</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0-15pts</div>
+          <div class="text-xs text-foreground/60">None, Flash Hider</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">20-25pts</div>
+          <div class="text-xs text-foreground/60">Brakes, Basic Suppressor</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">40pts</div>
+          <div class="text-xs text-foreground/60">CQB Suppressor</div>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Underbarrel</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0-18pts</div>
+          <div class="text-xs text-foreground/60">None, Handstop, Angled</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">20-25pts</div>
+          <div class="text-xs text-foreground/60">Vertical Grips</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">35pts</div>
+          <div class="text-xs text-foreground/60">Bipod</div>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Magazines</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0-12pts</div>
+          <div class="text-xs text-foreground/60">Standard, Fast Mag</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">15pts</div>
+          <div class="text-xs text-foreground/60">Extended Magazine</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">25pts</div>
+          <div class="text-xs text-foreground/60">Drum Magazine</div>
+        </td>
+      </tr>
+      <tr class="hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Accessories</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0-15pts</div>
+          <div class="text-xs text-foreground/60">None, 5MW Laser</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">25pts</div>
+          <div class="text-xs text-foreground/60">50MW Blue Laser</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">30pts</div>
+          <div class="text-xs text-foreground/60">120MW Blue Laser</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Budget Allocation Strategies
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">MAXIMIZE ONE ATTACHMENT</div>
+    <div class="mb-4">
+      <div class="text-2xl font-bold text-fs-gold mb-1">40-50pts</div>
+      <div class="text-xs text-foreground/60">on single premium attachment</div>
+    </div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>• CQB Suppressor (40pts)</li>
+      <li>• Build everything around it</li>
+      <li>• Accept compromises elsewhere</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: Stealth flanking builds
+    </div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">BALANCED DISTRIBUTION</div>
+    <div class="mb-4">
+      <div class="text-2xl font-bold text-fs-gold mb-1">15-25pts</div>
+      <div class="text-xs text-foreground/60">per attachment slot</div>
+    </div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>• Moderate attachments across all slots</li>
+      <li>• No extreme weaknesses</li>
+      <li>• Versatile performance</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-fs-gold/10 rounded text-fs-gold">
+      Best for: All-around versatility
+    </div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-500 font-semibold mb-3">BUDGET OPTIMIZATION</div>
+    <div class="mb-4">
+      <div class="text-2xl font-bold text-fs-gold mb-1">60-75pts</div>
+      <div class="text-xs text-foreground/60">total spend, leave points unused</div>
+    </div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>• Only essential attachments</li>
+      <li>• Skip low-value upgrades</li>
+      <li>• Efficient performance</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Best for: Min-max optimization
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**The Suppressor Trap:** Heavy suppressors cost 35-40 attachment points—nearly half your budget. Unless you're specifically building a flanking loadout where stealth enables your entire strategy, consider whether standard suppressors (25 points) or going loud with that budget spent elsewhere might serve you better.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Quick Reference: Build Archetypes
+
+<div class="space-y-4 mb-8">
+
+Use these proven loadout templates as starting points for your own customization. Each archetype is optimized for specific engagement ranges and playstyles.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-red-500">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-2xl">⚔️</span>
+      <div>
+        <div class="text-sm font-semibold text-red-400">CLOSE QUARTERS</div>
+        <div class="text-xs text-foreground/60">0-25m Engagements</div>
+      </div>
+    </div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-3">
+      <li>✓ Max hipfire accuracy</li>
+      <li>✓ Fast ADS time</li>
+      <li>✓ High mobility</li>
+      <li>✓ Extended magazines</li>
+      <li>✗ Skip suppressors</li>
+      <li>✗ Skip high-mag optics</li>
+    </ul>
+    <div class="pt-3 border-t border-border/50 text-xs">
+      <span class="text-foreground/60">Point range:</span> <span class="text-fs-gold font-semibold">60-80pts</span>
+    </div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-2xl">🎯</span>
+      <div>
+        <div class="text-sm font-semibold text-fs-gold">MEDIUM RANGE</div>
+        <div class="text-xs text-foreground/60">25-75m Engagements</div>
+      </div>
+    </div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-3">
+      <li>✓ Extended barrel</li>
+      <li>✓ Vertical grip</li>
+      <li>✓ 1x-2x optics</li>
+      <li>✓ Extended mags</li>
+      <li>✓ Balanced stats</li>
+      <li>~ Optional suppressor</li>
+    </ul>
+    <div class="pt-3 border-t border-border/50 text-xs">
+      <span class="text-foreground/60">Point range:</span> <span class="text-fs-gold font-semibold">85-95pts</span>
+    </div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-2xl">🔭</span>
+      <div>
+        <div class="text-sm font-semibold text-green-400">LONG RANGE</div>
+        <div class="text-xs text-foreground/60">75m+ Engagements</div>
+      </div>
+    </div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-3">
+      <li>✓ Max precision build</li>
+      <li>✓ Heavy/carbon barrels</li>
+      <li>✓ Bipod deployment</li>
+      <li>✓ High-mag optics (4x-6x)</li>
+      <li>✗ Ignore hipfire</li>
+      <li>✗ Accept slow mobility</li>
+    </ul>
+    <div class="pt-3 border-t border-border/50 text-xs">
+      <span class="text-foreground/60">Point range:</span> <span class="text-fs-gold font-semibold">90-100pts</span>
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Featured Build: Medium-Long Range Domination
+
+<div class="space-y-6 mb-8">
+
+This proven configuration demonstrates how to combine weapon stats knowledge with smart Pick 100 budgeting. Designed for Assault/Medic players who need to control medium-range engagements while maintaining objective-play versatility.
+
+</div>
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Medium-Long Range Build</h3>
+      <p class="text-sm text-foreground/60">Assault/Medic • Objective Play • 25-100m Effective Range</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">95</div>
+      <div class="text-xs text-foreground/60">points used</div>
+      <div class="text-xs text-green-400 mt-1">5 points remaining</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">PRIMARY WEAPON</div>
+      <div class="mb-4">
+        <div class="text-2xl font-bold text-fs-gold mb-2">NVO-228E</div>
+        <div class="text-xs text-foreground/60 mb-3">Assault Rifle • Rank 5 Unlock</div>
+        <div class="grid grid-cols-3 gap-3 text-xs">
+          <div>
+            <div class="text-foreground/60">Damage</div>
+            <div class="text-fs-gold font-bold">33</div>
+          </div>
+          <div>
+            <div class="text-foreground/60">RPM</div>
+            <div class="text-fs-gold font-bold">654</div>
+          </div>
+          <div>
+            <div class="text-foreground/60">Magazine</div>
+            <div class="text-fs-gold font-bold">30</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-xs text-foreground/70 p-3 bg-primary/10 rounded">
+        <span class="text-primary font-semibold">Why this weapon:</span> High base precision (60) and strong damage-per-shot for forgiving TTK at range.
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <div class="flex items-center gap-2">
+          <span class="text-foreground/60">Optic:</span>
+          <span class="font-semibold text-foreground">CCO Reflex</span>
+        </div>
+        <span class="text-fs-gold font-bold">10pts</span>
+      </div>
+      
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <div class="flex items-center gap-2">
+          <span class="text-foreground/60">Barrel:</span>
+          <span class="font-semibold text-foreground">Extended Barrel</span>
+        </div>
+        <span class="text-fs-gold font-bold">20pts</span>
+      </div>
+      
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <div class="flex items-center gap-2">
+          <span class="text-foreground/60">Muzzle:</span>
+          <span class="font-semibold text-foreground">Double-Port Brake</span>
+        </div>
+        <span class="text-fs-gold font-bold">25pts</span>
+      </div>
+      
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <div class="flex items-center gap-2">
+          <span class="text-foreground/60">Underbarrel:</span>
+          <span class="font-semibold text-foreground">Alloy Vertical Grip</span>
+        </div>
+        <span class="text-fs-gold font-bold">20pts</span>
+      </div>
+      
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <div class="flex items-center gap-2">
+          <span class="text-foreground/60">Magazine:</span>
+          <span class="font-semibold text-foreground">Extended Magazine</span>
+        </div>
+        <span class="text-fs-gold font-bold">15pts</span>
+      </div>
+      
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <div class="flex items-center gap-2">
+          <span class="text-foreground/60">Accessory:</span>
+          <span class="font-semibold text-foreground">Standard Laser</span>
+        </div>
+        <span class="text-fs-gold font-bold">5pts</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">STRENGTHS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Precision</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Control</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Velocity</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Magazine Capacity</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">TRADE-OFFS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Mobility</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Reload Speed</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-ADS Time</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">BUILD PHILOSOPHY</div>
+    <p class="text-sm text-foreground/80">This configuration minimizes bullet bloom and manages recoil for consistent medium-range performance. The extended barrel + vertical grip combination creates a "laser beam" effect. Extended magazine supports multi-enemy objective fights without reloading. Trade-offs in mobility and ADS are acceptable for defensive/objective-holding roles.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Key Attachment Impact: Before & After
+
+<div class="space-y-4 mb-8">
+
+Understanding the real-world impact of critical attachments helps justify their point costs. These comparisons show why certain attachments are worth prioritizing in your builds.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ❌
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">WITHOUT EXTENDED BARREL</div>
+        <div class="text-xs text-foreground/60">Standard Configuration</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Precision</span>
+        <span class="text-fs-gold font-semibold">52</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Muzzle Velocity</span>
+        <span class="text-fs-gold font-semibold">45</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Effective Range</span>
+        <span class="text-fs-gold font-semibold">~50m</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">PERFORMANCE</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Inconsistent at 75m+</li>
+        <li>• Requires excessive lead on moving targets</li>
+        <li>• Bloom makes full-auto unreliable</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ✓
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">WITH EXTENDED BARREL</div>
+        <div class="text-xs text-foreground/60">20 Point Investment</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Precision</span>
+        <span class="text-green-400 font-bold">67 <span class="text-xs">(+15)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Muzzle Velocity</span>
+        <span class="text-green-400 font-bold">60 <span class="text-xs">(+15)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Effective Range</span>
+        <span class="text-green-400 font-bold">~100m <span class="text-xs">(+50m)</span></span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">PERFORMANCE</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Reliable headshots at 100m</li>
+        <li>• Minimal lead required on targets</li>
+        <li>• 25-30% tighter bullet grouping</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ❌
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">WITHOUT VERTICAL GRIP</div>
+        <div class="text-xs text-foreground/60">High Recoil Pattern</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Control</span>
+        <span class="text-fs-gold font-semibold">42</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Burst Length</span>
+        <span class="text-fs-gold font-semibold">4-6 rounds</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">CHALLENGE</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Must burst fire constantly</li>
+        <li>• Loses to full-auto opponents in CQB</li>
+        <li>• Difficult recoil compensation</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ✓
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">WITH VERTICAL GRIP</div>
+        <div class="text-xs text-foreground/60">20 Point Investment</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Control</span>
+        <span class="text-green-400 font-bold">62 <span class="text-xs">(+20)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Burst Length</span>
+        <span class="text-green-400 font-bold">12-15 rounds <span class="text-xs">(+8-9)</span></span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">BENEFIT</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Sustained full-auto fire viable</li>
+        <li>• "Laser beam" feel with barrel combo</li>
+        <li>• Easy recoil management</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<Callout variant="success">
+**The 80/20 Rule in Action:** Extended barrel + vertical grip = 80% of your performance improvement for only 40 points. These two attachments transform basic guns into competitive tools. Everything else provides marginal refinement rather than fundamental capability improvements.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Optimization Tips & Best Practices
+
+<div class="space-y-6 mb-8">
+
+Beyond specific attachment choices, these strategic principles apply to weapon customization across all build types.
+
+</div>
+
+### Unlock Progression Priority
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+  <div class="p-4 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xl font-bold text-fs-gold mb-2">1st</div>
+    <div class="text-sm font-semibold text-foreground mb-2">Extended Barrel</div>
+    <div class="text-xs text-foreground/70 mb-2">~250-300 kills</div>
+    <div class="text-xs text-primary">Highest impact upgrade</div>
+  </div>
+  
+  <div class="p-4 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xl font-bold text-primary mb-2">2nd</div>
+    <div class="text-sm font-semibold text-foreground mb-2">Vertical Grip</div>
+    <div class="text-xs text-foreground/70 mb-2">~20-100 kills</div>
+    <div class="text-xs text-primary">Essential recoil control</div>
+  </div>
+  
+  <div class="p-4 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xl font-bold text-green-400 mb-2">3rd</div>
+    <div class="text-sm font-semibold text-foreground mb-2">Extended Magazine</div>
+    <div class="text-xs text-foreground/70 mb-2">~100+ kills</div>
+    <div class="text-xs text-primary">Multi-kill capability</div>
+  </div>
+  
+  <div class="p-4 bg-card/50 rounded-lg border-l-4 border-border">
+    <div class="text-xl font-bold text-foreground/50 mb-2">4th</div>
+    <div class="text-sm font-semibold text-foreground mb-2">Optic Preference</div>
+    <div class="text-xs text-foreground/70 mb-2">Varies</div>
+    <div class="text-xs text-primary">Personal choice</div>
+  </div>
+</div>
+
+### Attachment Synergy Matrix
+
+<div class="p-6 bg-card/50 rounded-lg border border-border mb-8">
+  <h4 class="text-lg font-semibold text-primary mb-4">Attachments That Work Together</h4>
+  
+  <div class="space-y-4">
+    <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl">🔗</span>
+        <div class="flex-1">
+          <div class="text-sm font-semibold text-foreground mb-2">Extended Barrel + Vertical Grip + Muzzle Brake</div>
+          <p class="text-xs text-foreground/80 mb-2">Extended barrel increases precision and velocity but adds recoil. Vertical grip and muzzle brake counteract this downside while preserving the accuracy benefits. Creates the "laser beam" effect.</p>
+          <div class="text-xs text-fs-gold font-semibold">Total: 60-70pts • Synergy: Excellent</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl">🔗</span>
+        <div class="flex-1">
+          <div class="text-sm font-semibold text-foreground mb-2">High-Mag Optic + Bipod + Heavy Barrel</div>
+          <p class="text-xs text-foreground/80 mb-2">High magnification creates visual recoil problems. Bipod provides massive stability when deployed. Heavy barrel maximizes precision at the cost of mobility—acceptable for static positions.</p>
+          <div class="text-xs text-fs-gold font-semibold">Total: 75-80pts • Synergy: Very Good</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl">🔗</span>
+        <div class="flex-1">
+          <div class="text-sm font-semibold text-foreground mb-2">Low-Power Optic + Laser Sight + Lightweight Stock</div>
+          <p class="text-xs text-foreground/80 mb-2">Maximizes close-range performance. Fast ADS, excellent hipfire, high mobility. Each attachment reinforces aggressive rushing playstyle without conflicts.</p>
+          <div class="text-xs text-fs-gold font-semibold">Total: 25-40pts • Synergy: Excellent</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Map-Specific Loadout Recommendations
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Map Type</th>
+        <th class="text-left p-3 text-primary font-semibold">Priority Stats</th>
+        <th class="text-left p-3 text-primary font-semibold">Key Attachments</th>
+        <th class="text-left p-3 text-primary font-semibold">Skip/Avoid</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30">
+        <td class="p-3">
+          <div class="font-semibold text-foreground">Urban/Dense</div>
+          <div class="text-xs text-foreground/60">Metro, Siege</div>
+        </td>
+        <td class="p-3 text-foreground/80">
+          <div>Hipfire, Mobility</div>
+          <div>ADS Speed</div>
+        </td>
+        <td class="p-3 text-foreground/80">
+          <div>Laser sights</div>
+          <div>Extended mags</div>
+          <div>Red dots</div>
+        </td>
+        <td class="p-3 text-foreground/60">
+          <div>High-mag optics</div>
+          <div>Bipods</div>
+          <div>Long barrels</div>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30">
+        <td class="p-3">
+          <div class="font-semibold text-foreground">Open/Long Sightlines</div>
+          <div class="text-xs text-foreground/60">Desert, Plains</div>
+        </td>
+        <td class="p-3 text-foreground/80">
+          <div>Precision, Velocity</div>
+          <div>Control</div>
+        </td>
+        <td class="p-3 text-foreground/80">
+          <div>Extended barrels</div>
+          <div>Vertical grips</div>
+          <div>3x-6x optics</div>
+        </td>
+        <td class="p-3 text-foreground/60">
+          <div>Laser sights</div>
+          <div>Lightweight builds</div>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30">
+        <td class="p-3">
+          <div class="font-semibold text-foreground">Mixed Terrain</div>
+          <div class="text-xs text-foreground/60">Industrial, Harbor</div>
+        </td>
+        <td class="p-3 text-foreground/80">
+          <div>Balance all stats</div>
+          <div>Versatility</div>
+        </td>
+        <td class="p-3 text-foreground/80">
+          <div>Moderate barrels</div>
+          <div>Balanced grips</div>
+          <div>1x-2x optics</div>
+        </td>
+        <td class="p-3 text-foreground/60">
+          <div>Extreme specialization</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip">
+**Test Range is Essential:** Always validate loadouts in practice range before competitive play. Some attachment combinations create uncomfortable sight pictures or visual effects that hurt practical accuracy even if stats improve on paper. What works theoretically doesn't always work practically.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Thoughts: Skill > Loadout
+
+<div class="p-6 bg-gradient-to-br from-primary/10 to-card/50 rounded-lg border border-primary/20 mb-8">
+  <div class="flex items-start gap-4">
+    <span class="text-4xl">💡</span>
+    <div class="flex-1">
+      <h4 class="text-lg font-semibold text-primary mb-3">Remember the Fundamentals</h4>
+      <p class="text-sm text-foreground/80 mb-4">
+        A skilled player with a mediocre weapon configuration will consistently outperform a poor player with the perfect attachment setup. Use the Pick 100 system to create weapons that complement your playstyle and address your specific weaknesses, but don't expect attachments to compensate for poor positioning, map awareness, or aim fundamentals.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+        <div class="p-3 bg-card/50 rounded">
+          <div class="text-primary font-semibold mb-1">Positioning > Loadout</div>
+          <div class="text-foreground/70">Cover and angles win fights</div>
+        </div>
+        <div class="p-3 bg-card/50 rounded">
+          <div class="text-primary font-semibold mb-1">Aim > Attachments</div>
+          <div class="text-foreground/70">Accuracy matters most</div>
+        </div>
+        <div class="p-3 bg-card/50 rounded">
+          <div class="text-primary font-semibold mb-1">Awareness > Stats</div>
+          <div class="text-foreground/70">Know your surroundings</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

@@ -1,0 +1,588 @@
+---
+title: Terminids Combat Tactics
+---
+
+import Callout from "@/components/Callout.astro";
+import { Flame, Target, Shield, Users, Skull, AlertTriangle } from "lucide-react";
+
+<div class="space-y-6 mb-10">
+
+The Terminids are an insectoid faction that overwhelms through sheer numbers and aggressive melee tactics. Fighting bugs demands constant mobility, area control mastery, and the mental fortitude to remain calm when dozens of chittering aliens charge your position simultaneously. Success against Terminids comes from dictating engagement terms through positioning and denying their numerical advantage through crowd control rather than attempting to trade blows directly.
+
+This guide provides scenario-based tactics for handling every Terminid threat from routine patrols to desperate extraction stands. Master these approaches and the bug swarms become predictable, manageable, and ultimately defeatable.
+
+</div>
+
+<Callout variant="info">
+**Faction Philosophy:** Terminids reward mobility over static defense, area damage over single-target precision, and proactive positioning over reactive responses. If you find yourself cornered and surrounded, you have already made tactical errors.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Flame className="inline-block mr-3 mb-1" size={32} /> Quick Loadout Reference
+
+<div class="space-y-6 mb-8">
+
+Before diving into scenarios, equip yourself appropriately. These loadout recommendations optimize Terminid combat across difficulty levels. As difficulty increases, the composition remains similar but execution demands tighten significantly.
+
+</div>
+
+<div class="grid md:grid-cols-2 gap-6 mb-10">
+
+<div class="p-6 rounded-lg border-2 border-fs-gold/30 bg-card/40">
+
+### Primary Weapons
+
+**Breaker Shotgun** (with Incendiary rounds if upgraded) — Your most reliable Terminid killer. Close-range devastation with fire damage over time. One-shots most small bugs, staggers medium threats. Available from base game with critical upgrades from weapon progression.
+
+**Sickle Energy Rifle** (from **Cutting Edge** Warbond) — Infinite ammunition via heat management means you never run dry during swarm waves. Penetrating beam damage hits multiple bugs in a line. Excellent for sustained fire while kiting.
+
+**Scorcher Plasma Rifle** — Energy weapon with explosive projectiles. Combines good damage with splash effect that catches multiple bugs per shot. Highly ammo-efficient against packed swarms.
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/30 bg-card/40">
+
+### Secondary Weapons
+
+**Grenade Pistol** (from **Democratic Detonation** Warbond) — Fires explosive grenades that close bug holes from safe distance and provide emergency crowd control. Essential for spawn management.
+
+**Crisper Flame Pistol** (from **Freedom's Flame** Warbond) — Backup flamethrower for close encounters. Burns through small bugs when primary reloads.
+
+**Senator Revolver** (from **Steeled Veterans** Warbond) — High damage single-shot option for finishing wounded Chargers or Bile Spewers at range.
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/30 bg-card/40">
+
+### Throwables
+
+**Thermite Grenade** (from **Democratic Detonation** Warbond) — Priority pickup. Melts heavy armor instantly. Your answer to Chargers and Bile Titans. Throw at their feet and watch the armor dissolve.
+
+**Gas Grenade** (from **Chemical Agents** Warbond) — Second choice. Creates damaging toxic cloud that stuns and kills over time. Excellent for blocking choke points or buying time during retreat.
+
+**Incendiary Grenade** (base game) — Solid fallback if you lack Warbond options. Creates fire zone that damages and deters bugs from an area.
+
+</div>
+
+<div class="p-6 rounded-lg border-2 border-primary/30 bg-card/40">
+
+### Stratagems Priority
+
+**Flamethrower Support Weapon** — Crowd control king. Immolates entire waves. Requires close quarters discipline but unmatched swarm clear potential.
+
+**Eagle 500kg Bomb** — Delete button for clustered swarms or heavy targets. Short cooldown makes it spammable for crisis moments.
+
+**Orbital Laser** — Sweeping beam that carves through bug formations. Call it perpendicular to their charge direction for maximum casualties.
+
+**Resupply or EMS Mortar Sentry** — Support choice. Ammo keeps sustained fire going. EMS stuns bugs in area for team to shred safely.
+
+</div>
+
+</div>
+
+<Callout variant="tip">
+**Armor Selection:** Light or Medium armor optimizes mobility for bug fights. The speed to kite and reposition matters more than damage mitigation when bugs excel at overwhelming static positions. Consider **Democracy Protects** passive for the clutch survival chance when a Charger clips you unexpectedly.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={28} /> Threat Priority Matrix
+
+<div class="space-y-6 mb-8">
+
+Knowing which Terminid to shoot first prevents squad wipes. This matrix guides target selection during chaotic engagements when multiple bug types converge simultaneously.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+<table class="w-full text-sm">
+<thead>
+<tr class="border-b border-border">
+<th class="text-left p-3">Priority Level</th>
+<th class="text-left p-3">Enemy Type</th>
+<th class="text-left p-3">Why Prioritize</th>
+<th class="text-left p-3">How to Engage</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border/30">
+<tr>
+<td class="p-3"><span class="px-2 py-1 text-xs font-bold rounded bg-red-500/20 text-red-300">CRITICAL</span></td>
+<td class="p-3 font-semibold">Breach Summoners</td>
+<td class="p-3">Orange cloud signals incoming wave spawn. Stop it or face double the bugs.</td>
+<td class="p-3">Interrupt immediately with any damage. One second delay causes Breach.</td>
+</tr>
+<tr>
+<td class="p-3"><span class="px-2 py-1 text-xs font-bold rounded bg-red-500/20 text-red-300">CRITICAL</span></td>
+<td class="p-3 font-semibold">Bile Titans</td>
+<td class="p-3">One-shot acid mortars can wipe entire team. Massive health pool threatens extended fights.</td>
+<td class="p-3">Thermite grenades or anti-tank stratagems. Dodge sideways when mouth opens to spit.</td>
+</tr>
+<tr>
+<td class="p-3"><span class="px-2 py-1 text-xs font-bold rounded bg-orange-500/20 text-orange-300">HIGH</span></td>
+<td class="p-3 font-semibold">Bile Spewers</td>
+<td class="p-3">Ranged acid attack deals heavy damage. Leaves damaging pools that restrict movement.</td>
+<td class="p-3">Focus fire from medium range. Prioritize over melee bugs since they're your only ranged threat.</td>
+</tr>
+<tr>
+<td class="p-3"><span class="px-2 py-1 text-xs font-bold rounded bg-orange-500/20 text-orange-300">HIGH</span></td>
+<td class="p-3 font-semibold">Chargers</td>
+<td class="p-3">Heavy frontal armor, charges through formations. Knocks players down, enabling swarm kills.</td>
+<td class="p-3">Thermite to legs/rear. Kite in circles, shoot exposed sides when turning. Never face head-on.</td>
+</tr>
+<tr>
+<td class="p-3"><span class="px-2 py-1 text-xs font-bold rounded bg-yellow-500/20 text-yellow-300">MEDIUM</span></td>
+<td class="p-3 font-semibold">Stalkers</td>
+<td class="p-3">Invisible flankers that pounce from unexpected angles. Disrupts formation.</td>
+<td class="p-3">Listen for characteristic hiss. Turn and shotgun when they decloak mid-pounce.</td>
+</tr>
+<tr>
+<td class="p-3"><span class="px-2 py-1 text-xs font-bold rounded bg-yellow-500/20 text-yellow-300">MEDIUM</span></td>
+<td class="p-3 font-semibold">Hive Guard</td>
+<td class="p-3">Shielded front, decent health. Blocks path while swarm surrounds.</td>
+<td class="p-3">Flank for rear/side shots. Explosives bypass shield. Lower priority if you have room to kite.</td>
+</tr>
+<tr>
+<td class="p-3"><span class="px-2 py-1 text-xs font-bold rounded bg-green-500/20 text-green-300">LOW</span></td>
+<td class="p-3 font-semibold">Warriors, Scavengers, Hunters</td>
+<td class="p-3">Swarm composition. Dangerous in numbers but individually weak.</td>
+<td class="p-3">Area weapons, kiting. Only focus if isolated or you have abundant ammunition.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<Callout variant="warning">
+**Common Mistake:** Shooting at the massive swarm while ignoring the Bile Spewer lobbing acid from the back. Ranged threats always take priority over melee threats in Terminid combat because melee you can outrun, ranged you cannot.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Combat Scenarios & Tactical Responses
+
+### <Users className="inline-block mr-2 mb-1" size={24} /> Scenario: Overwhelmed by Swarm Attack
+
+<div class="p-6 rounded-lg border-2 border-border/30 bg-card/20 mb-8">
+
+**Situation:** Your team triggers multiple patrols or a Breach spawns and suddenly thirty-plus bugs charge from multiple directions. The swarm threatens to surround and divide your squad.
+
+**🟢 Difficulties 1-3: Basic Kiting**
+
+Recognize encirclement before it completes. The moment bugs approach from more than one hundred eighty degrees, initiate coordinated movement in one direction to break the encirclement. All four players move together toward the thinnest part of the swarm, shooting through them to create a gap, then continue moving past that position. Never stop moving during a swarm event.
+
+Shotguns and automatic weapons mow down the bugs directly in your path. Once clear, the swarm must turn and chase, which buys seconds for reload and healing. Continue this running gunfight, always staying ahead of the mass, until numbers thin to manageable levels or reinforcements arrive.
+
+The key mistake at this difficulty level is panicking and having players run in different directions. The swarm splits and catches isolated players easily. Move as one unit.
+
+**🟡 Difficulties 4-6: Controlled Retreat with Area Denial**
+
+Swarms at this level have more health and recover from stagger faster, making pure kiting less effective. You need area denial tools to slow pursuit while maintaining mobility.
+
+As the swarm converges, immediately call out the retreat direction and designate one player to drop area-denial stratagems or throwables in your wake as you move. Drop an Incendiary grenade or Gas grenade directly in the swarm's path. They charge through it, taking damage and slowing. Follow immediately with an Eagle Cluster Bomb or Orbital Airburst timed for when the leading bugs enter the affected zone.
+
+Maintain formation while moving. Front player leads and clears the path ahead. Rear player watches behind and calls threats. Side players protect flanks. Rotate these roles continuously so no one runs out of ammunition watching one direction too long.
+
+If you have a Flamethrower support weapon, the rear player uses it to create a wall of fire behind the formation during movement. Bugs charging through flames die before reaching you. This technique, called "fire kiting," becomes essential for higher difficulties.
+
+**🔴 Difficulties 7-9: Offensive Repositioning**
+
+At these difficulties, swarms include multiple Chargers, Bile Spewers, and tougher Warriors that require significant ammunition to kill. Pure defensive kiting burns through resources too quickly. You need to eliminate priority targets during the kite to reduce pressure rather than just delaying the inevitable.
+
+Initiate the controlled retreat as before, but now coordinate target focus. Call out "Bile Spewer, left rear" and have two players turn simultaneously, dump damage into it, then resume movement. The Spewer dies in seconds of coordinated fire, removing its ranged threat permanently rather than just avoiding it temporarily.
+
+For Chargers that charge through the formation, one player with Thermite or anti-tank weapons explicitly focuses them while others handle the swarm. A dead Charger is one less thing pressuring you. A wounded Charger still charging accomplishes nothing.
+
+Use terrain aggressively. Kite toward high ground, through narrow passages, or around large obstacles that funnel the swarm into chokepoints where your area weapons achieve maximum effect. A swarm forced single-file through a canyon entrance loses its numerical advantage. Pour explosives and flamethrower fire into that chokepoint and the bugs burn themselves clearing it.
+
+The discipline required here is maintaining formation while still allowing individuals to focus priority targets momentarily. Communicate constantly. "Turning left for Spewer, cover me" lets teammates adjust positions to compensate for your momentary distraction.
+
+**⚫ Helldive+: Emergency Dispersion and Rally**
+
+Helldive swarms occur with such frequency that you cannot kite indefinitely. Eventually you run out of map, resources, or patience. The advanced technique involves controlled emergency dispersion followed by coordinated rally.
+
+When the swarm becomes truly overwhelming despite all the above techniques, call for emergency dispersion. All four players break in different directions intentionally. This seems counterintuitive to previous advice, but the swarm AI cannot chase four targets simultaneously. It splits, chasing whoever is closest or most threatening.
+
+Each player leads their portion of the swarm away for exactly ten seconds while using movement abilities, stims, and terrain to survive. After ten seconds, all players converge on a pre-designated rally point—typically an elevated position or defensible terrain feature identified before the engagement.
+
+As players arrive at the rally point, they have brief moments where only their portion of the swarm has caught up while others are still in transit. This creates a staggered engagement where you face twenty-five percent of the swarm for a few seconds, then fifty percent, allowing you to thin numbers before the full force reconvenes.
+
+Drop your heavy stratagems at the rally point just before full reconvergence. The swarm clusters as it pursues multiple converging players, creating the perfect target for Orbital Laser or 500kg Bomb. Time it correctly and you eliminate half the swarm in one strike, turning certain death into manageable cleanup.
+
+This technique requires trust in your teammates to survive their ten seconds and reach the rally point. Practice it on lower difficulties before attempting on Helldive under real pressure.
+
+</div>
+
+<Callout variant="success">
+**Pro Tip:** Bugs have predictable pathing AI. If you can visualize where the swarm will be in five seconds, you can drop stratagems there preemptively rather than reactively. Call your Orbital Laser on empty ground where the bugs are heading, not where they currently are. They charge straight into it.
+</Callout>
+
+### <Skull className="inline-block mr-2 mb-1" size={24} /> Scenario: Bile Titan or Charger Encounter
+
+<div class="p-6 rounded-lg border-2 border-border/30 bg-card/20 mb-8">
+
+**Situation:** A Bile Titan or Charger appears among the swarm. These heavily armored boss bugs require specific tactics and cannot be simply out-DPSed with standard weapons.
+
+**🟢 Difficulties 1-3: Basic Heavy Response**
+
+The appearance of a Charger at lower difficulties is manageable with standard anti-tank options. One player immediately switches focus to the Charger while others handle swarm threats. Call out "I've got the Charger" so teammates know they can ignore it and focus on clearing the small bugs that might interrupt your attack.
+
+For Chargers, avoid its frontal armor entirely. Circle strafe around it while shooting exposed rear and side plates. Shotgun blast its legs as you pass. If you have Thermite grenades, one or two to its rear legs will quickly cripple it. Alternatively, use Expendable Anti-Tank (EAT) rockets or Recoilless Rifle shots aimed at its vulnerable points.
+
+Bile Titans at this level are rare, but the tactic is similar. Never stand still when one appears. Mobility is your defense against its acid mortar. Watch for it rearing back, which signals an incoming spit. Dodge perpendicular to the attack vector at the last second. Forward or backward dodges still get hit by splash radius.
+
+Bile Titans have too much health for small arms. Immediately call for anti-tank stratagems. An Orbital Precision Strike or Eagle 500kg Bomb targeted at its position will kill or severely wound it. Multiple Thermite grenades work if you coordinate throwing them in sequence rather than all at once—stagger the throws so continuous burning occurs.
+
+**🟡 Difficulties 4-6: Coordinated Heavy Elimination**
+
+Multiple heavies now appear simultaneously or in rapid succession. Your team needs explicit anti-armor roles assigned. At least two players should carry Thermite grenades or anti-tank weapons specifically for these encounters.
+
+When a Charger appears, the designated anti-armor players immediately engage it with Thermite or railgun fire while the other two players aggressively push forward against the swarm to create space. This prevents the swarm from reaching the anti-armor players while they focus on the heavy. The swarm handlers use flamethrower or automatic fire to create a barrier between the Charger kill zone and the team.
+
+For Bile Titans, positioning becomes critical. Spread out immediately upon detection to minimize the chance of one acid glob killing multiple players. Designate one player as "bait" who maintains the Titan's attention through consistent fire while staying mobile. The Titan tracks that player, making its movements predictable.
+
+The other three players use this predictability to flank and attack from sides or rear with anti-tank weapons. A Bile Titan focused on Player One does not immediately turn to face Player Three launching rockets at its side. This divided attention lets you pour damage into vulnerable spots while the bait keeps it occupied and dodging.
+
+Always kill priority before engaging the heavy if multiple Terminids are present. A Bile Spewer behind you will kill you while you focus the Titan. Have one player assigned as rear security who handles any ranged threats that appear during the heavy engagement.
+
+**🔴 Difficulties 7-9: Pre-Planned Heavy Response**
+
+At these difficulties, heavies appear frequently enough that you need prepared responses rather than improvised reactions. Before the mission, designate heavy kill roles and stratagem allocation explicitly.
+
+Player assignments might be: Player One carries primary anti-armor (Thermite plus Recoilless Rifle), Player Two carries secondary anti-armor (Railgun plus Orbital Precision), Players Three and Four handle swarm control (flamethrowers, area stratagems) and bait duties.
+
+When a Charger appears, Players Three and Four immediately aggro it and begin kiting in one direction, drawing it away from Players One and Two. This gives the anti-armor team clean shots without worrying about melee swarm interference. The kiters use stims and mobility stratagems to survive the charge attacks while anti-armor eliminates it from a position of safety.
+
+For multiple Chargers or a Bile Titan plus Chargers combination, stack your anti-tank stratagems rather than using them individually. Drop an Orbital Precision Strike on the Bile Titan, immediately followed by Player Two's Orbital 120mm Barrage. The combined damage ensures the Titan dies even if your first strike only wounds it. Simultaneous strikes prevent the Titan from moving out of subsequent attack zones.
+
+Chargers die to focused Thermite application. Each anti-armor player throws one Thermite at a different Charger rather than both throwing at the same target. This simultaneous damage splits your pressure across multiple threats rather than overkilling one while the other rampages freely.
+
+Advanced technique: Use Charger charges against them. When a Charger charges, sidestep at the last moment and throw Thermite at its now-exposed side or rear as it passes. The charge momentarily makes it vulnerable and creates distance from the swarm, giving you the window to apply anti-armor damage safely.
+
+**⚫ Helldive+: Sacrifice Plays and Stratagem Efficiency**
+
+Helldive presents scenarios where multiple Bile Titans or five-plus Chargers appear simultaneously. Traditional tactics fail against this density. You need unconventional approaches.
+
+Sacrifice plays become valid tactics. If a Bile Titan pins the team in a bad position, one player with a Reinforce stratagem cooldown available can deliberately draw it away and die, leading it far from the team. The player respawns via Reinforce at the team's position thirty seconds later, and the Titan is now far enough away that objectives can be completed before it returns. This trades one temporary death for mission progress.
+
+Stratagem efficiency means using multi-purpose strikes. An Orbital Laser does not just damage the Bile Titan you aim it at—its sweep damages everything in the path. Call it perpendicular to both the Titan and the swarm's approach vector. The laser kills the Titan and carves through dozens of small bugs simultaneously, solving two problems with one cooldown.
+
+The 380mm Barrage, while random in its impact pattern, excels in multi-heavy scenarios. Drop it in an area with two Chargers and a Bile Titan. The sustained barrage over thirty seconds will hit all three multiple times, likely killing or crippling all of them without requiring precise aiming. Accept that players might need to evacuate the barrage zone and regroup afterward.
+
+Resource management extends to life and death. If someone goes down during a heavy engagement and the Reinforce cooldown is available, sometimes reviving them immediately is less efficient than using Reinforce to drop them back in fully armed and healthy. The Reinforce pod's impact can damage or kill enemies near the landing zone, adding tactical value beyond just respawning the player.
+
+</div>
+
+<Callout variant="warning">
+**Common Fatal Error:** Trying to face-tank a Charger with frontal fire. Its head armor is impenetrable to small arms. You waste ammunition achieving nothing while the swarm surrounds you. Always circle strafe and attack sides or rear. Positioning beats damage output.
+</Callout>
+
+### <Shield className="inline-block mr-2 mb-1" size={24} /> Scenario: Defending Objective Locations
+
+<div class="p-6 rounded-lg border-2 border-border/30 bg-card/20 mb-8">
+
+**Situation:** Mission requires holding a location while completing an objective—launching ICBM, conducting Geological Survey, protecting upload terminals. Bugs continuously spawn and assault your position.
+
+**🟢 Difficulties 1-3: Basic Perimeter Defense**
+
+Form a loose circle around the objective with all players facing outward. Space yourselves far enough apart that one acid glob or explosive cannot hit multiple people, but close enough to provide mutual support. Each player watches roughly ninety degrees of approach.
+
+Call out threats in your sector. "Bugs coming from north" alerts teammates to the threat's direction so others can assist if their sectors are clear. Reload timing becomes critical—stagger reloads so at least two players always have loaded weapons ready to fire.
+
+Use the objective itself as partial cover if possible. Position yourself so the objective structure blocks one approach vector, forcing bugs to come from predictable angles. This simplifies defense by reducing the directions you must watch simultaneously.
+
+Light area denial helps even at this level. Throw a few mines or grenades at likely approach paths before the timer starts. When bugs trigger them during the defense, you get free kills without expending ammunition or attention.
+
+The key is maintaining the perimeter until the objective completes rather than trying to push out and kill every bug. You do not need to eliminate all enemies, only prevent them from reaching the objective and your squad until the countdown ends.
+
+**🟡 Difficulties 4-6: Layered Defense with Stratagems**
+
+Bug density and frequency at mid-difficulties requires stratagem support to maintain the perimeter. Before activating the objective, have the team drop defensive stratagems in a layered pattern around the position.
+
+First layer: Deploy automated sentries (Gatling Sentry, Autocannon Sentry) facing the most likely approach vectors. These provide early warning and initial attrition as bugs enter range. Position them fifteen to twenty meters from the objective so they engage threats before bugs reach you.
+
+Second layer: Drop mines and barbed wire fences between the sentries and the objective. Bugs charging past the sentries hit these obstacles, slowing them and taking damage. This buys you reaction time to shoot wounded bugs before they reach point-blank range.
+
+Third layer: Your defensive position around the objective. Now when bugs arrive, they have already taken damage from sentries and obstacles, making them easier to finish with small arms fire.
+
+Coordinate stratagem rotations. When your first wave of sentries gets destroyed or runs out of ammunition, immediately drop the next set. Do not wait until you are being overrun to call replacements. Proactive replacement maintains pressure on the swarm rather than reactive replacement after you have lost defensive advantage.
+
+For defend-until-timer missions, use Orbital Barrages or Eagle Strafing Runs in front of your position in continuous sequence. Call one strike to hit the swarm at thirty seconds into the defense, another at sixty seconds, another at ninety seconds. This staggers your heavy firepower throughout the entire defense rather than dumping everything immediately and having nothing for the final push.
+
+Assign one player as the objective "babysitter" if the objective requires interaction. That player does not participate in perimeter defense except in emergencies. They watch the objective terminal, complete interaction prompts when required, and serve as last-line defense if bugs breach the perimeter. This prevents the common disaster where everyone focuses on shooting bugs and misses critical interaction windows.
+
+**🔴 Difficulties 7-9: Dynamic Defense and Controlled Abandonment**
+
+Traditional static defense fails at these difficulties when Bile Titans, multiple Chargers, and dense swarms converge simultaneously. You need flexibility to temporarily abandon the position when pressure exceeds defensive capability, then quickly return once the wave passes.
+
+Establish a rally point near the objective before starting—typically a piece of elevated terrain or building thirty to fifty meters away. This gives you a fallback position when defense becomes untenable.
+
+Monitor the situation constantly. When you see two Chargers plus a Bile Titan plus swarm approaching simultaneously, call for controlled abandonment. All players disengage from the objective, moving to the rally point together. Let the enemies swarm over the now-empty objective area.
+
+From the rally point, use heavy stratagems on the clustered enemy mass at the objective. They bunch up around the empty position looking for targets. An Orbital Laser or 500kg Bomb into that cluster eliminates most threats. Once the stratagem detonates, immediately move back to the objective and resume defense. The timer pauses when you leave the objective zone on some mission types, or it continues but you survive rather than dying pointlessly.
+
+This technique requires discipline. Newer players panic when abandoning the objective, thinking it means failure. It does not. Temporary repositioning to survive beats dying at the objective and failing the mission. The objective does not take damage from bugs swarming it—only player death causes mission failure.
+
+Advanced defensive positioning uses terrain height. If you can defend from elevated ground overlooking the objective rather than at ground level, do so. Bugs charging uphill arrive staggered rather than all at once, and you gain sight line advantage to shoot them before they reach melee range.
+
+Split your defensive formation into two groups rather than a circle. Have two players defend one approach heavily while two defend the opposite side heavily. This concentrates firepower and mutual support while accepting that sides will be weakly defended. Bugs that come from the sides get caught in crossfire from the front and rear groups.
+
+**⚫ Helldive+: Rotation Defense and Zone Control**
+
+Helldive defense scenarios last longer with more intense pressure. Static positions become death traps as ammunition depletes and stratagems remain on cooldown. You need rotation defense tactics.
+
+Instead of defending one position for the entire objective duration, establish three defensive positions in a triangle around the objective, roughly thirty meters from it at each point of the triangle. Number these positions One, Two, and Three.
+
+Start defense at Position One. When the swarm pressure becomes intense, call for rotation to Position Two. All players move together to Position Two and engage from there. The bugs that were pushing Position One now must reorient and charge toward Position Two, buying you time to reload and resupply.
+
+Continue rotating every sixty to ninety seconds or whenever pressure peaks. Position One → Position Two → Position Three → back to Position One. This rotation confuses bug AI slightly as they continuously chase your changing position, and it allows you to use each position's defensive stratagems before moving to fresh ones.
+
+Drop your automated defenses at each position before you start the objective. Position One gets two sentries, Position Two gets two more, Position Three gets the final two. As you rotate, you always have active automated support because the sentries remained in place while you moved.
+
+Zone control becomes critical at this level. Use area-denial stratagems not just to kill bugs but to create "no-go zones" that force them into preferred approaches. Drop Napalm Strikes on one side of the objective to block that approach entirely. Bugs path around the fire, concentrating them on the other approaches where you are prepared and aiming.
+
+Continuous communication is mandatory. Call out "Rotating to Two, mark it" and actually use the ping system to mark Position Two so everyone knows the destination. Call out "Gas grenade blocking west approach" so teammates know that approach is temporarily sealed and they can focus other directions.
+
+The mental shift required for Helldive defense is accepting that you will not kill every bug. Your goal is survive and complete the objective, not achieve maximum elimination count. Sometimes the correct action is ignoring the ten small bugs crawling around and focusing the Bile Titan about to mortar your position. Let the small ones live temporarily while eliminating actual threats.
+
+</div>
+
+<Callout variant="success">
+**Pro Tip:** For ICBM launch defenses specifically, you can actually extend the countdown by shooting the ICBM itself on some patches. This damage delays the launch, giving you more time to thin waves before the vulnerable final countdown sequence. Check current patch notes for viability.
+</Callout>
+
+### <AlertTriangle className="inline-block mr-2 mb-1" size={24} /> Scenario: Breach Events (Spawn Prevention)
+
+<div class="p-6 rounded-lg border-2 border-border/30 bg-card/20 mb-8">
+
+**Situation:** You spot a Terminid emitting orange cloud (Breach Summoner). Within seconds, a Breach occurs—multiple tunnels open and swarms pour out unless you interrupt it.
+
+**🟢 Difficulties 1-3: Immediate Interruption**
+
+The moment any player sees orange mist emanating from a bug, everyone immediately shoots that bug. Call it out loudly: "Breach bug, focus!" Speed matters more than accuracy. Even one hit interrupts the summon and the orange cloud dissipates.
+
+At lower difficulties, Breach summons occur rarely and are often single-bug events. The threat is manageable if you react quickly. The danger is tunnel vision during combat—you focus on shooting the bug in front of you and miss the Breach summoner behind your teammate.
+
+Train yourself to scan for orange clouds constantly during Terminid engagements. It becomes a pattern recognition check: see orange, shoot immediately, return to previous target. This three-second interruption prevents a thirty-second crisis.
+
+If you fail to stop the Breach, prepare for swarm response tactics. The Breach spawns ten to twenty additional bugs from underground tunnels. Treat it as a swarm attack scenario and implement the basic kiting tactics discussed previously.
+
+**🟡 Difficulties 4-6: Predictive Breach Response**
+
+Breaches at these difficulties occur more frequently, sometimes with multiple simultaneous summoners. You need more sophisticated detection and response.
+
+Sound cues become important. Breach summoners emit a distinct audio signal before the visual orange cloud appears. Train your ear to recognize this sound—a kind of high-pitched chittering different from normal bug noises. When you hear it, immediately start scanning for the source even before visual confirmation.
+
+Positioning prevents Breaches more effectively than reaction speed. During combat, maintain formation where everyone covers different sight lines. One player always watches the rear specifically for flanking threats and Breach summoners that spawn behind you. Rear security is that player's primary job during engagements.
+
+When Breaches occur despite prevention efforts, respond with area-denial stratagems immediately. The bugs spawn from specific tunnel locations marked by dirt eruptions. Drop Orbital Airburst or Incendiary strikes directly on these tunnels as bugs emerge. You catch them clustered at the spawn point, potentially killing the entire Breach wave before it spreads.
+
+Advanced prevention: Some community testing suggests that killing bugs extremely quickly can reduce Breach spawn rates. If you eliminate a patrol completely within seconds of engagement, the game may not trigger Breach reinforcement because the AI never escalated the threat level. This is unconfirmed but supports the general principle that faster kills mean fewer complications.
+
+**🔴 Difficulties 7-9: Breach Acceptance and Mitigation**
+
+At high difficulties, Breaches occur with such frequency that preventing every single one becomes impossible. The tactical shift is accepting that Breaches will happen and preparing mitigation rather than prevention.
+
+Your team needs at least two players with instant-activation crowd control tools ready at all times. Gas grenades, stun grenades, or EMS Mortar strikes. When a Breach occurs, immediately deploy crowd control at the breach site while you reposition to a better fighting position.
+
+The key insight is that newly spawned bugs require two to three seconds to orient and engage after emerging. They do not immediately charge. This lag gives you a window to either dump damage into the spawn point or evacuate to better terrain before they activate.
+
+If multiple Breaches occur simultaneously, priority-triage them by location. A Breach behind you demands immediate attention because bugs will surround you. A Breach to your flank is less critical because you can angle your formation to address it while continuing to move. Never stand still trying to kill every Breach wave—continue moving while fighting them or you enable additional Breaches through extended combat duration.
+
+Heavy stratagems are Breach insurance. Keep one heavy strike available rather than using all of them immediately in combat. When multiple Breaches cascade and the situation deteriorates toward squad wipe, having an Orbital Laser or Eagle Cluster Bomb ready to drop as an emergency reset matters more than having used them earlier for routine kills.
+
+Some missions have higher Breach rates than others based on proximity to bug nests or map type. If you notice frequent Breaches within the first few minutes, adjust your tactics to assume continuous Breach pressure for the entire mission. This mental preparation prevents panic when the fifth Breach triggers—you expected it and are ready.
+
+**⚫ Helldive+: Breach Baiting and Spawn Manipulation**
+
+Advanced technique for confident teams: intentionally triggering controlled Breaches to dictate spawn locations rather than letting them occur randomly at inopportune moments.
+
+The theory is that the game's spawn system has cooldowns on how frequently Breaches occur in a given area. If you deliberately trigger a Breach in a good location for you—open ground with sight lines and no swarm currently present—you force the spawn there and reset the cooldown, potentially preventing a Breach later in a worse location.
+
+To bait a Breach, deliberately prolong combat with a small patrol near good defensive terrain. Keep a few bugs alive longer than necessary, giving the spawn system time to decide a Breach is warranted. When it triggers, you are already positioned in optimal fighting terrain and prepared with stratagems ready.
+
+After the Breach completes and you eliminate the wave, immediately move to the next objective. The spawn cooldown means that area is less likely to Breach again soon, giving you a temporary safe zone for resupply and planning.
+
+This technique is high-risk and should only be attempted by teams with strong communication and tactical discipline. Poorly executed Breach baiting creates crises instead of preventing them. But mastered, it gives you agency over spawn events rather than being purely reactive.
+
+Spawn manipulation also includes intentionally destroying bug holes in specific patterns. Community theory suggests that destroyed holes increase spawn pressure at remaining holes, creating predictable spawn vectors. If you destroy all holes except those north of the objective, spawns will likely concentrate from the north, allowing you to prepare defenses facing that direction specifically.
+
+</div>
+
+<Callout variant="warning">
+**Never Ignore Orange Clouds:** At any difficulty level, ignoring a Breach summoner is the single most common tactical error leading to squad wipes. Treat orange mist sighting as a red-alert priority that overrides all other tactical considerations temporarily.
+</Callout>
+
+### Scenario: Extraction Under Swarm Pressure
+
+<div class="p-6 rounded-lg border-2 border-border/30 bg-card/20 mb-8">
+
+**Situation:** Primary objectives complete. Shuttle called. Ninety-second countdown active. Bugs pour from every direction toward the extraction point.
+
+**🟢 Difficulties 1-3: Basic Extraction Hold**
+
+Form a circle around the extraction beacon as discussed in defensive tactics. The shuttle touchdown zone is clear—do not stand directly on the beacon or the shuttle landing will kill you.
+
+Call out shuttle arrival timing. "Thirty seconds to shuttle" lets everyone prepare. At fifteen seconds, check ammunition and ready sprint toward the shuttle when it lands. At five seconds, watch for the shuttle's approach and be ready to board the instant it touches down.
+
+Do not try to kill every bug. The mission objective is board the shuttle, not eliminate all enemies. If the shuttle lands and a clear path exists, sprint to it immediately and board even if bugs remain alive nearby. Every second spent killing unnecessary targets is a second closer to someone getting grabbed and left behind.
+
+If someone goes down during extraction countdown, evaluate revival priority. If shuttle arrival is imminent (under ten seconds), use Reinforce to respawn them directly at the shuttle rather than exposing yourself to revive them manually and risk a second player death. The pod landing provides momentary safety as bugs recoil from the impact.
+
+**🟡 Difficulties 4-6: Phased Withdrawal to Extraction**
+
+Bug density at this level makes the extraction zone dangerous well before the shuttle arrives. Arriving early lets you set up defenses, but staying too long depletes resources fighting continuous waves.
+
+Advanced extraction timing: Move toward the extraction zone and call the shuttle when you are thirty seconds away from it. This synchronizes your arrival at the extraction point with the shuttle's ninety-second countdown. You arrive with sixty seconds remaining, set up quick defenses, fight one wave, then board. This minimizes total time spent holding the extraction zone.
+
+Phased withdrawal technique: The entire team does not move to extraction simultaneously. Two players (the anchor team) move to extraction first and begin setting up defenses. The other two players (the rear guard) remain at the objective location or between it and extraction, holding off pursuing bugs.
+
+The anchor team calls "Anchors set" when basic defenses are established. Rear guard then sprints to extraction, deliberately leading the chasing swarm toward the prepared defenses where the anchor team and deployed stratagems are ready. This controlled kiting delivers the swarm into kill zones rather than letting bugs arrive randomly.
+
+For the final thirty seconds before shuttle arrival, use your remaining heavy stratagems without reservation. You will not need them after extraction, so expend everything. Drop the Orbital Laser, throw remaining grenades, activate any unused support weapons. This burst expenditure thins the final waves significantly.
+
+Shuttle landing priorities: The shuttle will crush enemies underneath it when landing. Position yourself so enemies are between you and the incoming shuttle approach vector. They get splattered, clearing the immediate boarding path. Then board swiftly.
+
+**🔴 Difficulties 7-9: Extraction Kiting and Pod Armor**
+
+Static defense at extraction becomes nearly impossible at these difficulties due to sheer enemy density and the appearance of multiple heavies during the final countdown. You need mobile extraction tactics.
+
+Kiting circle extraction: Rather than defend a static position around the beacon, your team forms a moving circle that runs loops around the extraction point at thirty to forty meters distance. The bugs chase you in a massive conga line. You lead them in predictable paths that keep them away from the beacon while waiting for the shuttle.
+
+This requires cardio conditioning and situational awareness. Every player uses stims liberally during the kiting phase to maintain speed. Watch your stamina bar constantly and pop another stim before it depletes completely. Being caught mid-kite with zero stamina is usually fatal.
+
+Call out heavy threats during the kite. "Bile Titan northeast" alerts everyone to adjust the kiting path to avoid that threat zone. The circle flexes and adapts to terrain and enemy positions but maintains continuous movement.
+
+When the shuttle arrives, the entire team sprints toward it simultaneously from different points on the kiting circle. This forces the swarm to change direction to pursue, buying precious seconds. Board immediately—do not stop to shoot unless someone goes down at the shuttle ramp.
+
+Personal Shield Generator becomes extremely valuable at this difficulty for extraction insurance. If you have one, save it for extraction. Pop it at the shuttle ramp if you need those two seconds of invulnerability to board while bugs claw at the shield.
+
+If one player goes down, the decision tree is strict: If they are at the shuttle, revive immediately because you are all there already. If they are away from the shuttle, evaluate whether Reinforce pod can drop near the shuttle before boarding is impossible. If Reinforce is available, use it and let them respawn. If not available and shuttle boarding window is closing, you must board without them. Three survivors beats four deaths.
+
+**⚫ Helldive+: Sacrifice Lines and Sequential Boarding**
+
+Helldive extraction presents scenarios where ensuring everyone boards becomes impossible. Advanced teams prepare sacrifice lines—predetermined roles where certain players accept death to enable others' survival.
+
+Sacrifice line concept: One player is designated the "objective carrier" who holds all samples or mission-critical items. This player boards first regardless of situation. A second player is the "carrier escort" whose job is ensuring the carrier reaches the shuttle. The other two players are expendable in the sense that mission success does not depend on their survival, only their actions enabling the carrier's survival.
+
+Sequential boarding execution: Carrier and escort reach extraction first and set up temporary defense. The other two players arrive later, leading the main swarm. As the shuttle lands, the two expendable players form a physical barrier between the swarm and the carrier, using their bodies and suppressive fire to buy the carrier those three seconds needed to board.
+
+Once the carrier is aboard, the escort boards. The remaining two players attempt to board if possible, but accept that the swarm may overwhelm them. Two successful extractions beats zero extractions, and mission success only requires one Helldiver aboard with the samples.
+
+This sounds grim, but remember that death during extraction is not permanent—you simply do not receive the end-of-mission bonuses for surviving. The mission still succeeds and you keep your XP and sample rewards if at least one player boards.
+
+Alternative technique for confident aimers: Overwatch extraction. Three players board immediately when shuttle arrives. One player remains outside with a high-ground position and long-range weapon. That player provides covering fire and picks off priority targets while the shuttle prepares takeoff. At the last possible moment (usually five seconds before departure), the overwatch player sprints to the shuttle and boards.
+
+This works because the shuttle has a brief window where doors are open but not yet closing. The overwatch player uses this window, providing those extra seconds of fire support that can mean the difference between the other three being overwhelmed before boarding versus staying safe long enough to get inside.
+
+The risk is mistiming the sprint—if you miss the boarding window, you die alone and the mission succeeds without you. But for teams that consistently fail extraction by narrow margins, having one expert player stay outside providing suppression for those critical seconds improves overall success rates.
+
+</div>
+
+<Callout variant="success">
+**Final Pro Tip:** The extraction shuttle's arrival itself is a weapon. Its landing causes area-of-effect damage and knockback. If you position correctly, it crushes approaching Chargers and scatters swarms. Use this tactical bonus deliberately by positioning enemies between you and the shuttle's approach vector.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Stratagem Synergy: Terminids Edition
+
+<div class="space-y-6 mb-8">
+
+Stratagems combine for multiplicative effectiveness against bugs. Understanding which combinations work best prevents wasted cooldowns and creates team-wide advantages.
+
+</div>
+
+### Fire and Movement Combos
+
+**Incendiary Strike + Flamethrower Support Weapon:** The Orbital or Eagle Incendiary strike creates a fire zone that damages bugs continuously. Pair this with a teammate using a Flamethrower to extend the fire coverage. Bugs caught between the orbital fire and your personal flamethrower face fire from multiple sources simultaneously, dying before they can close distance.
+
+**Static Field + Orbital Laser:** Deploy the Static Field (Tesla Tower) in the swarm's path. It slows and damages bugs, causing them to bunch up in the affected zone. Immediately call Orbital Laser through that zone perpendicular to the swarm's movement. The laser sweeps through the clustered, slowed bugs, eliminating the entire group in one pass.
+
+**Gas Grenade + Eagle Cluster Bomb:** Throw gas grenades into a swarm approaching from medium range. The gas stuns and begins damaging them. While they stagger through the cloud, call Eagle Cluster Bomb on that position. The stunned bugs cannot dodge, and the cluster bombs impact while they are maximally exposed.
+
+### Defensive Stratagems Stacking
+
+**Gatling Sentry + Autocannon Sentry + Mortar Sentry:** Deploy all three automated sentries in a triangular formation fifteen meters from your defensive position. The Gatling handles small fast-moving bugs, the Autocannon targets medium armor, and the Mortar provides area denial. This tri-sentry setup creates overlapping fields of fire that bugs cannot navigate without taking significant damage.
+
+**Mine Field + Barbed Wire:** Place barbed wire fences in front of your mines. Bugs hit the wire and slow down, which causes them to bunch up and path poorly. When they finally push through the wire, they step on the mines as a clustered group rather than individually. One mine detonation can chain-kill multiple bugs that the wire held in close proximity.
+
+### Resource Management Synergies
+
+**Resupply + Machine Gun Support Weapon:** One player brings Resupply Pack, another brings the Machine Gun support weapon. The Machine Gun has massive sustained fire potential but burns through ammunition. By positioning the resupply player near the MG user, the MG essentially has infinite ammunition via quick backpack refills. This creates a bullet hose that never stops firing—devastating against continuous swarm waves.
+
+**Shield Generator Pack + Flamethrower + Objective Defense:** During objective defense, have the player with the Shield Generator Pack also carry the Flamethrower. They stand at the most dangerous approach vector and pop the shield when that direction gets swarmed. The shield protects them from incoming bugs while they spray fire through the shield bubble (most shields allow outgoing fire). This creates an invincible fire wall for the shield's duration, completely locking down one approach.
+
+### Emergency Combos
+
+**Orbital 380mm Barrage + Defensive Retreat:** When a position becomes completely overrun, call the 380mm Barrage directly on your current location then immediately sprint away with the team. The barrage has a huge area and lasts thirty seconds. You abandon the position to the bugs, they swarm the area, and the random barrage shells annihilate them while you establish a new position nearby. This trades ground temporarily to eliminate overwhelming numbers.
+
+**Eagle 500kg Bomb + Reinforce Pod:** If a teammate goes down in an impossible position surrounded by bugs, drop a 500kg Bomb on their body rather than attempting retrieval. The explosion clears the area. Immediately use Reinforce to drop them back in now that the zone is clear. The pod lands safely in the bombed zone where seconds earlier dozens of bugs prevented any rescue.
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Common Fatal Mistakes vs. Terminids
+
+<div class="space-y-6 mb-8">
+
+Certain errors appear repeatedly among players struggling with bug combat. Identifying and correcting these mistakes improves performance more than any single gear optimization.
+
+</div>
+
+<Callout variant="warning">
+**Standing still while shooting:** The single most common cause of death. Terminids' entire strength is closing distance. By stopping to aim and shoot, you allow them to close that distance. Always be moving—walk backwards while shooting, sidestep continuously, never plant your feet.
+</Callout>
+
+<Callout variant="warning">
+**Tunnel vision on the swarm:** Focusing so intently on the mass of small bugs that you miss the Breach summoner orange cloud behind you, or fail to notice the Bile Titan preparing to mortar your position. Maintain situational awareness through constant scanning and teammate callouts.
+</Callout>
+
+<Callout variant="warning">
+**Fighting with backs to each other in a circle:** This seems logical but creates a fatal flaw—when one player dies and goes down, they block the position and the circle collapses. Better to form a line or staggered positions where one death does not block others' movement or sight lines.
+</Callout>
+
+<Callout variant="warning">
+**Reloading simultaneously:** All four players reloading at the same time leaves zero players shooting during that window. Bugs advance unchecked. Stagger reloads by calling "reloading" so others know to maintain fire until you finish.
+</Callout>
+
+<Callout variant="warning">
+**Ignoring Charger flanks:** Focusing on frontal armor while a Charger circles to attack from your side or rear. Chargers are not stupid—they path around obstacles to attack your vulnerable angles. Maintain three-hundred-sixty-degree awareness and call out Charger positions continuously.
+</Callout>
+
+<Callout variant="warning">
+**Standing in acid pools:** Bile leaves damaging pools that persist for ten-plus seconds. Players often dodge the initial spit, then walk into the pool while focusing on shooting bugs. The pool slowly kills you. Always be aware of ground effects and path around them.
+</Callout>
+
+<Callout variant="warning">
+**Using all heavy stratagems immediately:** Dumping your Orbital Laser, 500kg Bomb, and both Eagle runs in the first minute of combat leaves you with nothing but small arms for the next two minutes of cooldowns. Pace stratagem usage, keeping at least one heavy option available continuously.
+</Callout>
+
+<Callout variant="warning">
+**Not calling out threats:** Silence during combat causes preventable deaths. The player facing east cannot see the Breach summoner to the west. Verbal callouts create team-wide awareness that individual sight lines cannot provide.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Tactical Mindset vs. Bugs
+
+<div class="space-y-6 mb-10">
+
+Terminids are the most straightforward faction mechanically but demand constant activity and awareness. Your mind never rests during bug combat—always scanning for threats, always moving, always communicating. This can be exhausting, which is why many players find bug missions stressful despite them being "easier" than bot missions.
+
+The key mental shift is accepting that you will be swarmed. The question is not "if" but "when" and "how prepared are you when it happens." Teams that internalize this acceptance perform far better than teams that try to prevent swarms entirely. You cannot prevent them on higher difficulties. You can only manage them well.
+
+Bugs punish hesitation and reward aggression. When you see an opening, take it. Sprint through a gap in the swarm. Throw that Thermite at the Charger even if you are not in optimal position. Call the stratagem strike on your own position if it saves the team. Terminids are direct threats that demand direct responses.
+
+Finally, remember that bugs are the entry point for most players. If you master bug combat, you establish the tactical fundamentals that apply across all factions—mobility, target priority, resource management, and team coordination. Every difficult skill you develop fighting bugs transfers to fighting the other factions.
+
+Now get out there, Helldiver, and show these bugs what happens when they underestimate humanity's capacity for overwhelming violence. For Democracy!
+
+</div>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

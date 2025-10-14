@@ -1,0 +1,1037 @@
+---
+title: Tips & Tricks — Competitive Guide
+---
+
+import Callout from "@/components/Callout.astro";
+import { Monitor, Gamepad2, Target, Users, Shield, Wrench } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Master Battlefield 6 with these essential tips for competitive play.** This comprehensive guide covers everything from PC optimization and control setup to advanced infantry tactics and team coordination.
+
+Whether you're transitioning from Call of Duty or just starting your Battlefield journey, these battle-tested strategies will dramatically improve your effectiveness on the battlefield. Each tip is designed to give you a tangible competitive edge.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Monitor className="inline-block mr-3 mb-1" size={32} /> Essential PC Settings & Optimization
+
+<div class="space-y-6 mb-8">
+
+These settings strip away visual clutter and maximize your ability to spot enemies. Every competitive player should configure these before their first match.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🧭
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Infantry Compass</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">The compass is OFF by default, hurting team communication drastically.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Location:</span> <span class="text-foreground/70">Settings > Graphics > HUD > Advanced</span></div>
+      <div><span class="text-fs-gold font-semibold">Setting:</span> <span class="text-foreground/70">Infantry Compass: ON</span></div>
+      <div class="mt-2 text-foreground/60">Enables precise callouts like "Sniper at 120°" for squad coordination</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        👁️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Raw Mouse Input</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Bypasses OS acceleration for true 1:1 mouse control.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Setting:</span> <span class="text-foreground/70">Raw Input: ON (usually default)</span></div>
+      <div class="mt-2 text-foreground/60">Essential for consistent, precise aiming with no smoothing or filtering</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Uniform Soldier Aiming</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Same sensitivity across all zoom levels for consistent muscle memory.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Setting:</span> <span class="text-foreground/70">USA: ON</span></div>
+      <div class="mt-2 text-foreground/60">Your mouse movement creates identical screen distance at 1× or 6× zoom</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        📊
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Damage Numbers</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">See exact damage dealt with numeric hit markers.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Location:</span> <span class="text-foreground/70">HUD or Gameplay Settings</span></div>
+      <div><span class="text-fs-gold font-semibold">Setting:</span> <span class="text-foreground/70">Damage Display: ON</span></div>
+      <div class="mt-2 text-foreground/60">Instantly know if enemy is one-shot or needs multiple hits</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🗺️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Minimap Size</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Maximize minimap to 100% for better battlefield awareness.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Setting:</span> <span class="text-foreground/70">Minimap Size: 100</span></div>
+      <div class="mt-2 text-foreground/60">Enemy gunfire shows as red dots instantly—like a built-in wallhack if you watch it</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎨
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Custom HUD Colors</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Change enemy colors to high-contrast options for better visibility.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Location:</span> <span class="text-foreground/70">Accessibility > HUD Color</span></div>
+      <div><span class="text-fs-gold font-semibold">Recommended:</span> <span class="text-foreground/70">Orange, yellow, or pink for enemies</span></div>
+      <div class="mt-2 text-foreground/60">Default red blends into backgrounds—bright colors pop instantly</div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Quick Win:** The infantry compass and maximized minimap alone will transform your situational awareness. Enable these first, then fine-tune the rest.
+</Callout>
+
+### Visual Clarity Settings
+
+<div class="space-y-6 mb-8">
+
+Turn OFF all these "cinematic" effects that only hurt your ability to spot enemies. Every frame of clarity matters.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Setting</th>
+        <th class="text-center p-3 text-primary font-semibold">Recommended</th>
+        <th class="text-left p-3 text-primary font-semibold">Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Motion Blur</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0%</div>
+          <div class="text-xs text-foreground/60">(Both World & Weapon)</div>
+        </td>
+        <td class="p-3 text-foreground/80">Sharp image while turning—essential for tracking enemies</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Chromatic Aberration</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">OFF</div>
+        </td>
+        <td class="p-3 text-foreground/80">Removes color fringing/distortion at screen edges</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Film Grain</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">OFF</div>
+        </td>
+        <td class="p-3 text-foreground/80">Eliminates visual noise that obscures distant targets</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Depth of Field</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">OFF</div>
+        </td>
+        <td class="p-3 text-foreground/80">Keeps distant enemies sharp instead of blurred</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Vignette</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">OFF</div>
+        </td>
+        <td class="p-3 text-foreground/80">No darkening at screen edges</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Lens Distortion</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">OFF</div>
+        </td>
+        <td class="p-3 text-foreground/80">Straight lines stay straight for accurate aiming</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Camera Shake</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">50%</div>
+          <div class="text-xs text-foreground/60">(Minimum)</div>
+        </td>
+        <td class="p-3 text-foreground/80">Stable view during explosions—aim through the chaos</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Crosshair Projection</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">OFF</div>
+        </td>
+        <td class="p-3 text-foreground/80">Static crosshair locked to screen center for consistency</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Field of View & Zoom Settings
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">Overall FOV</h4>
+    <div class="mb-4">
+      <div class="flex justify-between text-sm mb-2">
+        <span class="text-foreground/70">Recommended Range</span>
+        <span class="text-fs-gold font-semibold">90-100°</span>
+      </div>
+      <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+        <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+      </div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Broader peripheral vision without excessive distortion</li>
+      <li>✓ Enemies can't sneak up just outside your screen</li>
+      <li>✓ Sweet spot for most players</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">ADS Field of View</h4>
+    <div class="mb-4">
+      <div class="text-sm mb-2">
+        <span class="text-foreground/70">Personal Preference Setting</span>
+      </div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li><span class="text-fs-gold font-semibold">OFF:</span> More zoom when ADS, targets appear larger (most competitive players)</li>
+      <li><span class="text-fs-gold font-semibold">ON:</span> Maintains FOV while aiming, better peripheral awareness</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">Weapon FOV</h4>
+    <div class="mb-4">
+      <div class="flex justify-between text-sm mb-2">
+        <span class="text-foreground/70">Recommended</span>
+        <span class="text-fs-gold font-semibold">Wide</span>
+      </div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Smaller gun model on screen</li>
+      <li>✓ More visible screen real estate</li>
+      <li>✓ Enemies less likely to be obscured by your weapon</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">HUD Icon Size (Zoomed)</h4>
+    <div class="mb-4">
+      <div class="flex justify-between text-sm mb-2">
+        <span class="text-foreground/70">Recommended</span>
+        <span class="text-fs-gold font-semibold">Reduced</span>
+      </div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Objective markers shrink when you ADS</li>
+      <li>✓ Giant icons won't block enemy silhouettes</li>
+      <li>✓ Clear sightlines in objective areas</li>
+    </ul>
+  </div>
+</div>
+
+### Audio Setup for Competitive Play
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/20 mb-8">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="text-3xl">🎧</div>
+    <div>
+      <h4 class="text-lg font-semibold text-primary">Headphone Audio Mix</h4>
+      <p class="text-xs text-foreground/60">Sound is your superpower in Battlefield</p>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div class="p-4 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-2">❌ AVOID</div>
+      <div class="text-sm font-semibold text-foreground mb-1">War Tapes</div>
+      <p class="text-xs text-foreground/70">Makes explosions/ambience too loud, drowns out footsteps and subtle audio cues</p>
+    </div>
+    
+    <div class="p-4 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-2">✓ RECOMMENDED</div>
+      <div class="text-sm font-semibold text-foreground mb-1">3D Headphones / Stereo</div>
+      <p class="text-xs text-foreground/70">Emphasizes directional and close-range sounds—hear flankers and footsteps clearly</p>
+    </div>
+  </div>
+  
+  <div class="text-xs text-foreground/80 space-y-2">
+    <div><span class="text-fs-gold font-semibold">Why it matters:</span> Enemy footsteps are louder than friendly ones. Directional audio helps you pinpoint threats through walls.</div>
+    <div><span class="text-fs-gold font-semibold">Pro tip:</span> Consider lowering music volume to maximize tactical audio cues.</div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Gamepad2 className="inline-block mr-3 mb-1" size={32} /> Control Setup & Keybind Optimization
+
+<div class="space-y-6 mb-8">
+
+Smart keybinds and control configuration can give you mechanical advantages. These tricks separate good players from great ones.
+
+</div>
+
+### Advanced Keybind Tricks
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-gradient-to-br from-primary/10 to-card/50 rounded-lg border-2 border-primary/30">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="text-3xl">🎯</div>
+      <div>
+        <h4 class="text-lg font-semibold text-primary">Sniper Quick-Aim Combo</h4>
+        <p class="text-xs text-foreground/60">One button for everything</p>
+      </div>
+    </div>
+    
+    <div class="mb-4 p-4 bg-card/70 rounded border border-border">
+      <div class="text-xs text-foreground/70 mb-2">Bind these to the SAME key (right-click):</div>
+      <ul class="text-sm space-y-1 text-foreground">
+        <li>• Aim Down Sights</li>
+        <li>• Steady Scope (Hold Breath)</li>
+        <li>• Rangefinder/Zero</li>
+      </ul>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">RESULT</div>
+      <p class="text-xs text-foreground/80">Instant auto-zeroed, steady shot. Pre-aim near target, press one button, fire. Long-distance shots become trivial.</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="text-3xl">⌨️</div>
+      <div>
+        <h4 class="text-lg font-semibold text-primary">Separate Movement Keys</h4>
+        <p class="text-xs text-foreground/60">No accidental stance changes</p>
+      </div>
+    </div>
+    
+    <div class="space-y-3 text-sm">
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Crouch (Toggle)</span>
+        <span class="text-fs-gold font-semibold">Ctrl</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Prone</span>
+        <span class="text-fs-gold font-semibold">Z</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Slide</span>
+        <span class="text-fs-gold font-semibold">C</span>
+      </div>
+    </div>
+    
+    <p class="text-xs text-foreground/70 mt-4">Prevents accidentally going prone when you meant to slide, or vice versa. Precise control = staying alive.</p>
+  </div>
+</div>
+
+### Crosshair Customization
+
+<div class="p-5 bg-card/50 rounded-lg border border-border mb-8">
+  <h4 class="text-md font-semibold text-primary mb-3">Make Your Crosshair Visible</h4>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div>
+      <div class="text-xs text-foreground/60 mb-2">Color</div>
+      <div class="text-sm text-foreground/80">Bright cyan, green, or pink—colors uncommon in game world</div>
+    </div>
+    <div>
+      <div class="text-xs text-foreground/60 mb-2">Thickness</div>
+      <div class="text-sm text-foreground/80">Thick enough to see, not so bold it distracts</div>
+    </div>
+    <div>
+      <div class="text-xs text-foreground/60 mb-2">Opacity</div>
+      <div class="text-sm text-foreground/80">Adjust so it pops against any background</div>
+    </div>
+  </div>
+  
+  <div class="mt-4 text-xs text-foreground/70">
+    <span class="text-fs-gold font-semibold">Goal:</span> Never lose sight of your aiming point. Default white crosshairs get lost in bright environments.
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Combat Fundamentals
+
+<div class="space-y-6 mb-8">
+
+Battlefield punishes run-and-gun tactics. These fundamentals are non-negotiable for effective infantry combat.
+
+</div>
+
+### Weapon Control Essentials
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">BURST FIRE</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Fire 3-5 round bursts</li>
+      <li>✓ Let weapon settle between bursts</li>
+      <li>✓ Maintains accuracy at range</li>
+      <li>✗ Don't hold trigger for full mag</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Continuous fire = massive bloom
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">STABLE STANCE</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Stand still when shooting</li>
+      <li>✓ Crouch for extra accuracy</li>
+      <li>✓ Stop sprinting before firing</li>
+      <li>✗ Don't shoot while sliding/jumping</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Movement = massive inaccuracy
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">RECOIL CONTROL</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Pull down during sustained fire</li>
+      <li>✓ Use weapon mounting on ledges</li>
+      <li>✓ Mounted = laser-beam accuracy</li>
+      <li>✗ Don't mount in exposed positions</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Mount locks you in place
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**Critical Difference from CoD:** Battlefield has fast time-to-kill (TTK) but NOT while moving. You must stop moving to shoot accurately. Run or gun—not both.
+</Callout>
+
+### Healing & Engagement Discipline
+
+<div class="p-6 bg-red-500/10 rounded-lg border-2 border-red-500/30 mb-8">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="text-3xl">❤️</div>
+    <div>
+      <h4 class="text-lg font-semibold text-red-400">Fast TTK = Heal Before Re-engaging</h4>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">THE PROBLEM</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Extremely fast time-to-kill in BF6</li>
+        <li>• Peeking at low health = instant death</li>
+        <li>• Suppression fire stops health regen</li>
+      </ul>
+    </div>
+    
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">THE SOLUTION</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Break line of sight after taking damage</li>
+        <li>• Wait for full health regen (or use Assault's Adrenaline)</li>
+        <li>• Only re-engage at full health</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-3 bg-card/70 rounded">
+    <p class="text-sm text-foreground/80"><span class="text-fs-gold font-semibold">Patience saves lives:</span> Pick smart engagements. If you're wounded and bullets are flying past you, duck into cover and wait. Never challenge at low HP.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Shield className="inline-block mr-3 mb-1" size={32} /> Tactical Infantry Play
+
+<div class="space-y-6 mb-8">
+
+Advanced movement and positioning techniques that turn you into an elusive, effective infantry soldier.
+
+</div>
+
+### Cover-Based Warfare
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">Cover-to-Cover Movement</h4>
+    <div class="mb-4">
+      <p class="text-sm text-foreground/80">Treat the battlefield as a series of cover nodes. Never run exposed.</p>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Identify next cover before moving</li>
+      <li>✓ Use tactical sprint between positions</li>
+      <li>✓ Minimize time in open ground</li>
+      <li>✓ Even temporary cover (rocks, debris) counts</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">Lean & Peek System</h4>
+    <div class="mb-4">
+      <p class="text-sm text-foreground/80">ADS near cover to auto-lean. Use mount (F) for tighter control.</p>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Crouch before peeking to lower profile</li>
+      <li>✓ "Slice the pie"—inch out gradually</li>
+      <li>✓ Expose minimal body surface area</li>
+      <li>✓ Reposition if enemies focus your spot</li>
+    </ul>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Hard Cover vs Soft Cover:** Concrete, rocks, and metal = hard cover (bulletproof). Wood, drywall, thin walls = soft cover (bullets penetrate). Learn the difference.
+</Callout>
+
+### Advanced Movement Chains
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Movement Mastery</h3>
+      <p class="text-sm text-foreground/60">Chaining moves for unpredictable, elusive combat</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">⚡</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div class="p-4 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-2">CROUCH SPRINT</div>
+      <div class="text-sm text-foreground/80 mb-2">Sprint while crouched for ~80% speed with much smaller hitbox</div>
+      <div class="text-xs text-foreground/60">Perfect for crossing dangerous sightlines under sniper watch</div>
+    </div>
+
+    <div class="p-4 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-2">SLIDE TO PRONE</div>
+      <div class="text-sm text-foreground/80 mb-2">Sprint → Slide → Go prone to rapidly drop and change direction</div>
+      <div class="text-xs text-foreground/60">Snap sideways into cover or evade fire mid-slide</div>
+    </div>
+
+    <div class="p-4 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-2">DIVE TO PRONE</div>
+      <div class="text-sm text-foreground/80 mb-2">Sprint + prone key to dive forward onto ground instantly</div>
+      <div class="text-xs text-foreground/60">Emergency drop behind cover when under fire</div>
+    </div>
+  </div>
+
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20 mb-4">
+    <div class="text-xs text-primary font-semibold mb-2">EXAMPLE EVASION COMBO</div>
+    <div class="text-sm font-mono text-foreground bg-card/50 p-3 rounded">
+      Sprint → Slide → Jump → Sprint (repeat)
+    </div>
+    <p class="text-xs text-foreground/80 mt-2">Creates zig-zag bunny-hop effect that's extremely difficult to track</p>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">WHEN TO USE</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Dodging fire</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Closing distance</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Repositioning</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">DON'T SHOOT DURING</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Sliding</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Diving</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Jumping</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Audio-Based Awareness
+
+<div class="p-6 bg-card/50 rounded-lg border border-border mb-8">
+  <h4 class="text-lg font-semibold text-primary mb-4">Sound = Your Sixth Sense</h4>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <div class="text-xs text-primary font-semibold mb-3">WHAT TO LISTEN FOR</div>
+      <div class="space-y-2 text-sm text-foreground/80">
+        <div><span class="text-fs-gold">👂 Enemy footsteps:</span> Louder than friendly footsteps</div>
+        <div><span class="text-fs-gold">👂 Reload sounds:</span> Enemy reloading = push opportunity</div>
+        <div><span class="text-fs-gold">👂 Gunfire direction:</span> Pinpoint shooter location</div>
+        <div><span class="text-fs-gold">👂 Vehicle engines:</span> Tank/vehicle approaching</div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="text-xs text-primary font-semibold mb-3">AUDIO TACTICS</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Hear enemies through walls/smoke before seeing them</li>
+        <li>• Differentiate friend from foe by footstep volume</li>
+        <li>• Catch flankers approaching behind you</li>
+        <li>• Use directional audio to pre-aim corners</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="mt-4 p-3 bg-primary/10 rounded border border-primary/20">
+    <p class="text-xs text-foreground/80"><span class="text-fs-gold font-semibold">Pro tip:</span> Consider disabling the tinnitus "ringing" sound effect—it masks subtle audio cues like footsteps during explosions.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Users className="inline-block mr-3 mb-1" size={32} /> Team Play & Objectives
+
+<div class="space-y-6 mb-8">
+
+Battlefield is won through teamwork, not killstreaks. These systems separate Battlefield from other shooters.
+
+</div>
+
+### The Objective is King
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/20 mb-8">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="text-3xl">🎯</div>
+    <h4 class="text-xl font-semibold text-primary">Play the Objective > K/D Ratio</h4>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+    <div class="p-3 bg-card/50 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">CAPTURE</div>
+      <div class="text-sm text-foreground/80">Stand on objectives to capture them—the primary way to win</div>
+    </div>
+    <div class="p-3 bg-card/50 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">DEFEND</div>
+      <div class="text-sm text-foreground/80">Protecting captured points prevents enemy comebacks</div>
+    </div>
+    <div class="p-3 bg-card/50 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">SUPPORT</div>
+      <div class="text-sm text-foreground/80">Revives, ammo, health, spots all contribute to victory</div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-red-500/10 rounded border border-red-500/30">
+    <p class="text-sm text-foreground/80"><span class="text-red-400 font-semibold">Reality check:</span> There are NO killstreaks in BF6. A high K/D while ignoring objectives = low score and team loss. Teamwork wins matches.</p>
+  </div>
+</div>
+
+### Spotting System
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">Spot Enemies (Q Key)</h4>
+    <div class="mb-4">
+      <p class="text-sm text-foreground/80">Tag enemies so your entire team can see them for several seconds.</p>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Aim at enemy, tap Q to mark them</li>
+      <li>✓ Spotted enemies show on all teammates' screens</li>
+      <li>✓ Works through smoke and at range</li>
+      <li>✓ Spot vehicles, infantry, equipment</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">Watch Your Minimap</h4>
+    <div class="mb-4">
+      <p class="text-sm text-foreground/80">Enemies firing unsuppressed weapons appear as red dots instantly.</p>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Glance at minimap constantly</li>
+      <li>✓ Red dots = enemy firing location</li>
+      <li>✓ Anticipate enemy positions from indicators</li>
+      <li>✓ Like a built-in wallhack if you pay attention</li>
+    </ul>
+  </div>
+</div>
+
+### Class System & Roles
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Class</th>
+        <th class="text-left p-3 text-primary font-semibold">Primary Role</th>
+        <th class="text-left p-3 text-primary font-semibold">Key Gadgets</th>
+        <th class="text-left p-3 text-primary font-semibold">When to Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Assault</td>
+        <td class="p-3 text-foreground/80">Aggressive frontline combat</td>
+        <td class="p-3">
+          <div class="text-xs space-y-1">
+            <div class="text-fs-gold">Adrenaline Injector</div>
+            <div class="text-foreground/70">Instant heal + speed boost</div>
+          </div>
+        </td>
+        <td class="p-3 text-xs text-foreground/70">Leading pushes, close quarters, spawn beacon flanks</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Engineer</td>
+        <td class="p-3 text-foreground/80">Vehicle destruction & repair</td>
+        <td class="p-3">
+          <div class="text-xs space-y-1">
+            <div class="text-fs-gold">Rocket Launchers</div>
+            <div class="text-foreground/70">Repair tool, AA missiles</div>
+          </div>
+        </td>
+        <td class="p-3 text-xs text-foreground/70">When enemy vehicles dominate, friendly vehicles need repairs</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Support</td>
+        <td class="p-3 text-foreground/80">Healing & ammo resupply</td>
+        <td class="p-3">
+          <div class="text-xs space-y-1">
+            <div class="text-fs-gold">Supply Crate</div>
+            <div class="text-foreground/70">Fast revives, mobile health</div>
+          </div>
+        </td>
+        <td class="p-3 text-xs text-foreground/70">Team lacks medics/ammo, sustained firefights</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Recon</td>
+        <td class="p-3 text-foreground/80">Long-range overwatch & intel</td>
+        <td class="p-3">
+          <div class="text-xs space-y-1">
+            <div class="text-fs-gold">Spotting Scope</div>
+            <div class="text-foreground/70">Sensor beacons, drones</div>
+          </div>
+        </td>
+        <td class="p-3 text-xs text-foreground/70">Holding defensive positions, marking targets for team</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip">
+**Adapt your class:** Don't stubbornly stick to one role. If enemy tanks are dominating, your squad needs an Engineer. If teammates are dying without revives, go Support. Flexibility wins games.
+</Callout>
+
+### Revive & Squad Mechanics
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">Revive System</h4>
+    <div class="mb-4">
+      <p class="text-sm text-foreground/80">Any class can revive—Support does it fastest and to full health.</p>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Revives save team tickets (in Conquest)</li>
+      <li>✓ Drag downed teammates to cover before reviving</li>
+      <li>✓ Don't revive in the open—you'll both die</li>
+      <li>✓ Support defibrillators = full HP revive if charged</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <h4 class="text-md font-semibold text-primary mb-3">Smart Spawning</h4>
+    <div class="mb-4">
+      <p class="text-sm text-foreground/80">Spawn on squadmates or objectives strategically.</p>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Use spawn camera to check squadmate's situation</li>
+      <li>✓ Spawn on person in good position for flanks</li>
+      <li>✓ Assault's Deploy Beacon = behind-enemy-lines spawns</li>
+      <li>✓ One squadmate alive = whole squad can keep pushing</li>
+    </ul>
+  </div>
+</div>
+
+### Squad Orders & Coordination
+
+<div class="p-5 bg-card/50 rounded-lg border border-border mb-8">
+  <h4 class="text-md font-semibold text-primary mb-3">Follow Squad Orders for Bonus XP</h4>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+    <div>
+      <div class="text-xs text-primary font-semibold mb-2">IF YOU'RE SQUAD LEADER</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Aim at objective and press order key</li>
+        <li>• Mark Attack or Defend orders</li>
+        <li>• Update orders as battle shifts</li>
+        <li>• Keep your squad focused</li>
+      </ul>
+    </div>
+    
+    <div>
+      <div class="text-xs text-primary font-semibold mb-2">IF YOU'RE SQUAD MEMBER</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Pay attention to marked objectives</li>
+        <li>• Following orders = bonus points</li>
+        <li>• Stick with your squad</li>
+        <li>• Use voice or commorose to communicate</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+    <p class="text-sm text-foreground/80"><span class="text-green-400 font-semibold">Coordinated squad > four lone wolves:</span> A well-led squad moving together can turn the tide of battle. Plus, free bonus points!</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Wrench className="inline-block mr-3 mb-1" size={32} /> Vehicles & Destruction
+
+<div class="space-y-6 mb-8">
+
+Combined-arms warfare defines Battlefield. Learn to deal with vehicles and exploit destruction mechanics.
+
+</div>
+
+### Vehicle Warfare
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-red-500/10 rounded-lg border-2 border-red-500/30">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        🚁
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Countering Vehicles</div>
+        <div class="text-xs text-foreground/60">Don't ignore them—they'll ruin your day</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 mb-4">
+      <div class="text-xs font-semibold text-red-400 mb-2">ANTI-VEHICLE TOOLS</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Engineer rocket launchers (primary counter)</li>
+        <li>• C5 explosives (sneak attack)</li>
+        <li>• Stationary AT/AA emplacements</li>
+        <li>• Coordinate with squadmates</li>
+      </ul>
+    </div>
+    
+    <div class="p-3 bg-card/70 rounded">
+      <div class="text-xs text-red-400 font-semibold mb-1">NEVER</div>
+      <p class="text-xs text-foreground/80">Stand in open unloading rifle into tank. Fall back, flank, or lure into trap.</p>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        🛡️
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">Operating Vehicles</div>
+        <div class="text-xs text-foreground/60">Powerful but not invincible</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 mb-4">
+      <div class="text-xs font-semibold text-primary mb-2">VEHICLE TACTICS</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Must retreat to specific points to resupply/repair</li>
+        <li>• Cannot auto-repair indefinitely</li>
+        <li>• Find Engineer teammate for repairs</li>
+        <li>• Coordinated fire brings anything down</li>
+      </ul>
+    </div>
+    
+    <div class="p-3 bg-card/70 rounded">
+      <div class="text-xs text-green-400 font-semibold mb-1">TIP</div>
+      <p class="text-xs text-foreground/80">Disable tank treads or use AA missiles on choppers for quick takedowns.</p>
+    </div>
+  </div>
+</div>
+
+### Destruction Mechanics
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Exploit Destruction</h3>
+      <p class="text-sm text-foreground/60">Cover is temporary—use that to your advantage</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">💥</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div>
+      <div class="text-xs text-primary font-semibold mb-3">OFFENSIVE DESTRUCTION</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>✓ Blow holes in walls to create new angles</li>
+        <li>✓ Collapse buildings on campers</li>
+        <li>✓ Destroy sniper nest cover with rockets</li>
+        <li>✓ Crater walls to expose defenders</li>
+      </ul>
+    </div>
+    
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-3">DEFENSIVE AWARENESS</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>⚠ Enemy can do the same to you</li>
+        <li>⚠ Don't camp flimsy walls too long</li>
+        <li>⚠ Tank shells turn cover to rubble instantly</li>
+        <li>⚠ Always have escape route from buildings</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">BATTLEFIELD PHILOSOPHY</div>
+    <p class="text-sm text-foreground/80">Embracing destruction creates cinematic chaos and prevents stalemates. When in doubt, C4 it!</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🎯 Advanced Mechanics
+
+### Sniping Fundamentals
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">BULLET PHYSICS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Bullets have travel time</li>
+      <li>✓ Gravity causes bullet drop</li>
+      <li>✓ Lead moving targets</li>
+      <li>✓ Aim above distant targets</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Not hitscan like CoD
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">ZEROING SYSTEM</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Adjust scope zero to target distance</li>
+      <li>✓ Zero to 200m, 500m, etc.</li>
+      <li>✓ Crosshair compensates for drop</li>
+      <li>✓ Use rangefinder to determine distance</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Dialed shots at long range
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">SWEET SPOT MECHANIC</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ ~80-100m optimal range</li>
+      <li>✓ Extra damage at this distance</li>
+      <li>✓ One-shot body kills possible</li>
+      <li>✓ Varies by rifle model</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Find your sweet spot
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-card/50 rounded-lg border border-border mb-8">
+  <h4 class="text-md font-semibold text-primary mb-3">Scope Glint Management</h4>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">YOUR GLINT</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Your scope emits bright lens flare when aiming</li>
+        <li>• Rainbow tint makes you very visible</li>
+        <li>• Counter-snipers will spot you instantly</li>
+        <li>• Relocate after 1-2 kills</li>
+      </ul>
+    </div>
+    
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">SPOTTING GLINTS</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Watch for bright lens flares in distance</li>
+        <li>• Enemy sniper has you lined up</li>
+        <li>• Take cover or relocate immediately</li>
+        <li>• Counter-snipe their position</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### Practice & Mastery
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/20 mb-8">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="text-3xl">🎮</div>
+    <h4 class="text-lg font-semibold text-primary">Training Grounds & Portal Mode</h4>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+    <div>
+      <div class="text-xs text-primary font-semibold mb-2">FIRING RANGE</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Test weapons, recoil, attachments</li>
+        <li>• Shoot walls to see spread patterns</li>
+        <li>• Understand bloom during sustained fire</li>
+        <li>• Try different loadout configurations</li>
+      </ul>
+    </div>
+    
+    <div>
+      <div class="text-xs text-primary font-semibold mb-2">PORTAL MODE</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Custom games with various rule sets</li>
+        <li>• Low-pressure environment to learn</li>
+        <li>• Some servers emulate CoD-style gameplay</li>
+        <li>• Practice mechanics before ranked</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-3 bg-card/70 rounded">
+    <p class="text-sm text-foreground/80"><span class="text-fs-gold font-semibold">Invest in practice:</span> Spending 15-30 minutes in the range learning weapon behavior will pay massive dividends in real matches.</p>
+  </div>
+</div>
+
+<Callout variant="success">
+**You're Ready:** These tips cover everything from basic PC optimization to advanced tactical play. Master the fundamentals first (settings, burst fire, cover movement), then layer in advanced techniques (movement chains, audio awareness, destruction). See you on the battlefield!
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

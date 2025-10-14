@@ -1,21 +1,902 @@
 ---
-title: Update Me
+title: Ship Module Upgrade Guide
 ---
 
 import Callout from "@/components/Callout.astro";
+import { Rocket, Zap, Wrench, Target, DollarSign, Users } from "lucide-react";
 
-## Overview
+<div class="space-y-6 mb-8">
 
-[Add content here]
+Ship Module upgrades purchased with Samples transform your Stratagems from baseline tools into devastating force multipliers. These permanent upgrades affect every mission you undertake, enhancing support weapons, orbital strikes, defensive emplacements, and resupply efficiency. Understanding the optimal upgrade path separates struggling squads from efficient Democracy dispensers.
 
-## Getting Started
+This guide presents a ranked progression path optimized for **general-purpose co-op utility**—prioritizing upgrades that benefit any squad composition across all difficulties and enemy factions. New Helldivers should focus on ammo sustainability and cooldown reductions first, then scale into health and firepower enhancements. Veterans can reference bay-specific trees to plan late-game optimization strategies.
 
-[Add content here]
+**Sample Economy Context:** Common Samples are plentiful on any difficulty. Rare Samples require Medium+ difficulty missions. Super Rare Samples only drop on Extreme+ difficulties. Your early upgrade decisions with Common Samples create the foundation for everything that follows, making the first five upgrades particularly critical to get right.
 
-## Key Information
+</div>
 
-[Add content here]
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Rocket className="inline-block mr-3 mb-1" size={32} /> Quick Picks: Top 5 Priority Upgrades
+
+<div class="space-y-6 mb-8">
+
+If you're a new Helldiver looking for immediate impact without analysis paralysis, these five upgrades provide maximum value for minimal investment. Get these first, in this order, and you'll dramatically improve your squad's effectiveness.
+
+</div>
+
+<div class="grid grid-cols-1 gap-4 mb-8">
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">#1: Donation Access License</h3>
+    <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-300 font-semibold">Common Samples</span>
+  </div>
+  <p class="text-sm mb-2"><strong>Bay:</strong> Patriotic Administration Center • <strong>Tier:</strong> T1</p>
+  <p class="text-sm mb-3"><strong>Effect:</strong> All Support Weapons spawn with maximum ammo reserves.</p>
+  <p class="text-sm">The single most impactful first upgrade for new players. Support Weapons normally spawn with partial ammo—often just 50% capacity—forcing immediate resupply. Donation Access ensures every called-in heavy weapon (machine guns, rocket launchers, railguns) arrives fully stocked. This is universally valuable in co-op because it enables sharing spare support weapons with revived teammates without worrying about empty magazines. Ammo is the most precious resource in Helldivers 2, and this upgrade immediately solves the early-game ammo crisis.</p>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">#2: Streamlined Request Process</h3>
+    <span class="text-xs px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 font-semibold">Common + Rare</span>
+  </div>
+  <p class="text-sm mb-2"><strong>Bay:</strong> Patriotic Administration Center • <strong>Tier:</strong> T2</p>
+  <p class="text-sm mb-3"><strong>Effect:</strong> −10% cooldown on Support Weapon Stratagems.</p>
+  <p class="text-sm">Reduces the wait time for redeploying heavy weapons after death or loss. Support Weapons are key for eliminating bosses and armored threats—when you die and drop your weapon, this upgrade speeds your re-arming. Even if you don't personally need replacement, faster cooldowns let you supply weaponless teammates more quickly. Deaths happen constantly in co-op, making the ability to rapidly restore firepower genuinely lifesaving during frantic battles.</p>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">#3: Synthetic Supplementation</h3>
+    <span class="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-300 font-semibold">Common Samples</span>
+  </div>
+  <p class="text-sm mb-2"><strong>Bay:</strong> Engineering Bay • <strong>Tier:</strong> T1</p>
+  <p class="text-sm mb-3"><strong>Effect:</strong> −10% cooldown on Resupply, Sentries, and Emplacements.</p>
+  <p class="text-sm">Cheap and high-value, this upgrade has broad utility affecting multiple stratagem categories. Resupply packs come off cooldown faster enabling more frequent ammo drops for your team. Sentry turrets and defensive emplacements can be redeployed more frequently—sentries normally have lengthy 180-second cooldowns that feel interminable in high-intensity fights. This reduction proves invaluable for maintaining continuous defensive coverage and keeping ammo flowing steadily to your squad.</p>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">#4: Advanced Construction</h3>
+    <span class="text-xs px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 font-semibold">Rare Samples</span>
+  </div>
+  <p class="text-sm mb-2"><strong>Bay:</strong> Engineering Bay • <strong>Tier:</strong> T2</p>
+  <p class="text-sm mb-3"><strong>Effect:</strong> +50% health to all Sentry Stratagems.</p>
+  <p class="text-sm">Co-op squads rely heavily on Sentry guns to hold choke points and cover flanks, but on higher difficulties turrets get destroyed rapidly by heavy-hitting enemies. This upgrade makes sentries significantly tankier, greatly improving their durability under fire so they won't be dismantled immediately by swarms. Sturdier turrets dramatically improve viability during intense defensive moments like objective holds or extraction, staying operational longer to deal sustained damage before requiring replacement.</p>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">#5: Expanded Weapons Bay</h3>
+    <span class="text-xs px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 font-semibold">Super Rare Samples</span>
+  </div>
+  <p class="text-sm mb-2"><strong>Bay:</strong> Hangar • <strong>Tier:</strong> T3</p>
+  <p class="text-sm mb-3"><strong>Effect:</strong> Eagle Stratagems gain +1&nbsp;use per rearm.</p>
+  <p class="text-sm">Game-changer for Eagle airstrike Stratagems (500kg bombs, cluster strikes, strafing runs). Increases uses by one, meaning you can call extra heavy airstrike before needing to rearm at console. Given how devastating Eagle bombardments are, getting to drop two bombs back-to-back instead of one is huge boost to offensive power. In co-op, this enables coordinated double-strikes to instantly wipe boss enemies or hordes. Worth rushing once you have Super Samples despite needing earlier Hangar prerequisites.</p>
+</div>
+
+</div>
+
+<Callout variant="success">
+**Quick Start Path:** New players should acquire these five upgrades in order before branching into specialized enhancements. This progression ensures your squad maintains ammo sustainability (#1 and #3), can recover from deaths quickly (#2), has resilient defensive options (#4), and possesses devastating offensive firepower (#5). This foundation supports any playstyle or team composition across all difficulties.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Full Ranked Upgrade Path (1–10)
+
+<div class="space-y-6 mb-8">
+
+This complete ranking extends beyond the quick picks to provide a full progression path from early game through endgame optimization. Each upgrade includes detailed tactical context explaining why it earns its ranking, when to prioritize it, and how it synergizes with other modules. The ranking assumes general-purpose co-op play, but individual preferences and playstyles may shift priorities slightly.
+
+</div>
+
+### Tier 1: Foundation Upgrades (Ranks 1–5)
+
+<div class="space-y-6 mb-8">
+
+These modules form the bedrock of effective Stratagem usage. They solve the fundamental problems every new Helldiver faces: running out of ammo, waiting too long for cooldowns, and losing defensive assets too quickly. Prioritize acquiring all five foundation upgrades before investing heavily in specialization.
+
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">1</span>
+    <h3 class="font-bold text-lg mb-0">Donation Access License</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-green-500/20 text-green-300">Common Samples</span>
+      <span>Patriotic Administration Center • T1</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> All Support Weapons spawn with maximum ammo reserves.</p>
+    <p><strong class="text-secondary">Why First:</strong> Widely regarded as the single best first upgrade for new Helldivers. Support Weapons normally spawn with partial ammunition—often just half capacity—meaning you immediately need to use precious Resupply drops or ammo boxes to reach full capacity. This creates an early-game resource crisis where you're constantly scrounging for ammunition.</p>
+    <p>Donation Access eliminates this problem entirely. Every called-in heavy weapon arrives fully stocked, whether it's your personal loadout or a spare weapon for a revived teammate. In co-op, this proves universally valuable because teammates frequently die and lose their support weapons. Being able to immediately supply them with fully-loaded replacements without sacrificing team ammo economy is game-changing.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> This upgrade literally saves your squad from scrounging for ammo mid-mission, a critical quality-of-life improvement that has ripple effects throughout entire missions. It's cheap (only Common Samples with no prerequisites), universally useful regardless of loadout or faction, and provides immediate tangible benefit. Get this before anything else.</p>
+  </div>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">2</span>
+    <h3 class="font-bold text-lg mb-0">Streamlined Request Process</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300">Common + Rare</span>
+      <span>Patriotic Administration Center • T2</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> Support Weapon Stratagem cooldowns reduced by 10%.</p>
+    <p><strong class="text-secondary">Why Second:</strong> Often cited as "the most important" early module after Donation Access because support weapons are absolutely key for taking down bosses and heavily-armored threats. In Helldivers 2, deaths are frequent occurrences—when you die, you drop your heavy weapon and face significant wait time before calling another.</p>
+    <p>Streamlined Request Process cuts that wait by 10%, meaning you can re-arm yourself or supply weaponless friends sooner. Even if you personally survive, faster cooldowns let you call down spare weapons for teammates who respawned empty-handed. The ability to more quickly restore lost firepower frequently determines whether your squad holds defensive positions or gets overrun during frantic multi-wave assaults.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> Support Weapon cooldowns are typically 480 seconds (8&nbsp;minutes). A 10% reduction saves nearly a minute per call-in. Over the course of a 40-minute mission, this compounds significantly, potentially providing 2-3 additional support weapon deployments across your team. In practice, this means fewer periods where teammates are stuck with just primary weapons against heavy armor.</p>
+    <p><strong class="text-secondary">Synergy Note:</strong> Pairs perfectly with Donation Access—fast cooldowns combined with full ammo capacity creates sustainable heavy weapon uptime for your entire squad.</p>
+  </div>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">3</span>
+    <h3 class="font-bold text-lg mb-0">Synthetic Supplementation</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-green-500/20 text-green-300">Common Samples</span>
+      <span>Engineering Bay • T1</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> Cooldowns for Resupply, Sentry turrets, and Emplacement Stratagems reduced by 10%.</p>
+    <p><strong class="text-secondary">Why Third:</strong> This cheap upgrade delivers exceptional value by affecting three different Stratagem categories simultaneously. The breadth of impact makes it incredibly efficient—you're improving both offensive (Sentries) and logistical (Resupply) capabilities with one purchase.</p>
+    <p>Resupply packs with reduced cooldown mean you can drop ammo for the team more frequently, directly supporting sustained combat operations. Sentry turrets normally have lengthy 180-second cooldowns which feel interminable during high-intensity fights—this module's reduction proves invaluable for maintaining continuous defensive coverage. Emplacement Stratagems like mines and static defenses similarly benefit from faster redeployment.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> This upgrade boosts your team's overall sustain and holding power, keeping both supplies and support fire flowing steadily. It's particularly valuable during defensive objectives where you need overlapping sentry coverage and constant ammo availability. The 10% reduction on Resupply cooldown alone justifies the investment, with the Sentry improvements being bonus value.</p>
+    <p><strong class="text-secondary">Cost Efficiency:</strong> Only requires Common Samples with no prerequisites, making it one of the most cost-effective upgrades in the game relative to impact breadth.</p>
+  </div>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">4</span>
+    <h3 class="font-bold text-lg mb-0">Advanced Construction</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300">Rare Samples</span>
+      <span>Engineering Bay • T2</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> All Sentry Stratagems receive +50% health increase.</p>
+    <p><strong class="text-secondary">Why Fourth:</strong> Once you've unlocked Rare Samples from Medium+ difficulty missions, this becomes your first priority Rare upgrade. Co-op squads heavily rely on Sentry guns and defense towers to hold choke points, cover flanks, and provide suppressive fire during objective defenses. However, on higher difficulties these automated turrets get destroyed rapidly by heavy-hitting Bugs or Automaton walkers.</p>
+    <p>Advanced Construction makes turrets significantly more resilient, greatly improving their durability under fire. Instead of being dismantled within seconds of first contact, hardened sentries withstand sustained assault and continue dealing damage throughout extended engagements. This dramatically improves Sentry viability during intense moments like ICBM defense sequences or extraction holdouts.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> In tough co-op missions, sturdier turrets act as reliable battlefield partners that draw aggro and protect your team while you handle other objectives. A sentry that survives three times longer effectively multiplies your firepower by the same factor. Combined with Synthetic Supplementation's cooldown reduction (which you should already have), your sentries become consistently available and genuinely durable force multipliers.</p>
+    <p><strong class="text-secondary">Prerequisite Note:</strong> Requires unlocking Synthetic Supplementation first, but you'll have already acquired that as upgrade #3, making this a natural progression.</p>
+  </div>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">5</span>
+    <h3 class="font-bold text-lg mb-0">Expanded Weapons Bay</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300">Super Rare Samples</span>
+      <span>Hangar • T3</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> Eagle Stratagems gain +1&nbsp;use per rearm cycle.</p>
+    <p><strong class="text-secondary">Why Fifth:</strong> This upgrade is a genuine game-changer for Eagle airstrike Stratagems, which include 500kg bombs, cluster strikes, napalm runs, and strafing attacks. It increases the number of uses before needing rearm by one—in practical terms, you and your teammates can call in an extra heavy airstrike before needing to interact with an ammo console or objective.</p>
+    <p>Given how devastating Eagle bombardments are—capable of instantly deleting entire enemy formations or boss-level threats—getting to deploy two bombs back-to-back instead of one represents a massive boost to offensive capability. Community consensus calls this a "no-brainer" upgrade because extra payloads mean substantially more firepower with proportionally less downtime.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> In coordinated co-op, this enables synchronized double-strikes where multiple team members chain Eagle bombardments to create sustained bombardment zones that nothing survives. During critical defensive phases, having that extra airstrike available before needing rearm often determines mission success versus squad wipe.</p>
+    <p><strong class="text-secondary">Prerequisite Chain:</strong> Requires unlocking earlier Hangar modules first (Liquid-Ventilated Cockpit at T1 and Pit Crew at T2). However, Expanded Weapons Bay is unanimously considered the crown jewel of the Hangar category and worth rushing once you collect sufficient Super Rare Samples. Prioritize accumulating those samples specifically for this upgrade.</p>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Foundation Complete:** After acquiring these five upgrades, you've established a rock-solid baseline that supports any playstyle. Your squad has sustainable ammo (Donation + Supplementation), responsive cooldowns (Streamlined + Supplementation), durable defenses (Advanced Construction), and devastating offensive capability (Expanded Weapons Bay). Everything beyond this point represents optimization and specialization rather than fundamental capability gaps.
+</Callout>
+
+<div class="my-8 border-t-2 border-primary/30"></div>
+
+### Tier 2: Optimization Upgrades (Ranks 6–10)
+
+<div class="space-y-6 mb-8">
+
+With your foundation established, these modules optimize specific aspects of your Stratagem toolkit. They represent meaningful power increases but require more expensive samples or longer prerequisite chains. Prioritize based on your squad's preferred Stratagem categories and playstyle preferences.
+
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">6</span>
+    <h3 class="font-bold text-lg mb-0">Zero-G Breech Loading</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300">Super Rare Samples</span>
+      <span>Orbital Arsenal • T3</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> Orbital Stratagem cooldowns reduced by 10%.</p>
+    <p><strong class="text-secondary">Why Sixth:</strong> A favorite for any team that relies heavily on orbital bombardment, this module applies to all Orbital Stratagems including laser barrages, railcannon strikes, gas strikes, and precision munitions. Orbital strikes clear huge clusters of enemies in single hits and pierce heavy armor—incredibly powerful capabilities balanced by lengthy cooldowns.</p>
+    <p>Zero-G Breech Loading lets you bombard more frequently, which proves invaluable when facing endless bug swarms or armored walker columns in co-op. As tactical doctrine emphasizes, you want to use orbitals as frequently as possible, making it best to prioritize this module to reduce wait times between strikes. More orbitals per mission directly translates to more crowd control and breathing room for your squad.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> Especially helpful during prolonged defense events where being able to rain death from above repeatedly can decisively turn engagements. Typical orbital cooldowns range from 120 to 210 seconds—a 10% reduction saves 12 to 21 seconds per use, compounding over multiple deployments throughout missions.</p>
+    <p><strong class="text-secondary">Prerequisite Note:</strong> Requires completing Orbital Arsenal T1 and T2 first, representing significant sample investment. However, if your squad favors orbital bombardment over Eagle airstrikes, prioritize this over Hangar upgrades.</p>
+  </div>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">7</span>
+    <h3 class="font-bold text-lg mb-0">Shock Absorption Gel</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300">Super Rare Samples</span>
+      <span>Robotics Workshop • T2</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> Sentry ammunition capacity increased by +50%.</p>
+    <p><strong class="text-secondary">Why Seventh:</strong> This mid-to-late game investment requires substantial Super Rare Samples but delivers exceptional value for teams heavily relying on automated turrets. Standard sentries have limited ammunition pools and frequently pause firing to await ammo replenishment during extended engagements.</p>
+    <p>Shock Absorption Gel increases magazine capacity by half, allowing your automated turrets to fire significantly longer before running dry. In drawn-out firefights or high-intensity missions, expanding Sentry ammunition capacity ensures swift elimination of swarms because your turret maintains sustained fire rather than pausing repeatedly. This keeps your mechanical defenders continuously engaged in the fight.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> Many veteran players consider this one of the best endgame modules for co-op play since it transforms sentries from intermittent support into true sustained force multipliers. A well-placed sentry with doubled effective uptime can hold off entire waves of enemies during crucial moments, allowing your team to regroup or complete objectives without constant defensive pressure.</p>
+    <p><strong class="text-secondary">Synergy Power:</strong> When combined with earlier sentry upgrades (Synthetic Supplementation for cooldown reduction and Advanced Construction for health increase), Shock Absorption Gel completes the holy trinity of sentry optimization. Your turrets arrive faster, survive longer, and fire continuously—transforming them into battlefield MVPs.</p>
+  </div>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">8</span>
+    <h3 class="font-bold text-lg mb-0">Targeting Software Upgrade</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-green-500/20 text-green-300">Common Samples</span>
+      <span>Bridge • T1</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> Orbital strike deployment time reduced by 1&nbsp;second.</p>
+    <p><strong class="text-secondary">Why Eighth:</strong> This small tweak with life-saving potential represents subtle optimization that pays dividends in critical moments. When calling orbital strikes, there's normally a brief delay between stratagem activation and impact—approximately 3-4 seconds of "laser painting" or targeting time before munitions arrive.</p>
+    <p>While reducing this by one second might sound insignificant, in frantic situations when a Charger is actively chasing you and your team or when Automaton Hulks are closing distance, dropping an orbital strike even one second faster can make the difference between life and death. Targeting Software enables essentially instantaneous close air support when under immediate pressure from fast-moving threats.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> This proves particularly valuable on higher difficulties where enemies give minimal breathing room and reaction windows. The reduced deployment time helps ensure your team's big strikes land before rampaging monsters can scatter your formation or reach vulnerable squad members.</p>
+    <p><strong class="text-secondary">Cost Efficiency:</strong> Only requires Common Samples with no prerequisites, making it an easy early pickup. Despite ranking eighth in overall priority, many veterans grab this immediately after the top three foundation upgrades simply because it costs essentially nothing and has clear benefit. Don't skip this upgrade—community consensus widely recommends it for maximizing orbital effectiveness.</p>
+  </div>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">9</span>
+    <h3 class="font-bold text-lg mb-0">Superior Packaging Methodology</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300">Rare + Super Rare</span>
+      <span>Patriotic Administration Center • T4</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> Resupply boxes fully refill Support Weapon ammunition.</p>
+    <p><strong class="text-secondary">Why Ninth:</strong> This late-game upgrade is expensive but immensely impactful for co-op sustainability during extended missions. Standard Resupply drops only provide partial ammunition refills for heavy weapons—typically 50-70% of maximum capacity. This forces teams to either call multiple resupplies or carefully ration shots, creating constant ammunition anxiety.</p>
+    <p>Superior Packaging Methodology transforms every Resupply box into an instant full reload for heavy weapons like machine guns, railguns, rocket launchers, or autocannons. In effect, keeping your team's firepower topped up becomes trivial rather than requiring careful ammunition management. One drop pod gives max ammo to everyone's heavy weapons simultaneously.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> This upgrade is big help to team ammo economy. No more scrambling for multiple ammo packs or rationing shots during critical defensive phases. As one analysis notes, ammo represents perhaps the most important commodity in the entire game, and this upgrade ensures your squad never runs dry in the heat of battle—a literal lifesaver in Helldive difficulty missions where ammunition scarcity frequently determines success versus failure.</p>
+    <p><strong class="text-secondary">Prerequisite Investment:</strong> Requires unlocking earlier Patriotic Administration upgrades first (Donation Access, Streamlined Request, and Hand Carts) plus gathering substantial Samples. The lengthy prerequisite chain explains why this ranks ninth despite high impact—you won't access it until late game regardless of desire. Once achieved, however, it represents endgame ammunition security.</p>
+  </div>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-slate font-bold">10</span>
+    <h3 class="font-bold text-lg mb-0">Pit Crew Hazard Pay</h3>
+  </div>
+  <div class="text-sm space-y-3">
+    <div class="flex items-center gap-4 text-xs mb-2">
+      <span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300">Rare Samples</span>
+      <span>Hangar • T2</span>
+    </div>
+    <p><strong class="text-secondary">Effect:</strong> Eagle Stratagem rearm time reduced by 20%.</p>
+    <p><strong class="text-secondary">Why Tenth:</strong> Rounding out the core upgrade path, Pit Crew addresses a specific limitation of Eagle Stratagems. Eagle strikes don't just have cooldowns—after expending your allowed uses, you must rearm (typically by interacting at resupply objectives or extraction points) before calling more airstrikes. This rearm process normally takes significant time, leaving your team without heavy bombardment capability during that window.</p>
+    <p>This module speeds rearm process by 20%, meaning your team regains big explosive Stratagems more quickly. Since Eagles are invaluable and frequently employed for dealing heavy burst damage to priority targets, reducing their downtime represents meaningful offensive tempo increase. You're not left without your strongest Stratagems for extended periods.</p>
+    <p><strong class="text-secondary">Tactical Impact:</strong> Combined with Expanded Weapons Bay (upgrade #5) which granted extra use, Pit Crew lets you deploy those additional airstrike charges more frequently with less waiting. The result is higher sustained DPS from airstrikes during protracted engagements or multi-phase defensive sequences.</p>
+    <p><strong class="text-secondary">Prerequisite Note:</strong> Requires unlocking Liquid-Ventilated Cockpit (Hangar T1) first. After securing the more universal upgrades, this represents smart mid-game pickup to boost offensive tempo, particularly for players or squads favoring heavy Eagle bombardment strategies. Heavy ordnance enthusiasts on the team will definitely appreciate this investment.</p>
+  </div>
+</div>
+
+<Callout variant="success">
+**Full Path Complete:** With all ten ranked upgrades acquired, your ship operates at peak efficiency across all Stratagem categories. You've maximized ammo sustainability, minimized cooldowns, fortified defenses, and optimized both orbital and Eagle strike capabilities. This represents a fully mature upgrade investment optimized for general co-op effectiveness. Remaining upgrades beyond these ten represent specialized enhancements or minor optimizations that should be chosen based on specific team preferences and playstyles.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Wrench className="inline-block mr-3 mb-1" size={32} /> Bay-by-Bay Progression Trees
+
+<div class="space-y-6 mb-8">
+
+Ship Modules are organized into five bays, each with its own upgrade tree and tier structure. Understanding these trees helps you plan sample investment strategies and identify prerequisite chains. This section visualizes the complete progression path within each bay, showing tier dependencies and sample costs.
+
+</div>
+
+### Patriotic Administration Center
+
+<div class="space-y-4 mb-8">
+
+The Patriotic Administration Center governs Support Weapon Stratagems and Resupply capabilities—fundamentally about keeping your squad armed and supplied. This bay contains some of the most universally valuable upgrades in the game, particularly at T1 and T2 tiers.
+
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-6 bg-primary/5">
+
+**Tier 1 — Donation Access License** <span class="text-xs px-2 py-1 rounded bg-green-500/20 text-green-300 ml-2">Common</span>
+
+All Support Weapons spawn with maximum ammo reserves. **[PRIORITY: #1 Overall]**
+
+↓
+
+**Tier 2 — Streamlined Request Process** <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300 ml-2">Common + Rare</span>
+
+Support Weapon Stratagems cooldowns reduced by 10%. **[PRIORITY: #2 Overall]**
+
+↓
+
+**Tier 3 — Hand Carts** <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300 ml-2">Rare</span>
+
+Personal Order Stratagems cooldowns reduced by 10%. (Includes Reinforce, Resupply, SOS Beacon, Upload Data, etc.)
+
+↓
+
+**Tier 4 — Superior Packaging Methodology** <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300 ml-2">Rare + Super Rare</span>
+
+Resupply boxes fully refill Support Weapon ammunition. **[PRIORITY: #9 Overall]**
+
+</div>
 
 <Callout variant="info">
-This section is under construction. Check back soon for updates.
+**Bay Assessment:** This is arguably the most important bay for new players. Contains two top-five priority upgrades (Donation Access and Streamlined Request). Every co-op squad benefits from these improvements regardless of playstyle. Prioritize completing T1 and T2 immediately, then return for T4 late-game.
 </Callout>
+
+<div class="my-8 border-t border-primary/20"></div>
+
+### Engineering Bay
+
+<div class="space-y-4 mb-8">
+
+The Engineering Bay manages Sentry turrets, Emplacement Stratagems, and Resupply logistics. These upgrades transform defensive capabilities from adequate to excellent, particularly valuable for teams favoring stationary defense strategies or objective-holding tactics.
+
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-6 bg-primary/5">
+
+**Tier 1 — Synthetic Supplementation** <span class="text-xs px-2 py-1 rounded bg-green-500/20 text-green-300 ml-2">Common</span>
+
+Resupply, Sentry, and Emplacement Stratagem cooldowns reduced by 10%. **[PRIORITY: #3 Overall]**
+
+↓
+
+**Tier 2 — Advanced Construction** <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300 ml-2">Rare</span>
+
+All Sentry Stratagems receive +50% health increase. **[PRIORITY: #4 Overall]**
+
+</div>
+
+<Callout variant="info">
+**Bay Assessment:** Compact but powerful. Both upgrades rank in top five priority. The sentry enhancement combination of faster deployment (T1) and increased durability (T2) creates dramatically more effective automated defenses. Essential for any team using turrets, which should be every team given how versatile sentries are across mission types.
+</Callout>
+
+<div class="my-8 border-t border-primary/20"></div>
+
+### Robotics Workshop
+
+<div class="space-y-4 mb-8">
+
+The Robotics Workshop exclusively enhances Sentry Stratagems through two tiers focused on ammunition capacity and damage output. This represents specialized optimization for teams heavily invested in automated defense strategies.
+
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-6 bg-primary/5">
+
+**Tier 1 — Targeting Scanners** <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300 ml-2">Rare</span>
+
+Sentry Stratagems gain +25% damage increase. Improves kill speed against all targets.
+
+↓
+
+**Tier 2 — Shock Absorption Gel** <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300 ml-2">Super Rare</span>
+
+Sentry ammunition capacity increased by +50%. **[PRIORITY: #7 Overall]**
+
+</div>
+
+<Callout variant="info">
+**Bay Assessment:** Pure sentry optimization. Combined with Engineering Bay upgrades, this creates ultimate automated defense toolkit: faster deployment, more health, more damage, and extended ammunition. Worth investing in mid-to-late game if your squad relies heavily on turret-based strategies. Shock Absorption Gel ranks seventh overall, making it legitimate priority once you've secured foundational upgrades.
+</Callout>
+
+<div class="my-8 border-t border-primary/20"></div>
+
+### Hangar (Eagle Stratagems)
+
+<div class="space-y-4 mb-8">
+
+The Hangar governs Eagle airstrikes—the devastating close air support strikes including 500kg bombs, cluster munitions, napalm, and strafing runs. These upgrades maximize your ability to call down aerial destruction repeatedly and effectively.
+
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-6 bg-primary/5">
+
+**Tier 1 — Liquid-Ventilated Cockpit** <span class="text-xs px-2 py-1 rounded bg-green-500/20 text-green-300 ml-2">Common</span>
+
+Eagle Stratagem cooldowns reduced by 10%. Faster airstrike availability.
+
+↓
+
+**Tier 2 — Pit Crew Hazard Pay** <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300 ml-2">Rare</span>
+
+Eagle Stratagem rearm time reduced by 20%. **[PRIORITY: #10 Overall]**
+
+↓
+
+**Tier 3 — Expanded Weapons Bay** <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300 ml-2">Super Rare</span>
+
+Eagle Stratagems gain +1&nbsp;use per rearm cycle. **[PRIORITY: #5 Overall]**
+
+</div>
+
+<Callout variant="info">
+**Bay Assessment:** Complete progression creates extremely potent Eagle strike capability. T1 reduces wait between strikes, T2 minimizes downtime during rearm, and T3 grants extra payload capacity. Expanded Weapons Bay (T3) ranks as fifth priority overall despite expensive Super Rare cost—testament to how powerful that extra airstrike use proves in practice. Essential bay for offense-focused teams.
+</Callout>
+
+<div class="my-8 border-t border-primary/20"></div>
+
+### Orbital Arsenal
+
+<div class="space-y-4 mb-8">
+
+The Orbital Arsenal controls orbital bombardment Stratagems including laser strikes, railcannon shots, gas barrages, and precision munitions. These represent ship-based fire support raining death from orbit rather than aerial attack runs.
+
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-6 bg-primary/5">
+
+**Tier 1 — High-Altitude Agents** <span class="text-xs px-2 py-1 rounded bg-green-500/20 text-green-300 ml-2">Common</span>
+
+Increases active time of gas-based orbital strikes. Extends cloud duration for area denial.
+
+↓
+
+**Tier 2 — Fast Launch Tubes** <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300 ml-2">Rare</span>
+
+Orbital strike deployment radius increased. Gives you larger targeting area for more forgiving placement.
+
+↓
+
+**Tier 3 — Zero-G Breech Loading** <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300 ml-2">Super Rare</span>
+
+Orbital Stratagem cooldowns reduced by 10%. **[PRIORITY: #6 Overall]**
+
+</div>
+
+<Callout variant="info">
+**Bay Assessment:** T1 and T2 provide niche improvements for specific orbital types. The real prize is T3 Zero-G Breech Loading, which applies universal cooldown reduction across all orbital Stratagems—ranking sixth overall priority. This bay competes with Hangar for sample investment. Choose based on whether your squad prefers orbital strikes or Eagle airstrikes. Both approaches are viable; coordination determines which your team emphasizes.
+</Callout>
+
+<div class="my-8 border-t border-primary/20"></div>
+
+### Bridge
+
+<div class="space-y-4 mb-8">
+
+The Bridge contains miscellaneous upgrades affecting various aspects of Stratagem deployment and effectiveness. These tend to be smaller quality-of-life improvements rather than major power increases.
+
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 mb-6 bg-primary/5">
+
+**Tier 1 — Targeting Software Upgrade** <span class="text-xs px-2 py-1 rounded bg-green-500/20 text-green-300 ml-2">Common</span>
+
+Orbital strike deployment time reduced by 1&nbsp;second. **[PRIORITY: #8 Overall]**
+
+↓
+
+**Tier 2 — Seismic Probe Calibration** <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300 ml-2">Rare</span>
+
+Increases Stratagem map icon visibility range. Helps team coordinate Stratagem placement.
+
+</div>
+
+<Callout variant="info">
+**Bay Assessment:** Small bay with utility improvements. Targeting Software Upgrade ranks eighth overall due to cheap cost and meaningful impact in critical moments. Seismic Probe Calibration is pure quality-of-life with no combat impact—lowest priority upgrade. Only pursue after completing all combat-effective upgrades unless you really value improved map awareness.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <DollarSign className="inline-block mr-3 mb-1" size={32} /> Sample Budget Strategy
+
+<div class="space-y-6 mb-8">
+
+Understanding sample economy helps you plan efficient upgrade paths and avoid wasteful investments. Samples come in three tiers with different availability based on mission difficulty, creating natural gates in your progression. This section provides spending strategies for each stage of your Helldivers career.
+
+</div>
+
+### Common Samples (Early Game Focus)
+
+<div class="space-y-4 mb-8">
+
+Common Samples drop on all difficulty levels and are plentiful. New players should prioritize acquiring all valuable Common-cost upgrades before pursuing Rare or Super Rare modules. This establishes capability baseline without requiring high-difficulty missions.
+
+**Recommended Common Sample Spending Priority:**
+
+First, acquire Donation Access License (Patriotic Administration T1). This single upgrade solves the most painful early-game problem—ammunition scarcity for Support Weapons. The quality-of-life improvement alone justifies making this your absolute first purchase regardless of other considerations.
+
+Second, purchase Synthetic Supplementation (Engineering Bay T1). This cheap upgrade affects multiple Stratagem categories simultaneously, providing exceptional value per sample invested. The combination of faster Resupply drops and quicker Sentry deployment creates foundation for sustainable operations.
+
+Third, grab Targeting Software Upgrade (Bridge T1). With only these three Common purchases, you've eliminated starting ammo problems, accelerated defensive deployment, and improved orbital strike responsiveness. Only Common Samples were required, meaning any new player can acquire these immediately.
+
+Additional Common expenditures contribute toward unlocking Rare-tier prerequisites. Specifically, Liquid-Ventilated Cockpit (Hangar T1) costs only Common Samples and represents required stepping stone toward valuable Eagle upgrades. Similarly, High-Altitude Agents (Orbital Arsenal T1) unlocks that bay's progression tree.
+
+**Budget Principle:** Exhaust high-value Common purchases before hoarding samples for Rare upgrades. The immediate capability gain from foundational Common modules outweighs marginal benefit of slightly faster Rare acquisition.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Rare Samples (Mid Game Transition)
+
+<div class="space-y-4 mb-8">
+
+Rare Samples begin dropping on Medium difficulty and above, marking your transition from early to mid game. At this stage, you're making meaningful choices about which bays to invest in because Rare upgrades require more selective spending than abundant Common Samples.
+
+**Recommended Rare Sample Spending Priority:**
+
+First Rare expenditure should complete Streamlined Request Process (Patriotic Administration T2). This requires both Common and Rare Samples but ranks as second-priority upgrade overall. Faster Support Weapon cooldowns dramatically improve squad firepower recovery after deaths. Non-negotiable investment.
+
+Second Rare purchase should be Advanced Construction (Engineering Bay T2). This also requires prior Common investment (Synthetic Supplementation) but makes sentries genuinely viable on higher difficulties through 50% health increase. Fourth-priority upgrade overall justifies the expense.
+
+After securing these two foundational Rare upgrades, you face meaningful choices. Do you invest in Hangar progression (Pit Crew Hazard Pay at T2) or Orbital Arsenal progression (Fast Launch Tubes at T2)? This decision should reflect your squad's preferred offensive Stratagems. Teams favoring Eagle bombardment should prioritize Hangar; teams emphasizing orbital strikes should prioritize Orbital Arsenal. Both paths are equally valid.
+
+Alternative mid-game Rare investment includes Robotics Workshop T1 (Targeting Scanners) if your team heavily relies on sentry guns. The 25% damage increase makes turrets significantly more lethal, though this represents more specialized investment than the universal-value upgrades mentioned above.
+
+**Budget Principle:** Rare Samples enable specialization. After completing the two mandatory Rare upgrades (Streamlined Request and Advanced Construction), tailor remaining Rare spending to your squad's tactical preferences rather than following rigid prescriptive path.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Super Rare Samples (Late Game Optimization)
+
+<div class="space-y-4 mb-8">
+
+Super Rare Samples exclusively drop on Extreme difficulty and above, representing endgame resource requiring coordinated squad efforts to collect consistently. These samples unlock the most powerful enhancements but demand strategic allocation due to scarcity.
+
+**Recommended Super Rare Sample Spending Priority:**
+
+First Super Rare expenditure should absolutely be Expanded Weapons Bay (Hangar T3). Despite requiring completion of Hangar T1 and T2 first, this upgrade ranks fifth overall priority. The extra Eagle airstrike use represents massive offensive power increase that justifies the entire prerequisite investment chain. This is non-negotiable—rush this upgrade once you begin collecting Super Rares.
+
+Second Super Rare investment depends on whether you completed Orbital Arsenal progression during mid-game. If you favored Eagle Stratagems and already finished Hangar tree, now pivot to Zero-G Breech Loading (Orbital Arsenal T3) for the orbital cooldown reduction. Conversely, if you prioritized Orbital Arsenal during Rare sample phase, now you might invest Super Rares in Hangar completion. Either way, you're working toward having both major offensive Stratagem categories fully optimized.
+
+Third Super Rare priority is Shock Absorption Gel (Robotics Workshop T2) assuming you use sentries regularly. This completes your defensive optimization suite, creating incredibly effective automated turrets. Only pursue if sentries are important to your tactical approach.
+
+Late-game Super Rare spending includes Superior Packaging Methodology (Patriotic Administration T4). This requires lengthy prerequisite chain through Patriotic Administration bay but solves ammunition sustainability completely. However, given the prerequisite investments required, this typically represents one of your last major upgrades rather than immediate Super Rare target.
+
+**Budget Principle:** Super Rare Samples should prioritize offensive force multiplication first (Expanded Weapons Bay, Zero-G Breech Loading) before defensive optimization (Shock Absorption Gel) and finally logistical perfection (Superior Packaging Methodology). Win missions faster through firepower, then invest in sustainability.
+
+</div>
+
+<Callout variant="warning">
+**Sample Scarcity Reality:** Super Rare Samples remain genuinely scarce even on highest difficulties. A typical Helldive mission might yield 2-3 Super Rares with focused searching. Major upgrades cost 5-15 Super Rares. This means significant time investment between endgame module acquisitions. Plan Super Rare spending carefully—misallocated samples represent dozens of hours of grinding to correct.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Users className="inline-block mr-3 mb-1" size={32} /> Team Coordination & Role Specialization
+
+<div class="space-y-6 mb-8">
+
+Ship Module upgrades benefit your entire squad, but co-op teams can maximize effectiveness through coordinated upgrade prioritization and role specialization. When playing with consistent squadmates, discussing upgrade paths creates multiplicative benefits rather than redundant investments.
+
+</div>
+
+### Coordinated Progression Benefits
+
+<div class="space-y-4 mb-8">
+
+In organized squads where players regularly team together, coordinating who pursues which bay progression creates more well-rounded team capabilities. This approach becomes particularly valuable in mid-to-late game when sample scarcity forces meaningful tradeoffs.
+
+Consider a four-player squad where players specialize their Ship Module progression. Player One focuses on Patriotic Administration and Engineering Bay, ensuring excellent Support Weapon sustainability and defensive capability. Player Two prioritizes Hangar completion, maximizing Eagle airstrike effectiveness. Player Three emphasizes Orbital Arsenal, optimizing orbital bombardment frequency. Player Four pursues Robotics Workshop and utility upgrades, perfecting automated defense and quality-of-life features.
+
+This specialization means when Player Two calls Eagle strikes, they have maximum uses per rearm and fastest cooldowns. When Player Three calls orbital bombardments, those strikes arrive with minimal deployment time and reduced cooldowns. Player One keeps everyone armed and supplied with full-ammo Support Weapons and optimized Resupply drops. Player Four's sentries are tankier, deadlier, and longer-lasting than baseline.
+
+The result is a squad where each member excels at different aspects of Stratagem deployment, creating diverse tactical options rather than four players with identical moderate capabilities across all areas. This specialization particularly matters in endgame where collecting enough Super Rare Samples for every player to complete every tree would require hundreds of missions.
+
+**Practical Coordination:** Before beginning session, briefly discuss which bay progressions each player is pursuing. This prevents redundant investments and ensures squad collectively covers all Stratagem categories effectively. Even casual coordination produces better outcomes than uncoordinated individual progression.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Solo Player Considerations
+
+<div class="space-y-4 mb-8">
+
+Players who primarily queue with random teammates rather than consistent squads face different optimization considerations. Without guaranteed team coordination, generalist upgrade paths provide more reliable value than hyper-specialized progression.
+
+Solo queue players should prioritize upgrades with universal impact regardless of team composition. This means emphasizing Patriotic Administration and Engineering Bay progression heavily, as Support Weapon sustainability and defensive capability benefit every possible squad configuration. These upgrades improve your personal effectiveness and provide value to randoms regardless of their loadouts or upgrade states.
+
+Avoid investing heavily in specialized offensive trees (Hangar or Orbital Arsenal) until you've completed foundational upgrades. Random teammates may already have those trees completed, making your partial investment redundant. Alternatively, they may lack those upgrades entirely, meaning your specialization doesn't create multiplicative team benefit. Generalist progression ensures you're always contributing optimally regardless of teammate choices.
+
+Late-game solo players should complete one full offensive tree (Hangar or Orbital Arsenal, personal preference) but avoid pursuing both until all universal upgrades are acquired. This creates personal offensive specialization without sacrificing baseline capability across other areas. You become the reliable Eagle strike specialist or orbital bombardment coordinator for your random squads.
+
+**Solo Strategy:** Universal value over specialization until late game. Prioritize upgrades that improve your personal effectiveness and provide passive benefit to any team composition. Only specialize offensively after establishing complete foundation.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Communication Enhances Everything
+
+<div class="space-y-4 mb-8">
+
+Regardless of whether you play with organized squads or random teammates, using voice communication or the ping system to coordinate Stratagem usage multiplies upgrade effectiveness. Ship Modules make your Stratagems more powerful, but tactical coordination determines whether that power translates into mission success.
+
+Examples of coordination-enhanced module benefits include alerting teammates when you've called Resupply drops so they don't waste their cooldowns on redundant resupplies. With Synthetic Supplementation and Superior Packaging Methodology, a single coordinated Resupply can fully arm the entire squad—but only if everyone knows it's coming and positions to use it.
+
+Similarly, coordinating Eagle airstrikes prevents wasting your Expanded Weapons Bay bonus charges. If three teammates independently call Eagle strikes on the same bug breach, you've used three separate Stratagem cooldowns on a target that one coordinated strike would have eliminated. Better to communicate target priorities ensuring Eagle charges hit maximum-value targets.
+
+Sentry placement coordination maximizes Advanced Construction and Shock Absorption Gel benefits. When teammates place overlapping sentries creating crossfire zones, the durability and ammunition improvements create genuine defensive strongpoints. Uncoordinated random sentry placement wastes those enhancements by leaving gaps in coverage or creating redundant firing lanes.
+
+**Communication Principle:** Ship Module upgrades provide the tools. Team coordination determines how effectively those tools get employed. Brief callouts about Stratagem usage, target priorities, and positioning dramatically improve upgrade value realization.
+
+</div>
+
+<Callout variant="tip">
+**Upgrade Visibility:** Your Ship Module upgrades only affect Stratagems you personally call in. However, the indirect benefits to your squad are substantial. When you call a fully-loaded Support Weapon for a downed teammate (Donation Access), they benefit despite not having that upgrade themselves. When your sentries survive three times longer (Advanced Construction), your entire team benefits from extended defensive coverage. Ship Modules create positive externalities that benefit squad even if teammates lack same upgrades.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Advanced Upgrade Optimization
+
+<div class="space-y-6 mb-8">
+
+Beyond the top ten ranked upgrades, several additional modules provide meaningful enhancements for specialized playstyles or specific mission types. These represent optional optimizations rather than core progression path milestones. Advanced players should consider these based on personal preferences and squad tactical doctrine.
+
+</div>
+
+### Specialized Hangar & Orbital Upgrades
+
+<div class="space-y-4 mb-8">
+
+Both offensive Stratagem categories contain additional tier upgrades beyond the primary progression path. These modules offer incremental improvements that matter most to players who heavily favor one offensive style over the other.
+
+**Hangar Advanced Options:** The Hangar tree contains alternative upgrades like Incendiary Bombs Enhancement or Cluster Bomb Optimization that improve specific Eagle Stratagem variants rather than universally affecting all Eagle strikes. These become relevant if you consistently use particular Eagle loadouts. For instance, if your squad always brings 500kg bombs rather than cluster strikes, the 500kg-specific enhancement provides more practical value than cluster-focused upgrades despite similar sample costs.
+
+**Orbital Arsenal Advanced Options:** Similarly, the Orbital Arsenal tree includes upgrades benefiting specific orbital types like extended gas cloud duration or improved railcannon targeting. Players who reliably include gas strikes in loadouts benefit substantially from gas duration extension, while those who never use gas-based orbitals gain zero value. Evaluate these specialized modules based on your actual Stratagem usage patterns rather than abstract optimization principles.
+
+**Selection Guideline:** Review your post-mission statistics showing which Stratagems you actually deploy most frequently. Invest in upgrades that enhance your proven usage patterns rather than theoretical optimal loadouts you don't actually employ. Your consistently-used Stratagems deserve enhancement priority over situationally-equipped alternatives.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Quality-of-Life vs. Combat Effectiveness
+
+<div class="space-y-4 mb-8">
+
+Some Ship Modules provide quality-of-life improvements rather than direct combat power increases. These upgrades make playing more comfortable but don't directly improve your ability to eliminate threats or survive combat. Advanced players must decide how they value convenience versus raw effectiveness.
+
+**Quality-of-Life Examples:** Seismic Probe Calibration (Bridge T2) increases Stratagem map icon visibility range, making coordination slightly easier but providing zero combat benefit. Hand Carts (Patriotic Administration T3) reduces Personal Order cooldowns, which includes non-combat Stratagems like Upload Data. These improve experience smoothness without enhancing combat capability.
+
+**Combat Effectiveness Priority:** Until you've completed all combat-effective upgrades across relevant bays, quality-of-life modules should remain lowest priority. Samples spent on convenience represent samples not spent on firepower, durability, or sustainability. Only pursue QoL upgrades after exhausting combat-relevant options.
+
+**Exception Case:** If you and your squad have completed all primary combat upgrades and accumulated surplus samples with nothing critical remaining to purchase, quality-of-life upgrades become reasonable investments simply because the alternative is leaving samples unused. Better to have improved map icon visibility than unspent samples sitting permanently in your account.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Faction-Specific Optimization
+
+<div class="space-y-4 mb-8">
+
+While this guide emphasizes general-purpose utility valid across all enemy factions, advanced players might consider faction-specific optimization if they reliably know which enemy type upcoming missions will face.
+
+**Terminid Optimization:** Bug planets heavily favor defensive setups with area denial. Prioritizing Engineering Bay and Robotics Workshop upgrades maximizes sentry effectiveness for holding ground against swarms. Similarly, gas-based orbital upgrades gain value against Terminids since gas clouds effectively control bug approaches.
+
+**Automaton Optimization:** Bot missions emphasize precision firepower and anti-armor capability. Hangar and Orbital Arsenal upgrades providing direct damage improvements matter more than defensive enhancements. Railcannon-specific orbital upgrades particularly benefit anti-bot loadouts given railcannon effectiveness against heavy armor.
+
+**Illuminate Optimization:** Illuminate forces mix swarms with shielded elites requiring balanced approach. Generalist upgrades maintaining offensive and defensive capability serve better than extreme specialization. However, AoE-focused orbital strikes become particularly valuable, making orbital cooldown reduction high priority.
+
+**Practical Reality:** Most players won't reliably know enemy faction before queueing missions unless exclusively playing organized squads with predetermined mission selection. This makes faction-specific optimization less practical than general-purpose progression for majority of players. Only consider this if you genuinely commit to faction-focused grinding.
+
+</div>
+
+<Callout variant="info">
+**Optimization Complexity:** Advanced optimization requires understanding not just individual upgrade effects but how they interact with specific Stratagems, team compositions, and mission parameters. This complexity exceeds what most players need to succeed. The top ten ranked upgrades provide 90% of practical benefit for 40% of total sample investment. Pursuing perfect optimization yields diminishing returns unless you're genuinely pushing Helldive difficulty with coordinated veteran squads.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Progression Milestones & What They Enable
+
+<div class="space-y-6 mb-8">
+
+Ship Module progression gates access to higher difficulties and more challenging content not through explicit requirements but through practical capability thresholds. Understanding which upgrade milestones enable which difficulty ranges helps you gauge readiness for stepping up challenge levels.
+
+</div>
+
+### Early Game Capability (Common Upgrades Complete)
+
+<div class="space-y-4 mb-8">
+
+After acquiring Donation Access License, Synthetic Supplementation, and Targeting Software Upgrade using only Common Samples, you've established baseline competency for Medium difficulty missions. These upgrades solve fundamental problems that cripple new players on early difficulties.
+
+You no longer spawn Support Weapons with partial ammunition, eliminating immediate resupply pressure. Your defensive and logistical Stratagems deploy more frequently via cooldown reduction, maintaining better battlefield control. Orbital strikes land more responsively, improving emergency response capability. These enhancements transform struggling new Helldiver into functional squad member.
+
+**Recommended Difficulty Range:** Trivial through Challenging difficulties should feel comfortable with just Common upgrades complete. Medium difficulty becomes accessible rather than overwhelming. Focus on learning enemy patterns and Stratagem fundamentals rather than rushing into Hard difficulty prematurely.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Mid Game Competency (Top 5 Upgrades Complete)
+
+<div class="space-y-4 mb-8">
+
+Once you've acquired the top five priority upgrades (adding Streamlined Request Process, Advanced Construction, and Expanded Weapons Bay to your Common purchases), you've reached mid-game competency threshold. This represents having invested both Rare and Super Rare Samples for meaningful power increases across multiple categories.
+
+Your Support Weapons arrive fully loaded and redeploy faster after losses. Defensive sentries survive significantly longer under sustained fire. Eagle airstrikes provide extra bombardment capacity before requiring rearm. Collectively these improvements enable reliable performance on Hard difficulty and initial attempts at Extreme difficulty.
+
+**Recommended Difficulty Range:** Hard difficulty should feel appropriately challenging but consistently completable with competent squad. Extreme difficulty becomes accessible for experienced players with these upgrades, though success requires good tactical execution rather than just upgrade power. This represents the threshold where you're no longer upgrade-gated from content—skill becomes the primary limiting factor.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Late Game Mastery (Top 10 Upgrades Complete)
+
+<div class="space-y-4 mb-8">
+
+With all ten ranked priority upgrades acquired, you've achieved late-game mastery baseline. Your ship operates at high efficiency across all Stratagem categories with maximized ammunition sustainability, minimized cooldowns, fortified defenses, and optimized both orbital and Eagle strike capabilities.
+
+This level of upgrade investment makes Extreme difficulty reliably farmable with competent squads. Helldive difficulty becomes theoretically accessible, though success at that level demands excellent tactical execution and team coordination beyond what upgrades alone provide. You have all the tools—execution determines outcomes.
+
+**Recommended Difficulty Range:** Extreme difficulty should feel challenging but consistently completable, providing reliable Super Rare Sample income for pursuing remaining specialized upgrades. Helldive difficulty is accessible when your squad wants maximum challenge, with upgrades ensuring you're not mechanically disadvantaged. Success requires masterful play but upgrades ensure that mastery is sufficient.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Endgame Optimization (Complete Bay Trees)
+
+<div class="space-y-4 mb-8">
+
+Players who complete entire bay progression trees represent the pinnacle of Ship Module investment. Every relevant Stratagem category operates at maximum possible efficiency with no mechanical limitations. At this point, the only remaining constraints are player skill, team coordination, and tactical decision-making.
+
+This level of upgrade completion takes hundreds of hours across dozens of high-difficulty missions. Most players never reach this milestone, nor do they need to—the top ten ranked upgrades provide sufficient capability for all practical purposes. Complete bay optimization represents perfectionism rather than necessity.
+
+**Reality Check:** Don't feel compelled to complete every single upgrade before attempting highest difficulties. Helldive difficulty has been successfully completed by squads with only top five upgrades acquired. The ranked priority path provides sufficient capability—additional upgrades represent incremental optimization yielding diminishing returns. Play the difficulties you find engaging rather than grinding upgrades as prerequisite to enjoyment.
+
+</div>
+
+<Callout variant="success">
+**Progression Philosophy:** Ship Modules remove mechanical barriers to higher difficulties but don't guarantee success. Think of upgrades as providing the tools needed for challenging content—your skill and tactics determine whether those tools suffice. Prioritize acquiring top five upgrades quickly, then pursue additional modules at whatever pace matches your enjoyment. Rushing complete optimization isn't required for having excellent Helldivers experience.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## FAQ: Common Upgrade Questions
+
+<div class="space-y-6 mb-8">
+
+New Helldivers frequently have similar questions about Ship Module optimization strategy, sample collection efficiency, and upgrade priority adjustments. This section addresses the most common upgrade-related questions to clarify potentially confusing aspects of the system.
+
+</div>
+
+<details class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+<summary class="cursor-pointer font-semibold text-primary flex items-center gap-2">
+  <span>Should I save samples for expensive upgrades or buy cheaper ones first?</span>
+</summary>
+
+<div class="mt-4 text-sm space-y-3">
+
+Buy cheaper high-priority upgrades first rather than hoarding samples for expensive purchases. The ranked priority path already accounts for cost-benefit optimization—top-ranked cheap upgrades provide more immediate impact than saving for expensive modules.
+
+For example, Donation Access License (priority #1) costs only Common Samples while Expanded Weapons Bay (priority #5) costs expensive Super Rares. However, Donation Access should be purchased immediately despite Expanded Weapons Bay ranking higher in absolute priority, because you'll need to complete lower tiers as prerequisites anyway.
+
+The correct approach is purchasing upgrades in ranked order when you can afford them rather than skipping affordable high-priority upgrades to save for expensive high-priority ones. Prerequisites enforce logical progression—you literally cannot buy Tier 3 upgrades before completing Tier 1 and 2 in that bay.
+
+</div>
+</details>
+
+<details class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+<summary class="cursor-pointer font-semibold text-primary flex items-center gap-2">
+  <span>Do Ship Module upgrades affect teammates' Stratagems or only mine?</span>
+</summary>
+
+<div class="mt-4 text-sm space-y-3">
+
+Ship Modules only affect Stratagems you personally call in—they don't directly boost teammate Strategems. However, indirect benefits to your squad are substantial and easily overlooked.
+
+When you call a fully-loaded Support Weapon for a downed teammate (via Donation Access), they receive that benefit despite lacking the upgrade themselves. When your sentries survive three times longer (via Advanced Construction), your entire team benefits from extended defensive coverage regardless of whether they have sentry upgrades. When you drop Resupply that fully refills Support Weapons (via Superior Packaging Methodology), teammates gain that benefit even if their personal Resupplies would only provide partial refills.
+
+Think of Ship Modules as improving your personal Stratagem effectiveness, which then creates positive externalities benefiting the entire squad. Coordinated teams where each member has different upgrade specializations create more diverse and effective overall capability than four players with identical moderate upgrades.
+
+</div>
+</details>
+
+<details class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+<summary class="cursor-pointer font-semibold text-primary flex items-center gap-2">
+  <span>Should I prioritize Hangar (Eagle strikes) or Orbital Arsenal?</span>
+</summary>
+
+<div class="mt-4 text-sm space-y-3">
+
+Both paths are equally viable—choose based on your preferred offensive Stratagems rather than abstract optimization principles. The ranked guide prioritizes Hangar slightly (Expanded Weapons Bay at #5, Pit Crew at #10) over Orbital Arsenal (Zero-G Breech at #6), but this reflects general utility rather than superiority.
+
+Eagle strikes provide more frequent, lower-cooldown bombardment ideal for reactive fire support. Orbital strikes deliver heavier damage with longer cooldowns better suited for planned bombardments. Both approaches work excellently in co-op.
+
+Practical recommendation: Complete Hangar progression first if you reliably use Eagle Stratagems in your loadouts, complete Orbital Arsenal first if you favor orbital bombardment. If you use both equally, follow the ranked guide's sequence. In organized squads, consider specializing where different members complete different offensive trees to provide diverse fire support options.
+
+Don't feel compelled to complete both trees—choosing one and optimizing it fully provides better results than half-completing both.
+
+</div>
+</details>
+
+<details class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+<summary class="cursor-pointer font-semibold text-primary flex items-center gap-2">
+  <span>What difficulty should I play to efficiently farm samples?</span>
+</summary>
+
+<div class="mt-4 text-sm space-y-3">
+
+Play the highest difficulty you can consistently complete within reasonable time frames. Sample collection efficiency comes from successful mission completion rather than difficulty alone—failed missions provide zero samples regardless of what might have dropped.
+
+Common Samples are plentiful on all difficulties, so farming those requires only completing Trivial or Easy missions quickly. Rare Samples begin dropping on Medium difficulty, making Medium and Hard optimal for Rare farming. Super Rare Samples exclusively drop on Extreme and above, making those difficulties necessary for late-game progression.
+
+Practical guideline: Farm Medium/Hard difficulty until you've completed all Rare-cost upgrades, then step up to Extreme for Super Rare collection. Don't attempt Helldive difficulty purely for sample farming—the time investment and failure rate makes it inefficient compared to reliable Extreme completions.
+
+Remember that higher difficulties also provide more Common and Rare Samples alongside Super Rares, making Extreme difficulty efficient for all sample types once you're capable of consistent completions.
+
+</div>
+</details>
+
+<details class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+<summary class="cursor-pointer font-semibold text-primary flex items-center gap-2">
+  <span>Are there any upgrades I should avoid or skip entirely?</span>
+</summary>
+
+<div class="mt-4 text-sm space-y-3">
+
+Most Ship Modules provide genuine value for their cost. However, some lower-priority upgrades can be skipped if you have limited playtime or want to focus investment elsewhere.
+
+Quality-of-life upgrades like Seismic Probe Calibration provide zero combat benefit—skip these until you've exhausted all combat-effective options. Specialized enhancements for specific Stratagem variants you never use (like gas strike duration if you never equip gas orbitals) provide no practical value despite appearing in progression trees.
+
+The Robotics Workshop entire tree (Targeting Scanners and Shock Absorption Gel) can be skipped if you fundamentally dislike using Sentry Stratagems. However, sentries are genuinely powerful tools, so "skipping because I don't use sentries" might indicate you should learn to use sentries rather than avoiding relevant upgrades.
+
+Generally, follow the ranked priority path through at least the top ten upgrades before considering what to skip. By the time you reach upgrade decisions beyond rank #10, you'll have enough experience to make informed judgments about what your playstyle actually requires.
+
+</div>
+</details>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Conclusion: Building Your Democracy Dispensary
+
+<div class="space-y-6 mb-8">
+
+Ship Module upgrades transform Helldivers 2 from a challenging cooperative shooter into a precision-tuned war machine. The difference between a fresh Helldiver with no upgrades and a veteran with optimized modules is dramatic—faster cooldowns, fuller ammunition reserves, sturdier defenses, and more devastating firepower compound into significantly higher squad effectiveness.
+
+This guide provides a proven progression path from struggling new player through endgame mastery. Following the ranked priority sequence ensures you solve fundamental problems first (ammunition sustainability, cooldown responsiveness) before pursuing specialized optimizations (offensive firepower maximization, defensive perfection). The top ten ranked upgrades represent the sweet spot of effort-to-benefit ratio, providing the vast majority of practical capability improvement for reasonable sample investment.
+
+Remember that Ship Modules provide the tools but your tactics determine outcomes. No amount of upgrade investment replaces learning enemy patterns, mastering Stratagem timing, or coordinating effectively with squadmates. Treat modules as force multipliers for skilled play rather than replacements for learning fundamentals.
+
+Coordinate with your squad when possible. Discuss upgrade priorities before sessions to avoid redundant investments. Specialize your progression paths to create diverse team capabilities. Communicate Stratagem usage to maximize upgrade value realization. These coordination multipliers dramatically exceed raw upgrade power in determining mission success.
+
+Most importantly, enjoy the progression journey. Collecting samples and unlocking powerful upgrades provides excellent motivation for pushing into higher difficulties. Each new module acquisition feels rewarding, providing tangible power increase you immediately experience in subsequent missions. This creates positive feedback loop where upgrades enable higher difficulties, which provide better sample income, which funds additional upgrades.
+
+Now get out there, collect those samples, and build your ship into the Democracy-dispensing war machine it was meant to be. Freedom never comes free—you have to upgrade for it. Dive hard, Helldivers.
+
+</div>
+
+<Callout variant="success">
+**Quick Progression Reminder:** New players should acquire Donation Access License first, followed by Synthetic Supplementation and Streamlined Request Process. These three Common/Rare purchases solve your fundamental problems immediately. After that, grab Advanced Construction with your first Rare Samples, then save for Expanded Weapons Bay using Super Rares. This sequence creates optimal foundation for everything that follows. Good luck spreading Managed Democracy!
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

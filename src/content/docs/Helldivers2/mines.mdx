@@ -1,0 +1,1172 @@
+---
+title: Mine Guide
+---
+
+import Callout from "@/components/Callout.astro";
+import { Zap, Shield, Target, Skull } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Mines have evolved from risky novelties to meta-defining tools** in Helldivers 2. Recent buffs (cooldown reduced from 180s to 120s, damage doubled on AP/Incendiary mines) have transformed these stratagems into essential area-denial weapons for competitive squads.
+
+This guide breaks down tactical deployment against all three factions—Terminids, Cyborgs, and Illuminates—with specific enemy matchups, squad loadouts, and advanced placement strategies.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> Mine Arsenal Overview
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20 hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        💥
+      </div>
+      <h3 class="text-lg font-semibold text-primary">AP Mines</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">MD-6 Anti-Personnel</p>
+    <div class="text-xs space-y-1 mb-4">
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">700 (AP3)</span></div>
+      <div><span class="text-fs-gold font-semibold">Radius:</span> <span class="text-foreground/70">5m blast</span></div>
+      <div><span class="text-fs-gold font-semibold">Count:</span> <span class="text-foreground/70">48 mines</span></div>
+      <div><span class="text-fs-gold font-semibold">Cooldown:</span> <span class="text-green-400 font-semibold">120s</span> <span class="text-xs line-through text-foreground/50">180s</span></div>
+    </div>
+    <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">PATCH BUFF</div>
+      <div class="text-xs text-foreground/80">Damage increased 2x</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-orange-500/20 hover:border-orange-500/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center text-2xl">
+        🔥
+      </div>
+      <h3 class="text-lg font-semibold text-orange-400">Incendiary</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">MD-I4 Incendiary</p>
+    <div class="text-xs space-y-1 mb-4">
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">300 + fire DoT</span></div>
+      <div><span class="text-fs-gold font-semibold">Radius:</span> <span class="text-foreground/70">Fire patch area</span></div>
+      <div><span class="text-fs-gold font-semibold">Count:</span> <span class="text-foreground/70">48 mines</span></div>
+      <div><span class="text-fs-gold font-semibold">Cooldown:</span> <span class="text-green-400 font-semibold">120s</span> <span class="text-xs line-through text-foreground/50">180s</span></div>
+    </div>
+    <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">PATCH BUFF</div>
+      <div class="text-xs text-foreground/80">Cooldown -33%</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-purple-500/20 hover:border-purple-500/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-2xl">
+        ☠️
+      </div>
+      <h3 class="text-lg font-semibold text-purple-400">Gas Mines</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">MD-8 Gas</p>
+    <div class="text-xs space-y-1 mb-4">
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">Minor + poison DoT</span></div>
+      <div><span class="text-fs-gold font-semibold">Effect:</span> <span class="text-foreground/70">Blind + Frenzy</span></div>
+      <div><span class="text-fs-gold font-semibold">Count:</span> <span class="text-foreground/70">48 mines</span></div>
+      <div><span class="text-fs-gold font-semibold">Duration:</span> <span class="text-green-400 font-semibold">10s</span> <span class="text-xs text-foreground/50">buffed</span></div>
+    </div>
+    <div class="p-2 bg-purple-500/10 rounded border border-purple-500/30">
+      <div class="text-xs text-purple-400 font-semibold mb-1">CROWD CONTROL</div>
+      <div class="text-xs text-foreground/80">Enemies attack each other</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-yellow-500/20 hover:border-yellow-500/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-yellow-400">AT Mines</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">MD-17 Anti-Tank</p>
+    <div class="text-xs space-y-1 mb-4">
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">2000 (AP5)</span></div>
+      <div><span class="text-fs-gold font-semibold">Radius:</span> <span class="text-foreground/70">7m blast</span></div>
+      <div><span class="text-fs-gold font-semibold">Count:</span> <span class="text-foreground/70">18 mines</span></div>
+      <div><span class="text-fs-gold font-semibold">Trigger:</span> <span class="text-foreground/70">Heavy units only</span></div>
+    </div>
+    <div class="p-2 bg-yellow-500/10 rounded border border-yellow-500/30">
+      <div class="text-xs text-yellow-400 font-semibold mb-1">SAFE TRIGGER</div>
+      <div class="text-xs text-foreground/80">Ignores infantry/divers</div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+All mine types received the cooldown buff (180s → 120s), making it possible to maintain multiple active minefields simultaneously. This fundamentally changed their meta viability from "situational" to "essential."
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Enemy Effectiveness Matrix
+
+<div class="space-y-6 mb-8">
+
+The table below shows mine effectiveness by star rating across all major enemy types. **Hover over any cell** to see blast radius, specific combos, and tactical notes.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold sticky left-0 bg-background">Mine Type</th>
+        <th class="text-center p-3 text-primary font-semibold min-w-[140px]">🐛 Bug Warrior<br/><span class="text-xs text-foreground/60 font-normal">Melee rusher</span></th>
+        <th class="text-center p-3 text-primary font-semibold min-w-[140px]">🦟 Bug Hunter<br/><span class="text-xs text-foreground/60 font-normal">Fast flanker</span></th>
+        <th class="text-center p-3 text-primary font-semibold min-w-[140px]">🪲 Bug Heavy<br/><span class="text-xs text-foreground/60 font-normal">Tank/Behemoth</span></th>
+        <th class="text-center p-3 text-primary font-semibold min-w-[140px]">🤖 Cyborg Infantry<br/><span class="text-xs text-foreground/60 font-normal">Ranged troops</span></th>
+        <th class="text-center p-3 text-primary font-semibold min-w-[140px]">🚗 Cyborg IFV<br/><span class="text-xs text-foreground/60 font-normal">Tank/Vehicle</span></th>
+        <th class="text-center p-3 text-primary font-semibold min-w-[140px]">🛸 Illuminate Infantry<br/><span class="text-xs text-foreground/60 font-normal">Shielded troops</span></th>
+        <th class="text-center p-3 text-primary font-semibold min-w-[140px]">🚁 Illuminate Flyer<br/><span class="text-xs text-foreground/60 font-normal">Hovering units</span></th>
+        <th class="text-center p-3 text-primary font-semibold min-w-[140px]">🦾 Harvester<br/><span class="text-xs text-foreground/60 font-normal">Heavy walker</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors group">
+        <td class="p-3 font-medium text-foreground sticky left-0 bg-background group-hover:bg-card/30">💥 AP Mines</td>
+        <td class="text-center p-3 bg-green-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Excellent</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">💥 AP MINES vs BUG WARRIOR</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 4/5 stars</div>
+              <div><span class="text-primary">Blast Radius:</span> 5m</div>
+              <div><span class="text-primary">Why:</span> One-shots most warriors, perfect for predictable pathing</div>
+              <div><span class="text-primary">Combo:</span> Guard Dog + Eagle Cluster</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/20 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★★</div>
+          <div class="text-xs text-foreground/60 mt-1">Perfect</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">💥 AP MINES vs BUG HUNTER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 5/5 stars</div>
+              <div><span class="text-primary">Blast Radius:</span> 5m</div>
+              <div><span class="text-primary">Why:</span> Staggers fast movers, wipes entire packs</div>
+              <div><span class="text-primary">Combo:</span> Stagger → Autocannon finish</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Weak</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">💥 AP MINES vs BUG HEAVY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 2/5 stars</div>
+              <div><span class="text-primary">Why:</span> Insufficient penetration for armor</div>
+              <div><span class="text-primary">Use:</span> AT mines instead</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Excellent</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">💥 AP MINES vs CYBORG INFANTRY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 4/5 stars</div>
+              <div><span class="text-primary">Why:</span> Wipes squads, disrupts formations</div>
+              <div><span class="text-primary">Combo:</span> Place out of LoS, exploit Hellpod pause</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-red-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★☆☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Ineffective</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">💥 AP MINES vs CYBORG IFV</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 1/5 stars</div>
+              <div><span class="text-primary">Why:</span> No armor penetration</div>
+              <div><span class="text-primary">Use:</span> AT mines mandatory</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Excellent</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">💥 AP MINES vs ILLUMINATE INFANTRY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 4/5 stars</div>
+              <div><span class="text-primary">Why:</span> Bypasses shields with raw damage</div>
+              <div><span class="text-primary">Combo:</span> Choke narrow corridors</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-red-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">☆☆☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Immune</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">💥 AP MINES vs ILLUMINATE FLYER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 0/5 stars</div>
+              <div><span class="text-primary">Why:</span> Flies over ground mines</div>
+              <div><span class="text-primary">Use:</span> Anti-air weapons required</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Weak</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">💥 AP MINES vs HARVESTER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 2/5 stars</div>
+              <div><span class="text-primary">Why:</span> Insufficient damage for heavy walker</div>
+              <div><span class="text-primary">Use:</span> AT mines or turret bait</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors group">
+        <td class="p-3 font-medium text-orange-400 sticky left-0 bg-background group-hover:bg-card/30">🔥 Incendiary</td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Good</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🔥 INCENDIARY vs BUG WARRIOR</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 3/5 stars</div>
+              <div><span class="text-primary">Effect:</span> Lower burst but fire DoT</div>
+              <div><span class="text-primary">Combo:</span> Gas + Fire chain reaction</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Situational</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🔥 INCENDIARY vs BUG HUNTER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 2/5 stars</div>
+              <div><span class="text-primary">Why:</span> Fast movers escape fire patches</div>
+              <div><span class="text-primary">Better:</span> Use AP for instant kills</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Weak</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🔥 INCENDIARY vs BUG HEAVY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 2/5 stars</div>
+              <div><span class="text-primary">Why:</span> Fire chips slowly, insufficient burst</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Excellent</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🔥 INCENDIARY vs CYBORG INFANTRY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 4/5 stars</div>
+              <div><span class="text-primary">Why:</span> Fire walls block streets, great area denial</div>
+              <div><span class="text-primary">Combo:</span> Deploy out of enemy LoS</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-red-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★☆☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Ineffective</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🔥 INCENDIARY vs CYBORG IFV</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 1/5 stars</div>
+              <div><span class="text-primary">Why:</span> Fire damage negligible vs armor</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/20 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★★</div>
+          <div class="text-xs text-foreground/60 mt-1">Perfect</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🔥 INCENDIARY vs ILLUMINATE INFANTRY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 5/5 stars</div>
+              <div><span class="text-primary">Why:</span> Fire burns through shields, prevents regen</div>
+              <div><span class="text-primary">Combo:</span> Choke corridors in city maps</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-red-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">☆☆☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Immune</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🔥 INCENDIARY vs ILLUMINATE FLYER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 0/5 stars</div>
+              <div><span class="text-primary">Why:</span> Flies over ground fire</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Weak</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🔥 INCENDIARY vs HARVESTER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 2/5 stars</div>
+              <div><span class="text-primary">Why:</span> Can burn off shields after EMP, but slow</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors group">
+        <td class="p-3 font-medium text-purple-400 sticky left-0 bg-background group-hover:bg-card/30">☠️ Gas Mines</td>
+        <td class="text-center p-3 bg-green-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Excellent</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">☠️ GAS MINES vs BUG WARRIOR</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 4/5 stars</div>
+              <div><span class="text-primary">Why:</span> Causes friendly-fire frenzy in swarms</div>
+              <div><span class="text-primary">Combo:</span> Gas → Fire ignition</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Good</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">☠️ GAS MINES vs BUG HUNTER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 3/5 stars</div>
+              <div><span class="text-primary">Why:</span> Blinds flankers, creates confusion</div>
+              <div><span class="text-primary">Combo:</span> Stagger → Manual cleanup</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Weak</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">☠️ GAS MINES vs BUG HEAVY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 2/5 stars</div>
+              <div><span class="text-primary">Why:</span> Large enemies resist blind/frenzy</div>
+              <div><span class="text-primary">Use:</span> To expose burrowers, not kill</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/20 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★★</div>
+          <div class="text-xs text-foreground/60 mt-1">Perfect</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">☠️ GAS MINES vs CYBORG INFANTRY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 5/5 stars</div>
+              <div><span class="text-primary">Why:</span> Breaks formations, friendly-fire chain</div>
+              <div><span class="text-primary">Combo:</span> Gas → Pick off disoriented units</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-red-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★☆☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Ineffective</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">☠️ GAS MINES vs CYBORG IFV</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 1/5 stars</div>
+              <div><span class="text-primary">Why:</span> Vehicles immune to gas effects</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Excellent</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">☠️ GAS MINES vs ILLUMINATE INFANTRY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 4/5 stars</div>
+              <div><span class="text-primary">Why:</span> Reveals cloaked units, disrupts shields</div>
+              <div><span class="text-primary">Combo:</span> Gas → Enemies shoot own shield generator</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Situational</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">☠️ GAS MINES vs ILLUMINATE FLYER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 2/5 stars</div>
+              <div><span class="text-primary">Why:</span> Flies over mines, but affected if cloud reaches altitude</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Good</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">☠️ GAS MINES vs HARVESTER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 3/5 stars</div>
+              <div><span class="text-primary">Why:</span> Obscures lanes, disorients supporting units</div>
+              <div><span class="text-primary">Combo:</span> Gas cloud → Fire to ignite area</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors group">
+        <td class="p-3 font-medium text-yellow-400 sticky left-0 bg-background group-hover:bg-card/30">🎯 AT Mines</td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Won't Trigger</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🎯 AT MINES vs BUG WARRIOR</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> N/A</div>
+              <div><span class="text-primary">Why:</span> Won't trigger on infantry-sized units</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Won't Trigger</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🎯 AT MINES vs BUG HUNTER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> N/A</div>
+              <div><span class="text-primary">Why:</span> Too small to trigger AT mines</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/20 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★★</div>
+          <div class="text-xs text-foreground/60 mt-1">Perfect</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🎯 AT MINES vs BUG HEAVY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 5/5 stars</div>
+              <div><span class="text-primary">Damage:</span> 2000 (AP5)</div>
+              <div><span class="text-primary">Blast Radius:</span> 7m</div>
+              <div><span class="text-primary">Why:</span> One-shot or cripple Behemoths, Impalers</div>
+              <div><span class="text-primary">Combo:</span> Kite heavies into mines</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Won't Trigger</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🎯 AT MINES vs CYBORG INFANTRY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> N/A</div>
+              <div><span class="text-primary">Why:</span> Won't trigger on infantry</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/20 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★★</div>
+          <div class="text-xs text-foreground/60 mt-1">Essential</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🎯 AT MINES vs CYBORG IFV</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 5/5 stars</div>
+              <div><span class="text-primary">Damage:</span> 2000 (AP5)</div>
+              <div><span class="text-primary">Why:</span> Instant disable/kill on vehicles</div>
+              <div><span class="text-primary">Combo:</span> EMP → AT Mine for guaranteed hit</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Won't Trigger</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🎯 AT MINES vs ILLUMINATE INFANTRY</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> N/A</div>
+              <div><span class="text-primary">Why:</span> Infantry too small to trigger</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-yellow-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★☆☆☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Won't Trigger</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🎯 AT MINES vs ILLUMINATE FLYER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> N/A</div>
+              <div><span class="text-primary">Why:</span> Flies over mines, wouldn't trigger anyway</div>
+            </div>
+          </div>
+        </td>
+        <td class="text-center p-3 bg-green-500/10 relative group/cell">
+          <div class="text-amber-300 text-base">★★★★☆</div>
+          <div class="text-xs text-foreground/60 mt-1">Excellent</div>
+          <div class="invisible group-hover/cell:visible absolute z-10 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-4 bg-zinc-900/95 rounded-lg border border-primary/30 shadow-xl">
+            <div class="text-xs text-fs-gold font-semibold mb-2">🎯 AT MINES vs HARVESTER</div>
+            <div class="text-xs space-y-2">
+              <div><span class="text-primary">Rating:</span> 4/5 stars</div>
+              <div><span class="text-primary">Damage:</span> 2000 (AP5)</div>
+              <div><span class="text-primary">Why:</span> Massive damage if you can bait pathing</div>
+              <div><span class="text-primary">Combo:</span> Place near turret as bait target</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="info">
+**Mobile users:** Tap any cell to view detailed tactical information. The matrix shows at-a-glance effectiveness with color coding: green (excellent), yellow (situational), red (ineffective).
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Shield className="inline-block mr-3 mb-1" size={32} /> Faction-Specific Strategies
+
+### 🐛 Terminids (Bugs): Swarm Annihilation
+
+<div class="p-8 bg-gradient-to-br from-green-500/10 via-card/50 to-green-500/5 rounded-lg border-2 border-green-500/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-green-500/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Bug Breach Defense</h3>
+      <p class="text-sm text-foreground/60">Multi-layer minefield strategy</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-green-400">3</div>
+      <div class="text-xs text-foreground/60">mine layers</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div class="p-4 bg-card/70 rounded-lg border border-green-500/20">
+      <div class="text-sm font-semibold text-green-400 mb-2">LAYER 1: Outer Perimeter</div>
+      <div class="text-xs space-y-1">
+        <div><span class="text-fs-gold">Type:</span> AP Mines (48x)</div>
+        <div><span class="text-fs-gold">Radius:</span> 30m spread</div>
+        <div><span class="text-fs-gold">Purpose:</span> First-wave massacre</div>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-card/70 rounded-lg border border-green-500/20">
+      <div class="text-sm font-semibold text-green-400 mb-2">LAYER 2: Mid-Field</div>
+      <div class="text-xs space-y-1">
+        <div><span class="text-fs-gold">Type:</span> Gas Mines (48x)</div>
+        <div><span class="text-fs-gold">Effect:</span> Blind + frenzy</div>
+        <div><span class="text-fs-gold">Purpose:</span> Friendly-fire chain</div>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-card/70 rounded-lg border border-green-500/20">
+      <div class="text-sm font-semibold text-green-400 mb-2">LAYER 3: Heavy Intercept</div>
+      <div class="text-xs space-y-1">
+        <div><span class="text-fs-gold">Type:</span> AT Mines (18x)</div>
+        <div><span class="text-fs-gold">Damage:</span> 2000 per hit</div>
+        <div><span class="text-fs-gold">Purpose:</span> Behemoth/Impaler kill</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">KEY TACTICS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Place mines at breach spawn</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Stagger grids to prevent chains</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Gas → Fire ignition combo</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">AVOID</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Mining your own retreat path</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Dense stacking (waste)</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Ignoring burrowing Rupture strain</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-green-500/10 rounded-lg border border-green-500/20">
+    <div class="text-xs text-green-400 font-semibold mb-2">RUPTURE STRAIN COUNTER</div>
+    <p class="text-sm text-foreground/80">Gas mines force burrowers to surface early and attack each other. Combine with incendiary weapons for "warcrime" effectiveness—smoking them out then burning the exposed enemies.</p>
+  </div>
+</div>
+
+<Callout variant="success">
+Community consensus: "Get AT and gas mines and you're literally untouchable. It's so easy to hold points and bottleneck bugs." Post-patch, this combination has enabled solo clears of previously impossible difficulty 10 bug missions.
+</Callout>
+
+### 🤖 Cyborgs (Mechanized Forces): Anti-Armor Focus
+
+<div class="p-8 bg-gradient-to-br from-blue-500/10 via-card/50 to-blue-500/5 rounded-lg border-2 border-blue-500/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-blue-500/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Cyborg Tank Ambush</h3>
+      <p class="text-sm text-foreground/60">Vehicle interdiction strategy</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-blue-400">1</div>
+      <div class="text-xs text-foreground/60">shot kill</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-blue-500/20">
+      <div class="text-sm font-semibold text-blue-400 mb-3">PRIMARY: AT Mines</div>
+      <div class="text-xs space-y-2">
+        <div class="flex justify-between items-center p-2 bg-card/50 rounded">
+          <span class="text-foreground/70">Damage vs IFV</span>
+          <span class="text-fs-gold font-bold">2000 (instant kill)</span>
+        </div>
+        <div class="flex justify-between items-center p-2 bg-card/50 rounded">
+          <span class="text-foreground/70">Trigger Safety</span>
+          <span class="text-green-400 font-semibold">Ignores infantry</span>
+        </div>
+        <div class="flex justify-between items-center p-2 bg-card/50 rounded">
+          <span class="text-foreground/70">Placement</span>
+          <span class="text-foreground/80">Vehicle spawn routes</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-5 bg-card/70 rounded-lg border border-blue-500/20">
+      <div class="text-sm font-semibold text-blue-400 mb-3">SUPPORT: Gas Mines</div>
+      <div class="text-xs space-y-2">
+        <div class="flex justify-between items-center p-2 bg-card/50 rounded">
+          <span class="text-foreground/70">vs Infantry</span>
+          <span class="text-purple-400 font-semibold">Break formations</span>
+        </div>
+        <div class="flex justify-between items-center p-2 bg-card/50 rounded">
+          <span class="text-foreground/70">Effect</span>
+          <span class="text-purple-400 font-semibold">Friendly-fire chain</span>
+        </div>
+        <div class="flex justify-between items-center p-2 bg-card/50 rounded">
+          <span class="text-foreground/70">Use Case</span>
+          <span class="text-foreground/80">Disrupt ranged units</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-blue-500/10 rounded-lg border border-blue-500/20 mb-4">
+    <div class="text-xs text-blue-400 font-semibold mb-2">CRITICAL: AVOID FRIENDLY VEHICLES</div>
+    <p class="text-sm text-foreground/80">AT mines trigger on ANY large object—including your own SEAF cars and Exosuits. Place mines on <span class="text-fs-gold font-semibold">enemy</span> approach routes, never your team's paths. Communicate mine locations constantly.</p>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">DO THIS</div>
+      <div class="space-y-1 text-xs">
+        <div class="p-2 bg-green-500/10 rounded">✓ Mine ahead of vehicle spawns</div>
+        <div class="p-2 bg-green-500/10 rounded">✓ Use Hellpod drop to distract infantry</div>
+        <div class="p-2 bg-green-500/10 rounded">✓ Kite Warlords into AT mines</div>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">DON'T DO THIS</div>
+      <div class="space-y-1 text-xs">
+        <div class="p-2 bg-red-500/10 rounded">✗ Place mines in open (shot by infantry)</div>
+        <div class="p-2 bg-red-500/10 rounded">✗ Forget about your own vehicle</div>
+        <div class="p-2 bg-red-500/10 rounded">✗ Deploy without anti-armor plan</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+Cyborg infantry can detonate mines with stray gunfire or grenades. Deploy mines slightly out of direct line-of-sight (around corners, behind terrain) to prevent premature detonation. Exploit the "Hellpod pause"—enemies briefly stop when your mine pod lands, giving mines time to arm.
+</Callout>
+
+### 🛸 Illuminates (High-Tech Aliens): Chokepoint Mastery
+
+<div class="p-8 bg-gradient-to-br from-purple-500/10 via-card/50 to-purple-500/5 rounded-lg border-2 border-purple-500/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-purple-500/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Illuminate Corridor Defense</h3>
+      <p class="text-sm text-foreground/60">City map chokepoint control</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-purple-400">2</div>
+      <div class="text-xs text-foreground/60">mine types</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div class="p-5 bg-gradient-to-br from-purple-500/10 to-orange-500/10 rounded-lg border-l-4 border-purple-500">
+      <div class="text-sm font-semibold text-purple-400 mb-3">GAS + FIRE COMBO</div>
+      <div class="text-xs space-y-3">
+        <div>
+          <div class="text-purple-400 font-semibold mb-1">Step 1: Gas Mines</div>
+          <div class="text-foreground/80">Blind shielded troops, force friendly-fire on own shield generators</div>
+        </div>
+        <div>
+          <div class="text-orange-400 font-semibold mb-1">Step 2: Incendiary Mines</div>
+          <div class="text-foreground/80">Fire burns through shields, prevents regeneration, creates fire walls</div>
+        </div>
+        <div>
+          <div class="text-green-400 font-semibold mb-1">Result</div>
+          <div class="text-foreground/80">Illuminate waves stalled in corridor, taking continuous DoT</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-5 bg-card/70 rounded-lg border border-purple-500/20">
+      <div class="text-sm font-semibold text-purple-400 mb-3">HARVESTER COUNTER</div>
+      <div class="text-xs space-y-2">
+        <div class="p-2 bg-yellow-500/10 rounded border border-yellow-500/30">
+          <div class="text-yellow-400 font-semibold mb-1">BAIT TACTIC</div>
+          <div class="text-foreground/80">Place turret behind AT minefield. Harvester prioritizes turret, walks into mines.</div>
+        </div>
+        <div class="p-2 bg-blue-500/10 rounded border border-blue-500/30">
+          <div class="text-blue-400 font-semibold mb-1">ALTERNATIVE</div>
+          <div class="text-foreground/80">Mine objective paths preemptively before Harvester spawns</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-purple-500/10 rounded-lg border border-purple-500/20 mb-4">
+    <div class="text-xs text-purple-400 font-semibold mb-2">FLYER LIMITATION</div>
+    <p class="text-sm text-foreground/80">Illuminate hovering units ignore ground mines. Maintain anti-air coverage (personal weapons, turrets) to complement mine strategy. Mines handle 80% of threats; you handle the remaining flyers.</p>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">IDEAL FOR</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">City street defenses</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Civilian evacuations</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Static objectives</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-amber-400 font-semibold mb-2">WATCH OUT FOR</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-amber-500/10 text-amber-400 text-xs rounded-full">Teleporting units</span>
+        <span class="px-3 py-1.5 bg-amber-500/10 text-amber-400 text-xs rounded-full">Dropship bypasses</span>
+        <span class="px-3 py-1.5 bg-amber-500/10 text-amber-400 text-xs rounded-full">Civilian mine triggers</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+Learn Illuminate dropship landing zones and mine them preemptively. Some players report destroying dropship wrecks with mines, eliminating spawn points entirely. Even if patched, pre-mining spawn zones massacres reinforcements the moment they land.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Skull className="inline-block mr-3 mb-1" size={32} /> Squad Loadout Templates
+
+<div class="space-y-6 mb-8">
+
+Effective mine usage requires coordination. Below are recommended 4-player compositions for each faction, balancing mine coverage with essential support roles.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-green-500/30">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="text-3xl">🐛</div>
+      <div>
+        <h3 class="text-lg font-semibold text-green-400">Bug Mission Loadout</h3>
+        <p class="text-xs text-foreground/60">Swarm + Heavy Coverage</p>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="p-3 bg-background/50 rounded-lg border-l-4 border-red-500">
+        <div class="text-sm font-semibold text-foreground mb-1">Player 1: AP Mine Layer</div>
+        <div class="text-xs text-foreground/70">MD-6 AP Mines + Guard Dog + Eagle Cluster</div>
+        <div class="text-xs text-fs-gold mt-1">Role: First-wave massacre</div>
+      </div>
+      
+      <div class="p-3 bg-background/50 rounded-lg border-l-4 border-purple-500">
+        <div class="text-sm font-semibold text-foreground mb-1">Player 2: Gas Specialist</div>
+        <div class="text-xs text-foreground/70">MD-8 Gas Mines + Flamethrower + Mortar Sentry</div>
+        <div class="text-xs text-fs-gold mt-1">Role: Crowd control + Rupture counter</div>
+      </div>
+      
+      <div class="p-3 bg-background/50 rounded-lg border-l-4 border-yellow-500">
+        <div class="text-sm font-semibold text-foreground mb-1">Player 3: Heavy Killer</div>
+        <div class="text-xs text-foreground/70">MD-17 AT Mines + EAT-17 + Railcannon</div>
+        <div class="text-xs text-fs-gold mt-1">Role: Behemoth/Impaler removal</div>
+      </div>
+      
+      <div class="p-3 bg-background/50 rounded-lg border-l-4 border-blue-500">
+        <div class="text-sm font-semibold text-foreground mb-1">Player 4: Support</div>
+        <div class="text-xs text-foreground/70">Resupply Pack + Autocannon Sentry + Stims</div>
+        <div class="text-xs text-fs-gold mt-1">Role: Sustain + Cleanup</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-blue-500/30">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="text-3xl">🤖</div>
+      <div>
+        <h3 class="text-lg font-semibold text-blue-400">Cyborg Mission Loadout</h3>
+        <p class="text-xs text-foreground/60">Anti-Armor Priority</p>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="p-3 bg-background/50 rounded-lg border-l-4 border-yellow-500">
+        <div class="text-sm font-semibold text-foreground mb-1">Player 1: AT Mine Layer</div>
+        <div class="text-xs text-foreground/70">MD-17 AT Mines + EMP Mines + Railcannon</div>
+        <div class="text-xs text-fs-gold mt-1">Role: Vehicle interdiction</div>
+      </div>
+      
+      <div class="p-3 bg-background/50 rounded-lg border-l-4 border-purple-500">
+        <div class="text-sm font-semibold text-foreground mb-1">Player 2: Gas Specialist</div>
+        <div class="text-xs text-foreground/70">MD-8 Gas Mines + Machine Gun + Laser Cannon</div>
+        <div class="text-xs text-fs-gold mt-1">Role: Infantry disruption</div>
+      </div>
+      
+      <div class="p-3 bg-background/50 rounded-lg border-l-4 border-orange-500">
+        <div class="text-sm font-semibold text-foreground mb-1">Player 3: Fortification</div>
+        <div class="text-xs text-foreground/70">MD-I4 Incendiary + Autocannon Sentry + Shield Gen</div>
+        <div class="text-xs text-fs-gold mt-1">Role: Area denial + Defense</div>
+      </div>
+      
+      <div class="p-3 bg-background/50 rounded-lg border-l-4 border-blue-500">
+        <div class="text-sm font-semibold text-foreground mb-1">Player 4: Anti-Heavy</div>
+        <div class="text-xs text-foreground/70">Recoilless Rifle + Spear Launcher + Strafing Run</div>
+        <div class="text-xs text-fs-gold mt-1">Role: Direct AT + Air support</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-card/50 rounded-lg border-2 border-purple-500/30 mb-8">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="text-3xl">🛸</div>
+    <div>
+      <h3 class="text-lg font-semibold text-purple-400">Illuminate Mission Loadout</h3>
+      <p class="text-xs text-foreground/60">Chokepoint + Civilian Defense</p>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div class="p-3 bg-background/50 rounded-lg border-l-4 border-purple-500">
+      <div class="text-sm font-semibold text-foreground mb-1">Player 1: Gas Layer</div>
+      <div class="text-xs text-foreground/70">MD-8 Gas Mines + Incendiary Grenade + Arc Thrower</div>
+      <div class="text-xs text-fs-gold mt-1">Role: Shield disruption</div>
+    </div>
+    
+    <div class="p-3 bg-background/50 rounded-lg border-l-4 border-orange-500">
+      <div class="text-sm font-semibold text-foreground mb-1">Player 2: Fire Wall</div>
+      <div class="text-xs text-foreground/70">MD-I4 Incendiary + Flamethrower + Napalm Strike</div>
+      <div class="text-xs text-fs-gold mt-1">Role: Sustained burn</div>
+    </div>
+    
+    <div class="p-3 bg-background/50 rounded-lg border-l-4 border-yellow-500">
+      <div class="text-sm font-semibold text-foreground mb-1">Player 3: AT Backup</div>
+      <div class="text-xs text-foreground/70">MD-17 AT Mines + Gatling Sentry + Orbital Laser</div>
+      <div class="text-xs text-fs-gold mt-1">Role: Harvester counter</div>
+    </div>
+    
+    <div class="p-3 bg-background/50 rounded-lg border-l-4 border-blue-500">
+      <div class="text-sm font-semibold text-foreground mb-1">Player 4: Anti-Air</div>
+      <div class="text-xs text-foreground/70">Autocannon + Rocket Sentry + Resupply</div>
+      <div class="text-xs text-fs-gold mt-1">Role: Flyer coverage + Sustain</div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="info">
+These loadouts leave room for personal preference. The key principle: ensure anti-personnel (AP/Gas/Incendiary) AND anti-armor (AT mines or launchers) coverage, while one player brings support (ammo/healing). Never have all 4 players bring the same mine type.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Do's and Don'ts: Visual Quick Reference
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-green-500/5 rounded-lg border-2 border-green-500/30">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="text-4xl">✅</div>
+      <h3 class="text-xl font-bold text-green-400">DO THESE</h3>
+    </div>
+    
+    <div class="space-y-4">
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✓ Deploy at chokepoints and enemy spawn paths</div>
+        <div class="text-sm text-foreground/70">Mine where enemies WILL be, not where they are. Predict breach points, vehicle routes, dropship zones.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✓ Communicate mine locations constantly</div>
+        <div class="text-sm text-foreground/70">"Mines north side!" Ping the map. No IFF means your team needs to know where death zones are.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✓ Use mines to buy time during retreats</div>
+        <div class="text-sm text-foreground/70">Drop minefield behind you when falling back. Pursuers walk into it while you heal/reload.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✓ Layer different mine types in depth</div>
+        <div class="text-sm text-foreground/70">AP outer → Gas mid → AT inner creates 3 kill zones for different threats.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✓ Refresh minefields with 120s cooldown</div>
+        <div class="text-sm text-foreground/70">Multiple active fields possible. Drop new mines before old ones fully detonate.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✓ Combine gas with fire for maximum chaos</div>
+        <div class="text-sm text-foreground/70">Gas cloud → Incendiary ignition = "warcrime" effectiveness. Blinded enemies burn together.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-red-500/5 rounded-lg border-2 border-red-500/30">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="text-4xl">❌</div>
+      <h3 class="text-xl font-bold text-red-400">DON'T DO THESE</h3>
+    </div>
+    
+    <div class="space-y-4">
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✗ Mine your own extraction or objective paths</div>
+        <div class="text-sm text-foreground/70">Forgetting your minefield location kills more divers than enemies. Clear lanes for retreat.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✗ Stack mines too densely in one spot</div>
+        <div class="text-sm text-foreground/70">Chain reactions waste mines. One bug triggers 10 mines = 9 wasted. Spread them out.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✗ Ignore friendly vehicle locations</div>
+        <div class="text-sm text-foreground/70">AT mines obliterate your own tank/Exosuit. "But they only trigger on heavies!" You ARE heavy.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✗ Deploy mines in enemy line-of-sight (Cyborgs)</div>
+        <div class="text-sm text-foreground/70">Cyborg gunfire detonates mines prematurely. Use terrain cover or Hellpod distraction.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✗ Rely only on mines without backup</div>
+        <div class="text-sm text-foreground/70">Flyers ignore ground mines. Heavies might not path correctly. Have manual firepower ready.</div>
+      </div>
+      
+      <div class="p-4 bg-background/50 rounded-lg">
+        <div class="font-semibold text-foreground mb-2">✗ Use AP/Incendiary against heavy armor</div>
+        <div class="text-sm text-foreground/70">Wrong tool for the job. Bug Behemoth? Cyborg tank? You need AT mines, not AP.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**Critical Safety Rule:** Before calling extraction, verify minefield locations. Many squads have lost winnable missions by sprinting into their own mines during the final dash to the shuttle. Clear paths first, even if it means letting mines burn out or shooting them remotely.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Advanced Tactics & Community Meta
+
+<div class="space-y-6 mb-8">
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/30">
+  <h3 class="text-lg font-semibold text-primary mb-3">⚡ The Hellpod Pause Exploit</h3>
+  <p class="text-sm text-foreground/80 mb-3">When a stratagem Hellpod drops (including mine dispensers), enemies briefly halt their advance. Exploit this:</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">STEP 1</div>
+      <div class="text-xs text-foreground/70">Call mine stratagem slightly ahead of approaching patrol</div>
+    </div>
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">STEP 2</div>
+      <div class="text-xs text-foreground/70">Enemies pause as pod lands, giving mines time to arm</div>
+    </div>
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">STEP 3</div>
+      <div class="text-xs text-foreground/70">Enemies resume movement, immediately step on armed mines</div>
+    </div>
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">RESULT</div>
+      <div class="text-xs text-green-400 font-semibold">Patrol eliminated before engaging</div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-purple-500/10 rounded-lg border-2 border-purple-500/30">
+  <h3 class="text-lg font-semibold text-purple-400 mb-3">☠️ Gas Mine Superiority Theory</h3>
+  <p class="text-sm text-foreground/80 mb-3">Community consensus post-buff: Gas mines are the most versatile mine type across all factions. Here's why:</p>
+  <div class="space-y-2 text-sm">
+    <div class="p-3 bg-background/50 rounded-lg border-l-4 border-purple-500">
+      <span class="text-purple-400 font-semibold">Works on ANY faction's fodder:</span> 
+      <span class="text-foreground/80"> Bug swarms, Cyborg infantry, Illuminate troops all affected</span>
+    </div>
+    <div class="p-3 bg-background/50 rounded-lg border-l-4 border-purple-500">
+      <span class="text-purple-400 font-semibold">Safer for friendlies:</span> 
+      <span class="text-foreground/80"> Gas doesn't insta-kill; allies/civilians take gradual damage with escape time</span>
+    </div>
+    <div class="p-3 bg-background/50 rounded-lg border-l-4 border-purple-500">
+      <span class="text-purple-400 font-semibold">Disables ranged threats:</span> 
+      <span class="text-foreground/80"> Cyborg/Illuminate shooters can't aim while blinded—unique advantage</span>
+    </div>
+    <div class="p-3 bg-background/50 rounded-lg border-l-4 border-purple-500">
+      <span class="text-purple-400 font-semibold">Extended duration (10s):</span> 
+      <span class="text-foreground/80"> Patch buff doubled effect time, massive area denial window</span>
+    </div>
+    <div class="p-3 bg-background/50 rounded-lg border-l-4 border-purple-500">
+      <span class="text-purple-400 font-semibold">Friendly-fire chain:</span> 
+      <span class="text-foreground/80"> Enemies damage each other, effectively multiplying kill potential</span>
+    </div>
+  </div>
+  <div class="mt-4 p-3 bg-purple-500/20 rounded border border-purple-500/40">
+    <p class="text-xs text-purple-300 italic">"Gas mines + flamethrower is so strong it feels like cheating. Everything just melts." — Level 10 Helldiver, 200+ hours</p>
+  </div>
+</div>
+
+<div class="p-6 bg-yellow-500/10 rounded-lg border-2 border-yellow-500/30">
+  <h3 class="text-lg font-semibold text-yellow-400 mb-3">🎯 AT Mine Solo Carry Potential</h3>
+  <p class="text-sm text-foreground/80 mb-3">AT mines enable solo clears of content previously requiring full squads:</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <div class="p-4 bg-background/50 rounded text-center">
+      <div class="text-2xl mb-2">2000</div>
+      <div class="text-xs text-foreground/60 mb-2">Damage per mine</div>
+      <div class="text-xs text-yellow-400">vs 2500 HP Cyborg Warlord = near instant kill</div>
+    </div>
+    <div class="p-4 bg-background/50 rounded text-center">
+      <div class="text-2xl mb-2">18</div>
+      <div class="text-xs text-foreground/60 mb-2">Mines per deployment</div>
+      <div class="text-xs text-yellow-400">Enough for 3-4 heavy kills per cooldown</div>
+    </div>
+    <div class="p-4 bg-background/50 rounded text-center">
+      <div class="text-2xl mb-2">120s</div>
+      <div class="text-xs text-foreground/60 mb-2">Cooldown</div>
+      <div class="text-xs text-yellow-400">Fast enough to maintain constant fields</div>
+    </div>
+  </div>
+  <div class="mt-4 text-sm text-foreground/80">
+    <span class="text-fs-gold font-semibold">Solo Strategy:</span> Kite heavy enemies through AT mine corridors. Let the environment kill them while you manage adds. "AT mines will do a lot of heavy lifting in solo play" — Veteran advice
+  </div>
+</div>
+
+<div class="p-6 bg-blue-500/10 rounded-lg border-2 border-blue-500/30">
+  <h3 class="text-lg font-semibold text-blue-400 mb-3">🔄 Mine Refresh Rotation</h3>
+  <p class="text-sm text-foreground/80 mb-4">With 120s cooldown, you can maintain overlapping minefields. Advanced rotation:</p>
+  <div class="space-y-3">
+    <div class="flex items-center gap-4">
+      <div class="w-16 text-center">
+        <div class="text-2xl font-bold text-fs-gold">0:00</div>
+        <div class="text-xs text-foreground/60">Start</div>
+      </div>
+      <div class="flex-1 p-3 bg-background/50 rounded-lg border-l-4 border-blue-500">
+        <div class="text-sm font-semibold">Deploy Field A (AP Mines)</div>
+        <div class="text-xs text-foreground/70">Outer perimeter, 48 mines active</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="w-16 text-center">
+        <div class="text-2xl font-bold text-fs-gold">2:00</div>
+        <div class="text-xs text-foreground/60">+2 min</div>
+      </div>
+      <div class="flex-1 p-3 bg-background/50 rounded-lg border-l-4 border-purple-500">
+        <div class="text-sm font-semibold">Deploy Field B (Gas Mines)</div>
+        <div class="text-xs text-foreground/70">Mid-field, 48 mines active (Field A still live)</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="w-16 text-center">
+        <div class="text-2xl font-bold text-fs-gold">4:00</div>
+        <div class="text-xs text-foreground/60">+4 min</div>
+      </div>
+      <div class="flex-1 p-3 bg-background/50 rounded-lg border-l-4 border-yellow-500">
+        <div class="text-sm font-semibold">Deploy Field C (AT Mines)</div>
+        <div class="text-xs text-foreground/70">Heavy paths, all 3 fields now active</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="w-16 text-center">
+        <div class="text-2xl font-bold text-fs-gold">4:00+</div>
+        <div class="text-xs text-foreground/60">Sustain</div>
+      </div>
+      <div class="flex-1 p-3 bg-green-500/10 rounded-lg border-l-4 border-green-500">
+        <div class="text-sm font-semibold">Maintain Rotation</div>
+        <div class="text-xs text-foreground/70">As Field A depletes, refresh it. Always have 2-3 active fields</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<Callout variant="success">
+**Meta Evolution:** Pre-patch, mines were dismissed as "teamkill bait with marginal damage." Post-patch, they're essential for difficulty 9-10 missions. The community now rates mines as top-tier stratagems, with gas+AT combinations enabling previously impossible solo content. This represents a complete reversal in the strategic meta.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Notes: Mines in the Current Meta
+
+<div class="space-y-6 mb-8">
+
+Patch 1.400.002 transformed mines from niche tools into meta-defining stratagems. The combination of halved cooldowns (180s → 120s) and doubled anti-personnel damage has made minefields viable as primary defensive strategies, not just supplementary tools.
+
+**Key takeaways from the competitive community:**
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-sm font-semibold text-green-400 mb-2">Terminids (Bugs)</div>
+    <div class="text-xs text-foreground/80">Gas + AP mines = swarm annihilation. Counters new Rupture strain. AT mines for heavies. Mines now solve "impossible" bug breach scenarios.</div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-blue-500">
+    <div class="text-sm font-semibold text-blue-400 mb-2">Cyborgs (Bots)</div>
+    <div class="text-xs text-foreground/80">AT mines mandatory for vehicles. Gas disrupts ranged formations. Requires more tactical placement than bugs, but equally effective when executed.</div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-purple-500">
+    <div class="text-sm font-semibold text-purple-400 mb-2">Illuminates (Squids)</div>
+    <div class="text-xs text-foreground/80">Gas + Incendiary combo dominates chokepoints. Fire burns through shields. AT mines for Harvesters. Flyer coverage still required.</div>
+  </div>
+</div>
+
+<div class="p-6 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="text-sm text-primary font-semibold mb-3">COMPETITIVE META VERDICT</div>
+  <div class="space-y-3 text-sm text-foreground/80">
+    <p>Mines are no longer optional at high difficulty. A coordinated 4-player squad with proper mine coverage (AP/Gas/AT split) can hold objectives that would overwhelm the same squad using only direct-fire weapons and orbitals.</p>
+    <p>The 120-second cooldown enables <span class="text-fs-gold font-semibold">strategic layering</span>—deploying multiple minefields over the course of a mission to create persistent area denial. This wasn't possible with the old 180s cooldown.</p>
+    <p>Perhaps most importantly, mines shift the difficulty curve: they reward <span class="text-fs-gold font-semibold">tactical planning over mechanical skill</span>. A well-placed minefield achieves what rapid reflexes and perfect aim struggle to accomplish—controlling space and forcing enemy behavior.</p>
+  </div>
+</div>
+
+<Callout variant="tip">
+**For players new to mines:** Start with gas mines on bug missions. They're the most forgiving (won't instantly kill friendlies), provide immediate visual feedback (gas clouds), and offer the most versatility. Once comfortable with placement and communication, add AP or AT mines to your loadout.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
+
+---
+
+<div class="text-center text-xs text-foreground/50 mt-8">
+  Guide based on patch 1.400.002 meta analysis • Updated January 2025 • FOR DEMOCRACY
+</div>

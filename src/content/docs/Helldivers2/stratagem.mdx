@@ -1,21 +1,979 @@
 ---
-title: Update Me
+title: Stratagem Tier List
 ---
 
 import Callout from "@/components/Callout.astro";
+import { Zap, Flame, Target, Shield, Rocket, Users, TrendingUp } from "lucide-react";
 
-## Overview
+<div class="space-y-6 mb-8">
 
-[Add content here]
+Stratagems represent your tactical toolkit in Helldivers 2—offensive strikes, defensive emplacements, support weapons, and utility tools called down from orbit or via Eagle close air support. Unlike primary weapons that you carry constantly, Stratagems operate on cooldowns and limited uses, making selection and timing critical strategic decisions. Understanding which Stratagems provide maximum impact across various scenarios separates effective Helldivers from struggling squads.
 
-## Getting Started
+This tier list evaluates all Stratagems for general co-op effectiveness, then breaks down faction-specific meta shifts for Terminids, Automatons, and Illuminate. Each Stratagem receives visual indicators showing faction effectiveness, cooldown windows, and tactical role categorization. The focus is teaching you **when** and **why** to deploy each tool rather than simply ranking power levels.
 
-[Add content here]
+</div>
 
-## Key Information
+<div class="my-12 border-t-2 border-primary/30"></div>
 
-[Add content here]
+## Understanding Stratagem Selection
+
+<div class="space-y-6 mb-8">
+
+Effective Stratagem loadouts balance four critical factors that determine battlefield impact. Power measures raw damage or utility strength. Versatility indicates how many situations benefit from the Stratagem. Uptime reflects how frequently you can deploy it based on cooldowns and uses. Team Synergy evaluates how well it complements squadmate choices. A Stratagem ranking S-tier typically excels in three or more factors, while lower tiers might only satisfy one or two.
+
+Your four Stratagem slots should generally cover these roles: one anti-armor option for heavy targets, one crowd control tool for swarms, one defensive or utility pick for survivability, and one flex slot adapting to mission requirements or personal preference. Teams lacking any of these categories will struggle in specific scenarios—no anti-armor means Chargers and Hulks overwhelm you, no crowd control means swarms overrun positions, no defensive tools means attrition wears you down.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+  <div class="border border-primary/30 rounded-lg p-4 bg-primary/5">
+    <div class="flex items-center gap-2 mb-2">
+      <Rocket className="text-secondary" size={20} />
+      <span class="font-semibold text-secondary">Anti-Armor</span>
+    </div>
+    <p class="text-sm">High single-target damage for heavies</p>
+  </div>
+  <div class="border border-primary/30 rounded-lg p-4 bg-primary/5">
+    <div class="flex items-center gap-2 mb-2">
+      <Flame className="text-secondary" size={20} />
+      <span class="font-semibold text-secondary">Crowd Control</span>
+    </div>
+    <p class="text-sm">Area damage for swarms and groups</p>
+  </div>
+  <div class="border border-primary/30 rounded-lg p-4 bg-primary/5">
+    <div class="flex items-center gap-2 mb-2">
+      <Shield className="text-secondary" size={20} />
+      <span class="font-semibold text-secondary">Defensive</span>
+    </div>
+    <p class="text-sm">Survivability and area denial</p>
+  </div>
+  <div class="border border-primary/30 rounded-lg p-4 bg-primary/5">
+    <div class="flex items-center gap-2 mb-2">
+      <TrendingUp className="text-secondary" size={20} />
+      <span class="font-semibold text-secondary">Flex/Utility</span>
+    </div>
+    <p class="text-sm">Situational power or team support</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## S-Tier: Elite Stratagems
+
+<div class="space-y-4 mb-8">
+
+S-tier Stratagems excel in nearly any mission due to exceptional power, versatility, or uptime. These represent must-consider options for any loadout, though you still need to balance roles across your four slots rather than stacking four S-tier picks of the same type.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">Railgun (RS-422)</h3>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300" title="Good vs Terminids">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300" title="Excellent vs Automatons">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300" title="Good vs Illuminate">👁️</span>
+    </div>
+  </div>
+  <div class="text-xs space-y-1 mb-3 text-foreground/70">
+    <div class="flex justify-between">
+      <span>Type: Support Weapon</span>
+      <span>Cooldown: 480s</span>
+    </div>
+    <div class="flex gap-2">
+      <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300">Anti-Armor</span>
+    </div>
+  </div>
+  <p class="text-sm mb-3">Widely considered the single best support weapon. In unsafe mode, charged shots one-shot heavily armored targets like Hulks and Chargers through precision weak-spot hits. Immense damage and long range make it invaluable despite requiring careful aim with no splash damage.</p>
+  <details class="text-sm">
+    <summary class="cursor-pointer text-primary font-semibold mb-2">Expand for tactical details →</summary>
+    <div class="space-y-2 mt-2 pt-2 border-t border-primary/20">
+      <p><strong class="text-secondary">Why S-Tier:</strong> The Railgun solves the universal problem every Helldiver faces—how to quickly eliminate heavy armor without wasting multiple Stratagems. Its precision-based gameplay rewards skilled aim with instant boss deletion. Despite post-launch nerfs, it remains dominant because its fundamental capability (high penetration, extreme damage) fills an irreplaceable niche.</p>
+      <p><strong class="text-secondary">Tactical Usage:</strong> Charge shots fully before firing at priority targets. Aim for glowing weak spots on Automatons (eye lenses, heatsinks) or Charger heads. The lack of splash means missing is punishing, but hitting means instant threat removal. Pair with Shield Generator Pack since Railgun doesn't require backpack slot.</p>
+      <p><strong class="text-secondary">Team Role:</strong> Designated heavy-killer. Your job is deleting bosses and armored elites while teammates handle crowd control. Call targets before firing to prevent redundant fire. On cooldown, use primary weapon for cleanup rather than wasting Railgun ammo on trash mobs.</p>
+    </div>
+  </details>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">Orbital Laser</h3>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300" title="Excellent vs Terminids">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300" title="Excellent vs Automatons">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300" title="Excellent vs Illuminate">👁️</span>
+    </div>
+  </div>
+  <div class="text-xs space-y-1 mb-3 text-foreground/70">
+    <div class="flex justify-between">
+      <span>Type: Orbital Strike</span>
+      <span>Cooldown: 300s | Uses: 3</span>
+    </div>
+    <div class="flex gap-2">
+      <span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300">Crowd Control</span>
+      <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300">Anti-Armor</span>
+    </div>
+  </div>
+  <p class="text-sm mb-3">Devastating continuous beam that incinerates hordes and heavy units alike. Sweeps area wiping dozens of enemies or multiple armored targets in single use. Leaves behind flames for persistent damage. Long cooldown and limited uses offset by sheer destructive power.</p>
+  <details class="text-sm">
+    <summary class="cursor-pointer text-primary font-semibold mb-2">Expand for tactical details →</summary>
+    <div class="space-y-2 mt-2 pt-2 border-t border-primary/20">
+      <p><strong class="text-secondary">Why S-Tier:</strong> No other Stratagem combines the area coverage, sustained damage, and anti-everything capability of Orbital Laser. It's simultaneously your best crowd-clear AND your emergency boss-delete button. The versatility of handling any threat type makes it universally valuable regardless of faction or mission type.</p>
+      <p><strong class="text-secondary">Tactical Usage:</strong> Throw strategically on enemy spawn points, breach locations, or defensive objectives under siege. The beam tracks slightly toward enemies after initial placement, so aim for central mass of threat rather than trying to lead moving targets. Persistent fire after beam ends continues damaging area for several seconds.</p>
+      <p><strong class="text-secondary">Resource Management:</strong> With only three uses and five-minute cooldown, treat this as your "oh shit" button for genuine emergencies. Don't waste on small patrols you could handle with primaries. Ideal uses are breach defenses, extraction holds, or situations where 20+ enemies threaten to overwhelm. One well-placed laser can save a squad wipe.</p>
+    </div>
+  </details>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">Eagle 500kg Bomb</h3>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300" title="Excellent vs Terminids">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300" title="Excellent vs Automatons">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300" title="Excellent vs Illuminate">👁️</span>
+    </div>
+  </div>
+  <div class="text-xs space-y-1 mb-3 text-foreground/70">
+    <div class="flex justify-between">
+      <span>Type: Eagle Strike</span>
+      <span>Cooldown: ~90s | Uses: 1-2</span>
+    </div>
+    <div class="flex gap-2">
+      <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300">Anti-Armor</span>
+      <span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300">Crowd Control</span>
+    </div>
+  </div>
+  <p class="text-sm mb-3">The "tactical nuke" capable of one-shotting most bosses or obliterating large spawns near ground zero. Massive radius deletes groups of enemies. Staple pick for incredible burst damage against both crowds and armored threats. Ship upgrade grants second use before rearm.</p>
+  <details class="text-sm">
+    <summary class="cursor-pointer text-primary font-semibold mb-2">Expand for tactical details →</summary>
+    <div class="space-y-2 mt-2 pt-2 border-t border-primary/20">
+      <p><strong class="text-secondary">Why S-Tier:</strong> Pure damage output unmatched by any other Stratagem in single-hit potential. Functions as guaranteed boss-killer when positioned correctly. The ability to call down overwhelming force on demand with relatively short cooldown provides tactical flexibility unmatched by longer-cooldown orbitals.</p>
+      <p><strong class="text-secondary">Tactical Usage:</strong> Throw beacon directly on stationary boss targets (nest, fabricator, Bile Titan) or lead moving bosses by throwing where they'll be in 3-4 seconds. Massive blast radius means you don't need pinpoint accuracy—close enough usually works. Warn teammates before throwing since friendly fire is guaranteed within blast zone.</p>
+      <p><strong class="text-secondary">When to Deploy:</strong> Boss encounters (Bile Titans, Impalers, Automaton Behemoths), dense enemy spawns during breaches, objective defenses when overwhelmed. Don't waste on small patrols—save for moments where deleting one major threat or group changes battle outcome. With Expanded Weapons Bay upgrade, you get two per rearm enabling aggressive usage.</p>
+    </div>
+  </details>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">Quasar Cannon (LAS-99)</h3>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300" title="Good vs Terminids">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300" title="Excellent vs Automatons">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300" title="Good vs Illuminate">👁️</span>
+    </div>
+  </div>
+  <div class="text-xs space-y-1 mb-3 text-foreground/70">
+    <div class="flex justify-between">
+      <span>Type: Support Weapon</span>
+      <span>Cooldown: 480s</span>
+    </div>
+    <div class="flex gap-2">
+      <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300">Anti-Armor</span>
+      <span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300">Crowd Control</span>
+    </div>
+  </div>
+  <p class="text-sm mb-3">Heavy laser support weapon dealing sustained damage with infinite ammo via heat management. Excellent penetration against medium armor. Slightly behind Railgun in raw power but superior anti-infantry capability without resupply concerns makes it exceptional generalist choice.</p>
+  <details class="text-sm">
+    <summary class="cursor-pointer text-primary font-semibold mb-2">Expand for tactical details →</summary>
+    <div class="space-y-2 mt-2 pt-2 border-t border-primary/20">
+      <p><strong class="text-secondary">Why S-Tier:</strong> Post-buff Quasar delivers Railgun-adjacent anti-armor capability while maintaining strong anti-infantry performance. The infinite ammo characteristic eliminates resupply dependency that plagues other support weapons, enabling sustained operation throughout entire missions. Versatility handling both roles elevates it to top tier.</p>
+      <p><strong class="text-secondary">Tactical Usage:</strong> Charge shots fully for maximum damage against armored targets. Partial charges work fine for killing unarmored mobs. Manage heat carefully—let weapon cool between heavy engagements rather than overheating mid-fight. The lack of backpack requirement means you can pair with Shield Generator for excellent survivability.</p>
+      <p><strong class="text-secondary">Strengths vs Weaknesses:</strong> Excels at sustained combat across extended missions without ammo concerns. Handles both elite deletion and crowd thinning adequately. Weakness is charge time between shots creates vulnerability windows where aggressive enemies can close distance. Position behind cover or teammates when charging against fast-moving threats.</p>
+    </div>
+  </details>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">MLS-4X Commando</h3>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300" title="Good vs Terminids">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300" title="Excellent vs Automatons">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300" title="Good vs Illuminate">👁️</span>
+    </div>
+  </div>
+  <div class="text-xs space-y-1 mb-3 text-foreground/70">
+    <div class="flex justify-between">
+      <span>Type: Support Weapon</span>
+      <span>Cooldown: 480s</span>
+    </div>
+    <div class="flex gap-2">
+      <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300">Anti-Armor</span>
+    </div>
+  </div>
+  <p class="text-sm mb-3">Laser-guided multi-missile launcher delivering highest burst damage potential among rocket weapons. Fires four rockets per pod with precise weak-point sniping capability. Ideal for big enemies and destroying objectives from extreme range. Flexibility and burst damage make it potent tool.</p>
+  <details class="text-sm">
+    <summary class="cursor-pointer text-primary font-semibold mb-2">Expand for tactical details →</summary>
+    <div class="space-y-2 mt-2 pt-2 border-t border-primary/20">
+      <p><strong class="text-secondary">Why S-Tier:</strong> Commando combines safety of long-range engagement with precision of guided munitions and volume of four-rocket payload. This trifecta enables consistent heavy-target elimination from positions of safety. The ability to guide missiles mid-flight means you can adjust aim based on target movement, dramatically improving hit probability versus other dumbfire rockets.</p>
+      <p><strong class="text-secondary">Tactical Usage:</strong> Maintain laser designation on target throughout missile flight. Lead moving targets appropriately—missiles have travel time despite guidance. Four-rocket capacity means you can saturate single boss (all four into weak spot) or distribute across multiple medium threats. Excels at destroying bug nests and bot fabricators from safe distance before engaging defenders.</p>
+      <p><strong class="text-secondary">Limitations:</strong> Zero area damage means ineffective against swarms—bring this for anti-armor not crowd control. Once four rockets expend, you're limited to primary weapon until cooldown completes. Works best when teammates handle crowd control while you focus exclusively on priority target deletion. The guidance requirement means you must maintain sightline throughout flight, creating vulnerability windows.</p>
+    </div>
+  </details>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">Recoilless Rifle (GR-8)</h3>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300" title="Good vs Terminids">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300" title="Excellent vs Automatons">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300" title="Good vs Illuminate">👁️</span>
+    </div>
+  </div>
+  <div class="text-xs space-y-1 mb-3 text-foreground/70">
+    <div class="flex justify-between">
+      <span>Type: Support Weapon</span>
+      <span>Cooldown: 480s</span>
+    </div>
+    <div class="flex gap-2">
+      <span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300">Anti-Armor</span>
+      <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300">Team Synergy</span>
+    </div>
+  </div>
+  <p class="text-sm mb-3">Two-shot reusable rocket launcher with ammo backpack. Hits nearly as hard as expendable launchers, one-shotting Chargers with headshots after balance changes. Slow solo reload transforms into rapid barrage when teammate wears backpack and feeds rockets. Teamwork potential keeps it top-tier.</p>
+  <details class="text-sm">
+    <summary class="cursor-pointer text-primary font-semibold mb-2">Expand for tactical details →</summary>
+    <div class="space-y-2 mt-2 pt-2 border-t border-primary/20">
+      <p><strong class="text-secondary">Why S-Tier:</strong> The Recoilless Rifle's team-assisted reload mechanic creates unique multiplicative power in coordinated squads. With dedicated loader, fire rate rivals or exceeds other anti-tank options while maintaining excellent per-shot damage. Solo performance remains adequate, but coordinated performance becomes exceptional.</p>
+      <p><strong class="text-secondary">Tactical Usage:</strong> In duo or squad play, have one teammate wear the ammo backpack and position behind you. Call for reloads after each shot—loader teammate can reload you in under two seconds versus your solo eight-second reload. This enables sustained rocket barrage overwhelming even toughest enemies. Solo players should carefully choose engagements, firing both rockets then retreating to cover during reload.</p>
+      <p><strong class="text-secondary">Team Coordination:</strong> Designate loader and shooter roles before mission starts. Loader should prioritize positioning behind shooter during combat, using primary weapon between reload assists. Shooter calls targets and confirms before firing to ensure loader maintains safe position. This division of labor creates highly effective anti-armor team within the squad.</p>
+    </div>
+  </details>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">Flamethrower (FLAM-40)</h3>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300" title="Excellent vs Terminids">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300" title="Excellent vs Illuminate">👁️</span>
+    </div>
+  </div>
+  <div class="text-xs space-y-1 mb-3 text-foreground/70">
+    <div class="flex justify-between">
+      <span>Type: Support Weapon</span>
+      <span>Cooldown: 480s</span>
+    </div>
+    <div class="flex gap-2">
+      <span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300">Crowd Control</span>
+    </div>
+  </div>
+  <p class="text-sm mb-3">Short-range continuous flame projector incinerating swarms of unarmored enemies. Devastatingly effective against Terminids vulnerable to fire. Single fuel tank wipes clusters instantly or kills medium targets rapidly. Limited range and ineffectiveness versus heavy armor offset by unmatched crowd-clearing power.</p>
+  <details class="text-sm">
+    <summary class="cursor-pointer text-primary font-semibold mb-2">Expand for tactical details →</summary>
+    <div class="space-y-2 mt-2 pt-2 border-t border-primary/20">
+      <p><strong class="text-secondary">Why S-Tier:</strong> No other Stratagem approaches Flamethrower's kill-per-second rate against massed unarmored enemies. Against appropriate factions (Terminids, Illuminate Voteless), it transforms impossible swarm situations into manageable encounters. The continuous area denial created by persistent flames provides tactical control unmatched by bullet-based weapons.</p>
+      <p><strong class="text-secondary">Tactical Usage:</strong> Create walls of fire blocking enemy approaches. The flame lingers after projection, dealing damage over time to anything crossing through. Sweep side-to-side across enemy formations rather than focusing single targets—your goal is area saturation not precision. Backpack fuel lasts surprisingly long with disciplined trigger control; burst fire during gaps in enemy waves rather than holding continuously.</p>
+      <p><strong class="text-secondary">When to Avoid:</strong> Automaton missions where most enemies are armored and engage at range beyond flame reach. Tight indoor spaces where persistent fire creates hazards for your own team. Missions with frequent friendly-fire modifiers where flame's area effect becomes liability. Otherwise, consider bringing Flamethrower on any mission against swarm-based factions.</p>
+    </div>
+  </details>
+</div>
+
+<div class="border-2 border-secondary/40 rounded-lg p-5 bg-secondary/5">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-lg font-bold text-secondary mb-0">Shield Generator Pack</h3>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300" title="Excellent vs Automatons">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300" title="Good vs Illuminate">👁️</span>
+    </div>
+  </div>
+  <div class="text-xs space-y-1 mb-3 text-foreground/70">
+    <div class="flex justify-between">
+      <span>Type: Backpack</span>
+      <span>Cooldown: 480s</span>
+    </div>
+    <div class="flex gap-2">
+      <span class="px-2 py-0.5 rounded bg-green-500/20 text-green-300">Defensive</span>
+    </div>
+  </div>
+  <p class="text-sm mb-3">Personal energy shield blocking incoming damage while allowing outgoing fire. Auto-regenerates when broken and negates slowdown debuffs. Unanimously S-tier despite nerfs because it blocks almost any attack type. In high-difficulty missions, this pack saves lives by preventing chip damage and alpha strikes.</p>
+  <details class="text-sm">
+    <summary class="cursor-pointer text-primary font-semibold mb-2">Expand for tactical details →</summary>
+    <div class="space-y-2 mt-2 pt-2 border-t border-primary/20">
+      <p><strong class="text-secondary">Why S-Tier:</strong> Shield Generator transforms fragile Helldivers into resilient combat operatives. The ability to absorb entire volleys of Automaton fire or Illuminate disintegration beams prevents deaths that would otherwise occur from positioning mistakes or overwhelming fire. Auto-regeneration means shield remains relevant throughout entire mission rather than being one-time-use protection.</p>
+      <p><strong class="text-secondary">Tactical Usage:</strong> Shield strength is finite per engagement but regenerates out of combat. Don't rely on shield to tank sustained fire—use it to survive initial contact then break line of sight while shield recharges. The debuff negation is particularly valuable against Terminid acid slow or Illuminate stun effects, maintaining your mobility when it matters most.</p>
+      <p><strong class="text-secondary">Team Considerations:</strong> Not every squad member needs shields—one or two shield users can draw aggro enabling unshielded teammates with offensive backpacks to operate safely. Shield users should generally take point during advances, using their protection to scout ahead and trigger ambushes without immediately dying. Coordinate with team about who carries shields versus who carries ammo or jump packs.</p>
+    </div>
+  </details>
+</div>
+
+</div>
+
+<Callout variant="tip">
+**S-Tier Selection Strategy:** You cannot bring all eight S-tier Stratagems—you have four slots. Effective loadouts include one anti-armor weapon (Railgun, Quasar, Commando, or Recoilless), one crowd control option (Flamethrower or offensive strike), one defensive tool (Shield Pack or defensive strike), and one flex slot based on faction. This ensures coverage across all tactical needs rather than stacking redundant capabilities.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## A-Tier: Excellent Stratagems
+
+<div class="space-y-4 mb-8">
+
+A-tier Stratagems are highly effective tools that excel in specific roles or situations. They often match S-tier performance when circumstances align but lack the universal applicability of top-tier picks. These represent strong choices for specialized loadouts or when S-tier options are already occupied.
+
+</div>
+
+<details class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+<summary class="cursor-pointer font-semibold text-primary flex items-center justify-between">
+  <span>View A-Tier Stratagems (10 entries)</span>
+  <span class="text-sm text-foreground/50">Click to expand →</span>
+</summary>
+
+<div class="mt-4 space-y-4">
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Autocannon (AC-8)</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300">⚙️</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Support Weapon • Cooldown: 480s • Role: Anti-Armor</p>
+  <p class="text-sm">Heavy automatic cannon shredding armor with explosive rounds. Next-best alternative to Railgun for general use. Rapid fire and splash make it easier to use than Railgun with less precision required. Out-damages Railgun against explosive-weak targets like Automaton heatsinks. Main drawback is ammo backpack requirement occupying backpack slot.</p>
+</div>
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Expendable Anti-Tank (EAT-17)</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300">👁️</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Support Weapon • Cooldown: 70s • Role: Anti-Armor</p>
+  <p class="text-sm">Calls down pair of one-shot rocket launchers on fast cooldown. Excels at stripping armor and limbs off Hulks and tanks. Headshot kills Chargers outright. Uniquely capable of one-shotting Automaton dropships by hitting engines. Being unlockable early and spammable makes them top-tier anti-armor tool despite single-use nature.</p>
+</div>
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Orbital Gatling Barrage</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300">👁️</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Orbital Strike • Cooldown: 80s • Role: Crowd Control</p>
+  <p class="text-sm">Rapid-fire cannon rounds raining over tight area. Exceptionally short cooldown and call-in time enabling very frequent use. Mulches infantry mobs effectively. Perfect answer to horde of smaller enemies due to fast precise damage over area. Not great versus buildings or toughest armor but excels at holding back swarms.</p>
+</div>
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Orbital 380mm Barrage</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300">👁️</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Orbital Strike • Cooldown: 240s • Role: Crowd Control + Anti-Armor</p>
+  <p class="text-sm">Heavy artillery strike calling massive high-explosive shells. Buffed to tighten spread improving precision. Hits extremely hard—ideal for leveling enemy bases or annihilating clusters in one go. Long cooldown and friendly-fire risk offset by ability to turn tide when overwhelmed. Brings big guns when situation demands overwhelming force.</p>
+</div>
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Eagle Cluster Bomb</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300">👁️</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Eagle Strike • Cooldown: ~90s • Uses: 1-2 • Role: Crowd Control</p>
+  <p class="text-sm">Close air support dropping chain of cluster munitions. Effectively wipes any unarmored enemies over huge area. Amazing for clearing swarms. Unlike standard airstrike, doesn't damage structures—specialized anti-infantry tool. Large coverage requires careful beacon placement to avoid teamkills but devastating against Terminid hordes or Illuminate fodder.</p>
+</div>
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Eagle 110mm Rocket Pods</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-300">⚙️</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300">👁️</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Eagle Strike • Cooldown: ~90s • Uses: 1-2 • Role: Anti-Armor</p>
+  <p class="text-sm">Airstrike of multiple small rockets with minimal blast radius. Hits armored targets very hard, often one-shotting medium vehicles or severely wounding bosses. Concentrated damage and low collateral make it excellent precision choice. Can safely use nearer to team without blowing up allies. Reliable anti-armor strike despite occasional damage inconsistency.</p>
+</div>
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Gatling Sentry (A/MG-43)</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300">👁️</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Defensive Stratagem • Cooldown: 180s • Role: Defensive</p>
+  <p class="text-sm">Automated turret ripping apart infantry with sustained fire. Can't hurt heavily armored units but mows down everything else in firing lane. Frequently brought for objective defense or holding chokepoints. Careful placement required since it will friendly-fire—position on flanks or high ground to minimize risk.</p>
+</div>
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Supply Pack (B-1)</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-green-500/20 text-green-300">All Factions</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Backpack • Cooldown: 480s • Role: Utility</p>
+  <p class="text-sm">Backpack dispensing ammo and healing stimulants to self and teammates. Doesn't deal damage but often unsung hero. Only one person needs to carry it but keeps whole team topped up during prolonged missions. Crucial in hardest operations where ammo scarcity determines success. Pairs especially well with ammo-hungry weapons or multiple support weapons in squad.</p>
+</div>
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Guard Dog Drones (AX-series)</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300">👁️</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Backpack • Cooldown: 480s • Role: Crowd Control</p>
+  <p class="text-sm">Automated defensive drones following player or staying stationary depending on model. Provide extra firepower and distraction. Guard Dog Rover accompanies player as mobile turret. Particularly effective against Illuminates where cutting down lighter mobs quickly is key. Not as universally strong as static sentries but excellent force multipliers in right hands.</p>
+</div>
+
+<div class="border-l-2 border-primary/30 pl-4">
+  <div class="flex items-center justify-between mb-2">
+    <h4 class="font-bold text-secondary">Orbital Napalm Barrage</h4>
+    <div class="flex gap-1">
+      <span class="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-300">🔥</span>
+      <span class="text-xs px-2 py-1 rounded bg-purple-500/20 text-purple-300">👁️</span>
+    </div>
+  </div>
+  <p class="text-xs text-foreground/70 mb-2">Orbital Strike • Cooldown: 240s • Role: Crowd Control + Area Denial</p>
+  <p class="text-sm">Orbital strike blanketing area in persistent fire. Doesn't instantly kill like HE barrages but burning AoE devastates hordes and forces enemies to stall or burn to death. Incredibly effective for area denial. Dropping napalm on Terminid spawn hive or choke point melts masses of bugs rushing through flames. Exceptionally powerful when placed strategically.</p>
+</div>
+
+</div>
+</details>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## B/C-Tier: Situational Stratagems
+
+<div class="space-y-4 mb-8">
+
+B-tier Stratagems are solid choices that can excel in specific scenarios but are generally outperformed by higher tiers. C-tier options are average or niche with notable limitations making them harder to justify in most loadouts. Both tiers include early-unlock options players eventually replace and specialized tools for specific tactics.
+
+</div>
+
+<details class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+<summary class="cursor-pointer font-semibold text-primary flex items-center justify-between">
+  <span>View B-Tier Stratagems</span>
+  <span class="text-sm text-foreground/50">Click to expand →</span>
+</summary>
+
+<div class="mt-4 space-y-3 text-sm">
+
+**Orbital Precision Strike** — Pinpoint laser-guided bomb from orbit. Quickly blasts single structure or area with minimal cooldown. Great for deleting Terminid nests or Automaton fabricators. Excellent utility pick but lower damage per strike than big barrages. Good surgical strike tool.
+
+**Eagle Napalm Airstrike** — Smaller-scale incendiary airstrike dropping wall of flame. Highly effective against rushing Terminid hordes or cutting off Automaton patrols. Creates area denial through fire. Deals less direct damage than HE strikes so better for crowd control than direct elimination.
+
+**Rocket Sentry (A/MLS-4X)** — Turret firing rockets with good anti-group and anti-medium-armor capability. Dishes great damage but splash can hurt team if enemies get close. Risk and slower fire rate compared to other sentries. Powerful but requires careful positioning.
+
+**Anti-Personnel Minefield (MD-6)** — Deploys AP mine field excelling at thinning waves automatically. Effective against unarmored foes like Terminid swarms blowing themselves up. Little effect on heavies and requires luring enemies over them. Useful fire-and-forget defensive tool though not as flexible as guns.
+
+**Orbital 120mm Barrage** — Lighter artillery strike with smaller radius and shorter cooldown than 380mm. Essentially mini-barrage safer to use closer to team. Fine for moderate damage and frequent use. Many players prefer Precision Strike for accuracy or 380mm for maximum damage. Solid middle-ground option.
+
+**Jump Pack (LIFT-850)** — Mobility backpack enabling leaping to high ground or over obstacles. Opinions split—some swear by tactical freedom while others find limited combat value. Situational greatness for certain maps and objectives but if mobility not needed, Shield or ammo pack stronger choice.
+
+**Arc Thrower (ARC-3)** — Lightning gun chaining electricity through nearby targets. Very fun and stuns groups but will hit teammates in range creating teamkill risk. Limited range keeps it from top tiers. Effective crowd control when used cautiously.
+
+**Anti-Tank Mines (MD-17)** — Heavy mines exploding on big targets. Properly placed can cripple or kill boss instantly. Fantastic for ambushing patrols or defending against heavy units. Use is situational—need enemies to path over them—so while powerful not as broadly useful as direct-fire launcher.
+
+**Mortar Sentry (A/M-12 & EMS variant)** — Mortar launches explosives in arc hitting at range for area damage. EMS variant fires stun rounds stunlocking groups. Both strong if used correctly but require careful setup and positioning. Regular mortar teamkills if bugs get close; EMS does no damage but halts rushes effectively.
+
+</div>
+</details>
+
+<details class="border border-primary/30 rounded-lg p-5 mb-4 bg-primary/5">
+<summary class="cursor-pointer font-semibold text-primary flex items-center justify-between">
+  <span>View C-Tier Stratagems</span>
+  <span class="text-sm text-foreground/50">Click to expand →</span>
+</summary>
+
+<div class="mt-4 space-y-3 text-sm">
+
+**Machine Gun Sentry (A/MG-43)** — Basic auto-turret with rifle-caliber gun. Provides extra fire but lower DPS and can't penetrate armor well. Higher-tier sentries like Gatling or Autocannon outperform it. Still adequate for covering angles against weaker enemies just underwhelming compared to other options.
+
+**Orbital Airburst Strike** — Bombardment detonating in air to hit targets in cover. Theory is anti-infantry but players find it unpredictable with uncertain trigger points leading to inconsistent results. Also weak against flying targets despite being airburst. Frequent teamkills and unreliable behavior make it one of worst orbitals.
+
+**Orbital EMS Strike** — Orbital strike dealing no damage, only EMP stun to enemies. Stunning enemies sounds useful but this often isn't worth slot over something that kills or damages significantly. Better to bring EMP grenade or EMS Mortar Sentry if stuns needed. Seldom used in most lists.
+
+**Orbital Smoke Strike** — Calls down smoke wall blocking enemy vision causing aggro loss. Pure utility providing no direct damage. Can buy time to reposition or revive but most find it rarely good pick except specific stealthy or defensive scenarios. Ranked among lowest tiers.
+
+**Eagle Smoke Run** — Similar to orbital smoke with faster delivery but limited use. Creates large smoke curtain confusing enemies briefly. Again conceptually useful for disengaging but in practice prefer firepower. Generally bottom-tier used only in niche tactics.
+
+**Eagle Strafing Run** — Fast low-damage airstrike bulleting line across throw direction. Some place in lowest tier since damage modest and easily misses fast enemies. Others note surprisingly good quick crowd clearer against rushing hordes on open ground. Overall inferior to other Eagles for killing power.
+
+**Tesla Tower (ARC-3)** — Stationary tower zapping nearby enemies with electricity. Limited range and damage. Might fry smaller bugs or stun illuminates wandering near but easily destroyed and not very impactful. Tends toward bottom-tier because neither kills reliably nor covers large area.
+
+**Ballistic Shield Backpack (SH-20)** — Backpack providing physical riot shield. Blocks frontal damage but only covers one direction without regeneration. Players find Directional Shield strictly better—blocks same attacks, regenerates when broken, and protects 360 degrees if positioned well. One of least-picked stratagems since mobility or ammo packs usually preferred.
+
+</div>
+</details>
 
 <Callout variant="info">
-This section is under construction. Check back soon for updates.
+**Tier Context:** Lower-tier Stratagems aren't necessarily bad—they simply have better alternatives or require specific scenarios to shine. Many early-unlock tools (Machine Gun Sentry, basic strikes) serve adequately until you unlock superior options. Some specialized picks (Jump Pack, Arc Thrower) excel for players who master their quirks but don't offer universal value. Experiment to find what works for your playstyle, but recognize higher tiers generally provide more consistent results.
 </Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Stratagem Quick Comparison Table
+
+<div class="space-y-4 mb-8">
+
+This table provides at-a-glance comparison of key Stratagems across critical performance metrics. Use this to quickly evaluate tradeoffs between options when building loadouts.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+<table class="w-full text-sm border-collapse">
+  <thead>
+    <tr class="border-b-2 border-primary/30">
+      <th class="text-left p-3 font-semibold">Stratagem</th>
+      <th class="text-left p-3 font-semibold">Type</th>
+      <th class="text-left p-3 font-semibold">Cooldown</th>
+      <th class="text-left p-3 font-semibold">Primary Role</th>
+      <th class="text-left p-3 font-semibold">Best vs Faction</th>
+      <th class="text-left p-3 font-semibold">Tier</th>
+    </tr>
+  </thead>
+  <tbody class="divide-y divide-primary/20">
+    <tr class="hover:bg-primary/5">
+      <td class="p-3 font-semibold text-secondary">Railgun</td>
+      <td class="p-3">Support Weapon</td>
+      <td class="p-3">480s</td>
+      <td class="p-3">Anti-Armor</td>
+      <td class="p-3">Automatons</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-secondary/20 text-secondary text-xs font-bold">S</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3 font-semibold text-secondary">Orbital Laser</td>
+      <td class="p-3">Orbital Strike</td>
+      <td class="p-3">300s (3 uses)</td>
+      <td class="p-3">Multi-Role</td>
+      <td class="p-3">All</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-secondary/20 text-secondary text-xs font-bold">S</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3 font-semibold text-secondary">Eagle 500kg</td>
+      <td class="p-3">Eagle Strike</td>
+      <td class="p-3">~90s (1-2 uses)</td>
+      <td class="p-3">Multi-Role</td>
+      <td class="p-3">All</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-secondary/20 text-secondary text-xs font-bold">S</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3 font-semibold text-secondary">Quasar Cannon</td>
+      <td class="p-3">Support Weapon</td>
+      <td class="p-3">480s</td>
+      <td class="p-3">Anti-Armor</td>
+      <td class="p-3">Automatons</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-secondary/20 text-secondary text-xs font-bold">S</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3 font-semibold text-secondary">Flamethrower</td>
+      <td class="p-3">Support Weapon</td>
+      <td class="p-3">480s</td>
+      <td class="p-3">Crowd Control</td>
+      <td class="p-3">Terminids</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-secondary/20 text-secondary text-xs font-bold">S</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3 font-semibold text-secondary">Shield Generator</td>
+      <td class="p-3">Backpack</td>
+      <td class="p-3">480s</td>
+      <td class="p-3">Defensive</td>
+      <td class="p-3">Automatons</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-secondary/20 text-secondary text-xs font-bold">S</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3">Autocannon</td>
+      <td class="p-3">Support Weapon</td>
+      <td class="p-3">480s</td>
+      <td class="p-3">Anti-Armor</td>
+      <td class="p-3">Automatons</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300 text-xs font-bold">A</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3">EAT-17</td>
+      <td class="p-3">Support Weapon</td>
+      <td class="p-3">70s</td>
+      <td class="p-3">Anti-Armor</td>
+      <td class="p-3">All</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300 text-xs font-bold">A</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3">Orbital Gatling</td>
+      <td class="p-3">Orbital Strike</td>
+      <td class="p-3">80s</td>
+      <td class="p-3">Crowd Control</td>
+      <td class="p-3">Terminids</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300 text-xs font-bold">A</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3">Eagle Cluster</td>
+      <td class="p-3">Eagle Strike</td>
+      <td class="p-3">~90s (1-2 uses)</td>
+      <td class="p-3">Crowd Control</td>
+      <td class="p-3">Terminids</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300 text-xs font-bold">A</span></td>
+    </tr>
+    <tr class="hover:bg-primary/5">
+      <td class="p-3">Gatling Sentry</td>
+      <td class="p-3">Defensive</td>
+      <td class="p-3">180s</td>
+      <td class="p-3">Defensive</td>
+      <td class="p-3">Terminids</td>
+      <td class="p-3"><span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300 text-xs font-bold">A</span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Faction-Specific Meta Breakdowns
+
+<div class="space-y-6 mb-8">
+
+Each enemy faction in Helldivers 2 has unique characteristics fundamentally shifting Stratagem effectiveness. What dominates against Terminid swarms may prove ineffective against armored Automaton forces. Understanding these meta shifts enables you to adapt loadouts appropriately rather than bringing generalist builds that struggle against specific threats.
+
+</div>
+
+### <Flame className="inline-block mr-3 mb-1" size={28} /> Terminids (Bugs): Fire and Area Denial
+
+<div class="space-y-4 mb-8">
+
+Terminids attack in massive swarms of melee-focused enemies with few heavily-armored units. Only the largest bugs like Bile Titans possess thick armor plating. They are highly vulnerable to fire and persistent area damage due to organic nature. Effective anti-bug strategy emphasizes rapid crowd-clear and area denial preventing swarms from overwhelming positions.
+
+**Meta Shifts:** Crowd control Stratagems jump entire tiers in value. Flamethrower becomes arguably the best support weapon. Orbital Napalm transforms from situational to essential. Anti-armor tools remain necessary for Bile Titans and Chargers but take secondary priority compared to swarm management. Single-target precision tools like Railgun drop slightly in relative value since most threats are massed fodder rather than elite units.
+
+**Top Picks:**
+- **Flamethrower** — Perhaps ultimate bug-killer. Continuous flames melt entire swarms in seconds. Even larger bugs die quickly when lit on fire. Essential for one squad member on bug planets.
+- **Orbital Napalm Barrage** — Extraordinarily effective dropped on hive entrances or choke points. Sets up fire walls bugs rush into and perish. Great for slowing onslaught and thinning huge waves.
+- **Orbital Laser** — Toasts dozens of bugs at once. Instantly destroys nearby bug nests. Deletes any cluster or boss encounter. Top-tier emergency button for bug missions.
+- **Eagle 500kg Bomb** — Bugs cluster around objectives. Well-placed bomb annihilates huge clump or entire nest. One-shots bug bosses if they're in blast radius.
+- **Orbital Gatling Barrage** — Perfect for swarms of smaller unarmored bugs. Fast cooldown enables repeatedly carpeting incoming waves. Brood Commanders and minions get chewed up efficiently.
+
+**Strong Alternatives:**
+- Eagle Strafing Run surprisingly useful against bugs despite mediocrity elsewhere. Thrown at your feet while kiting, shreds line through approaching horde buying breathing room.
+- Orbital Gas Strike releases poison cloud confusing larger bugs. Won't kill biggest bugs quickly but massacres weaker ones while leaving them choking.
+- Eagle Napalm smaller airstrike dropping fire line. Excellent for cutting off stampedes—forces swarm to pause or burn running through flames.
+- Anti-Personnel and Incendiary Mines work exceptionally well due to bug density. Bugs blow themselves up automatically. Incendiary mines create small flames playing to fire weakness.
+
+</div>
+
+<Callout variant="success">
+**Terminid Loadout Example:** Flamethrower (crowd control) + Orbital Napalm (area denial) + Eagle 500kg (boss killer) + Gatling Sentry (defensive support). This covers swarm management through fire, has emergency boss-delete capability, and provides defensive coverage during objectives. Team should coordinate so at least one member brings Flamethrower.
+</Callout>
+
+<div class="my-8 border-t border-primary/20"></div>
+
+### <Target className="inline-block mr-3 mb-1" size={28} /> Automatons (Bots): Armor Penetration and Shields
+
+<div class="space-y-4 mb-8">
+
+Automatons are robotic enemies deploying lots of ranged firepower and heavy armor. Even many grunt bots have metal plating or shields. They deploy turrets and construct alarm towers. Fighting bots requires high penetration and anti-tank damage to break their armor plus protection from their concentrated gunfire. Single-target precision and defensive tools rank highest.
+
+**Meta Shifts:** Anti-armor Stratagems become mandatory rather than optional. Railgun and similar precision tools jump to absolute top priority. Shield Generator Pack transforms from nice-to-have to nearly essential for surviving sustained fire. Crowd control drops in relative importance since bot numbers are lower but individual units are tougher. Flamethrower falls dramatically in value due to short range versus ranged enemies and ineffectiveness against armor.
+
+**Top Picks:**
+- **Railgun** — Practically designed for Automaton elites. Charged shots punch through armored bots, killing Hulks or Striders in one weak-spot hit. Best anti-bot weapon.
+- **MLS-4X Commando** — Immense burst damage for deleting bot armor. Guide missiles into vulnerable points of tanks or walkers from long range. Snipe fabricator cores without engaging defenders.
+- **Shield Generator Pack** — Top pick for bot missions. Constant gunfire, explosives, and laser beams wear you down quickly. Shield negates chip damage enabling you to focus on shooting. Essential survival tool.
+- **Orbital Laser** — Bot bases have tightly clustered structures and units. Single laser sweep obliterates entire cluster of armored robots and turrets. Melts heavy bot bases if placed correctly.
+- **Orbital Railcannon Strike** — Drops kinetic rod instantly killing one big target. Long cooldown but unlimited uses mean you can answer each heavy Automaton with guaranteed kill.
+
+**Strong Alternatives:**
+- Autocannon Sentry if placed covering open approach will destroy even Hulks given moment to fire. High damage and decent ammo make it excellent area-denial.
+- Eagle 500kg Bomb one-shots almost any bot including bosses like Behemoths if near blast center. Excellent for cracking hardened structures in bot bases.
+- Expendable AT Launchers pair every minute great for bots. Two in succession or well-placed headshot kills Hulks. Can one-shot dropships by hitting engines.
+- Orbital Precision Strike common tactic is immediately striking Automaton outpost or alarm tower before spawning reinforcements. Fast arrival removes key targets quickly.
+- EMP effects great against bots. Stun Grenades or EMS Mortar halt charging robot groups allowing you to pick them off. Shock Mines periodically freeze incoming bots.
+
+</div>
+
+<Callout variant="success">
+**Automaton Loadout Example:** Railgun (heavy-killer) + Shield Generator Pack (survivability) + Orbital Laser (base-breaker) + EAT-17 (backup anti-armor). This ensures you can handle armored threats consistently, survive their ranged fire, and break their defensive positions. The combination of precision anti-armor and defensive protection addresses both primary bot challenges.
+</Callout>
+
+<div class="my-8 border-t border-primary/20"></div>
+
+### <Zap className="inline-block mr-3 mb-1" size={28} /> Illuminate (Squids): Shield-Breaking and AoE
+
+<div class="space-y-4 mb-8">
+
+Illuminate are high-tech aliens mixing fleshy units with energy shields and psionic abilities. They generally lack sheer heavy armor of Automatons—only few large units have moderate armor. Instead their threat comes from energy shields negating frontal damage until broken and tricks like teleportation. Effective strategy revolves around breaking shields and wiping groups of fragile but dangerous units quickly.
+
+**Meta Shifts:** Rapid-fire ballistics and explosive area damage work exceptionally well. Shield-breaking capability becomes important—concentrated fire or high-alpha strikes pop shields enabling follow-up. Crowd control regains importance for handling Voteless thrall hordes. Precision anti-armor slightly less critical since Illuminate heavies are rarer than Automaton counterparts. Versatile multi-role Stratagems that handle both shield-breaking and crowd-clearing perform best.
+
+**Top Picks:**
+- **Orbital Laser** — Cuts through packs of Voteless, Overseers, and multiple Harvesters in one blast. Placed on Illuminate warp gate or structure demolishes it outright. Efficient way to deal with bunched shielded enemies.
+- **Eagle 500kg Bomb** — Most Illuminate enemies don't survive direct hit even bosses. They often cluster when teleporting in. Can destroy landed Warp Ship and all deployed enemies in one blast.
+- **Anti-Materiel Rifle** — Illuminates frequently deploy medium armored targets with frontal shields. Powerful single-shot weapon pierces and pops shields or takes out key target from range. Addresses faction's unique mechanic through brute force.
+- **Grenade Launcher / Autocannon** — Both spew explosive damage hitting multiple foes without requiring precision weak-spot aiming. Most Illuminate units except few don't have extreme armor—blow up groups with grenades or shells quickly. Help break multiple shields through damage saturation.
+- **W.A.S.P. Launcher** — Guided micro-missile launcher very effective against hovering Illuminate units. Locks on and barrages targets with multiple small rockets. Great for tracking agile Illuminate units and destroying unarmored flyers.
+
+**Strong Alternatives:**
+- Eagle Strafing Run uniquely useful against Illuminates because it strips energy shields from multiple enemies at once. If lacking other shield-breaking, strafing run peppers line dropping shields for follow-up fire.
+- Orbital 120mm or 380mm Barrages well-timed on teleporting enemy waves wipe spawn groups as they arrive. Also handy for destroying Illuminate structures from afar preventing more teleports.
+- Guard Dog Drones and Sentries because many Illuminate units are relatively squishy once shields drop. Continuous fire from automated weapons cleans them up efficiently while you focus on priorities.
+- Orbital Precision Strike useful for taking out Warp Gates and objectives quickly so you don't get overrun. Couple strikes destroy shielded portal faster than small arms.
+
+</div>
+
+<Callout variant="success">
+**Illuminate Loadout Example:** Orbital Laser (multi-role) + Grenade Launcher (shield-break and AoE) + Eagle 500kg (boss-killer) + Gatling Sentry (Voteless control). This provides shield-breaking through explosive volume, handles both crowds and elites, and maintains defensive coverage. The emphasis on area damage and shield-popping addresses Illuminate's unique tactical challenges.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Loadout Composition Theory
+
+<div class="space-y-6 mb-8">
+
+Effective Stratagem selection isn't just picking the four highest-tier options—it's about creating balanced composition covering all tactical needs. This section teaches the framework for building synergistic loadouts that address mission requirements comprehensively rather than redundantly stacking similar tools.
+
+</div>
+
+### The Four-Role Framework
+
+<div class="space-y-4 mb-8">
+
+Your four Stratagem slots should generally satisfy these categories: Anti-Armor for eliminating heavy targets, Crowd Control for managing swarms, Defensive for survivability and area denial, and Flex for adapting to specific mission requirements. Loadouts lacking any category will struggle in predictable scenarios.
+
+**Anti-Armor (Slot 1):** This role handles boss enemies, heavily-armored elites, and vehicles that your primary weapon cannot damage effectively. Strong choices include Railgun, Quasar Cannon, Commando, Recoilless Rifle, Autocannon, or EAT-17. You absolutely need something in this category—missions will spawn Chargers, Bile Titans, Hulks, or Behemoths that demand high-penetration firepower. Without anti-armor, these enemies will overwhelm your squad through attrition.
+
+**Crowd Control (Slot 2):** This role addresses mass enemy spawns, breach events, and defensive holds where dozens of enemies assault simultaneously. Options include Flamethrower, Orbital Laser, Eagle 500kg, Cluster Bomb, Orbital Gatling, or Napalm strikes. Against swarm factions like Terminids, this becomes your highest-priority slot. Against Automatons where enemy density is lower, you might downgrade to secondary priority. The goal is preventing tactical situations where sheer numbers overwhelm despite individual enemies being killable.
+
+**Defensive (Slot 3):** This category covers survivability tools and area denial assets that keep you alive and control battlefield space. Prime examples include Shield Generator Pack, Gatling Sentry, Supply Pack, or defensive strikes like Orbital Napalm for area denial. Against ranged-heavy factions (Automatons, Illuminate), defensive tools jump in priority because you need protection from sustained fire. Against melee-focused Terminids, area denial through sentries or mines provides similar value by keeping swarms at distance.
+
+**Flex (Slot 4):** The adaptive slot matching mission-specific needs or personal preference. This might be backup anti-armor (bringing both Railgun and EAT-17), additional crowd control for swarm-heavy missions, utility like Jump Pack or Supply Pack for specific tactical approaches, or simply your favorite Stratagem that doesn't fit other categories cleanly. Experienced players use this slot to min-max against known enemy compositions or mission modifiers.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Common Anti-Patterns to Avoid
+
+<div class="space-y-4 mb-8">
+
+Certain loadout mistakes appear repeatedly among struggling players. Recognizing these anti-patterns helps you build more effective compositions.
+
+**Redundancy Stacking:** Bringing four anti-armor tools (Railgun + Commando + Recoilless + EAT-17) sounds powerful but leaves you vulnerable to swarms. Yes, you'll delete any boss instantly, but thirty Terminid warriors will overrun you because you lack crowd control. Similarly, four crowd-control strikes without any anti-armor means Bile Titans or Hulks will survive your bombardments and methodically destroy your team. Balance across roles instead of doubling down on single capability.
+
+**Role Gaps:** The inverse problem—bringing four Stratagems that don't cover critical needs. Example: Eagle Strafing Run + Orbital Precision + Jump Pack + Supply Pack. You have utility and some damage but nothing that truly deletes bosses or manages massive swarms. When Charger shows up, you'll struggle. When breach spawns forty enemies, you'll get overwhelmed. Make sure your loadout explicitly answers "what do I do when boss appears" and "what do I do when twenty enemies rush me."
+
+**Mission Mismatch:** Bringing generalist loadout into faction-specific mission. If you know you're fighting Terminids, bringing Railgun as your only offensive Stratagem is suboptimal—it handles Bile Titans fine but does nothing for the ninety lesser bugs accompanying them. Similarly, bringing Flamethrower into Automaton mission cripples you since short range versus ranged armored enemies creates impossible tactical situation. Adapt to known enemy type when possible.
+
+**Cooldown Overlap:** Taking multiple long-cooldown limited-use Stratagems without any frequent-use options. Example: Orbital Laser (300s, 3 uses) + Eagle 500kg (90s, 1-2 uses) + Railgun (480s) + Recoilless (480s). Once you expend your strikes and support weapons die or run dry, you face extended windows where you're relying purely on primary weapon. Include at least one short-cooldown option (EAT-17 at 70s, Orbital Gatling at 80s) providing consistent available firepower throughout mission.
+
+</div>
+
+<div class="my-6 border-t border-primary/20"></div>
+
+### Team Coordination
+
+<div class="space-y-4 mb-8">
+
+In four-player squads, individual Stratagem choices should complement teammates rather than duplicate them. Coordinated loadout distribution creates more capable team than four identical loadouts.
+
+**Specialization Benefits:** If Player One brings Railgun for anti-armor, Player Two can skip anti-armor entirely and focus on crowd control with Flamethrower. Player Three might bring defensive coverage via sentries. Player Four carries utility like Supply Pack. Together they cover all roles comprehensively. Contrast with all four bringing Railgun—redundant anti-armor with nobody handling swarms or providing utility.
+
+**Redundancy Insurance:** Some redundancy is smart—if only one player brings anti-armor and they die, suddenly your team can't handle heavies. Having two players with anti-armor capability (even if one is primary Railgun and other is backup EAT-17) provides insurance against deaths or mistakes. Similarly, ensure at least two players can handle crowd control so single death doesn't leave team defenseless against swarms.
+
+**Complementary Roles:** Certain Stratagem combinations create multiplicative value. Recoilless Rifle user pairs perfectly with teammate carrying the ammo backpack, enabling rapid-fire barrage. Shield Generator Pack users should take point drawing aggro while unshielded teammates with offensive backpacks operate safely behind them. Player with Supply Pack becomes mobile ammo distribution enabling ammo-hungry weapons others are carrying. Discuss roles before mission rather than discovering gaps mid-combat.
+
+**Communication:** Brief pre-mission discussion prevents redundancy and ensures coverage. "I'm bringing Railgun and Shield Pack for anti-armor and defense. What are you bringing?" If everyone briefly states their loadout focus, obvious gaps become apparent. This doesn't require rigid coordination—casual awareness prevents four players all bringing same Stratagem categories accidentally.
+
+</div>
+
+<Callout variant="tip">
+**Loadout Building Process:** Start by identifying mission faction if known. Choose appropriate anti-armor tool for that faction. Select crowd control option matching faction swarm density. Pick defensive tool based on whether enemies are ranged or melee. Use final slot for backup capability or personal preference. Verify you've covered anti-armor, crowd control, and defense. Adjust if you notice gaps. This systematic approach ensures balanced loadouts rather than haphazard selection.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Practical Loadout Examples
+
+<div class="space-y-6 mb-8">
+
+These example loadouts demonstrate the composition theory in practice, showing how to balance roles across four slots while adapting to specific scenarios. Each loadout includes tactical explanation of how pieces work together.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="border border-primary/30 rounded-lg p-5 bg-primary/5">
+  <h3 class="font-bold text-secondary mb-3">Generalist All-Purpose</h3>
+  <div class="space-y-2 mb-3">
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-red-500/20 text-red-300 text-xs">Anti-Armor</span>
+      <span>Railgun</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300 text-xs">Crowd Control</span>
+      <span>Orbital Laser</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-green-500/20 text-green-300 text-xs">Defensive</span>
+      <span>Shield Generator Pack</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300 text-xs">Flex</span>
+      <span>Eagle 500kg Bomb</span>
+    </div>
+  </div>
+  <p class="text-sm">Works across all factions and difficulties. Railgun handles any heavy target. Orbital Laser provides emergency crowd-clear or boss-delete. Shield Pack keeps you alive in any firefight. 500kg gives backup boss-killer or structure-breaker. The Swiss Army knife of loadouts—nothing it can't handle adequately.</p>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 bg-primary/5">
+  <h3 class="font-bold text-secondary mb-3">Terminid Specialist</h3>
+  <div class="space-y-2 mb-3">
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300 text-xs">Crowd Control</span>
+      <span>Flamethrower</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300 text-xs">Area Denial</span>
+      <span>Orbital Napalm</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-red-500/20 text-red-300 text-xs">Anti-Armor</span>
+      <span>Eagle 500kg Bomb</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300 text-xs">Defensive</span>
+      <span>Gatling Sentry</span>
+    </div>
+  </div>
+  <p class="text-sm">Optimized for bug planets. Flamethrower and Napalm create overlapping fire coverage preventing swarm approaches. 500kg deletes Bile Titans and Chargers. Gatling Sentry holds flanks during objectives. The fire-focused approach exploits Terminid vulnerability maximizing clear speed. Absolutely dominates bug missions.</p>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 bg-primary/5">
+  <h3 class="font-bold text-secondary mb-3">Automaton Tank-Buster</h3>
+  <div class="space-y-2 mb-3">
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-red-500/20 text-red-300 text-xs">Anti-Armor</span>
+      <span>Railgun</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-red-500/20 text-red-300 text-xs">Backup Anti-Armor</span>
+      <span>EAT-17</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-green-500/20 text-green-300 text-xs">Defensive</span>
+      <span>Shield Generator Pack</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300 text-xs">Crowd Control</span>
+      <span>Orbital Laser</span>
+    </div>
+  </div>
+  <p class="text-sm">Heavy anti-armor emphasis for bot-heavy missions. Railgun as primary heavy-killer with EAT-17 backup for overwhelming armor situations or dropship sniping. Shield Pack mandatory for surviving ranged fire. Orbital Laser handles base-breaking and emergency crowd situations. Slight crowd-control weakness but teammates should cover that gap.</p>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 bg-primary/5">
+  <h3 class="font-bold text-secondary mb-3">Team Support Build</h3>
+  <div class="space-y-2 mb-3">
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300 text-xs">Utility</span>
+      <span>Supply Pack</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300 text-xs">Crowd Control</span>
+      <span>Orbital Gatling</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-red-500/20 text-red-300 text-xs">Anti-Armor</span>
+      <span>EAT-17</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-green-500/20 text-green-300 text-xs">Defensive</span>
+      <span>Gatling Sentry</span>
+    </div>
+  </div>
+  <p class="text-sm">Focused on team sustainability rather than personal firepower. Supply Pack keeps entire squad topped up on ammo and health. Orbital Gatling provides frequent crowd-clear on short cooldown. EAT-17 handles armor needs adequately. Gatling Sentry adds defensive coverage. Works best when squadmates bring heavy offensive Stratagems this player enables through resupply.</p>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 bg-primary/5">
+  <h3 class="font-bold text-secondary mb-3">Coordinated Duo: Recoilless</h3>
+  <div class="space-y-2 mb-3">
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-red-500/20 text-red-300 text-xs">Anti-Armor</span>
+      <span>Recoilless Rifle (Shooter)</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300 text-xs">Crowd Control</span>
+      <span>Eagle Cluster Bomb</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300 text-xs">Area Denial</span>
+      <span>Orbital Napalm</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-green-500/20 text-green-300 text-xs">Defensive</span>
+      <span>Shield Generator</span>
+    </div>
+  </div>
+  <p class="text-sm text-xs mb-2"><em>Paired with loader carrying Recoilless backpack + their own offensive loadout</em></p>
+  <p class="text-sm">Specialized for duo play where one player carries Recoilless Rifle and their teammate wears the ammo backpack. Shooter focuses on precision anti-armor work via rapid-fire rockets. Cluster Bomb and Napalm handle crowd scenarios. Shield Pack for survivability. Loader player should bring complementary offensive tools this shooter lacks.</p>
+</div>
+
+<div class="border border-primary/30 rounded-lg p-5 bg-primary/5">
+  <h3 class="font-bold text-secondary mb-3">Solo Queue Safe Pick</h3>
+  <div class="space-y-2 mb-3">
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-red-500/20 text-red-300 text-xs">Anti-Armor</span>
+      <span>Quasar Cannon</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-orange-500/20 text-orange-300 text-xs">Crowd Control</span>
+      <span>Orbital Gatling</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-green-500/20 text-green-300 text-xs">Defensive</span>
+      <span>Shield Generator Pack</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-2 py-1 rounded bg-blue-500/20 text-blue-300 text-xs">Flex</span>
+      <span>Eagle 500kg Bomb</span>
+    </div>
+  </div>
+  <p class="text-sm">Designed for random matchmaking where you can't coordinate with teammates. Quasar handles anti-armor without backpack requirement, freeing Shield Pack slot. Orbital Gatling on short cooldown provides reliable crowd-clear. 500kg serves as backup emergency button. No team coordination required—self-sufficient across all scenarios regardless of what randoms bring.</p>
+</div>
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Thoughts: Adaptation Over Rigid Rankings
+
+<div class="space-y-6 mb-8">
+
+Tier lists provide valuable starting framework for understanding Stratagem effectiveness, but Helldivers 2's tactical depth means context always matters. The best Stratagem is the one that solves your immediate tactical problem, not necessarily the highest-ranked option on paper.
+
+An S-tier Railgun becomes useless when forty Terminids are overrunning your position and you need area damage right now. A C-tier Smoke Strike might save your squad during desperate extraction when you need enemy aggro break. Mission modifiers, team composition, personal skill level, and tactical situation all influence what constitutes optimal choice in any given moment.
+
+Use this guide as educational foundation teaching you what each Stratagem does well and why. Learn the framework of balancing roles across your four slots. Understand how faction matchups shift priorities. But don't be afraid to experiment with lower-tier options that match your playstyle or to adapt mid-mission when your initial loadout isn't addressing the actual threats you're facing.
+
+The mark of skilled Helldiver isn't memorizing tier rankings—it's recognizing which tool fits the current tactical situation and deploying it effectively. Study the patterns, understand the principles, then adapt fluidly based on battlefield realities. That's how you spread Managed Democracy efficiently.
+
+</div>
+
+<Callout variant="success">
+**Parting Wisdom:** Every Stratagem has scenarios where it excels. Even bottom-tier picks can win missions in right circumstances with skilled deployment. The tier list shows which options perform most consistently across broadest range of situations, but consistency doesn't mean superiority in every specific case. Learn the tools, understand the context, adapt accordingly. That's true tactical mastery.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

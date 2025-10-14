@@ -1,0 +1,925 @@
+---
+title: HUD & Crosshair Optimization
+---
+
+import Callout from "@/components/Callout.astro";
+import { Eye, Crosshair, Users, Target, Zap, Settings } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Every millisecond matters in Battlefield 6's intense firefights.** Your ability to instantly spot enemies, track your crosshair, and process hit feedback can mean the difference between dominating the scoreboard and respawning repeatedly.
+
+Battlefield 6 offers unprecedented HUD customization—and competitive players leverage these tools to create visual clarity that gives them a measurable edge. This guide provides battle-tested configurations to maximize target visibility, eliminate HUD clutter, and accelerate your reaction time through optimized color selection and interface tweaks.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> Quick Setup Guide
+
+<div class="space-y-6 mb-8">
+
+Copy this complete configuration to get started immediately. Every setting is optimized for maximum contrast and instant target recognition on PC.
+
+</div>
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Competitive HUD Configuration</h3>
+      <p class="text-sm text-foreground/60">Battle-tested settings for PC infantry play</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">100%</div>
+      <div class="text-xs text-foreground/60">Visibility</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">CROSSHAIR</div>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Color</span>
+          <span class="text-fs-gold font-semibold">Hot Pink (Magenta)</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Thickness</span>
+          <span class="text-fs-gold font-semibold">Thick</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Opacity</span>
+          <span class="text-fs-gold font-semibold">100%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Projection</span>
+          <span class="text-fs-gold font-semibold">Off</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">ENEMY MARKERS</div>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Color</span>
+          <span class="text-fs-gold font-semibold">Bright Red-Orange</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Opacity</span>
+          <span class="text-fs-gold font-semibold">100%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Scale</span>
+          <span class="text-fs-gold font-semibold">100%+</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Opacity (Zoomed)</span>
+          <span class="text-fs-gold font-semibold">100%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">FRIENDLY MARKERS</div>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Color</span>
+          <span class="text-fs-gold font-semibold">Cyan Blue</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Opacity</span>
+          <span class="text-fs-gold font-semibold">90%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Opacity (Zoomed)</span>
+          <span class="text-fs-gold font-semibold">50-70%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Scale</span>
+          <span class="text-fs-gold font-semibold">80-90%</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">HIT INDICATORS</div>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Normal Hit</span>
+          <span class="text-fs-gold font-semibold">White</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Headshot</span>
+          <span class="text-fs-gold font-semibold">Bright Red</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Kill Confirmed</span>
+          <span class="text-fs-gold font-semibold">Black</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Armor Hit</span>
+          <span class="text-fs-gold font-semibold">Blue</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-3">VISIBILITY ENHANCEMENTS</div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+      <div class="flex flex-col">
+        <span class="text-foreground/70 text-xs mb-1">Allied Outlines</span>
+        <span class="text-fs-gold font-semibold">On</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-foreground/70 text-xs mb-1">SOVIS Filter</span>
+        <span class="text-fs-gold font-semibold">On</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-foreground/70 text-xs mb-1">Camera Shake</span>
+        <span class="text-fs-gold font-semibold">20% or lower</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-foreground/70 text-xs mb-1">HUD Motion</span>
+        <span class="text-fs-gold font-semibold">Off</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20 mt-6">
+    <div class="text-xs text-primary font-semibold mb-2">CONFIGURATION PHILOSOPHY</div>
+    <p class="text-sm text-foreground/80">This setup prioritizes enemy visibility above all else. Pink crosshair never camouflages, red-orange enemies pop against any background, cyan friendlies remain distinct but subdued, and color-coded hit feedback provides instant combat information.</p>
+  </div>
+</div>
+
+<Callout variant="tip">
+Test these settings in the practice range first. Pan across different map environments to verify your crosshair and markers remain visible in all scenarios before jumping into multiplayer.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Crosshair className="inline-block mr-3 mb-1" size={32} /> Crosshair Optimization
+
+<div class="space-y-6 mb-8">
+
+Your crosshair is your primary aiming reference and must remain visible in all conditions. Battlefield 6 allows full customization—use it strategically.
+
+</div>
+
+### Crosshair Color Selection
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ❌
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Default White Crosshair</div>
+        <div class="text-xs text-foreground/60">Standard configuration</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Visibility on Snow</span>
+        <span class="text-fs-gold font-semibold">Poor</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Visibility on Bright Sky</span>
+        <span class="text-fs-gold font-semibold">Poor</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Visibility in Explosions</span>
+        <span class="text-fs-gold font-semibold">Moderate</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">DRAWBACKS</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Disappears against bright backgrounds</li>
+        <li>• Lost in particle effects and muzzle flash</li>
+        <li>• Generic—no environmental advantage</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ✓
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">Hot Pink Crosshair</div>
+        <div class="text-xs text-foreground/60">Optimized for all environments</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Visibility on Snow</span>
+        <span class="text-green-400 font-bold">Excellent</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Visibility on Bright Sky</span>
+        <span class="text-green-400 font-bold">Excellent</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Visibility in Explosions</span>
+        <span class="text-green-400 font-bold">Excellent</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">BENEFITS</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Never found in natural environments</li>
+        <li>• Contrasts against all BF6 map palettes</li>
+        <li>• Instantly draws eye in peripheral vision</li>
+        <li>• Distinct from enemy/friendly markers</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### Best Crosshair Colors by Environment
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Environment Type</th>
+        <th class="text-center p-3 text-primary font-semibold">Best Colors</th>
+        <th class="text-center p-3 text-primary font-semibold">Avoid</th>
+        <th class="text-left p-3 text-primary font-semibold">Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Foliage (Green/Brown)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Pink, Red, Purple</div>
+        </td>
+        <td class="text-center p-3 text-red-400">Green, Brown</td>
+        <td class="p-3 text-foreground/80 text-xs">Red/magenta are opposite green on color wheel—maximum contrast</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Sky/Snow (Blue/White)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Red, Orange, Yellow</div>
+        </td>
+        <td class="text-center p-3 text-red-400">White, Light Blue</td>
+        <td class="p-3 text-foreground/80 text-xs">Warm colors contrast strongly with cool backgrounds</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Urban (Gray/Beige)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Cyan, Magenta, Lime</div>
+        </td>
+        <td class="text-center p-3 text-red-400">Gray, Beige, White</td>
+        <td class="p-3 text-foreground/80 text-xs">Saturated neon tones pop against muted concrete palette</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Desert (Tan/Orange)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Cyan, Blue, Purple</div>
+        </td>
+        <td class="text-center p-3 text-red-400">Yellow, Orange, Red</td>
+        <td class="p-3 text-foreground/80 text-xs">Cool colors contrast warm desert tones</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Dark Interiors/Night</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Pink, Cyan, Lime, White</div>
+        </td>
+        <td class="text-center p-3 text-red-400">Dark Red, Brown</td>
+        <td class="p-3 text-foreground/80 text-xs">Bright neon colors render at full brightness regardless of lighting</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip">
+**Universal Winner:** Hot pink (magenta) works across all environments because it's rarely found in nature or BF6's realistic art style. It contrasts with greens, blues, grays, and warm tones equally well.
+</Callout>
+
+### Additional Crosshair Settings
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        📏
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Thickness</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Set to <span class="text-fs-gold font-semibold">Thick</span> for high-resolution displays (1440p/4K). Thicker lines remain visible during rapid movement and explosions.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Thin:</span> <span class="text-foreground/70">Can disappear on bright backgrounds</span></div>
+      <div><span class="text-fs-gold font-semibold">Thick:</span> <span class="text-foreground/70">Always visible, minimal target obscuring</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💎
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Opacity</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Lock at <span class="text-fs-gold font-semibold">100%</span>. A transparent crosshair defeats the purpose—your chosen color must display at full intensity.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">&lt;100%:</span> <span class="text-foreground/70">Blends with background colors</span></div>
+      <div><span class="text-fs-gold font-semibold">100%:</span> <span class="text-foreground/70">True color display, maximum contrast</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Projection</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Set to <span class="text-fs-gold font-semibold">Off</span>. Locks crosshair to screen center for consistent muscle memory and predictable flick shots.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">On:</span> <span class="text-foreground/70">Crosshair shifts with camera motion</span></div>
+      <div><span class="text-fs-gold font-semibold">Off:</span> <span class="text-foreground/70">Static center point, reliable aim reference</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Users className="inline-block mr-3 mb-1" size={32} /> Enemy & Friendly Markers
+
+<div class="space-y-6 mb-8">
+
+Battlefield 6's colorblind customization system is actually a competitive advantage tool. You're not limited to "blue team vs red team"—you can assign any colors to maximize visibility and reduce cognitive load.
+
+</div>
+
+### Enemy Icon Configuration
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        🎨
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Color</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Use <span class="text-fs-gold font-semibold">bright red-orange</span> or <span class="text-fs-gold font-semibold">neon pink</span>. These don't appear naturally in BF6's environments.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best:</span> <span class="text-foreground/70">Hot Pink, Red-Orange, Bright Red</span></div>
+      <div><span class="text-fs-gold font-semibold">Why:</span> <span class="text-foreground/70">Maximum contrast on realistic maps</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💯
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Opacity</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Set to <span class="text-fs-gold font-semibold">100%</span> at all times, including when zoomed. Enemy markers should never fade.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Normal:</span> <span class="text-foreground/70">100% opacity</span></div>
+      <div><span class="text-fs-gold font-semibold">Zoomed:</span> <span class="text-foreground/70">100% opacity (always visible)</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        📐
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Scale</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Set to <span class="text-fs-gold font-semibold">100% or larger</span>. Bigger enemy icons mean faster peripheral detection.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Recommended:</span> <span class="text-foreground/70">100-110% scale</span></div>
+      <div><span class="text-fs-gold font-semibold">Effect:</span> <span class="text-foreground/70">Spot enemies faster in chaotic battles</span></div>
+    </div>
+  </div>
+</div>
+
+### Friendly Icon Strategy
+
+<div class="space-y-4 mb-8">
+
+The goal with friendly markers is visibility without distraction. You need to identify teammates to avoid teamkills, but they shouldn't obscure enemies or dominate your visual field.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">FRIENDLY MARKER SETTINGS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ <span class="text-fs-gold font-semibold">Color:</span> Cyan blue or light teal (distinct from enemy red/pink)</li>
+      <li>✓ <span class="text-fs-gold font-semibold">Opacity (Normal):</span> 90% (slightly dimmed)</li>
+      <li>✓ <span class="text-fs-gold font-semibold">Opacity (Zoomed):</span> 50-70% (faded when ADS)</li>
+      <li>✓ <span class="text-fs-gold font-semibold">Scale:</span> 80-90% (smaller than enemies)</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Result: Friendlies visible but visually de-prioritized
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">SQUAD MARKER SETTINGS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ <span class="text-fs-gold font-semibold">Color:</span> Light green or yellow (separate from team)</li>
+      <li>✓ <span class="text-fs-gold font-semibold">Opacity (Normal):</span> 95%</li>
+      <li>✓ <span class="text-fs-gold font-semibold">Opacity (Zoomed):</span> 60-75%</li>
+      <li>✓ <span class="text-fs-gold font-semibold">Scale:</span> 85-95%</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Result: Squad stands out from team but not from enemies
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**Critical Setting:** Lower friendly icon opacity when zoomed (ADS) to 50-70%. This prevents friendly markers from blocking your view of enemies at range. Enemy opacity should remain 100% when zoomed.
+</Callout>
+
+### Visibility Enhancements
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-foreground mb-3">Allied Outlines</div>
+    <div class="mb-4 p-3 bg-primary/10 rounded">
+      <div class="text-xs text-primary font-semibold mb-1">SETTING</div>
+      <div class="text-sm text-fs-gold">On</div>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Renders a thin colored outline around friendly soldiers, even through light cover or smoke. Prevents teamkills and helps you locate squadmates for revives/resupplies.</p>
+    <div class="text-xs text-foreground/60">Note: Outline color matches your friendly team color (e.g., cyan outline if friendlies are cyan)</div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-foreground mb-3">Soldier Visibility Filter (SOVIS)</div>
+    <div class="mb-4 p-3 bg-primary/10 rounded">
+      <div class="text-xs text-primary font-semibold mb-1">SETTING</div>
+      <div class="text-sm text-fs-gold">On</div>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Subtly enhances contrast on all soldier models, making players "pop" from backgrounds. Think of it as a mild character highlight effect. Minimal performance cost.</p>
+    <div class="text-xs text-foreground/60">Works with your custom colors to make enemy icons even more noticeable</div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Hit Indicator Color Coding
+
+<div class="space-y-6 mb-8">
+
+In fast-paced firefights, you need instant feedback on hit registration. Color-coded hit markers tell you—at a glance—if you landed a body shot, headshot, armor break, or kill without reading the kill feed.
+
+</div>
+
+### Recommended Hit Marker Scheme
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-white">
+    <div class="flex items-center justify-between mb-3">
+      <div class="text-lg font-bold text-foreground">Normal Hit</div>
+      <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-xl border-2 border-white">
+        ✕
+      </div>
+    </div>
+    <div class="mb-3 p-3 bg-white/10 rounded">
+      <div class="text-xs text-white/70 font-semibold mb-1">COLOR</div>
+      <div class="text-sm text-fs-gold font-semibold">White</div>
+    </div>
+    <p class="text-xs text-foreground/80">Neutral, high-contrast color for standard body shots. Shows up on dark backgrounds without being distracting.</p>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-red-500">
+    <div class="flex items-center justify-between mb-3">
+      <div class="text-lg font-bold text-foreground">Headshot</div>
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl border-2 border-red-500">
+        ★
+      </div>
+    </div>
+    <div class="mb-3 p-3 bg-red-500/10 rounded">
+      <div class="text-xs text-red-400 font-semibold mb-1">COLOR</div>
+      <div class="text-sm text-fs-gold font-semibold">Bright Red</div>
+    </div>
+    <p class="text-xs text-foreground/80">Immediately alerts you to critical hit. Tells you enemy is likely one more shot from death—stay on target.</p>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-gray-900">
+    <div class="flex items-center justify-between mb-3">
+      <div class="text-lg font-bold text-foreground">Kill</div>
+      <div class="w-10 h-10 rounded-full bg-gray-900/50 flex items-center justify-center text-xl border-2 border-gray-900">
+        ☠
+      </div>
+    </div>
+    <div class="mb-3 p-3 bg-gray-900/30 rounded">
+      <div class="text-xs text-gray-400 font-semibold mb-1">COLOR</div>
+      <div class="text-sm text-fs-gold font-semibold">Black</div>
+    </div>
+    <p class="text-xs text-foreground/80">Stark color change from white→black confirms elimination. Switch targets immediately—no need to check kill feed.</p>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-blue-500">
+    <div class="flex items-center justify-between mb-3">
+      <div class="text-lg font-bold text-foreground">Armor Hit</div>
+      <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-xl border-2 border-blue-500">
+        🛡
+      </div>
+    </div>
+    <div class="mb-3 p-3 bg-blue-500/10 rounded">
+      <div class="text-xs text-blue-400 font-semibold mb-1">COLOR</div>
+      <div class="text-sm text-fs-gold font-semibold">Blue</div>
+    </div>
+    <p class="text-xs text-foreground/80">Distinct color warns you're hitting armor plates. Enemy might soak extra bullets—aim for head or continue firing.</p>
+  </div>
+</div>
+
+### Hit Indicator Workflow
+
+<div class="p-6 bg-card/30 rounded-lg border border-primary/20 mb-8">
+  <div class="text-sm font-semibold text-primary mb-4">COMBAT FEEDBACK LOOP</div>
+  
+  <div class="space-y-4">
+    <div class="flex items-start gap-4">
+      <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 border-2 border-white text-sm font-bold">
+        1
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-1">White Hit Marker</div>
+        <div class="text-xs text-foreground/70">Body shot landed → Continue tracking target</div>
+      </div>
+    </div>
+    
+    <div class="flex items-start gap-4">
+      <div class="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 border-2 border-red-500 text-sm font-bold">
+        2
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-1">Red Hit Marker</div>
+        <div class="text-xs text-foreground/70">Headshot confirmed → Target critically wounded, finish them</div>
+      </div>
+    </div>
+    
+    <div class="flex items-start gap-4">
+      <div class="w-8 h-8 rounded-full bg-gray-900/50 flex items-center justify-center flex-shrink-0 border-2 border-gray-900 text-sm font-bold">
+        3
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-1">Black Hit Marker</div>
+        <div class="text-xs text-foreground/70">Kill confirmed → Immediately switch to next threat</div>
+      </div>
+    </div>
+    
+    <div class="flex items-start gap-4">
+      <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 border-2 border-blue-500 text-sm font-bold">
+        +
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-1">Blue Hit Marker</div>
+        <div class="text-xs text-foreground/70">Armor detected → Adjust expectations for TTK, aim high</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+Enable **Damage-Based Shapes** in settings. This changes hit marker shape for headshots/kills in addition to color, providing redundant feedback in case lighting makes colors hard to distinguish.
+</Callout>
+
+### Hit Indicator Settings
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold mb-2">Hit Indicator Opacity</div>
+    <div class="mb-3">
+      <span class="text-fs-gold font-semibold text-lg">100%</span>
+    </div>
+    <p class="text-xs text-foreground/70">Always keep at maximum. You need to see these colors clearly during rapid fire and explosions.</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold mb-2">Damage-Based Shapes</div>
+    <div class="mb-3">
+      <span class="text-fs-gold font-semibold text-lg">On</span>
+    </div>
+    <p class="text-xs text-foreground/70">Hit markers change shape for headshots/kills. Combined with color coding, provides dual-layer feedback.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Eye className="inline-block mr-3 mb-1" size={32} /> The Science Behind Color Selection
+
+<div class="space-y-6 mb-8">
+
+Understanding why certain colors work better helps you make informed customization decisions for your playstyle and monitor setup.
+
+</div>
+
+### Human Eye Sensitivity to Color
+
+<div class="space-y-3 mb-8">
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Yellow-Green (555nm)</span>
+      <span class="text-fs-gold font-semibold">Peak Sensitivity</span>
+    </div>
+    <div class="h-3 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-green-400 to-green-500" style="width: 100%"></div>
+    </div>
+    <p class="text-xs text-foreground/60 mt-1">Eyes detect this wavelength most rapidly under daylight—why emergency signs use lime green</p>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Red-Orange (600-620nm)</span>
+      <span class="text-fs-gold font-semibold">Very High Sensitivity</span>
+    </div>
+    <div class="h-3 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-orange-500 to-red-500" style="width: 90%"></div>
+    </div>
+    <p class="text-xs text-foreground/60 mt-1">Strong neurological response, associated with danger/urgency—ideal for enemy markers</p>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Cyan-Blue (470-490nm)</span>
+      <span class="text-fs-gold font-semibold">High Sensitivity</span>
+    </div>
+    <div class="h-3 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-cyan-400 to-blue-500" style="width: 85%"></div>
+    </div>
+    <p class="text-xs text-foreground/60 mt-1">Cool colors process quickly and contrast well with warm environments—good for friendlies</p>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Magenta/Pink (Purple-Red)</span>
+      <span class="text-fs-gold font-semibold">Unnatural Alert</span>
+    </div>
+    <div class="h-3 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-pink-500 to-pink-600" style="width: 95%"></div>
+    </div>
+    <p class="text-xs text-foreground/60 mt-1">Not found in nature—brain processes as "artificial" and attention-grabbing</p>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Pure Red (Low Light)</span>
+      <span class="text-fs-gold font-semibold">Lower Sensitivity</span>
+    </div>
+    <div class="h-3 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-red-700 to-red-800" style="width: 50%"></div>
+    </div>
+    <p class="text-xs text-foreground/60 mt-1">Dark red appears nearly black in night vision—use pink/orange instead for dark maps</p>
+  </div>
+</div>
+
+### Contrast Principles
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-3">✓ High Contrast Combinations</div>
+    <ul class="space-y-2 text-sm text-foreground/80">
+      <li>• <span class="text-fs-gold">Pink crosshair</span> vs. <span class="text-green-400">green foliage</span></li>
+      <li>• <span class="text-fs-gold">Red enemy icons</span> vs. <span class="text-blue-400">blue sky</span></li>
+      <li>• <span class="text-fs-gold">Cyan friendlies</span> vs. <span class="text-orange-400">orange/tan terrain</span></li>
+      <li>• <span class="text-fs-gold">Yellow crosshair</span> vs. <span class="text-purple-400">purple/dark shadows</span></li>
+    </ul>
+    <div class="mt-4 p-3 bg-green-500/10 rounded border border-green-500/30">
+      <p class="text-xs text-green-400">These pairings use complementary or strongly contrasting hues for maximum separation</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-red-400 mb-3">✗ Low Contrast Combinations</div>
+    <ul class="space-y-2 text-sm text-foreground/80">
+      <li>• <span class="text-red-400">Green crosshair</span> vs. <span class="text-green-400">grass/foliage</span></li>
+      <li>• <span class="text-red-400">White crosshair</span> vs. <span class="text-gray-300">bright sky/snow</span></li>
+      <li>• <span class="text-red-400">Yellow icons</span> vs. <span class="text-yellow-400">desert sand</span></li>
+      <li>• <span class="text-red-400">Gray elements</span> vs. <span class="text-gray-400">concrete/urban</span></li>
+    </ul>
+    <div class="mt-4 p-3 bg-red-500/10 rounded border border-red-500/30">
+      <p class="text-xs text-red-400">These pairings use similar hues and will cause your HUD to camouflage into the environment</p>
+    </div>
+  </div>
+</div>
+
+<Callout variant="info">
+**Key Insight:** The "best" color isn't just about eye sensitivity—it's about contrast with the environment. A bright green crosshair leverages peak eye sensitivity but fails in forest maps. Hot pink sacrifices a bit of raw sensitivity for universal contrast across all environments.
+</Callout>
+
+### Why Unnatural Colors Win
+
+<div class="p-6 bg-card/30 rounded-lg border border-primary/20 mb-8">
+  <div class="text-sm font-semibold text-primary mb-4">Battlefield 6's Realistic Art Style = Your Advantage</div>
+  
+  <p class="text-sm text-foreground/80 mb-4">BF6 uses a grounded, realistic color palette: earthy greens, browns, grays, tans, blue skies, and white smoke. This is intentional for immersion—but it means colors that <span class="text-fs-gold font-semibold">don't exist in nature</span> will immediately grab your visual attention.</p>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="p-3 bg-card/50 rounded text-center">
+      <div class="text-2xl mb-2">🌸</div>
+      <div class="text-xs text-fs-gold font-semibold">Neon Pink</div>
+      <div class="text-xs text-foreground/60">Never in maps</div>
+    </div>
+    <div class="p-3 bg-card/50 rounded text-center">
+      <div class="text-2xl mb-2">💜</div>
+      <div class="text-xs text-fs-gold font-semibold">Vivid Purple</div>
+      <div class="text-xs text-foreground/60">Rare in nature</div>
+    </div>
+    <div class="p-3 bg-card/50 rounded text-center">
+      <div class="text-2xl mb-2">💚</div>
+      <div class="text-xs text-fs-gold font-semibold">Lime Green</div>
+      <div class="text-xs text-foreground/60">Too bright for BF6</div>
+    </div>
+    <div class="p-3 bg-card/50 rounded text-center">
+      <div class="text-2xl mb-2">🔵</div>
+      <div class="text-xs text-fs-gold font-semibold">Electric Cyan</div>
+      <div class="text-xs text-foreground/60">Not found in terrain</div>
+    </div>
+  </div>
+
+  <p class="text-sm text-foreground/80 mt-4">Your brain processes these colors as "artificial objects" (UI elements) rather than "natural environment," creating instant visual separation and faster target detection.</p>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Settings className="inline-block mr-3 mb-1" size={32} /> Additional PC Optimization Tips
+
+<div class="space-y-6 mb-8">
+
+Beyond color selection, these settings reduce visual noise and keep your HUD elements crisp.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold mb-3">
+      <span class="text-fs-gold">Camera Shake</span>
+    </div>
+    <div class="mb-3">
+      <div class="text-xs text-foreground/60 mb-2">Recommended Setting</div>
+      <span class="text-primary font-semibold">20% or Lower</span>
+    </div>
+    <p class="text-xs text-foreground/70">Reduces screen jolting from explosions and movement. Keeps crosshair and icons stable in your field of view.</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold mb-3">
+      <span class="text-fs-gold">HUD Motion</span>
+    </div>
+    <div class="mb-3">
+      <div class="text-xs text-foreground/60 mb-2">Recommended Setting</div>
+      <span class="text-primary font-semibold">Off</span>
+    </div>
+    <p class="text-xs text-foreground/70">Prevents HUD elements from swaying with camera movement. Keeps UI elements locked to screen positions.</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold mb-3">
+      <span class="text-fs-gold">Motion Blur</span>
+    </div>
+    <div class="mb-3">
+      <div class="text-xs text-foreground/60 mb-2">Recommended Setting</div>
+      <span class="text-primary font-semibold">Off</span>
+    </div>
+    <p class="text-xs text-foreground/70">Eliminates blur during fast turns. Keeps HUD sharp and readable during rapid camera movement.</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold mb-3">
+      <span class="text-fs-gold">Chromatic Aberration</span>
+    </div>
+    <div class="mb-3">
+      <div class="text-xs text-foreground/60 mb-2">Recommended Setting</div>
+      <span class="text-primary font-semibold">Off</span>
+    </div>
+    <p class="text-xs text-foreground/70">Removes color fringing at screen edges. Preserves true colors of your custom HUD elements.</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold mb-3">
+      <span class="text-fs-gold">Film Grain</span>
+    </div>
+    <div class="mb-3">
+      <div class="text-xs text-foreground/60 mb-2">Recommended Setting</div>
+      <span class="text-primary font-semibold">Off</span>
+    </div>
+    <p class="text-xs text-foreground/70">Removes visual noise overlay. Improves clarity of small UI elements and distant targets.</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold mb-3">
+      <span class="text-fs-gold">Lens Flare</span>
+    </div>
+    <div class="mb-3">
+      <div class="text-xs text-foreground/60 mb-2">Recommended Setting</div>
+      <span class="text-primary font-semibold">Off or Low</span>
+    </div>
+    <p class="text-xs text-foreground/70">Reduces bright light obscuring your crosshair. Particularly important if using white crosshair.</p>
+  </div>
+</div>
+
+### High-Resolution Display Considerations
+
+<div class="p-6 bg-card/30 rounded-lg border border-primary/20 mb-8">
+  <div class="text-sm font-semibold text-primary mb-3">1440p / 4K Players</div>
+  
+  <p class="text-sm text-foreground/80 mb-4">At very high resolutions, default HUD elements can appear microscopic. Consider these adjustments:</p>
+
+  <ul class="space-y-2 text-sm text-foreground/80">
+    <li>• <span class="text-fs-gold font-semibold">Overall HUD Scale:</span> Increase 5-10% so icons remain visible</li>
+    <li>• <span class="text-fs-gold font-semibold">Crosshair Thickness:</span> Use "Thick" setting—default may be too thin at distance</li>
+    <li>• <span class="text-fs-gold font-semibold">Enemy Icon Scale:</span> Push to 110-120% if you have trouble spotting distant markers</li>
+    <li>• <span class="text-fs-gold font-semibold">Monitor Distance:</span> Sit closer to larger displays (27"+ at 1440p) to maintain visibility</li>
+  </ul>
+
+  <div class="mt-4 p-3 bg-primary/10 rounded border border-primary/20">
+    <p class="text-xs text-primary">Test your settings at different engagement ranges. If you can't clearly see your crosshair or enemy markers at 50+ meters, increase scale or thickness.</p>
+  </div>
+</div>
+
+<Callout variant="success">
+Use the **Practice Range** to test your configuration across different lighting conditions and backgrounds. Verify your crosshair and icons remain visible when aiming at bright skies, dark corners, and mid-range foliage before entering multiplayer.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Recommendations
+
+<div class="space-y-6 mb-8">
+
+These configurations give you the foundation for superior visual clarity. However, the "perfect" setup may vary based on your monitor, room lighting, and visual preferences.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">UNIVERSAL SETUP</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Hot pink crosshair (thick, 100% opacity, projection off)</li>
+      <li>✓ Bright red-orange enemies (100% scale/opacity)</li>
+      <li>✓ Cyan friendlies (dimmed when zoomed)</li>
+      <li>✓ White→Red→Black hit markers</li>
+      <li>✓ SOVIS + outlines enabled</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Works on all maps and conditions
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">FOLIAGE-HEAVY MAPS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Pink or purple crosshair</li>
+      <li>✓ Neon pink enemy icons</li>
+      <li>✓ Blue friendlies</li>
+      <li>✓ Standard hit marker colors</li>
+      <li>✓ Increase enemy icon scale +10%</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Maximizes contrast vs. green/brown
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-blue-500">
+    <div class="text-xs text-blue-400 font-semibold mb-3">URBAN/DESERT MAPS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Cyan or lime green crosshair</li>
+      <li>✓ Red-orange enemies</li>
+      <li>✓ Purple or teal friendlies</li>
+      <li>✓ Standard hit marker colors</li>
+      <li>✓ Normal icon scaling</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-blue-500/10 rounded text-blue-400">
+      Cool colors pop on warm terrain
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg border border-primary/30 mb-8">
+  <div class="text-sm font-semibold text-primary mb-3">🎯 The Competitive Edge</div>
+  <p class="text-sm text-foreground/80">Studies show that reducing target detection time by even 50-100 milliseconds can improve combat effectiveness by 15-20%. Proper HUD optimization isn't about "looking cool"—it's about your brain processing threats faster. Every engagement where you spot the enemy first is an engagement you're likely to win.</p>
+</div>
+
+<Callout variant="warning">
+**Don't Copy Blindly:** What works for streamers may not work for you. Their monitors, lighting, and vision differ from yours. Use this guide's principles to build a setup tailored to your hardware and preferences, then refine through testing.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

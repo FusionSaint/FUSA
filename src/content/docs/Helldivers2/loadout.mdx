@@ -1,21 +1,982 @@
 ---
-title: Update Me
+title: Loadouts by Faction
 ---
 
 import Callout from "@/components/Callout.astro";
+import { Target, Bug, Zap, Cog } from "lucide-react";
 
-## Overview
+<div class="space-y-6 mb-8">
 
-[Add content here]
+**Success on Super Helldive difficulty demands faction-specific tactics.** Each enemy type—Terminids, Illuminate, and Automatons—requires a completely different squad composition, weapon loadout, and stratagem setup.
 
-## Getting Started
+This guide provides optimized 4-player loadouts for each faction. Coordinate your team's boosters (they stack team-wide but can't duplicate), diversify roles, and exploit each enemy's critical weaknesses.
 
-[Add content here]
+</div>
 
-## Key Information
+<div class="my-12 border-t-2 border-primary/30"></div>
 
-[Add content here]
+## <Bug className="inline-block mr-3 mb-1" size={32} /> Terminid "Exterminator" Squad
+
+<div class="space-y-6 mb-8">
+
+The bug swarms demand one thing above all: **fire**. Terminids are highly flammable insectoids that attack in overwhelming numbers with melee and acid strikes. Mobility is survival—stay mobile or get overrun.
+
+</div>
+
+### Enemy Profile Card
+
+<div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20 mb-8">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div>
+      <div class="text-xs text-primary font-semibold mb-2">PRIMARY THREAT</div>
+      <div class="text-sm text-foreground/80">Massive swarms, acid attacks, heavy chargers</div>
+    </div>
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">EXPLOIT WEAKNESS</div>
+      <div class="text-sm text-green-400">🔥 Highly flammable</div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">CRITICAL RULE</div>
+      <div class="text-sm text-red-400">Never stop moving</div>
+    </div>
+  </div>
+</div>
+
+### Loadout Components
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <h3 class="text-base font-semibold text-primary">Primary Weapons</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Breaker Incendiary</span>
+        <div class="text-xs text-foreground/60">Sets swarms ablaze</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Cookout Shotgun</span>
+        <div class="text-xs text-foreground/60">Fire + crowd clear</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Sickle / Double-Edge</span>
+        <div class="text-xs text-foreground/60">Rapid-fire penetration</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔧
+      </div>
+      <h3 class="text-base font-semibold text-primary">Sidearms</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Grenade Pistol</span>
+        <div class="text-xs text-foreground/60">Seal bug holes instantly</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Crisper</span>
+        <div class="text-xs text-foreground/60">Pocket flamethrower</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Senator</span>
+        <div class="text-xs text-foreground/60">Heavy penetration backup</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💨
+      </div>
+      <h3 class="text-base font-semibold text-primary">Grenades</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+        <span class="text-green-400 font-semibold">Gas Grenades</span>
+        <div class="text-xs text-foreground/60">TOP CHOICE: Stuns + melts swarms</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Incendiary</span>
+        <div class="text-xs text-foreground/60">Area denial fire patches</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⚡
+      </div>
+      <h3 class="text-base font-semibold text-primary">Team Boosters</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="text-xs text-foreground/60 mb-2">Each player takes ONE:</div>
+      <div class="flex flex-wrap gap-1">
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Localization Confusion</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Stamina Enhancement</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Experimental Infusion</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Hellpod Optimization</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="tip">
+**Localization Confusion is critical** against Terminids—it reduces Bug Breach events by ~50%, dramatically cutting surprise swarm spawns.
+</Callout>
+
+### Stratagem Setup
+
+<div class="space-y-4 mb-8">
+
+**Squad Composition:** 2 players focus on swarm control, 2 players handle heavy targets.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="p-6 bg-card/50 rounded-lg border-l-4 border-primary">
+  <div class="text-sm font-semibold text-primary mb-4">🔥 ANTI-SWARM ROLE</div>
+  
+  <div class="space-y-3 mb-4">
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Support Weapon</span>
+      <span class="text-fs-gold">Flamethrower</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Backpack</span>
+      <span class="text-fs-gold">Jump Pack (escape)</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Orbital</span>
+      <span class="text-fs-gold">Napalm Barrage</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Eagle</span>
+      <span class="text-fs-gold">Napalm Strike</span>
+    </div>
+  </div>
+  
+  <div class="text-xs text-foreground/70 italic">
+    Roast everything. Use flame weapons at medium range (watch backblast in tunnels).
+  </div>
+</div>
+
+<div class="p-6 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+  <div class="text-sm font-semibold text-fs-gold mb-4">💥 ANTI-ARMOR ROLE</div>
+  
+  <div class="space-y-3 mb-4">
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Support Weapon</span>
+      <span class="text-fs-gold">Quasar Cannon / Autocannon</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Backpack</span>
+      <span class="text-fs-gold">Personal Shield</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Orbital</span>
+      <span class="text-fs-gold">Laser / Precision Strike</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Eagle</span>
+      <span class="text-fs-gold">500kg Bomb</span>
+    </div>
+  </div>
+  
+  <div class="text-xs text-foreground/70 italic">
+    Snipe Chargers, Bile Titans, and Impalers from distance. Quasar has infinite ammo.
+  </div>
+</div>
+
+</div>
+
+<Callout variant="warning">
+**Never have all 4 players use flamethrowers.** You need anti-armor capability for Bile Titans and Chargers. Balance is everything.
+</Callout>
+
+### Tactical Priority Matrix
+
+<div class="space-y-3 mb-8">
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">🔥 Fire Damage</span>
+      <span class="text-fs-gold font-semibold">CRITICAL</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 95%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">👟 Mobility</span>
+      <span class="text-fs-gold font-semibold">CRITICAL</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 90%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">💥 Anti-Armor</span>
+      <span class="text-fs-gold font-semibold">HIGH</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 75%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">🎯 Precision</span>
+      <span class="text-foreground/60 font-semibold">MODERATE</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 45%"></div>
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> Illuminate "Anti-Squid" Squad
+
+<div class="space-y-6 mb-8">
+
+High-tech aliens with mixed threats: zombie thralls, shielded Overseers, cloaked units, and ranged attackers. **Fast-firing ballistic and energy weapons dominate**—most Illuminate units lack heavy armor but deploy energy shields that require sustained fire to break.
+
+</div>
+
+### Enemy Profile Card
+
+<div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20 mb-8">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div>
+      <div class="text-xs text-primary font-semibold mb-2">PRIMARY THREAT</div>
+      <div class="text-sm text-foreground/80">Shield-wielding elites, teleporting units, thrall hordes</div>
+    </div>
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">EXPLOIT WEAKNESS</div>
+      <div class="text-sm text-green-400">⚡ Minimal armor, shield-dependent</div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">CRITICAL RULE</div>
+      <div class="text-sm text-red-400">Sustain fire to break shields</div>
+    </div>
+  </div>
+</div>
+
+### Loadout Components
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <h3 class="text-base font-semibold text-primary">Primary Weapons</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Sickle / Double-Edge</span>
+        <div class="text-xs text-foreground/60">Infinite ammo, melts shields</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Scorcher / Purifier</span>
+        <div class="text-xs text-foreground/60">Energy beams + fire</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Adjudicator AR</span>
+        <div class="text-xs text-foreground/60">High ROF bullet hose</div>
+      </div>
+      <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+        <span class="text-green-400 font-semibold">Arc Thrower</span>
+        <div class="text-xs text-foreground/60">SPECIALTY: Chain stun</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔧
+      </div>
+      <h3 class="text-base font-semibold text-primary">Sidearms</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Grenade Pistol</span>
+        <div class="text-xs text-foreground/60">Destroy warp beacons</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Loyalist</span>
+        <div class="text-xs text-foreground/60">Mini plasma gun</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Crisper</span>
+        <div class="text-xs text-foreground/60">Thrall crowd control</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💨
+      </div>
+      <h3 class="text-base font-semibold text-primary">Grenades</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+        <span class="text-green-400 font-semibold">Gas Grenades</span>
+        <div class="text-xs text-foreground/60">TOP CHOICE: Stuns crowds</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">High-Explosive</span>
+        <div class="text-xs text-foreground/60">Direct AoE damage</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⚡
+      </div>
+      <h3 class="text-base font-semibold text-primary">Team Boosters</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="text-xs text-foreground/60 mb-2">Each player takes ONE:</div>
+      <div class="flex flex-wrap gap-1">
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Stamina Enhancement</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Experimental Infusion</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Hellpod Optimization</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Vitality Enhancement</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="tip">
+**Arc Thrower Synergy:** One player with Arc Thrower provides incredible crowd control by chain-stunning groups. Others should follow up with raw damage to finish shielded enemies.
+</Callout>
+
+### Stratagem Setup
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="p-6 bg-card/50 rounded-lg border-l-4 border-primary">
+  <div class="text-sm font-semibold text-primary mb-4">🔫 SUSTAINED FIRE ROLE</div>
+  
+  <div class="space-y-3 mb-4">
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Support Weapon</span>
+      <span class="text-fs-gold">Machine Gun / Heavy MG</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Backpack</span>
+      <span class="text-fs-gold">Jump Pack</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Orbital</span>
+      <span class="text-fs-gold">Laser / HE Barrage</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Eagle</span>
+      <span class="text-fs-gold">Strafing Run</span>
+    </div>
+  </div>
+  
+  <div class="text-xs text-foreground/70 italic">
+    Pour sustained fire into shields. Strafing runs break shields instantly.
+  </div>
+</div>
+
+<div class="p-6 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+  <div class="text-sm font-semibold text-fs-gold mb-4">🎯 PRECISION ROLE</div>
+  
+  <div class="space-y-3 mb-4">
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Support Weapon</span>
+      <span class="text-fs-gold">Anti-Materiel Rifle / Autocannon</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Backpack</span>
+      <span class="text-fs-gold">Jump Pack / Shield</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Orbital</span>
+      <span class="text-fs-gold">Precision Strike</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Eagle</span>
+      <span class="text-fs-gold">500kg Bomb</span>
+    </div>
+  </div>
+  
+  <div class="text-xs text-foreground/70 italic">
+    Snipe elites and Harvesters. Destroy structures from safe distance.
+  </div>
+</div>
+
+</div>
+
+### Tactical Priority Matrix
+
+<div class="space-y-3 mb-8">
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">🔫 Rate of Fire</span>
+      <span class="text-fs-gold font-semibold">CRITICAL</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 95%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">👟 Mobility</span>
+      <span class="text-fs-gold font-semibold">HIGH</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">⚡ Shield Breaking</span>
+      <span class="text-fs-gold font-semibold">HIGH</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 80%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">💥 Anti-Armor</span>
+      <span class="text-foreground/60 font-semibold">MODERATE</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 55%"></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="success">
+**Eagle Strafing Runs** are exceptional against Illuminate—they strip shields, have heavy armor penetration, and can be called multiple times per mission.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Cog className="inline-block mr-3 mb-1" size={32} /> Automaton "Bot Buster" Squad
+
+<div class="space-y-6 mb-8">
+
+The hardest faction. **Heavy armor, devastating ranged firepower, and coordinated reinforcements.** Success requires every Helldiver to bring anti-tank capability, personal shields, and precision weapons. These robots will shred unprepared squads.
+
+</div>
+
+### Enemy Profile Card
+
+<div class="p-6 bg-red-500/10 rounded-lg border-2 border-red-500/30 mb-8">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">PRIMARY THREAT</div>
+      <div class="text-sm text-foreground/80">Hulks, tanks, turrets, armored devastators</div>
+    </div>
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">EXPLOIT WEAKNESS</div>
+      <div class="text-sm text-green-400">🎯 Weak point targeting</div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">CRITICAL RULE</div>
+      <div class="text-sm text-red-400">Everyone needs AT capability</div>
+    </div>
+  </div>
+</div>
+
+### Loadout Components
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <h3 class="text-base font-semibold text-primary">Primary Weapons</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+        <span class="text-green-400 font-semibold">Eruptor</span>
+        <div class="text-xs text-foreground/60">TOP: Explosive heavy pen</div>
+      </div>
+      <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+        <span class="text-green-400 font-semibold">Explosive Crossbow</span>
+        <div class="text-xs text-foreground/60">TOP: Fast explosive bolts</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Purifier / Scorcher</span>
+        <div class="text-xs text-foreground/60">Energy beam melts armor</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Sickle</span>
+        <div class="text-xs text-foreground/60">Sustained laser fire</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔧
+      </div>
+      <h3 class="text-base font-semibold text-primary">Sidearms</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+        <span class="text-green-400 font-semibold">Senator</span>
+        <div class="text-xs text-foreground/60">Heavy pen hand cannon</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Ultimatum</span>
+        <div class="text-xs text-foreground/60">Pocket AT launcher (1-2 shots)</div>
+      </div>
+      <div class="p-2 bg-card/70 rounded">
+        <span class="text-fs-gold font-semibold">Grenade Pistol</span>
+        <div class="text-xs text-foreground/60">Turret/emplacement killer</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💨
+      </div>
+      <h3 class="text-base font-semibold text-primary">Grenades</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+        <span class="text-green-400 font-semibold">Stun Grenades</span>
+        <div class="text-xs text-foreground/60">EMP: Freezes all bots</div>
+      </div>
+      <div class="p-2 bg-green-500/10 rounded border border-green-500/30">
+        <span class="text-green-400 font-semibold">Thermite</span>
+        <div class="text-xs text-foreground/60">Stick + burn bosses</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⚡
+      </div>
+      <h3 class="text-base font-semibold text-primary">Team Boosters</h3>
+    </div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="text-xs text-foreground/60 mb-2">Each player takes ONE:</div>
+      <div class="flex flex-wrap gap-1">
+        <span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded font-semibold">Localization Confusion</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Stamina Enhancement</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Experimental Infusion</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Hellpod Optimization</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="warning">
+**Localization Confusion is MANDATORY** against Automatons on Super Helldive. It cuts Bot Drop reinforcements by ~50%, which is the difference between success and being overwhelmed.
+</Callout>
+
+### Stratagem Setup
+
+<div class="space-y-4 mb-8">
+
+**Squad Philosophy:** 2 players carry Personal Shields + anti-tank weapons. 2 players carry heavy backpack weapons. Overlap firepower—everyone should be able to damage heavy armor.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="p-6 bg-card/50 rounded-lg border-l-4 border-primary">
+  <div class="text-sm font-semibold text-primary mb-4">🛡️ SHIELD + HANDHELD AT</div>
+  
+  <div class="space-y-3 mb-4">
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Support Weapon</span>
+      <span class="text-fs-gold">Railgun / Commando</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Backpack</span>
+      <span class="text-fs-gold">Personal Shield</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Orbital</span>
+      <span class="text-fs-gold">380mm HE Barrage</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Eagle</span>
+      <span class="text-fs-gold">Strafing Run</span>
+    </div>
+  </div>
+  
+  <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+    <div class="text-xs text-green-400 font-semibold mb-1">WHY THIS WORKS</div>
+    <div class="text-xs text-foreground/80">Railgun/Commando don't use backpack slot, so you can carry both AT weapon + shield for maximum survivability.</div>
+  </div>
+</div>
+
+<div class="p-6 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+  <div class="text-sm font-semibold text-fs-gold mb-4">💥 HEAVY BACKPACK WEAPON</div>
+  
+  <div class="space-y-3 mb-4">
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Support Weapon</span>
+      <span class="text-fs-gold">Recoilless Rifle / SPEAR</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Backpack</span>
+      <span class="text-fs-gold">(Weapon Backpack)</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Orbital</span>
+      <span class="text-fs-gold">Laser / Precision Strike</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded">
+      <span class="font-semibold">Eagle</span>
+      <span class="text-fs-gold">500kg Bomb</span>
+    </div>
+  </div>
+  
+  <div class="p-3 bg-primary/10 rounded border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-1">TRADE-OFF</div>
+    <div class="text-xs text-foreground/80">Maximum damage output but no personal shield. Use cover aggressively and rely on shield teammates.</div>
+  </div>
+</div>
+
+</div>
+
+<Callout variant="tip">
+**Suppression Mechanics:** Firing at Automatons reduces their accuracy. Constant offense = better defense. Don't stop shooting.
+</Callout>
+
+### Support Weapon Comparison
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Backpack Slot?</th>
+        <th class="text-center p-3 text-primary font-semibold">Best For</th>
+        <th class="text-center p-3 text-primary font-semibold">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Commando</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">NO ✓</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Multi-rocket burst</div>
+          <div class="text-xs text-foreground/60">Tanks, Hulks</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Short cooldown, massive damage</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Railgun</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">NO ✓</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Long-range sniper</div>
+          <div class="text-xs text-foreground/60">Devastators, weakpoints</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Unsafe mode = one-shot power</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Recoilless Rifle</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">YES</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Heavy single-target</div>
+          <div class="text-xs text-foreground/60">Boss bots</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Requires backpack reload station</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SPEAR</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">YES</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Lock-on missiles</div>
+          <div class="text-xs text-foreground/60">Gunships, moving targets</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Auto-targets flying units</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Tactical Priority Matrix
+
+<div class="space-y-3 mb-8">
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">💥 Anti-Tank Capability</span>
+      <span class="text-red-400 font-semibold">MANDATORY</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-red-500/50 to-red-500" style="width: 100%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">🛡️ Personal Shields</span>
+      <span class="text-fs-gold font-semibold">CRITICAL</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 90%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">🎯 Precision / Weakpoints</span>
+      <span class="text-fs-gold font-semibold">HIGH</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">⚡ EMP / Stun</span>
+      <span class="text-fs-gold font-semibold">HIGH</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 75%"></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">🔥 Fire Damage</span>
+      <span class="text-foreground/60 font-semibold">LOW</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 25%"></div>
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Booster Coordination Reference
+
+<div class="space-y-6 mb-8">
+
+Team Boosters apply to all 4 players but **cannot stack**. Each Helldiver must equip a different booster. Coordinate before deployment.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/30">
+  <div class="text-lg font-bold text-primary mb-4">🏆 Universal Core Boosters</div>
+  
+  <div class="space-y-3">
+    <div class="p-3 bg-card/50 rounded">
+      <div class="font-semibold text-foreground mb-1">Stamina Enhancement</div>
+      <div class="text-xs text-foreground/70">Bigger stamina bar + faster regen. Critical for all factions.</div>
+    </div>
+    
+    <div class="p-3 bg-card/50 rounded">
+      <div class="font-semibold text-foreground mb-1">Experimental Infusion</div>
+      <div class="text-xs text-foreground/70">Stims grant +10% speed and damage resistance. Essential for clutch moments.</div>
+    </div>
+    
+    <div class="p-3 bg-card/50 rounded">
+      <div class="font-semibold text-foreground mb-1">Hellpod Space Optimization</div>
+      <div class="text-xs text-foreground/70">Respawn with full ammo, grenades, and stims. Eliminates resupply issues.</div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-card/50 rounded-lg border-2 border-border">
+  <div class="text-lg font-bold text-foreground mb-4">🎯 Faction-Specific Boosters</div>
+  
+  <div class="space-y-3">
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="font-semibold text-green-400 mb-1">Localization Confusion</div>
+      <div class="text-xs text-foreground/70"><span class="text-fs-gold font-semibold">For Terminids & Automatons:</span> Cuts reinforcement events by ~50%. Game-changer on Super Helldive.</div>
+    </div>
+    
+    <div class="p-3 bg-card/70 rounded">
+      <div class="font-semibold text-foreground mb-1">Vitality Enhancement</div>
+      <div class="text-xs text-foreground/70"><span class="text-fs-gold font-semibold">For Illuminate:</span> Extra injury resistance when facing varied damage types.</div>
+    </div>
+  </div>
+</div>
+
+</div>
 
 <Callout variant="info">
-This section is under construction. Check back soon for updates.
+**Standard Loadout:** For most Super Helldive missions, run Stamina + Infusion + Hellpod + Localization (swap Localization for Vitality vs Illuminate if needed).
 </Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Quick Reference: Faction Priorities
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Factor</th>
+        <th class="text-center p-3 text-primary font-semibold">Terminids</th>
+        <th class="text-center p-3 text-primary font-semibold">Illuminate</th>
+        <th class="text-center p-3 text-primary font-semibold">Automatons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Primary Damage Type</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">🔥 Fire</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">🔫 Kinetic / Energy</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">💥 Explosive / Heavy Pen</div>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Engagement Range</td>
+        <td class="text-center p-3 text-foreground/80">Close-Medium</td>
+        <td class="text-center p-3 text-foreground/80">Medium</td>
+        <td class="text-center p-3 text-foreground/80">Medium-Long</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Armor Level</td>
+        <td class="text-center p-3 text-foreground/80">Low-Medium</td>
+        <td class="text-center p-3 text-foreground/80">Low (Shields)</td>
+        <td class="text-center p-3 text-foreground/80">Heavy</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Critical Stratagem</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Flamethrower</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Machine Gun</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Personal Shield</div>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Best Grenade</td>
+        <td class="text-center p-3 text-fs-gold">Gas</td>
+        <td class="text-center p-3 text-fs-gold">Gas</td>
+        <td class="text-center p-3 text-fs-gold">Stun / Thermite</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Mandatory Booster</td>
+        <td class="text-center p-3 text-fs-gold">Localization Confusion</td>
+        <td class="text-center p-3 text-fs-gold">Stamina Enhancement</td>
+        <td class="text-center p-3 text-fs-gold">Localization Confusion</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Tactical Notes
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+  <div class="text-xs text-primary font-semibold mb-3">TERMINIDS STRATEGY</div>
+  <ul class="text-sm space-y-2 text-foreground/80">
+    <li>✓ Burn everything constantly</li>
+    <li>✓ Never stop moving</li>
+    <li>✓ Seal bug holes with Grenade Pistol</li>
+    <li>✗ Don't all take flamers</li>
+    <li>✗ Don't stand still in swarms</li>
+  </ul>
+  <div class="text-xs mt-3 px-3 py-2 bg-primary/10 rounded text-primary">
+    Best for: Area denial, kiting, fire superiority
+  </div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+  <div class="text-xs text-fs-gold font-semibold mb-3">ILLUMINATE STRATEGY</div>
+  <ul class="text-sm space-y-2 text-foreground/80">
+    <li>✓ Sustain fire to break shields</li>
+    <li>✓ Use Arc Thrower for crowd stun</li>
+    <li>✓ Strafing runs strip shields fast</li>
+    <li>✗ Don't use slow weapons</li>
+    <li>✗ Don't ignore warp beacons</li>
+  </ul>
+  <div class="text-xs mt-3 px-3 py-2 bg-fs-gold/10 rounded text-fs-gold">
+    Best for: High ROF, shield breaking, mobility
+  </div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-red-500">
+  <div class="text-xs text-red-400 font-semibold mb-3">AUTOMATON STRATEGY</div>
+  <ul class="text-sm space-y-2 text-foreground/80">
+    <li>✓ Everyone brings AT weapons</li>
+    <li>✓ Use Personal Shields religiously</li>
+    <li>✓ Target weak points (red sensors)</li>
+    <li>✗ Don't skip Localization Confusion</li>
+    <li>✗ Don't expose yourself without cover</li>
+  </ul>
+  <div class="text-xs mt-3 px-3 py-2 bg-red-500/10 rounded text-red-400">
+    Best for: Precision, heavy armor penetration, defense
+  </div>
+</div>
+
+</div>
+
+<Callout variant="success">
+**Coordinate pre-mission.** Discuss roles, confirm booster distribution, and ensure weapon variety. A well-coordinated squad with diverse loadouts will outperform four identically-equipped Helldivers every time.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
