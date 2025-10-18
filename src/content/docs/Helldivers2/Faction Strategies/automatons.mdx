@@ -1,0 +1,1136 @@
+---
+title: Automatons Tactical Combat Guide
+---
+
+import Callout from "@/components/Callout.astro";
+import { Shield, Target, Crosshair, Radio, Building } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Fighting Automatons requires precision warfare, not brute force.** These cybernetic soldiers use cover, suppression fire, and coordinated reinforcements to pin you down. Unlike the Terminid swarms, bots punish aggressive play and reward tactical positioning, weak point targeting, and reinforcement denial.
+
+This guide provides scenario-based tactics organized by your current combat situation. Scan to your scenario, extract your tactical response, and adapt to bot warfare. Difficulty scaling is marked throughout with 🟢 (1-3), 🟡 (4-6), 🔴 (7-9), and ⚫ (Helldive+).
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Shield className="inline-block mr-3 mb-1" size={32} /> Core Automaton Combat Principles
+
+<div class="space-y-6 mb-8">
+
+Before diving into scenarios, internalize these fundamental differences between bot and bug combat. Automatons operate on completely different tactical logic that requires a mindset shift.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Precision Over Volume</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Bots have specific weak points that instantly kill. One accurate shot beats ten body shots.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Priority:</span> <span class="text-foreground/70">Headshots on infantry, weak spots on heavies</span></div>
+      <div><span class="text-fs-gold font-semibold">Result:</span> <span class="text-foreground/70">Ammo conservation + faster kills</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🛡️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Cover is Survival</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Bots use accurate suppression fire. Standing in the open means instant death at 🔴 7+.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Tactics:</span> <span class="text-foreground/70">Peek-shoot from rocks, trenches, buildings</span></div>
+      <div><span class="text-fs-gold font-semibold">Movement:</span> <span class="text-foreground/70">Sprint between cover, never linger in open</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        📡
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Reinforcement Denial</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Bots call dropships via flares. Stop the flare = stop the reinforcements.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Window:</span> <span class="text-foreground/70">~2 seconds from flare prep to launch</span></div>
+      <div><span class="text-fs-gold font-semibold">Priority Kill:</span> <span class="text-foreground/70">Troopers/Raiders pointing upward</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⚡
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Energy > Ballistic</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Bots are weak to energy weapons and arc damage. Exploit this consistently.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best Weapons:</span> <span class="text-foreground/70">Sickle, Scorcher, Purifier, Arc Thrower</span></div>
+      <div><span class="text-fs-gold font-semibold">Stratagems:</span> <span class="text-foreground/70">Tesla Tower, Arc Thrower, Laser Cannon</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎖️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Armor Penetration Mandatory</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Medium+ armor pen required for all heavies. Light pen primaries struggle at 🟡 4+.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Primary:</span> <span class="text-foreground/70">Dominator, Scorcher, Sickle, Slugger</span></div>
+      <div><span class="text-fs-gold font-semibold">Support:</span> <span class="text-foreground/70">Autocannon, Railgun, Quasar, Recoilless</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        👥
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Slow, Methodical Clears</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Rushing gets you surrounded. Coordinate advances, clear systematically, watch flanks.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Pace:</span> <span class="text-foreground/70">Clear patrol → advance → clear next patrol</span></div>
+      <div><span class="text-fs-gold font-semibold">Never:</span> <span class="text-foreground/70">Run past patrols (they call reinforcements)</span></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**Critical Distinction:** Bots fight like YOU do. They use tactics, cover, and suppression. Treat every engagement like a PvP match where the enemy has aim assist. Aggressive Terminid tactics will get you killed against bots.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Radio className="inline-block mr-3 mb-1" size={32} /> Scenario 1: Stopping Reinforcement Chains
+
+<div class="space-y-6 mb-8">
+
+**Situation:** You engage a patrol. A Trooper points skyward with a red flare beacon. Dropships incoming. More bots arrive. Another flare. Endless cycle.
+
+**Why This Happens:** Bot reinforcements have a map-wide ~2-5 minute cooldown AFTER the dropship arrives. But if you can't clear the first wave fast, another bot will call another dropship immediately, restarting the cycle.
+
+</div>
+
+### Immediate Response
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ❌
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">WRONG: Spray and Pray</div>
+        <div class="text-xs text-foreground/60">Panic shooting at everything</div>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">WHAT GOES WRONG</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Miss the flare-caller while shooting heavies</li>
+        <li>• Flare launches, dropship arrives in 30 seconds</li>
+        <li>• New bots immediately call another flare</li>
+        <li>• 3 dropships later you're overrun</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ✓
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">RIGHT: Priority Targeting</div>
+        <div class="text-xs text-foreground/60">Flare-callers die first, always</div>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">HOW IT WORKS</div>
+      <ol class="text-xs text-foreground/80 space-y-2">
+        <li>1. <span class="text-fs-gold font-semibold">Scan for flare animation:</span> Bot pointing flare beacon upward</li>
+        <li>2. <span class="text-fs-gold font-semibold">Kill immediately:</span> You have ~2 seconds before launch</li>
+        <li>3. <span class="text-fs-gold font-semibold">If flare launches:</span> Shoot dropship engines OR accept it and prepare</li>
+        <li>4. <span class="text-fs-gold font-semibold">Clear fast:</span> Kill dropship wave before another flare</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+### Tactical Setup
+
+<div class="space-y-4 mb-8">
+
+**Pre-Engagement Positioning** (🟡 4+ difficulties):
+- Identify cover BEFORE shooting
+- Position team with overlapping firing lanes
+- One player watches for flares specifically
+- Have anti-dropship weapon ready (Railgun, Recoilless, Quasar)
+
+**During Engagement**:
+1. Call out "FLARE!" immediately when you see it
+2. All players shift fire to flare-caller (usually Trooper/Raider/Marauder)
+3. If flare launches, designate one player to shoot dropship engines
+4. Other players focus on clearing infantry fast
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Enemy Type</th>
+        <th class="text-center p-3 text-primary font-semibold">Can Call Flares?</th>
+        <th class="text-center p-3 text-primary font-semibold">Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Trooper / Raider / Marauder</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-bold">YES</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-red-500/20 text-red-400 text-xs rounded-full font-semibold">HIGHEST</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Commissar</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-bold">YES</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-red-500/20 text-red-400 text-xs rounded-full font-semibold">HIGHEST</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Devastator / Hulk / Tank</td>
+        <td class="text-center p-3">
+          <div class="text-green-400">No</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Secondary</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Scout Strider (pilot)</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-bold">YES (if survives walker destruction)</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">Kill walker + pilot</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip">
+**Pro Tip:** After a successful dropship spawn, there's a ~2 minute map-wide cooldown before another can be called. Use this window aggressively to push objectives. Communicate when dropship arrives: "Bot drop cooldown active, push now!"
+</Callout>
+
+### Loadout Recommendations
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">ANTI-DROPSHIP BUILDS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ <span class="text-fs-gold">Railgun (Unsafe Mode)</span> — 1-shot dropship engines</li>
+      <li>✓ <span class="text-fs-gold">Recoilless Rifle</span> — 1-shot engines, team reload</li>
+      <li>✓ <span class="text-fs-gold">Quasar Cannon</span> — 1-shot engines, no backpack, slower</li>
+      <li>✓ <span class="text-fs-gold">EAT</span> — 1-shot engines, disposable, call frequently</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: Dedicated anti-reinforcement role
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">FAST INFANTRY CLEAR</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ <span class="text-fs-gold">Arc Thrower</span> — Chains through grouped bots</li>
+      <li>✓ <span class="text-fs-gold">Sickle</span> — Accurate, infinite ammo for headshots</li>
+      <li>✓ <span class="text-fs-gold">Dominator</span> — Medium pen, fast TTK on infantry</li>
+      <li>✓ <span class="text-fs-gold">Autocannon</span> — Destroys everything fast</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-fs-gold/10 rounded text-fs-gold">
+      Best for: Clearing waves before next flare
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Scenario 2: Heavy Unit Weak Point Targeting
+
+<div class="space-y-6 mb-8">
+
+**Situation:** You're facing Hulks, Devastators, Tanks, or Factory Striders. Body shots ricochet. You're wasting ammo. They're not dying.
+
+**Why This Happens:** Bot heavies have heavy armor plating everywhere EXCEPT specific weak points. Hit the weak point = instant kill or massive damage. Miss it = you're tickling them.
+
+</div>
+
+### Complete Weak Point Matrix
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Enemy</th>
+        <th class="text-left p-3 text-primary font-semibold">Primary Weak Point</th>
+        <th class="text-left p-3 text-primary font-semibold">Secondary Weak Point</th>
+        <th class="text-left p-3 text-primary font-semibold">Best Weapons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Hulk (all types)</td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Red eye slit (face)</div>
+          <div class="text-xs text-foreground/60">Front-facing, glowing red</div>
+        </td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Orange heat sinks (back)</div>
+          <div class="text-xs text-foreground/60">Two glowing orange vents</div>
+        </td>
+        <td class="p-3 text-xs">
+          Railgun (2-shot), Quasar, Anti-Materiel Rifle, precision primaries
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Devastators</td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Red eye (head)</div>
+          <div class="text-xs text-foreground/60">Instant kill with headshots</div>
+        </td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Weapon arms</div>
+          <div class="text-xs text-foreground/60">Disarm then finish</div>
+        </td>
+        <td class="p-3 text-xs">
+          Dominator (4-5 shots to head), Slugger, Scorcher, precision weapons
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Scout Strider</td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Pilot (rear opening)</div>
+          <div class="text-xs text-foreground/60">Exposed from behind</div>
+        </td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Leg joints</div>
+          <div class="text-xs text-foreground/60">Destroy legs to immobilize</div>
+        </td>
+        <td class="p-3 text-xs">
+          Any medium+ pen weapon on pilot, explosives on legs
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Tank (Shredder)</td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Rear exhaust vent</div>
+          <div class="text-xs text-foreground/60">Behind turret, glowing</div>
+        </td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Turret itself</div>
+          <div class="text-xs text-foreground/60">Destroy turret to disable</div>
+        </td>
+        <td class="p-3 text-xs">
+          EAT, Quasar, Recoilless (rear vent), Orbital strikes
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Tank (Annihilator)</td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">No obvious weak point</div>
+          <div class="text-xs text-foreground/60">Extremely durable</div>
+        </td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">—</div>
+        </td>
+        <td class="p-3 text-xs">
+          Orbital Laser, Orbital Precision Strike, 500kg Bomb, sustained anti-tank fire
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Factory Strider</td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Face "eye visor" (front)</div>
+          <div class="text-xs text-foreground/60">Thin red strip between armor</div>
+        </td>
+        <td class="p-3">
+          <div class="text-fs-gold font-semibold mb-1">Underbelly factory door</div>
+          <div class="text-xs text-foreground/60">When spawning Devastators</div>
+        </td>
+        <td class="p-3 text-xs">
+          Railgun/Quasar (6 shots to face), rockets into belly when door opens
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Factory Strider Detailed Breakdown
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Factory Strider (AT-AT)</h3>
+      <p class="text-sm text-foreground/60">Appears 🔴 Difficulty 7+ • Dropped by Dropships • Walking Devastator Factory</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">4</div>
+      <div class="text-xs text-foreground/60">destroyable components</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">DESTROY WEAPONS FIRST (Priority)</div>
+      <ol class="text-sm space-y-3 text-foreground/80">
+        <li><span class="text-fs-gold font-bold">1. Chin-mounted miniguns</span> — Shred Helldivers in 1-2 seconds. <span class="text-green-400">Destroy with medium pen primaries (4-5 shots each gun)</span></li>
+        <li><span class="text-fs-gold font-bold">2. Dorsal laser cannon</span> — 360° rotating turret, extreme range, ragdolls on near-miss. <span class="text-green-400">Destroy with 2 anti-tank rockets</span></li>
+        <li><span class="text-fs-gold font-bold">3. Underbelly Devastator factory</span> — Spawns 4 Devastators periodically. <span class="text-green-400">Shoot into open door when spawning</span></li>
+      </ol>
+    </div>
+    
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">KILL OPTIONS (After Disarming)</div>
+      <div class="space-y-3">
+        <div class="p-3 bg-primary/10 rounded">
+          <div class="text-sm font-semibold text-fs-gold mb-1">Option 1: Face Weak Point</div>
+          <div class="text-xs text-foreground/70">Thin horizontal red "eye" between armor plates. 6 Railgun/Quasar shots or sustained Autocannon fire</div>
+        </div>
+        <div class="p-3 bg-primary/10 rounded">
+          <div class="text-sm font-semibold text-fs-gold mb-1">Option 2: Underbelly Rush</div>
+          <div class="text-xs text-foreground/70">Get underneath (after disabling chin guns). Fire rockets/HMG into factory door when it opens. High risk, high reward</div>
+        </div>
+        <div class="p-3 bg-primary/10 rounded">
+          <div class="text-sm font-semibold text-fs-gold mb-1">Option 3: Orbital Spam</div>
+          <div class="text-xs text-foreground/70">Walking Barrage (throw along its length), Orbital Laser, multiple 500kg bombs. Most reliable method</div>
+        </div>
+        <div class="p-3 bg-primary/10 rounded">
+          <div class="text-sm font-semibold text-fs-gold mb-1">Option 4: Hellpod Drop</div>
+          <div class="text-xs text-foreground/70">~5 Hellpods (reinforcements, support weapons) landing on its back will destroy it. Risky but hilarious</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">TACTICS THAT WORK</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Disarm weapons first</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Team focus fire</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Orbital barrages</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Kite while shooting</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">FATAL MISTAKES</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Standing in front of it</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Ignoring chin guns</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Solo rushing belly</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Body-shotting armor</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">TEAM COORDINATION</div>
+    <p class="text-sm text-foreground/80">Designate roles: <span class="text-fs-gold">Player 1-2 destroy miniguns</span>, <span class="text-fs-gold">Player 3 takes out dorsal cannon</span>, <span class="text-fs-gold">Player 4 calls orbital strikes</span>. After disarming, all players focus on face weak point or coordinate belly rush. Communication prevents wasted stratagems and ammo.</p>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Difficulty Scaling:** Factory Striders start appearing at 🔴 Difficulty 7. At ⚫ Helldive+, expect them in PAIRS during certain objectives. Always eliminate Devastators it spawns immediately—they have jump packs at high difficulties and will overwhelm you.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Crosshair className="inline-block mr-3 mb-1" size={32} /> Scenario 3: Under Heavy Suppression Fire
+
+<div class="space-y-6 mb-8">
+
+**Situation:** You peek from cover and immediately take sustained fire from multiple directions. Can't return fire effectively. Team pinned down. Objective timer running out.
+
+**Why This Happens:** Bots use suppression tactics. Devastators, Hulks, and heavy units coordinate fire to keep you in cover while infantry flanks or calls reinforcements.
+
+</div>
+
+### Breaking Suppression: Tactical Options
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">OPTION 1: SMOKE BREAK</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Throw smoke between you and enemy</li>
+      <li>✓ Sprint to new cover position during smoke</li>
+      <li>✓ Flank while they're blind</li>
+      <li>✓ Reposition to better angle</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best when: You need to move, not fight
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">OPTION 2: ORBITAL STRIKE</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Railcannon Strike (targets heavies)</li>
+      <li>✓ Precision Strike on grouped enemies</li>
+      <li>✓ 380mm Barrage on fortified position</li>
+      <li>✓ EMS Strike to stun, then push</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-fs-gold/10 rounded text-fs-gold">
+      Best when: Enemies are stationary/grouped
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-500 font-semibold mb-3">OPTION 3: SHIELD PUSH</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Shield Generator Pack + advance</li>
+      <li>✓ Ballistic Shield + Revolver combo</li>
+      <li>✓ Shield Generator Relay for team</li>
+      <li>✓ Tank hits, team shoots from behind</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-500">
+      Best when: You need to hold ground
+    </div>
+  </div>
+</div>
+
+### Cover Movement Technique
+
+<div class="space-y-6 mb-8">
+
+Bots punish poor positioning. Master cover-to-cover movement at 🟡 4+ or die constantly.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Cover Type</th>
+        <th class="text-center p-3 text-primary font-semibold">Protection Level</th>
+        <th class="text-left p-3 text-primary font-semibold">When to Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Rocks / Large Boulders</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Excellent</div>
+        </td>
+        <td class="p-3 text-xs text-foreground/80">
+          Best cover. Blocks all fire. Can't be destroyed. Peek from sides, not top.
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Trenches / Ditches</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Excellent</div>
+        </td>
+        <td class="p-3 text-xs text-foreground/80">
+          Full protection when crouched. Beware: vulnerable to flanking. Watch entrances.
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Building Walls</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Good</div>
+        </td>
+        <td class="p-3 text-xs text-foreground/80">
+          Solid cover, but destructible by tank/cannon fire. Don't stay if taking heavy weapons fire.
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Metal Crates / Containers</td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400">Fair</div>
+        </td>
+        <td class="p-3 text-xs text-foreground/80">
+          Blocks most fire but can be destroyed. Temporary cover only. Move before destroyed.
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Destroyed Dropship Wreckage</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Good</div>
+        </td>
+        <td class="p-3 text-xs text-foreground/80">
+          Excellent improvised cover. Large, blocks fire. Be aware some bots can pin underneath it.
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Hills / Terrain Elevation</td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400">Situational</div>
+        </td>
+        <td class="p-3 text-xs text-foreground/80">
+          Blocks line of sight when used correctly. Can also expose you if enemies on higher ground.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="warning">
+**Critical Mistake:** Do NOT peek from the same cover position repeatedly. Bots pre-fire peek spots. Peek left, duck, peek right next time. Vary your timing. Predictable peeking = instant death at 🔴 7+.
+</Callout>
+
+### Loadout Recommendations
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">DEFENSIVE / SHIELD BUILDS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ <span class="text-fs-gold">Shield Generator Pack</span> + Any primary</li>
+      <li>✓ <span class="text-fs-gold">Ballistic Shield</span> + Senator/Verdict</li>
+      <li>✓ <span class="text-fs-gold">Shield Generator Relay</span> (team stationary defense)</li>
+      <li>✓ Smoke grenades for repositioning</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Drawback: Less offensive firepower
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">AGGRO PRESSURE BUILDS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ <span class="text-fs-gold">Autocannon</span> — Destroys cover, kills everything</li>
+      <li>✓ <span class="text-fs-gold">Grenade Launcher</span> — Flushes enemies from cover</li>
+      <li>✓ <span class="text-fs-gold">Machine Gun</span> — Sustained suppression fire back</li>
+      <li>✓ <span class="text-fs-gold">Eagle Airstrikes</span> — Multiple for constant pressure</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-fs-gold/10 rounded text-fs-gold">
+      Philosophy: Best defense is offense
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Building className="inline-block mr-3 mb-1" size={32} /> Scenario 4: Breaching Fortified Bot Outposts
+
+<div class="space-y-6 mb-8">
+
+**Situation:** You need to destroy a bot fabricator/outpost. It's surrounded by turrets, patrols, and defensive structures. Direct assault gets you shredded.
+
+**Why This Happens:** Bot outposts are designed as defensive fortresses with overlapping fields of fire. Frontal assault without strategy fails at 🟡 4+.
+
+</div>
+
+### Breach Options by Difficulty
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-xl">
+        🟢
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Difficulties 1-3: Direct Assault</div>
+        <div class="text-xs text-foreground/60">Low enemy density, weak defenses</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Tactic:</span> Run in, shoot everything, throw Eagle Airstrike on fabricator. Minimal strategy needed.
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center text-xl">
+        🟡
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Difficulties 4-6: Suppression + Breach</div>
+        <div class="text-xs text-foreground/60">Increased turrets and patrols</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 mb-4">
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Step 1:</span> Scout outpost perimeter, identify turrets
+      </div>
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Step 2:</span> Destroy turrets from range (Railgun, Autocannon)
+      </div>
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Step 3:</span> Clear perimeter patrol
+      </div>
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Step 4:</span> Breach, destroy fabricator with explosives
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        🔴
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Difficulties 7-9: Orbital Strike Method</div>
+        <div class="text-xs text-foreground/60">Heavy defenses, reinforcements likely</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 mb-4">
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Best approach:</span> Don't breach at all. Use 380mm Barrage or Walking Barrage from outside outpost range.
+      </div>
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Alternative:</span> Destroy Stratagem Jammer first (if present), THEN orbital strike
+      </div>
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Cleanup:</span> Clear survivors with team, avoid staying inside outpost
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-gray-500/20 flex items-center justify-center text-xl">
+        ⚫
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">Helldive+: Stealth or Die</div>
+        <div class="text-xs text-foreground/60">Maximum defenses, certain death if detected</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 mb-4">
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Preferred:</span> Stealth past outpost entirely if not required objective
+      </div>
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">If required:</span> Multiple orbital barrages + Eagle strikes simultaneously. Team coordinates to hit from outside during bombardment window
+      </div>
+      <div class="text-sm p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Extract immediately:</span> After fabricator destroyed, don't linger. Reinforcements incoming
+      </div>
+    </div>
+  </div>
+</div>
+
+### Stratagem Jammer Towers (Highest Priority)
+
+<div class="p-6 bg-red-500/10 rounded-lg border-2 border-red-500/30 mb-8">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="text-4xl">📡❌</div>
+    <div>
+      <h3 class="text-lg font-semibold text-red-400">Stratagem Jammer Towers</h3>
+      <p class="text-xs text-foreground/60">Tall forked towers that prevent stratagem use in large radius</p>
+    </div>
+  </div>
+  
+  <div class="space-y-3 mb-4">
+    <div class="p-3 bg-card/50 rounded">
+      <div class="text-sm font-semibold text-fs-gold mb-2">CRITICAL: Destroy BEFORE breaching outpost</div>
+      <p class="text-xs text-foreground/80">If jammer active, you cannot call reinforcements, support weapons, or strikes inside the radius. You're fighting with only your loadout. Locate tower (usually center of outpost), destroy from outside jammer radius using anti-tank weapon or primary fire.</p>
+    </div>
+    <div class="p-3 bg-card/50 rounded">
+      <div class="text-sm font-semibold text-fs-gold mb-2">Identification</div>
+      <p class="text-xs text-foreground/80">When you try to call stratagem and it shows red/blocked icon with "JAMMED" indicator, there's a tower nearby. Look for tall structure with forked top, often glowing red.</p>
+    </div>
+  </div>
+</div>
+
+### Detector Towers (Automatic Reinforcement Trigger)
+
+<div class="p-6 bg-yellow-500/10 rounded-lg border-2 border-yellow-500/30 mb-8">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="text-4xl">👁️📡</div>
+    <div>
+      <h3 class="text-lg font-semibold text-yellow-400">Detector Towers</h3>
+      <p class="text-xs text-foreground/60">Rotating searchlight beams that trigger dropships when you're spotted</p>
+    </div>
+  </div>
+  
+  <div class="space-y-3 mb-4">
+    <div class="p-3 bg-card/50 rounded">
+      <div class="text-sm font-semibold text-fs-gold mb-2">How They Work</div>
+      <p class="text-xs text-foreground/80">Red searchlight beam rotates. If beam touches you, instant dropship called. Can retrigger IMMEDIATELY after dropship leaves (no cooldown like regular flares). Creates endless reinforcement spam if not destroyed.</p>
+    </div>
+    <div class="p-3 bg-card/50 rounded">
+      <div class="text-sm font-semibold text-fs-gold mb-2">Counter Tactics</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Destroy from outside beam range (anti-tank weapons)</li>
+        <li>• Avoid beam while sprinting through (risky)</li>
+        <li>• Use cover to block line of sight</li>
+        <li>• Orbital strike the tower before entering area</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Pro Strat:** At ⚫ Helldive, coordinate full team orbital loadouts for outpost clearing. Player 1: 380mm Barrage. Player 2: Orbital Laser. Player 3: Walking Barrage. Player 4: Multiple Eagle Airstrikes. Call everything simultaneously from outside outpost, wait for explosions to stop, then quick in-and-out to confirm fabricator destroyed.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Quick Reference: Priority Target Matrix
+
+<div class="space-y-6 mb-8">
+
+In any engagement, kill in this order. Adjust based on immediate threat, but this is the baseline priority system.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-center p-3 text-primary font-semibold">Priority</th>
+        <th class="text-left p-3 text-primary font-semibold">Target</th>
+        <th class="text-left p-3 text-primary font-semibold">Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="text-center p-3">
+          <span class="px-3 py-2 bg-red-500/20 text-red-400 text-sm rounded font-bold">1</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">Bots launching flares (Trooper/Raider/Commissar)</td>
+        <td class="p-3 text-xs text-foreground/80">Calling dropship = more enemies. Stop this first or get overwhelmed.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="text-center p-3">
+          <span class="px-3 py-2 bg-red-500/20 text-red-400 text-sm rounded font-bold">2</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">Devastators (Rocket/Gun types)</td>
+        <td class="p-3 text-xs text-foreground/80">High DPS, accurate, can kill you in 2-3 seconds. Headshot kills them instantly.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="text-center p-3">
+          <span class="px-3 py-2 bg-yellow-500/20 text-yellow-400 text-sm rounded font-bold">3</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">Berserkers</td>
+        <td class="p-3 text-xs text-foreground/80">Fast melee, will flank and kill you from behind. Shoot head or waist weak point.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="text-center p-3">
+          <span class="px-3 py-2 bg-yellow-500/20 text-yellow-400 text-sm rounded font-bold">4</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">Hulks</td>
+        <td class="p-3 text-xs text-foreground/80">Tanky, high damage, but slow. Kill after immediate threats handled. Hit eye or heat sinks.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="text-center p-3">
+          <span class="px-3 py-2 bg-yellow-500/20 text-yellow-400 text-sm rounded font-bold">5</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">Scout Striders</td>
+        <td class="p-3 text-xs text-foreground/80">Mobile, shoots over cover. Kill pilot from behind or destroy legs to immobilize.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="text-center p-3">
+          <span class="px-3 py-2 bg-green-500/20 text-green-400 text-sm rounded font-bold">6</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">Tanks / Factory Striders</td>
+        <td class="p-3 text-xs text-foreground/80">Highest HP but slowest. Kite while killing other threats, then focus with anti-tank.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="text-center p-3">
+          <span class="px-3 py-2 bg-green-500/20 text-green-400 text-sm rounded font-bold">7</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">Troopers / Raiders / Marauders (not launching flares)</td>
+        <td class="p-3 text-xs text-foreground/80">Basic infantry. Low threat individually. Clean up last after heavies dead.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="info">
+**Context Override:** This priority list assumes standard engagement. Override if: Tank/Strider is about to kill teammate (save them first), Hulk is in your face (kill it immediately), or you're extracting and need to focus on immediate threats blocking escape.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Recommended Loadouts by Role
+
+<div class="space-y-8 mb-10">
+
+### Anti-Armor Specialist
+
+<div class="space-y-4 mb-8">
+
+**Role:** Dedicated heavy killer. You delete Hulks, Tanks, Striders, and dropships.
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-3">LOADOUT</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li><span class="text-fs-gold font-semibold">Primary:</span> Scorcher or Sickle (for infantry cleanup)</li>
+      <li><span class="text-fs-gold font-semibold">Secondary:</span> Senator or Verdict</li>
+      <li><span class="text-fs-gold font-semibold">Support:</span> Railgun (Unsafe Mode) or Quasar Cannon</li>
+      <li><span class="text-fs-gold font-semibold">Grenade:</span> Thermite (sticks to heavies)</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 1:</span> EAT (backup anti-tank)</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 2:</span> Orbital Railcannon Strike</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 3:</span> Orbital Laser</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 4:</span> Supply Pack or Shield Generator Pack</li>
+    </ul>
+  </div>
+  
+  <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-3">TACTICS</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>• Position at range, use Railgun/Quasar on weak points</li>
+      <li>• Call EATs frequently as backup ammo</li>
+      <li>• Save Railcannon/Laser for Factory Striders or Tank emergencies</li>
+      <li>• Communicate heavy targets to team</li>
+      <li>• Don't rush into frontline (you're support)</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+### Infantry Shredder
+
+<div class="space-y-4 mb-8">
+
+**Role:** Fast clear of Troopers, Raiders, Devastators. Stop flares, mop up infantry.
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-3">LOADOUT</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li><span class="text-fs-gold font-semibold">Primary:</span> Dominator or Slugger (medium pen, 1-tap headshots)</li>
+      <li><span class="text-fs-gold font-semibold">Secondary:</span> Redeemer (high ROF close range)</li>
+      <li><span class="text-fs-gold font-semibold">Support:</span> Autocannon or Arc Thrower</li>
+      <li><span class="text-fs-gold font-semibold">Grenade:</span> Stun or Gas (crowd control)</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 1:</span> Machine Gun Sentry (constant pressure)</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 2:</span> Autocannon Sentry</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 3:</span> Eagle Cluster Bomb</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 4:</span> Eagle Airstrike</li>
+    </ul>
+  </div>
+  
+  <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-3">TACTICS</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>• Place sentries at choke points before engagements</li>
+      <li>• Focus fire on flare-callers immediately</li>
+      <li>• Headshot Devastators on sight (instant kill)</li>
+      <li>• Use Arc Thrower on grouped infantry (chains kills)</li>
+      <li>• Save Eagle strikes for dropship arrivals</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+### Defensive Support
+
+<div class="space-y-4 mb-8">
+
+**Role:** Tank damage, revive team, hold ground during objectives.
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-3">LOADOUT</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li><span class="text-fs-gold font-semibold">Primary:</span> Purifier (energy weapon, good vs bots)</li>
+      <li><span class="text-fs-gold font-semibold">Secondary:</span> Grenade Pistol</li>
+      <li><span class="text-fs-gold font-semibold">Support:</span> Shield Generator Pack</li>
+      <li><span class="text-fs-gold font-semibold">Grenade:</span> Smoke</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 1:</span> Shield Generator Relay</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 2:</span> Mortar Sentry</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 3:</span> EMS Mortar Sentry</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 4:</span> Orbital Gas Strike or EMS Strike</li>
+    </ul>
+  </div>
+  
+  <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-3">TACTICS</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>• Deploy Shield Relay at objective BEFORE starting it</li>
+      <li>• Place Mortars to cover approaches</li>
+      <li>• Use personal shield to revive downed teammates</li>
+      <li>• Smoke grenades for emergency repositioning</li>
+      <li>• Focus on keeping team alive, not max kills</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+### Flexible All-Rounder
+
+<div class="space-y-4 mb-8">
+
+**Role:** Adaptable loadout for any situation. Good when team composition unknown.
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-3">LOADOUT</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li><span class="text-fs-gold font-semibold">Primary:</span> Sickle (infinite ammo, medium pen)</li>
+      <li><span class="text-fs-gold font-semibold">Secondary:</span> Senator</li>
+      <li><span class="text-fs-gold font-semibold">Support:</span> Autocannon (kills everything)</li>
+      <li><span class="text-fs-gold font-semibold">Grenade:</span> Thermite or Stun</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 1:</span> Orbital Precision Strike</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 2:</span> Eagle 500kg Bomb</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 3:</span> Eagle Airstrike</li>
+      <li><span class="text-fs-gold font-semibold">Stratagem 4:</span> Resupply or Shield Pack</li>
+    </ul>
+  </div>
+  
+  <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-3">TACTICS</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>• Sickle for infantry headshots (never reload)</li>
+      <li>• Autocannon for heavies and dropships</li>
+      <li>• Orbital strikes for fortified positions</li>
+      <li>• Eagle strikes for emergency crowds or heavies</li>
+      <li>• Adapt tactics based on what team needs</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Team Booster Recommendations
+
+<div class="space-y-6 mb-8">
+
+Boosters stack team-wide but cannot duplicate. Coordinate before drop for maximum efficiency.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Booster</th>
+        <th class="text-left p-3 text-primary font-semibold">Effect</th>
+        <th class="text-left p-3 text-primary font-semibold">Priority vs Bots</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Hellpod Space Optimization</td>
+        <td class="p-3 text-xs text-foreground/80">
+          More resupplies and support weapons from drops
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-fs-gold/20 text-fs-gold text-xs rounded-full font-semibold">HIGH</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Localization Confusion</td>
+        <td class="p-3 text-xs text-foreground/80">
+          Increases cooldown between bot reinforcement calls
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-fs-gold/20 text-fs-gold text-xs rounded-full font-semibold">HIGH</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Stamina Enhancement</td>
+        <td class="p-3 text-xs text-foreground/80">
+          Faster stamina regen for sprint/cover movement
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full">MEDIUM</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Muscle Enhancement</td>
+        <td class="p-3 text-xs text-foreground/80">
+          Faster throw speed for grenades/stratagems
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full">MEDIUM</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Flexible Reinforcement Budget</td>
+        <td class="p-3 text-xs text-foreground/80">
+          More reinforcements available (deaths matter less)
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">LOW (learn not to die instead)</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Tactical Mindset: Bots vs Bugs
+
+<div class="space-y-6 mb-10">
+
+Fighting bots requires a complete mental shift from fighting bugs. Here's the philosophical difference:
+
+**Terminids:** Reactive combat. Bugs come to you. You respond with area denial and crowd control. Constant motion required.
+
+**Automatons:** Proactive combat. You engage on YOUR terms. Plan before shooting. Use cover religiously. Precision over speed.
+
+The single biggest mistake players make transitioning to bots is bringing bug tactics to bot fights. Against bugs, you can be aggressive, sprint through enemies, and overwhelm them with firepower. Against bots, that gets you killed in seconds.
+
+Bots punish:
+- Staying in the open
+- Predictable movement
+- Ignoring flares
+- Poor positioning
+- Wasting anti-tank on infantry
+
+Bots reward:
+- Cover usage
+- Weak point accuracy
+- Reinforcement denial
+- Coordinated orbital strikes
+- Patience and positioning
+
+The difficulty gap between bugs and bots at high levels comes down to this: bugs test your ability to handle chaos and maintain awareness. Bots test your ability to execute tactics and coordinate with your team.
+
+One final note: **Stealth is viable against bots in ways it isn't against bugs.** If an objective doesn't require combat, consider bypassing patrols entirely. Avoiding detection means no flares, no dropships, no attrition. Sometimes the best fight is the one you never start.
+
+Now get out there, Helldiver, and show these tin cans that flesh beats steel when backed by Superior Firepower and Tactical Superiority. For Democracy!
+
+</div>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

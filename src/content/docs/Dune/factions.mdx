@@ -1,0 +1,906 @@
+---
+title: Factions Overview
+---
+
+import Callout from "@/components/Callout.astro";
+import { Swords, Users, Crown, TrendingUp, Shield, Zap } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Nine major powers vie for control of Arrakis**, each bringing unique approaches to conquest, diplomacy, and spice harvesting. From noble houses bound by honor to ruthless oppressors and desert-dwelling insurgents, understanding each faction's strengths and playstyle is critical to victory.
+
+This guide breaks down every faction's tactical advantages, weaknesses, and optimal strategies based on the latest competitive meta.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Crown className="inline-block mr-3 mb-1" size={32} /> Current Meta Tier List
+
+<div class="space-y-6 mb-8">
+
+Based on competitive multiplayer performance and community consensus, factions currently rank across four tiers. **Top-tier factions offer forgiving playstyles with strong late-game scaling**, while lower tiers require higher skill floors or niche strategies to succeed.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-gradient-to-br from-green-500/10 via-card/50 to-green-500/5 rounded-lg border-2 border-green-500/30">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-xl">
+        S
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-green-400">TOP TIER</div>
+        <div class="text-xs text-foreground/60">Most competitive picks</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 mb-4">
+      <div class="p-3 bg-card/70 rounded border border-green-500/20">
+        <span class="text-fs-gold font-bold">House Atreides</span>
+        <div class="text-xs text-foreground/70 mt-1">Forgiving economy, powerful late-game military</div>
+      </div>
+      <div class="p-3 bg-card/70 rounded border border-green-500/20">
+        <span class="text-fs-gold font-bold">House Ecaz</span>
+        <div class="text-xs text-foreground/70 mt-1">Champion system dominates, sanctuary control</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl">
+        A
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">STRONG TIER</div>
+        <div class="text-xs text-foreground/60">Solid competitive options</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 mb-4">
+      <div class="p-3 bg-card/70 rounded border border-border">
+        <span class="text-fs-gold font-bold">House Corrino</span>
+        <div class="text-xs text-foreground/70 mt-1">Late-game juggernaut with dual bases</div>
+      </div>
+      <div class="p-3 bg-card/70 rounded border border-border">
+        <span class="text-fs-gold font-bold">Fremen</span>
+        <div class="text-xs text-foreground/70 mt-1">High skill cap, devastating when mastered</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-card/50 flex items-center justify-center text-xl">
+        B
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">SITUATIONAL TIER</div>
+        <div class="text-xs text-foreground/60">Requires specific strategies</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2">
+      <div class="p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">Smugglers</span>
+        <div class="text-xs text-foreground/70 mt-1">Powerful in expert hands</div>
+      </div>
+      <div class="p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">House Vernius</span>
+        <div class="text-xs text-foreground/70 mt-1">Tech superiority when mastered</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-card/50 flex items-center justify-center text-xl">
+        C
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">CHALLENGING TIER</div>
+        <div class="text-xs text-foreground/60">High skill floor to compete</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2">
+      <div class="p-3 bg-card/50 rounded">
+        <span class="text-fs-gold font-semibold">House Harkonnen</span>
+        <div class="text-xs text-foreground/70 mt-1">Unforgiving economy management</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Meta shifts happen with patches.** These rankings reflect the current competitive landscape as of the latest Heroes of Dune update. Faction strength varies significantly with player skill—a master Fremen player can dominate an average Atreides player.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Users className="inline-block mr-3 mb-1" size={32} /> Faction Comparison at a Glance
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Faction</th>
+        <th class="text-center p-3 text-primary font-semibold">Difficulty</th>
+        <th class="text-center p-3 text-primary font-semibold">Best Victory Type</th>
+        <th class="text-center p-3 text-primary font-semibold">Core Mechanic</th>
+        <th class="text-center p-3 text-primary font-semibold">Playstyle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-fs-gold">House Atreides</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Easy</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Political / Hegemony</td>
+        <td class="text-center p-3 text-foreground/80">Peaceful Annexation</td>
+        <td class="text-center p-3 text-foreground/80">Defensive Diplomacy</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-fs-gold">House Harkonnen</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Hard</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Domination</td>
+        <td class="text-center p-3 text-foreground/80">Oppression</td>
+        <td class="text-center p-3 text-foreground/80">Aggressive Conquest</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-fs-gold">Smugglers</td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Medium</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Economic / Political</td>
+        <td class="text-center p-3 text-foreground/80">Underworld HQs</td>
+        <td class="text-center p-3 text-foreground/80">Subterfuge & Raiding</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-fs-gold">Fremen</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Hard</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Hegemony / Domination</td>
+        <td class="text-center p-3 text-foreground/80">Worm Riding</td>
+        <td class="text-center p-3 text-foreground/80">Guerrilla Warfare</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-fs-gold">House Corrino</td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Medium</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Domination / Political</td>
+        <td class="text-center p-3 text-foreground/80">Imperial Tax & Dual Bases</td>
+        <td class="text-center p-3 text-foreground/80">Late-Game Power</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-fs-gold">House Ecaz</td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Medium</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Hegemony / Domination</td>
+        <td class="text-center p-3 text-foreground/80">Champions & Sanctuaries</td>
+        <td class="text-center p-3 text-foreground/80">Elite Forces</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-fs-gold">House Vernius</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Hard</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Economic / Domination</td>
+        <td class="text-center p-3 text-foreground/80">Nodal Network & Tech</td>
+        <td class="text-center p-3 text-foreground/80">Technological Supremacy</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Swords className="inline-block mr-3 mb-1" size={32} /> House Atreides — The Honorable Diplomats
+
+<div class="space-y-6 mb-8">
+
+**House Atreides embodies nobility and fair governance.** Led by Duke Leto Atreides, they excel at building alliances and leveraging Landsraad influence. This is the beginner-friendly faction with balanced, straightforward mechanics that reward stability over aggression.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        ✓
+      </div>
+      <h3 class="text-lg font-semibold text-green-400">Key Strengths</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Peaceful Annexation</div>
+        Convert neutral villages without combat, avoiding early military losses
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Economic Efficiency</div>
+        <span class="text-green-400 font-bold">-10%</span> Solari upkeep on all units and buildings
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Landsraad Dominance</div>
+        Rapidly gain standing and benefit from council resolutions
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Elite Military</div>
+        Ginaz Swordmasters and veteran militia provide durability
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        ✗
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Notable Weaknesses</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">No Pillaging</div>
+        Cannot raid neutral villages for quick resource bursts
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Slow Expansion</div>
+        Peaceful annexation takes time; can lag in early map control
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Higher Authority Costs</div>
+        <span class="text-red-400 font-bold">+10%</span> authority cost to annex settlements
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Limited Aggression</div>
+        Honorable tactics make sudden rushes difficult
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-primary/10 rounded-lg border border-primary/20 mb-8">
+  <div class="text-xs text-primary font-semibold mb-2">OPTIMAL PLAYSTYLE</div>
+  <p class="text-sm text-foreground/80 mb-3">Focus on consolidating territory through peaceful means, using Landsraad influence to secure economic benefits. Build a quality-over-quantity military with defensive bonuses. Aim for late-game political or hegemony victories through stable governance and alliance building.</p>
+  <div class="text-xs text-foreground/60">
+    <span class="text-fs-gold font-semibold">Best For:</span> New players, defensive players, diplomacy enthusiasts
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## House Harkonnen — The Ruthless Oppressors
+
+<div class="space-y-6 mb-8">
+
+**Baron Vladimir Harkonnen leads through fear and exploitation.** Recently ousted from Arrakis, the Harkonnens seek vengeance through brutal tactics. This challenging faction rewards aggressive play and espionage, but punishes mismanagement harshly.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        ✓
+      </div>
+      <h3 class="text-lg font-semibold text-green-400">Key Strengths</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Oppression Mechanic</div>
+        Temporarily push villages to <span class="text-green-400 font-bold">200%</span> output for massive resource spikes
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Garrison Efficiency</div>
+        Each militia increases village output by <span class="text-green-400 font-bold">+5%</span>
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Espionage Mastery</div>
+        Sacrifice agents to speed operations, gain brainwashed agents from kills
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Brutal Military</div>
+        Fanatical troops, heavy armor (Executioner), devastating siege units
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        ✗
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Notable Weaknesses</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Unstable Economy</div>
+        <span class="text-red-400 font-bold">-10%</span> resource production penalty empire-wide
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Rebellion Risk</div>
+        Oppression causes <span class="text-red-400 font-bold">+2%</span> daily revolt chance per use
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Poor Diplomacy</div>
+        Low Landsraad influence, often targeted by negative resolutions
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">High Attrition</div>
+        Strategy relies on replacing losses, expensive long-term upkeep
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**Walking the knife's edge:** Harkonnen requires constant balance between maximum exploitation and economic collapse. Overuse oppression at your peril—rebellions can cascade and cripple your empire. Not recommended for first-time players.
+</Callout>
+
+<div class="p-6 bg-primary/10 rounded-lg border border-primary/20 mb-8">
+  <div class="text-xs text-primary font-semibold mb-2">OPTIMAL PLAYSTYLE</div>
+  <p class="text-sm text-foreground/80 mb-3">Aggressive domination through military conquest and espionage. Pillage villages for intel, use covert operations to weaken enemies, then launch overwhelming sieges. Stack militia in key territories to offset production penalties. Win through relentless pressure and attrition.</p>
+  <div class="text-xs text-foreground/60">
+    <span class="text-fs-gold font-semibold">Best For:</span> Aggressive players, espionage enthusiasts, experienced strategists
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Smugglers — The Black Market Opportunists
+
+<div class="space-y-6 mb-8">
+
+**Esmar Tuek leads the Smugglers**, a rogue faction operating in Arrakis' shadows. Not a Great House, but profit-driven opportunists who thrive on economic subversion and irregular warfare. They exist in the gray area between trader and bandit.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        ✓
+      </div>
+      <h3 class="text-lg font-semibold text-green-400">Key Strengths</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Underworld Headquarters</div>
+        Plant infiltrations in enemy villages to siphon resources and gain intel
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Superior Mobility</div>
+        <span class="text-green-400 font-bold">+10%</span> unit speed outside combat for swift raids
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">No Distance Penalties</div>
+        Expand to distant outposts without increased authority costs
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Enhanced Pillaging</div>
+        <span class="text-green-400 font-bold">+50%</span> resources from all pillaging at 10k hegemony
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        ✗
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Notable Weaknesses</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Limited Landsraad Power</div>
+        Join council late with minimal votes (50 at 5k hegemony)
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Weak Direct Combat</div>
+        Fewer heavy frontliners; rely on stealth and range
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Tall Faction Penalty</div>
+        <span class="text-red-400 font-bold">+50%</span> authority cost per existing village when expanding
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Conflict-Dependent</div>
+        Income suffers in peaceful games or heavily policed territories
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-primary/10 rounded-lg border border-primary/20 mb-8">
+  <div class="text-xs text-primary font-semibold mb-2">OPTIMAL PLAYSTYLE</div>
+  <p class="text-sm text-foreground/80 mb-3">Hit-and-run warfare combined with economic parasitism. Plant Underworld HQs in rival territories early, use fast units for constant harassment, then retreat before counterattacks. Make and break deals pragmatically. Win through accumulated wealth and late-game buyouts.</p>
+  <div class="text-xs text-foreground/60">
+    <span class="text-fs-gold font-semibold">Best For:</span> Cunning players, guerrilla tacticians, economic manipulators
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Fremen — The Desert Masters
+
+<div class="space-y-6 mb-8">
+
+**Liet Kynes leads the Fremen**, Arrakis' indigenous people. Hardened desert survivors fighting to protect their homeland from off-world colonizers. They operate outside the imperial system with unparalleled desert mobility and guerrilla tactics.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        ✓
+      </div>
+      <h3 class="text-lg font-semibold text-green-400">Key Strengths</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Flexible Spice Harvesting</div>
+        Deploy mobile teams on any field without territorial control
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Worm Riding</div>
+        Use thumpers to summon sandworms for instant long-distance travel
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Sietch Alliances</div>
+        Forge bonds with neutral settlements for military aid and bonuses
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Deep Desert Control</div>
+        At 5k hegemony, control deep desert regions with no supply drain
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        ✗
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Notable Weaknesses</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Limited Infrastructure</div>
+        Villages have <span class="text-red-400 font-bold">-1</span> building slot compared to other factions
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Minimal Landsraad Power</div>
+        Never achieve Great House voting strength; vulnerable to edicts
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Economy Challenges</div>
+        Limited trading options; Solari income can be tight
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Weak Direct Combat</div>
+        Units excel at hit-and-run but struggle in head-on battles
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Master the asymmetry:** Fremen demand a completely different mindset than imperial factions. Embrace constant harassment, territory denial through liberation, and worm-riding repositioning. Never fight fair—strike where enemies are weak, then vanish into the desert.
+</Callout>
+
+<div class="p-6 bg-primary/10 rounded-lg border border-primary/20 mb-8">
+  <div class="text-xs text-primary font-semibold mb-2">OPTIMAL PLAYSTYLE</div>
+  <p class="text-sm text-foreground/80 mb-3">Guerrilla warfare and territory denial. Split armies into raiding parties, use worm transit to attack vulnerable points, instigate rebellions to deny enemy income. Allied Sietches provide intel and harassment. Win through hegemony or attrition by controlling the desert and choking out occupiers.</p>
+  <div class="text-xs text-foreground/60">
+    <span class="text-fs-gold font-semibold">Best For:</span> Expert players, asymmetric warfare enthusiasts, patient strategists
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Crown className="inline-block mr-3 mb-1" size={32} /> House Corrino — The Imperial Power
+
+<div class="space-y-6 mb-8">
+
+**Padishah Emperor Shaddam IV commands the Imperial legions.** House Corrino has ruled the Known Universe for 10,000 years. They bring elite Sardaukar forces and immense wealth, but shoulder the burden of maintaining the Imperium with heavy logistics costs.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        ✓
+      </div>
+      <h3 class="text-lg font-semibold text-green-400">Key Strengths</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Imperial Spice Tax</div>
+        Receive all other factions' tax payments as bonus income
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Enhanced Infrastructure</div>
+        Villages have <span class="text-green-400 font-bold">+1</span> building slot for superior development
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Sardaukar Legions</div>
+        Elite troops with incredible combat power; can trade to allies for profit
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Dual Base System</div>
+        Deploy second main base at 5k hegemony for strategic projection
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        ✗
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Notable Weaknesses</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Heavy Guild Costs</div>
+        Must pay significantly higher spice tribute to Spacing Guild
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Harsh Distance Penalties</div>
+        <span class="text-red-400 font-bold">+100%</span> authority cost per distance from main base
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Limited Early Expansion</div>
+        Can only take nearby regions initially due to logistics
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Expensive Military</div>
+        Sardaukar are powerful but costly; difficult to sustain if behind
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-primary/10 rounded-lg border border-primary/20 mb-8">
+  <div class="text-xs text-primary font-semibold mb-2">OPTIMAL PLAYSTYLE</div>
+  <p class="text-sm text-foreground/80 mb-3">Late-game powerhouse strategy. Turtle early while leveraging tax income to tech up. Maximize each territory's output with extra building slots. Deploy second base mid-game to break expansion limits. Dominate late-game with stacked building bonuses, Sardaukar armies, and extreme-range artillery sieges.</p>
+  <div class="text-xs text-foreground/60">
+    <span class="text-fs-gold font-semibold">Best For:</span> Patient players, late-game enthusiasts, power fantasy seekers
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## House Ecaz — The Cultural Elites
+
+<div class="space-y-6 mb-8">
+
+**Archduchess Armanda Ecaz rules a house famed for arts and exotic luxuries.** House Ecaz brings creative economic tools and elite military champions. Their sanctuary system and masterpiece buildings provide unique strategic depth.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        ✓
+      </div>
+      <h3 class="text-lg font-semibold text-green-400">Key Strengths</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Sanctuary System</div>
+        Surround neutral villages to create invulnerable buffer zones
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Champion Units</div>
+        Designated units gain massive stat boosts and generate hegemony per kill
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Masterpiece Buildings</div>
+        Unique cultural projects provide major buffs and Landsraad favor
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Elite Units</div>
+        Knights, Squires, and Fencers with exceptional combat power
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        ✗
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Notable Weaknesses</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Slow Set-Piece Strategy</div>
+        Sanctuaries and masterpieces require time and planning
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Expensive Investments</div>
+        Masterpieces and elite units demand significant resources
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Champion Vulnerability</div>
+        Losing a leveled champion is devastating to overall power
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Diplomatic Penalties</div>
+        Breaking truces causes <span class="text-red-400 font-bold">-100%</span> Landsraad standing
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="success">
+**Currently top-tier:** Ecaz's champion mechanic is extremely powerful in the current meta. A fully buffed Knight champion can exceed 1000 attack power, practically one-shotting enemy units. Combined with sanctuary hegemony generation, Ecaz can dominate multiple victory paths.
+</Callout>
+
+<div class="p-6 bg-primary/10 rounded-lg border border-primary/20 mb-8">
+  <div class="text-xs text-primary font-semibold mb-2">OPTIMAL PLAYSTYLE</div>
+  <p class="text-sm text-foreground/80 mb-3">Cultural domination with elite forces. Secure a cluster of territories, raise sanctuaries on periphery for natural borders. Invest in masterpieces and champions. Field compact, high-tech armies led by champion units. Win through hegemony acceleration or decisive champion-led strikes.</p>
+  <div class="text-xs text-foreground/60">
+    <span class="text-fs-gold font-semibold">Best For:</span> Strategic planners, quality-over-quantity players, hegemony victory seekers
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## House Vernius — The Technological Innovators
+
+<div class="space-y-6 mb-8">
+
+**Earl Rhombur Vernius leads the Ixian Confederacy**, pushing the boundaries of science. As chief suppliers of starship technology, they bring robotic units, advanced research, and a neural economic network. Complex but incredibly powerful when mastered.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        ✓
+      </div>
+      <h3 class="text-lg font-semibold text-green-400">Key Strengths</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Research Supremacy</div>
+        Extra Knowledge generation; can skip one tech prerequisite
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Tech Patents</div>
+        File patents on technologies others haven't researched for monopoly benefits
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Nodal Network Efficiency</div>
+        Connected regions operate at massively increased production
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-fs-gold font-semibold mb-1">Advanced Units</div>
+        Fighting Meks, teleporting Folder Relays, self-repairing drones
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        ✗
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Notable Weaknesses</h3>
+    </div>
+    
+    <div class="space-y-3 text-sm text-foreground/80">
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Network Dependency</div>
+        Unconnected villages suffer <span class="text-red-400 font-bold">-50%</span> production penalty
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Infrastructure Vulnerability</div>
+        Destroying key Neural Nodes can cripple entire regions
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">EMP Susceptible</div>
+        Electronic warfare operations can disable drones and advantages
+      </div>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-red-400 font-semibold mb-1">Tech Sharing in Truces</div>
+        Allied factions gain benefits of your researched techs
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**High skill ceiling:** Vernius offers incredible power when played optimally, but demands careful infrastructure planning and tech prioritization. Early rushes can overwhelm before high-tech units come online. Only a few players have truly mastered this faction.
+</Callout>
+
+<div class="p-6 bg-primary/10 rounded-lg border border-primary/20 mb-8">
+  <div class="text-xs text-primary font-semibold mb-2">OPTIMAL PLAYSTYLE</div>
+  <p class="text-sm text-foreground/80 mb-3">Tech-centric strategic expansion. Race for key research breakthroughs using patent system. Expand in chains to maintain Neural Network. Field diverse high-tech armies with self-repair and teleportation. Dominate through superior technology and knowledge-to-resource conversion.</p>
+  <div class="text-xs text-foreground/60">
+    <span class="text-fs-gold font-semibold">Best For:</span> Tech enthusiasts, infrastructure planners, sci-fi faction lovers
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <TrendingUp className="inline-block mr-3 mb-1" size={32} /> Choosing Your Faction
+
+<div class="space-y-6 mb-8">
+
+Faction selection should match your preferred playstyle and skill level. **New players should start with House Atreides or House Corrino** for forgiving mechanics and straightforward paths to victory. **Experienced players seeking challenges** will find Fremen, Vernius, or Harkonnen rewarding but demanding.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-400">
+    <div class="text-xs text-green-400 font-semibold mb-3">BEGINNER FRIENDLY</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ House Atreides</li>
+      <li>✓ House Corrino</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Forgiving economies, clear objectives
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">INTERMEDIATE</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ House Ecaz</li>
+      <li>✓ Smugglers</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Unique mechanics, moderate complexity
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-red-400">
+    <div class="text-xs text-red-400 font-semibold mb-3">ADVANCED</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Fremen</li>
+      <li>✓ House Vernius</li>
+      <li>✓ House Harkonnen</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-red-500/10 rounded text-red-400">
+      High skill floors, unforgiving gameplay
+    </div>
+  </div>
+</div>
+
+### Key Decision Factors
+
+<div class="space-y-3 mb-8">
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Prefer Diplomacy & Politics</span>
+      <span class="text-fs-gold font-semibold">Atreides, Ecaz</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 90%"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Prefer Military Domination</span>
+      <span class="text-fs-gold font-semibold">Harkonnen, Corrino</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Prefer Guerrilla Tactics</span>
+      <span class="text-fs-gold font-semibold">Fremen, Smugglers</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 80%"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Prefer Economic Strategy</span>
+      <span class="text-fs-gold font-semibold">Vernius, Smugglers</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 75%"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Prefer Elite Small Armies</span>
+      <span class="text-fs-gold font-semibold">Ecaz, Corrino</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="info">
+**Meta considerations:** While tier lists provide guidance, player skill and strategic adaptation matter more than raw faction strength. A master Fremen player will consistently defeat average Atreides players. Learn your faction's mechanics deeply rather than chasing the "best" pick.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

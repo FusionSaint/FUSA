@@ -1,0 +1,1918 @@
+---
+title: Illuminate Tactical Combat Guide
+---
+
+import Callout from "@/components/Callout.astro";
+import { Brain, Eye, Shield, Zap, Radio, Target } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**The Illuminate represent the ultimate test of Helldiver tactical mastery.** These psychic aliens combine swarming infantry with heavily-shielded elites, stealth scouts that summon infinite reinforcements, and devastating heavy units designed to punish conventional tactics. Unlike Terminids (predictable swarms) or Automatons (static defenses), Illuminate force you to fight on multiple fronts simultaneously—crowd control AND precision targeting AND reinforcement denial.
+
+This guide provides comprehensive scenario-based tactics for Illuminate warfare. Scan to your scenario, extract your tactical response, and adapt to the squid threat. Difficulty scaling: 🟢 (1-3), 🟡 (4-6), 🔴 (7-9), ⚫ (Helldive+).
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Brain className="inline-block mr-3 mb-1" size={32} /> Understanding the Illuminate Threat
+
+<div class="space-y-6 mb-8">
+
+Before diving into scenarios, you must understand WHY Illuminate require completely different tactics than other factions. They are deliberately designed to punish players who rely on muscle memory from bug or bot missions.
+
+</div>
+
+### The Three Core Mechanics That Change Everything
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔵
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Regenerating Shields</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Most Illuminate units have energy shields that regenerate after 3-5 seconds without damage. Burst damage is wasted—sustained fire wins.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Implication:</span> <span class="text-foreground/70">Single 500kg bomb = one shield break. Cookout = total annihilation</span></div>
+      <div><span class="text-red-400 font-semibold">Fatal Error:</span> <span class="text-foreground/70">Using railcannon strikes or Eagle 500kg on shielded enemies</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-l-4 border-yellow-500">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-2xl">
+        👁️
+      </div>
+      <h3 class="text-lg font-semibold text-yellow-500">Watcher Reinforcements</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Watchers call Warp Ships that drop 8-12 enemies each. One missed Watcher = exponential spawn cascade within 30 seconds.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Implication:</span> <span class="text-foreground/70">Watcher elimination is THE top priority in every scenario</span></div>
+      <div><span class="text-red-400 font-semibold">Fatal Error:</span> <span class="text-foreground/70">Fighting elites while Watchers patrol nearby</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-l-4 border-purple-500">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-purple-500">Counter-Intuitive Weak Points</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Overseer heads are NOT weak points. Harvester eyes are NOT weak points. Illuminate deliberately trap players who rely on "aim for the head."</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Implication:</span> <span class="text-foreground/70">Must memorize correct weak points or waste all ammo</span></div>
+      <div><span class="text-red-400 font-semibold">Fatal Error:</span> <span class="text-foreground/70">Headshot-focused players burning entire magazines into immune zones</span></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**The Illuminate Learning Curve:** New players often report "Illuminate are impossible" because they bring Terminid tactics (burst damage, aggressive pushing) or Automaton tactics (cover camping, precision headshots) and fail catastrophically. The faction requires sustained-fire weapons, constant Watcher awareness, and learned weak point knowledge. Expect a 3-5 mission learning period.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Eye className="inline-block mr-3 mb-1" size={32} /> Scenario 1: Watcher-Controlled Reinforcement Management
+
+<div class="space-y-6 mb-8">
+
+**Situation:** You're pushing toward an objective when you hear the distinctive Watcher scanning sound. Blue detection cones appear. If you fail to neutralize Watchers, they'll summon Warp Ships every 15-20 seconds, creating infinite spawns that make the mission unwinnable.
+
+**Why This Matters:** Unlike Terminids (where breaches are triggered by noise/presence) or Automatons (where reinforcement flares can be shot down), Illuminate reinforcements are entirely Watcher-controlled. Kill Watchers = controlled engagement. Ignore Watchers = death spiral.
+
+</div>
+
+### Tactical Response by Difficulty
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border-2 border-green-500/30">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="text-3xl">🟢</span>
+      <div>
+        <h3 class="text-lg font-semibold text-green-400">Difficulty 1-3: Learning Phase</h3>
+        <p class="text-xs text-foreground/60">Few Watchers, slow spawns, forgiving mechanics</p>
+      </div>
+    </div>
+    
+    <div class="space-y-4">
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">Detection Mechanics</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• <span class="text-fs-gold">Blue cone</span> = Searching mode (not alerted)</div>
+          <div>• <span class="text-red-400">Red cone</span> = Detected you (calling reinforcements in 3 seconds)</div>
+          <div>• <span class="text-yellow-400">Yellow flash</span> = Warp Ship summoned (8-12 enemies incoming)</div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">Priority Response</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>1. <span class="text-green-400">Shoot Watcher BEFORE engaging other enemies</span></div>
+          <div>2. Use primary weapon (save stratagems for elites)</div>
+          <div>3. If red cone appears, sprint to cover immediately</div>
+          <div>4. After Watcher dies, handle remaining enemies normally</div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+        <div class="text-xs font-semibold text-green-400 mb-1">RECOMMENDED WEAPONS</div>
+        <div class="text-xs text-foreground/80">
+          Any accurate primary works. AR-23 Liberator, SG-451 Cookout, or LAS-16 Sickle all kill Watchers in 1-2 second bursts.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border-2 border-yellow-500/30">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="text-3xl">🟡</span>
+      <div>
+        <h3 class="text-lg font-semibold text-yellow-500">Difficulty 4-6: Multi-Threat</h3>
+        <p class="text-xs text-foreground/60">Multiple Watchers + elites simultaneously</p>
+      </div>
+    </div>
+    
+    <div class="space-y-4">
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">New Complications</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• <span class="text-yellow-400">2-3 Watchers patrol simultaneously</span></div>
+          <div>• Watchers appear DURING fights with Overseers/Harvesters</div>
+          <div>• Missed Watchers summon reinforcements that include MORE Watchers</div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">Advanced Priority Matrix</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>1. <span class="text-red-400">Active Watcher (red cone)</span> → Drop everything, kill immediately</div>
+          <div>2. <span class="text-yellow-400">Searching Watcher (blue cone)</span> → Kill before engaging elites</div>
+          <div>3. <span class="text-primary">Shielded Overseer/Harvester</span> → Only after Watchers dead</div>
+          <div>4. <span class="text-foreground/60">Voteless swarms</span> → Lowest priority (kite while handling above)</div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-yellow-500/10 rounded border border-yellow-500/30">
+        <div class="text-xs font-semibold text-yellow-400 mb-1">CRITICAL TACTIC</div>
+        <div class="text-xs text-foreground/80">
+          If fighting an elite when Watcher appears: <span class="text-fs-gold">Stop DPS on elite → Kill Watcher → Resume elite fight</span>. Yes, even if the elite is at 10% HP. One missed Watcher creates 12 new enemies including potential new Watchers.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border-2 border-red-500/30">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="text-3xl">🔴</span>
+      <div>
+        <h3 class="text-lg font-semibold text-red-400">Difficulty 7-9: Spawn Cascade Hell</h3>
+        <p class="text-xs text-foreground/60">Watchers spawn from reinforcements, creating loops</p>
+      </div>
+    </div>
+    
+    <div class="space-y-4">
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">The Death Spiral</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• Miss 1 Watcher → 12 enemies spawn (includes 1-2 new Watchers)</div>
+          <div>• Miss those Watchers → 24 enemies spawn (includes 2-3 new Watchers)</div>
+          <div>• Miss those → 48+ enemies, mission becomes unwinnable</div>
+          <div>• This cascade occurs in under 60 seconds</div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">Prevention Protocol</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>1. <span class="text-fs-gold">Assign one player as "Watcher Watcher"</span> (dedicated spotter)</div>
+          <div>2. Call out Watchers instantly: "Watcher north, Watcher south"</div>
+          <div>3. Team STOPS all other combat to focus-fire Watchers</div>
+          <div>4. Use stratagems if needed (Orbital Laser, Eagle Airstrike acceptable Watcher kills)</div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+        <div class="text-xs font-semibold text-red-400 mb-1">IF CASCADE STARTS</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>1. <span class="text-fs-gold">Disengage completely</span> — Run 200m+ away from the spawn cluster</div>
+          <div>2. Split team to prevent full wipe</div>
+          <div>3. Use Eagle/Orbital barrage on spawn cluster from range</div>
+          <div>4. Only re-engage once Watcher count confirmed zero</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border-2 border-gray-300/30">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="text-3xl">⚫</span>
+      <div>
+        <h3 class="text-lg font-semibold text-foreground">Helldive: Perfect Execution Required</h3>
+        <p class="text-xs text-foreground/60">Zero-tolerance Watcher protocol</p>
+      </div>
+    </div>
+    
+    <div class="space-y-4">
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">Helldive Mechanics</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• <span class="text-red-400">Watchers spawn in pairs</span> (2-4 simultaneously)</div>
+          <div>• Warp Ships drop 15-20 enemies instead of 8-12</div>
+          <div>• Reinforcement Watchers spawn 100% of the time in Warp Ships</div>
+          <div>• Detection radius increased 25%</div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">Squad Coordination Required</div>
+        <div class="text-xs text-foreground/80 space-y-2">
+          <div class="p-2 bg-primary/10 rounded">
+            <span class="text-primary font-semibold">Player 1 (Watcher Primary):</span> LAS-16 Sickle (infinite ammo precision), only shoots Watchers unless none present
+          </div>
+          <div class="p-2 bg-yellow-500/10 rounded">
+            <span class="text-yellow-500 font-semibold">Player 2 (Watcher Secondary):</span> Backup Watcher shooter, switches to elite DPS when Watchers confirmed dead
+          </div>
+          <div class="p-2 bg-green-500/10 rounded">
+            <span class="text-green-500 font-semibold">Players 3-4 (Elite/Crowd):</span> Handle shielded enemies and swarms, but DROP EVERYTHING when "Watcher!" called
+          </div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-purple-500/10 rounded border border-purple-500/30">
+        <div class="text-xs font-semibold text-purple-400 mb-1">ADVANCED: STEALTH APPROACH</div>
+        <div class="text-xs text-foreground/80">
+          On Helldive, some teams use <span class="text-fs-gold">stealth</span> to avoid Watcher detection entirely. Crouch-walk, kill patrols silently with melee/suppressed weapons, never trigger blue cones. This only works with coordinated squads but eliminates reinforcement problem at source.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Watcher-Specific Weapon Effectiveness Matrix
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon/Stratagem</th>
+        <th class="text-center p-3 text-primary font-semibold">Kill Speed</th>
+        <th class="text-center p-3 text-primary font-semibold">Ammo Efficiency</th>
+        <th class="text-center p-3 text-primary font-semibold">Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">LAS-16 Sickle</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">1.5s</div>
+          <div class="text-xs text-foreground/60">Sustained beam</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Infinite</div>
+          <div class="text-xs text-foreground/60">Heat-based</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-semibold">BEST IN SLOT</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">AR-23 Liberator</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">2.0s</div>
+          <div class="text-xs text-foreground/60">Half mag burst</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Good</div>
+          <div class="text-xs text-foreground/60">15-20 kills/mag</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">EXCELLENT</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SG-451 Cookout</td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">3.0s</div>
+          <div class="text-xs text-foreground/60">Close range</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Excellent</div>
+          <div class="text-xs text-foreground/60">8-10 kills/mag</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">GOOD (range-limited)</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Orbital Laser</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Instant</div>
+          <div class="text-xs text-foreground/60">On contact</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">3-min CD</div>
+          <div class="text-xs text-foreground/60">Limited uses</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">EMERGENCY ONLY</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Eagle Airstrike</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Instant</div>
+          <div class="text-xs text-foreground/60">On impact</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Limited</div>
+          <div class="text-xs text-foreground/60">4-6 uses/mission</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">ACCEPTABLE</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Railgun (Support)</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">6.0s+</div>
+          <div class="text-xs text-foreground/60">Charge + aim</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Poor</div>
+          <div class="text-xs text-foreground/60">1-2 kills/mag</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">AVOID</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip">
+**Pro Tactic — Watcher Baiting:** Deliberately allow ONE Watcher to start summoning (red cone) but kill it before Warp Ship arrives. This causes nearby Illuminate to cluster toward the spawn point, making them vulnerable to Eagle Cluster Bomb or Orbital Barrage. High-risk, high-reward for experienced teams.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Shield className="inline-block mr-3 mb-1" size={32} /> Scenario 2: Overseer Shield Encounters
+
+<div class="space-y-6 mb-8">
+
+**Situation:** Your squad encounters one or more Overseers (the tall humanoid elites with regenerating shields). These enemies output devastating ranged damage and have massive HP pools protected by shields that regenerate every 5 seconds. Conventional burst-damage tactics fail completely.
+
+**Why This Matters:** Overseers are the Illuminate "elite infantry" equivalent to Bile Spewers (Terminids) or Devastators (Automatons), but their shield mechanics make them exponentially more dangerous. A single Overseer can solo-wipe an unprepared squad.
+
+</div>
+
+### Understanding Overseer Mechanics
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30">
+    <h3 class="text-lg font-semibold text-primary mb-4">Shield Mechanics</h3>
+    <div class="space-y-3">
+      <div class="flex justify-between items-center p-2 bg-background/50 rounded">
+        <span class="text-sm text-foreground/80">Shield HP:</span>
+        <span class="text-fs-gold font-semibold">~1000</span>
+      </div>
+      <div class="flex justify-between items-center p-2 bg-background/50 rounded">
+        <span class="text-sm text-foreground/80">Body HP (under shield):</span>
+        <span class="text-fs-gold font-semibold">~800</span>
+      </div>
+      <div class="flex justify-between items-center p-2 bg-background/50 rounded">
+        <span class="text-sm text-foreground/80">Shield regen time:</span>
+        <span class="text-fs-gold font-semibold">5 seconds</span>
+      </div>
+      <div class="flex justify-between items-center p-2 bg-background/50 rounded">
+        <span class="text-sm text-foreground/80">Regen speed:</span>
+        <span class="text-fs-gold font-semibold">Full instant</span>
+      </div>
+    </div>
+    
+    <div class="mt-4 p-3 bg-yellow-500/10 rounded border border-yellow-500/30">
+      <div class="text-xs font-semibold text-yellow-400 mb-1">CRITICAL</div>
+      <div class="text-xs text-foreground/80">
+        If you stop shooting for 5 seconds, the shield fully regenerates. This means all previous damage was wasted. You MUST maintain sustained fire.
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-red-500/30">
+    <h3 class="text-lg font-semibold text-red-400 mb-4">Common Fatal Mistakes</h3>
+    <div class="space-y-3 text-sm">
+      <div class="p-3 bg-red-500/10 rounded">
+        <div class="font-semibold text-red-400 mb-1">❌ Aiming for the Head</div>
+        <div class="text-xs text-foreground/80">
+          The glowing head is NOT a weak point. It's a trap. Chest/body shots deal full damage, headshots do nothing special.
+        </div>
+      </div>
+      <div class="p-3 bg-red-500/10 rounded">
+        <div class="font-semibold text-red-400 mb-1">❌ Using Single-Shot Explosives</div>
+        <div class="text-xs text-foreground/80">
+          500kg bomb, Railcannon, Orbital Precision = breaks shield only. Enemy survives with 800 HP and shield regenerates.
+        </div>
+      </div>
+      <div class="p-3 bg-red-500/10 rounded">
+        <div class="font-semibold text-red-400 mb-1">❌ Reloading Without Coordination</div>
+        <div class="text-xs text-foreground/80">
+          If all players reload simultaneously, 5-second gap = shield regens = all progress lost.
+        </div>
+      </div>
+      <div class="p-3 bg-red-500/10 rounded">
+        <div class="font-semibold text-red-400 mb-1">❌ Splitting Fire Across Multiple Overseers</div>
+        <div class="text-xs text-foreground/80">
+          Shooting 2 Overseers to half HP = 0 kills (both shields regen). Focus-fire ONE at a time.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Tactical Response by Difficulty
+
+<div class="space-y-6 mb-8">
+
+<div class="p-6 bg-gradient-to-br from-green-500/10 to-card/50 rounded-lg border-2 border-green-500/30">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="text-4xl">🟢</span>
+    <div>
+      <h3 class="text-xl font-bold text-green-400">Difficulty 1-3: Solo Overseer</h3>
+      <p class="text-sm text-foreground/60">Single enemy, team can focus-fire easily</p>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">Step-by-Step Engagement</div>
+      <div class="space-y-2 text-xs text-foreground/80">
+        <div class="p-2 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">1.</span> All players aim at CHEST (not head)
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">2.</span> Start sustained fire simultaneously
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">3.</span> Shield breaks after ~3-4 seconds of team fire
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">4.</span> Continue firing into body for 2-3 more seconds
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">5.</span> Enemy dies, team reloads safely
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">Recommended Loadout</div>
+      <div class="space-y-2 text-xs">
+        <div class="p-2 bg-primary/10 rounded border-l-4 border-primary">
+          <div class="font-semibold text-primary">Primary: SG-451 Cookout</div>
+          <div class="text-foreground/70">Incendiary DoT continues through shield regen windows</div>
+        </div>
+        <div class="p-2 bg-yellow-500/10 rounded border-l-4 border-yellow-500">
+          <div class="font-semibold text-yellow-500">Support: MG-43 Machine Gun</div>
+          <div class="text-foreground/70">200-round mag = sustained fire without reload</div>
+        </div>
+        <div class="p-2 bg-green-500/10 rounded border-l-4 border-green-500">
+          <div class="font-semibold text-green-500">Grenade: Thermite</div>
+          <div class="text-foreground/70">Sticks to Overseer, burns through shield regen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-4 p-3 bg-green-500/10 rounded border border-green-500/30">
+    <div class="text-xs font-semibold text-green-400 mb-1">LEARNING TIP</div>
+    <div class="text-xs text-foreground/80">
+      At lower difficulties, you can afford to experiment. Try different weapons to see how sustained-fire mechanics work. Once you understand "fire continuously = kill," higher difficulties become manageable.
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-gradient-to-br from-yellow-500/10 to-card/50 rounded-lg border-2 border-yellow-500/30">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="text-4xl">🟡</span>
+    <div>
+      <h3 class="text-xl font-bold text-yellow-500">Difficulty 4-6: Multiple Overseers + Swarms</h3>
+      <p class="text-sm text-foreground/60">2-3 Overseers with Voteless crowds</p>
+    </div>
+  </div>
+  
+  <div class="space-y-4">
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">The Problem</div>
+      <div class="text-xs text-foreground/80 mb-3">
+        Multiple shielded elites + swarms creates a priority dilemma. Focus on Overseers = Voteless overwhelm. Focus on Voteless = Overseers kill you. Standard tactics fail.
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="p-4 bg-red-500/10 rounded-lg border border-red-500/30">
+        <div class="text-sm font-semibold text-red-400 mb-2">❌ WRONG APPROACH</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• Splitting team: 2 on Overseers, 2 on Voteless</div>
+          <div>• Result: Overseers don't die fast enough (not enough DPS to prevent shield regen)</div>
+          <div>• Voteless kill the 2 crowd-control players</div>
+          <div>• Team wipes</div>
+        </div>
+      </div>
+      
+      <div class="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
+        <div class="text-sm font-semibold text-green-400 mb-2">✓ CORRECT APPROACH</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• <span class="text-fs-gold">Kiting strategy:</span> Team stays mobile, kites Voteless while focus-firing ONE Overseer</div>
+          <div>• Use incendiary weapons (Cookout, Flamethrower) that kill crowds passively while DPSing elite</div>
+          <div>• Kill Overseer #1, then #2, then #3</div>
+          <div>• Voteless die to residual fire/AoE throughout</div>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">Squad Role Assignments</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="p-3 bg-background/50 rounded border-l-4 border-primary">
+          <div class="text-sm font-semibold text-primary mb-1">Players 1-2: Sustained DPS</div>
+          <div class="text-xs text-foreground/80">
+            <span class="text-fs-gold">MG-43, Stalwart, or LAS-99 Quasar</span> — Never stop shooting the designated Overseer chest
+          </div>
+        </div>
+        <div class="p-3 bg-background/50 rounded border-l-4 border-yellow-500">
+          <div class="text-sm font-semibold text-yellow-500 mb-1">Player 3: Crowd/Elite Hybrid</div>
+          <div class="text-xs text-foreground/80">
+            <span class="text-fs-gold">SG-451 Cookout</span> — Fires into both Overseer and Voteless, AoE fire damage handles crowds while contributing to shield break
+          </div>
+        </div>
+        <div class="p-3 bg-background/50 rounded border-l-4 border-green-500">
+          <div class="text-sm font-semibold text-green-500 mb-1">Player 4: Utility/Crowd</div>
+          <div class="text-xs text-foreground/80">
+            <span class="text-fs-gold">Flamethrower or Arc Thrower</span> — Clears Voteless around the team, occasional bursts into Overseer to help shield break
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-gradient-to-br from-red-500/10 to-card/50 rounded-lg border-2 border-red-500/30">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="text-4xl">🔴</span>
+    <div>
+      <h3 class="text-xl font-bold text-red-400">Difficulty 7-9: Crescent Overseers + Chaos</h3>
+      <p class="text-sm text-foreground/60">Upgraded variants with AoE attacks + maximum spawns</p>
+    </div>
+  </div>
+  
+  <div class="space-y-4">
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">Crescent Overseer Differences</div>
+      <div class="text-xs text-foreground/80 space-y-2">
+        <div class="p-2 bg-red-500/10 rounded">
+          <span class="text-red-400 font-semibold">AoE Spin Attack:</span> If you're within 10m, Crescent does a spin that one-shots anyone nearby. <span class="text-fs-gold">Never group up near a Crescent.</span>
+        </div>
+        <div class="p-2 bg-red-500/10 rounded">
+          <span class="text-red-400 font-semibold">Increased HP:</span> Shield HP: ~1500, Body HP: ~1200 (50% more tanky than regular Overseer)
+        </div>
+        <div class="p-2 bg-red-500/10 rounded">
+          <span class="text-red-400 font-semibold">Faster Movement:</span> Crescents close distance faster, making kiting harder
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">Counter-Strategy</div>
+      <div class="text-xs text-foreground/80 space-y-2">
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">1. Spread Formation:</span> Team maintains 15m+ separation to avoid AoE spin wipes
+        </div>
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">2. Stagger Rotations:</span> Players alternate shooting and repositioning so DPS never fully stops
+        </div>
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">3. Thermite Mandatory:</span> Every player brings Thermite grenades. Stick Crescent immediately on engagement to guarantee DoT through shield regen
+        </div>
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">4. Stratagem Usage:</span> Unlike lower difficulties, using Orbital Laser or Eagle 110mm on Crescents is ACCEPTABLE (their HP justifies the resource cost)
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs font-semibold text-red-400 mb-1">IF SURROUNDED</div>
+      <div class="text-xs text-foreground/80">
+        If a Crescent closes to melee range while you're handling Voteless: <span class="text-fs-gold">DROP EVERYTHING, SPRINT AWAY IMMEDIATELY</span>. Do not try to finish your reload. Do not throw a grenade. RUN. The spin attack one-shots through full armor. Regroup 30m away and re-engage.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-gradient-to-br from-gray-500/10 to-card/50 rounded-lg border-2 border-gray-300/30">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="text-4xl">⚫</span>
+    <div>
+      <h3 class="text-xl font-bold text-foreground">Helldive: 4+ Crescents Simultaneously</h3>
+      <p class="text-sm text-foreground/60">Maximum difficulty Overseer scenarios</p>
+    </div>
+  </div>
+  
+  <div class="space-y-4">
+    <div class="p-4 bg-purple-500/10 rounded-lg border border-purple-500/30">
+      <div class="text-sm font-semibold text-purple-400 mb-2">THE PROBLEM</div>
+      <div class="text-xs text-foreground/80 space-y-2">
+        <div>• 4-6 Crescent Overseers spawn during objective defenses</div>
+        <div>• Each has 1500 shield + 1200 HP = 2700 effective HP</div>
+        <div>• Total: 10,800-16,200 HP that must be dealt through sustained fire</div>
+        <div>• Meanwhile: 50+ Voteless swarm, Watchers call reinforcements, time limit on objective</div>
+        <div>• This is the hardest Illuminate scenario in the game</div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">Advanced Team Tactics</div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="p-3 bg-primary/10 rounded">
+          <div class="text-sm font-semibold text-primary mb-2">Tactic A: Sequential Focus</div>
+          <div class="text-xs text-foreground/80 space-y-1">
+            <div>• All 4 players focus ONE Crescent</div>
+            <div>• Kill in ~10 seconds with team focus-fire</div>
+            <div>• Immediately switch to Crescent #2</div>
+            <div>• Repeat until all dead</div>
+            <div>• <span class="text-green-400">Pros:</span> Reduces threat count quickly</div>
+            <div>• <span class="text-red-400">Cons:</span> Requires perfect coordination</div>
+          </div>
+        </div>
+        
+        <div class="p-3 bg-yellow-500/10 rounded">
+          <div class="text-sm font-semibold text-yellow-500 mb-2">Tactic B: Area Denial</div>
+          <div class="text-xs text-foreground/80 space-y-1">
+            <div>• Team doesn't try to kill all Crescents</div>
+            <div>• Instead: Thermite all of them, creating 4-6 fire zones</div>
+            <div>• Crescents take constant DoT from Thermite</div>
+            <div>• Team kites through safe zones while DoT kills</div>
+            <div>• <span class="text-green-400">Pros:</span> Less aim-dependent</div>
+            <div>• <span class="text-red-400">Cons:</span> Requires excellent positioning</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="p-4 bg-gradient-to-r from-primary/10 to-yellow-500/10 rounded-lg border border-primary/30">
+        <div class="text-sm font-semibold text-foreground mb-2">META STRATEGY: The "Cookout Wall"</div>
+        <div class="text-xs text-foreground/80 space-y-2">
+          <div>Current Helldive meta has all 4 players bring <span class="text-fs-gold font-bold">SG-451 Cookout</span></div>
+          <div>• Team forms a line, all players fire forward into Crescent group</div>
+          <div>• Incendiary AoE creates a 20m "wall of fire" that melts shields and bodies</div>
+          <div>• Fire DoT continues damaging even when players reload (prevents shield regen)</div>
+          <div>• Voteless die passively to residual fire</div>
+          <div>• 4 Cookouts firing together kills a Crescent in ~6 seconds vs. 10+ for other weapons</div>
+          <div class="pt-2 border-t border-primary/30 mt-2">
+            <span class="text-green-400 font-semibold">Why this works:</span> Cookout's incendiary effect is the ONLY weapon type that prevents shield regeneration during reload windows. It's broken against Illuminate.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+### Overseer Weak Point Chart
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Body Part</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage Multiplier</th>
+        <th class="text-center p-3 text-primary font-semibold">Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Head/Helmet (glowing)</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">1.0x</div>
+          <div class="text-xs text-foreground/60">Normal damage</div>
+        </td>
+        <td class="text-center p-3 text-xs text-red-400">
+          NOT A WEAK POINT - Do not aim here
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-green-500/5">
+        <td class="p-3 font-medium text-green-400">Chest/Torso</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">1.0x</div>
+          <div class="text-xs text-foreground/60">Normal damage</div>
+        </td>
+        <td class="text-center p-3 text-xs text-green-400">
+          BEST TARGET - Largest hitbox, consistent damage
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Legs</td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">1.0x + Stagger</div>
+          <div class="text-xs text-foreground/60">Slows movement</div>
+        </td>
+        <td class="text-center p-3 text-xs text-yellow-400">
+          SITUATIONAL - Use if Crescent closing too fast
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Arms/Shoulders</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">0.5x</div>
+          <div class="text-xs text-foreground/60">Reduced damage</div>
+        </td>
+        <td class="text-center p-3 text-xs text-red-400">
+          AVOID - Wastes ammo
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="warning">
+**The Headshot Trap:** The Overseer's glowing head is DELIBERATELY designed to look like a weak point. It's not. Many players waste entire magazines shooting heads because "that's what works in other games." Against Illuminate, aim center-mass (chest) for maximum DPS.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Scenario 3: Harvester Encounters
+
+<div class="space-y-6 mb-8">
+
+**Situation:** A Harvester (tripod heavy unit) appears on the battlefield. These enemies are the Illuminate equivalent of Bile Titans or Hulks—massive HP pools, devastating attacks, and the ability to solo-wipe teams. Unlike Overseers, Harvesters have different weak point mechanics and attack patterns.
+
+**Why This Matters:** Harvesters are the ultimate Illuminate heavy. They have the highest HP in the faction, output massive AoE damage, and their weak points are counter-intuitive. Misunderstanding Harvester mechanics leads to wasted stratagems and guaranteed deaths.
+
+</div>
+
+### Harvester Critical Information
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-purple-500/30">
+    <h3 class="text-lg font-semibold text-purple-500 mb-4">Stats & Mechanics</h3>
+    <div class="space-y-3">
+      <div class="flex justify-between items-center p-2 bg-background/50 rounded">
+        <span class="text-sm text-foreground/80">Shield HP:</span>
+        <span class="text-fs-gold font-semibold">~2000</span>
+      </div>
+      <div class="flex justify-between items-center p-2 bg-background/50 rounded">
+        <span class="text-sm text-foreground/80">Body HP:</span>
+        <span class="text-fs-gold font-semibold">~3000</span>
+      </div>
+      <div class="flex justify-between items-center p-2 bg-background/50 rounded">
+        <span class="text-sm text-foreground/80">Total Effective HP:</span>
+        <span class="text-fs-gold font-semibold">5000</span>
+      </div>
+      <div class="flex justify-between items-center p-2 bg-background/50 rounded">
+        <span class="text-sm text-foreground/80">Shield regen:</span>
+        <span class="text-fs-gold font-semibold">5 seconds</span>
+      </div>
+      <div class="flex justify-between items-center p-2 bg-background/50 rounded">
+        <span class="text-sm text-foreground/80">Movement speed:</span>
+        <span class="text-fs-gold font-semibold">Slow but unstoppable</span>
+      </div>
+    </div>
+    
+    <div class="mt-4 p-3 bg-purple-500/10 rounded border border-purple-500/30">
+      <div class="text-xs font-semibold text-purple-400 mb-1">ATTACK PATTERN</div>
+      <div class="text-xs text-foreground/80 space-y-1">
+        <div>• <span class="text-red-400">Beam Attack:</span> Sweeping laser that one-shots</div>
+        <div>• <span class="text-red-400">Stomp:</span> AoE around legs, instant kill within 8m</div>
+        <div>• <span class="text-red-400">Summon:</span> Can spawn Voteless during combat</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-red-500/30">
+    <h3 class="text-lg font-semibold text-red-400 mb-4">Common Fatal Mistakes</h3>
+    <div class="space-y-3 text-sm">
+      <div class="p-3 bg-red-500/10 rounded">
+        <div class="font-semibold text-red-400 mb-1">❌ Aiming for the Eye</div>
+        <div class="text-xs text-foreground/80">
+          The giant glowing eye is NOT a weak point. It's another trap. Players waste Railgun shots and Eagle strikes on the eye thinking it's critical. It's not.
+        </div>
+      </div>
+      <div class="p-3 bg-red-500/10 rounded">
+        <div class="font-semibold text-red-400 mb-1">❌ Standing Under the Harvester</div>
+        <div class="text-xs text-foreground/80">
+          Trying to shoot up at hip joints while beneath = instant stomp death. Always maintain distance.
+        </div>
+      </div>
+      <div class="p-3 bg-red-500/10 rounded">
+        <div class="font-semibold text-red-400 mb-1">❌ Using Single-Shot Anti-Tank</div>
+        <div class="text-xs text-foreground/80">
+          Recoilless Rifle, EAT-17 = breaks shield, Harvester survives with 3000 HP, shield regens. Completely wasted.
+        </div>
+      </div>
+      <div class="p-3 bg-red-500/10 rounded">
+        <div class="font-semibold text-red-400 mb-1">❌ Ignoring It to Complete Objectives</div>
+        <div class="text-xs text-foreground/80">
+          Harvesters patrol toward objectives. Ignoring one means it arrives during your defense and wipes you. Kill it early.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Where to Shoot a Harvester
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <h3 class="text-2xl font-bold text-foreground mb-6">Harvester Weak Point Guide</h3>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+    <div class="p-5 bg-red-500/10 rounded-lg border-2 border-red-500/30">
+      <div class="text-6xl text-center mb-3">👁️</div>
+      <div class="text-center">
+        <div class="text-lg font-bold text-red-400 mb-2">EYE</div>
+        <div class="text-4xl font-bold text-red-400 mb-2">❌</div>
+        <div class="text-xs text-foreground/80">NOT a weak point<br/>Normal damage only<br/>DO NOT WASTE SHOTS HERE</div>
+      </div>
+    </div>
+    
+    <div class="p-5 bg-green-500/10 rounded-lg border-2 border-green-500/30">
+      <div class="text-6xl text-center mb-3">🦵</div>
+      <div class="text-center">
+        <div class="text-lg font-bold text-green-400 mb-2">HIP JOINTS</div>
+        <div class="text-4xl font-bold text-green-400 mb-2">✓</div>
+        <div class="text-xs text-foreground/80">PRIMARY weak points<br/>2x damage multiplier<br/>AIM HERE FIRST</div>
+      </div>
+    </div>
+    
+    <div class="p-5 bg-yellow-500/10 rounded-lg border-2 border-yellow-500/30">
+      <div class="text-6xl text-center mb-3">🎯</div>
+      <div class="text-center">
+        <div class="text-lg font-bold text-yellow-500 mb-2">LEG TIPS</div>
+        <div class="text-4xl font-bold text-yellow-500 mb-2">~</div>
+        <div class="text-xs text-foreground/80">Secondary weak points<br/>1.5x damage<br/>USE IF HIP SHOTS MISS</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-sm font-semibold text-primary mb-2">OPTIMAL ENGAGEMENT ANGLE</div>
+    <div class="text-xs text-foreground/80 space-y-1">
+      <div>• <span class="text-fs-gold">Position 20-30m away from Harvester</span></div>
+      <div>• <span class="text-fs-gold">Aim at the three hip joints</span> where legs connect to body</div>
+      <div>• <span class="text-fs-gold">Fire sustained bursts into hip joints</span> — this is the ONLY way to kill efficiently</div>
+      <div>• Harvester will try to rotate to face you — keep circling to maintain hip joint line-of-sight</div>
+    </div>
+  </div>
+</div>
+
+### Tactical Response by Difficulty
+
+<div class="space-y-6 mb-8">
+
+<div class="p-6 bg-gradient-to-br from-green-500/10 to-card/50 rounded-lg border-2 border-green-500/30">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="text-4xl">🟢</span>
+    <div>
+      <h3 class="text-xl font-bold text-green-400">Difficulty 1-3: Single Harvester, Open Terrain</h3>
+    </div>
+  </div>
+  
+  <div class="space-y-4">
+    <div class="text-sm text-foreground/80 mb-3">
+      At lower difficulties, Harvesters spawn alone and move slowly. This is your chance to learn the hip joint targeting without pressure.
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">Step-by-Step Kill</div>
+        <div class="space-y-2 text-xs text-foreground/80">
+          <div class="p-2 bg-background/50 rounded">
+            <span class="text-fs-gold font-semibold">1.</span> Spot Harvester from distance (listen for mechanical walking sounds)
+          </div>
+          <div class="p-2 bg-background/50 rounded">
+            <span class="text-fs-gold font-semibold">2.</span> Team spreads out to avoid beam sweep hitting multiple players
+          </div>
+          <div class="p-2 bg-background/50 rounded">
+            <span class="text-fs-gold font-semibold">3.</span> All players aim at hip joints (NOT the eye)
+          </div>
+          <div class="p-2 bg-background/50 rounded">
+            <span class="text-fs-gold font-semibold">4.</span> Focus-fire until shield breaks (~8-10 seconds)
+          </div>
+          <div class="p-2 bg-background/50 rounded">
+            <span class="text-fs-gold font-semibold">5.</span> Continue sustained fire into hip joints for 15-20 more seconds
+          </div>
+          <div class="p-2 bg-background/50 rounded">
+            <span class="text-fs-gold font-semibold">6.</span> Harvester collapses (one leg destroyed) or dies outright
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="text-sm font-semibold text-foreground mb-2">Recommended Weapons</div>
+        <div class="space-y-2 text-xs">
+          <div class="p-3 bg-primary/10 rounded border-l-4 border-primary">
+            <div class="font-semibold text-primary mb-1">Autocannon (Support)</div>
+            <div class="text-foreground/70">High-penetration sustained fire, perfect for hip joints. 60-round mag allows continuous DPS.</div>
+          </div>
+          <div class="p-3 bg-yellow-500/10 rounded border-l-4 border-yellow-500">
+            <div class="font-semibold text-yellow-500 mb-1">LAS-99 Quasar Cannon</div>
+            <div class="text-foreground/70">Charged shots deal massive damage to hip joints. 2-3 shots breaks shield, 4-5 more kills.</div>
+          </div>
+          <div class="p-3 bg-green-500/10 rounded border-l-4 border-green-500">
+            <div class="font-semibold text-green-500 mb-1">Arc Thrower</div>
+            <div class="text-foreground/70">Chains between hip joints, disrupts shield regen, good backup option.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs font-semibold text-green-400 mb-1">LEARNING FOCUS</div>
+      <div class="text-xs text-foreground/80">
+        Use this difficulty to practice identifying hip joints quickly. The faster you can spot and shoot them, the easier higher difficulties become. Ignore the eye completely—train yourself to look past it.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-gradient-to-br from-yellow-500/10 to-card/50 rounded-lg border-2 border-yellow-500/30">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="text-4xl">🟡</span>
+    <div>
+      <h3 class="text-xl font-bold text-yellow-500">Difficulty 4-6: Harvester + Escort Forces</h3>
+    </div>
+  </div>
+  
+  <div class="space-y-4">
+    <div class="text-sm text-foreground/80 mb-3">
+      Mid-difficulty Harvesters spawn with Overseer bodyguards and Voteless swarms. You can't ignore the escorts to focus the Harvester, nor can you ignore the Harvester to fight escorts.
+    </div>
+    
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">The Priority Dilemma</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+          <div class="text-sm font-semibold text-red-400 mb-2">❌ Wrong: Focus Harvester First</div>
+          <div class="text-xs text-foreground/80">
+            • Overseers have clear shots at your team<br/>
+            • Voteless swarm and melee kill players<br/>
+            • Harvester beam sweeps finish off anyone standing still to aim<br/>
+            • Result: Team wipe before Harvester dies
+          </div>
+        </div>
+        <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+          <div class="text-sm font-semibold text-red-400 mb-2">❌ Wrong: Clear Escorts First</div>
+          <div class="text-xs text-foreground/80">
+            • Harvester closes distance while you fight escorts<br/>
+            • Beam attack one-shots players mid-reload<br/>
+            • By time escorts dead, Harvester in melee range<br/>
+            • Result: Stomp deaths, team wipe
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-green-500/10 rounded-lg border-2 border-green-500/30">
+      <div class="text-sm font-semibold text-green-400 mb-3">✓ Correct: Split-Focus Kiting</div>
+      <div class="text-xs text-foreground/80 space-y-2">
+        <div class="p-2 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">Players 1-2:</span> Maintain sustained fire on Harvester hip joints while backing away. Do NOT stop shooting to handle escorts.
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">Player 3:</span> Runs interference—uses Cookout/Flamethrower to clear Voteless approaching players 1-2. Does NOT shoot Harvester.
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">Player 4:</span> Focuses Overseers with Thermite grenades + sustained fire. Keeps elite enemies off the Harvester DPS team.
+        </div>
+        <div class="pt-2 border-t border-green-500/30 mt-2">
+          <span class="text-green-400 font-semibold">Result:</span> Harvester dies in 30-40 seconds. Escorts die shortly after to residual team fire. No one dies.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-gradient-to-br from-red-500/10 to-card/50 rounded-lg border-2 border-red-500/30">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="text-4xl">🔴</span>
+    <div>
+      <h3 class="text-xl font-bold text-red-400">Difficulty 7-9: Multiple Harvesters</h3>
+    </div>
+  </div>
+  
+  <div class="space-y-4">
+    <div class="p-4 bg-red-500/10 rounded-lg border border-red-500/30">
+      <div class="text-sm font-semibold text-red-400 mb-2">THE NIGHTMARE SCENARIO</div>
+      <div class="text-xs text-foreground/80 space-y-1">
+        <div>• 2-3 Harvesters spawn during major engagements</div>
+        <div>• Each with full escort (2-3 Overseers + 20+ Voteless)</div>
+        <div>• Watchers calling reinforcements throughout</div>
+        <div>• Beam attacks from multiple angles = nowhere safe to stand</div>
+        <div>• Combined effective HP: 10,000-15,000 requiring sustained fire</div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">Only Viable Tactic: Stratagem Investment</div>
+      <div class="text-xs text-foreground/80 mb-3">
+        Unlike lower difficulties where primary weapons can handle Harvesters, difficulty 7-9 requires stratagem usage. The HP pools are too high for sustained small-arms fire alone.
+      </div>
+      
+      <div class="space-y-2">
+        <div class="p-3 bg-primary/10 rounded border-l-4 border-primary">
+          <div class="font-semibold text-primary mb-1">Orbital Laser (Recommended)</div>
+          <div class="text-xs text-foreground/70 space-y-1">
+            <div>• Lasts 6-8 seconds = long enough to burn through shield and kill Harvester</div>
+            <div>• Harvester moves slowly, easy to keep laser on target</div>
+            <div>• Can kill 2 Harvesters if positioned close together</div>
+            <div>• Save for Harvester encounters specifically</div>
+          </div>
+        </div>
+        
+        <div class="p-3 bg-yellow-500/10 rounded border-l-4 border-yellow-500">
+          <div class="font-semibold text-yellow-500 mb-1">Orbital Railcannon Strike (Acceptable)</div>
+          <div class="text-xs text-foreground/70 space-y-1">
+            <div>• Instantly destroys one leg hip joint = cripples Harvester</div>
+            <div>• Harvester immobilized but still alive and dangerous</div>
+            <div>• Team must finish with sustained fire to exposed joints</div>
+            <div>• Better than nothing, worse than Orbital Laser</div>
+          </div>
+        </div>
+        
+        <div class="p-3 bg-green-500/10 rounded border-l-4 border-green-500">
+          <div class="font-semibold text-green-500 mb-1">Spear (Lock-On Launcher)</div>
+          <div class="text-xs text-foreground/70 space-y-1">
+            <div>• Locks onto Harvesters, guaranteed hip joint hit</div>
+            <div>• One shot destroys shield + deals major hip damage</div>
+            <div>• 2 Spear shots + team sustained fire = kill</div>
+            <div>• Requires one player dedicate support weapon slot</div>
+          </div>
+        </div>
+        
+        <div class="p-3 bg-red-500/10 rounded border-l-4 border-red-500">
+          <div class="font-semibold text-red-400 mb-1">Eagle 500kg Bomb (AVOID)</div>
+          <div class="text-xs text-foreground/70 space-y-1">
+            <div>• Only breaks shield, does not kill</div>
+            <div>• Harvester survives with 3000 HP, shield regens in 5 seconds</div>
+            <div>• Completely wasted stratagem</div>
+            <div>• Never use single-burst explosives on Harvesters</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-purple-500/10 rounded-lg border border-purple-500/30">
+      <div class="text-xs font-semibold text-purple-400 mb-1">CRITICAL: KILL ORDER</div>
+      <div class="text-xs text-foreground/80 space-y-1">
+        <div>If facing 2-3 Harvesters:</div>
+        <div>1. <span class="text-fs-gold">Kill Watchers immediately</span> (prevent exponential spawns)</div>
+        <div>2. <span class="text-fs-gold">Orbital Laser the closest Harvester</span> (biggest immediate threat)</div>
+        <div>3. <span class="text-fs-gold">Team focus-fires Harvester #2</span> hip joints (sustained fire)</div>
+        <div>4. <span class="text-fs-gold">Use backup stratagems on Harvester #3</span> if team can't sustain DPS</div>
+        <div>5. <span class="text-fs-gold">Handle Overseers and Voteless AFTER</span> all Harvesters dead</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-gradient-to-br from-gray-500/10 to-card/50 rounded-lg border-2 border-gray-300/30">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="text-4xl">⚫</span>
+    <div>
+      <h3 class="text-xl font-bold text-foreground">Helldive: Harvester Objective Defense</h3>
+    </div>
+  </div>
+  
+  <div class="space-y-4">
+    <div class="p-4 bg-red-500/10 rounded-lg border-2 border-red-500/30">
+      <div class="text-sm font-semibold text-red-400 mb-2">THE ULTIMATE CHALLENGE</div>
+      <div class="text-xs text-foreground/80 space-y-2">
+        <div>Helldive objective defenses spawn 3-4 Harvesters simultaneously while you're defending a fixed position. You cannot kite. You cannot run. You must hold ground and kill them before the objective completes.</div>
+        <div class="font-semibold text-foreground mt-2">This is the hardest Illuminate scenario in the entire game.</div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="text-sm font-semibold text-foreground mb-2">Pre-Positioned Defense Setup</div>
+      <div class="text-xs text-foreground/80 mb-2">
+        The ONLY way to survive is pre-positioning stratagems before the defense starts:
+      </div>
+      
+      <div class="space-y-2">
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">Before defense:</span> Place 3-4 Autocannon Sentries in a semi-circle 30m from objective, facing outward
+        </div>
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">Before defense:</span> Drop 2-3 Tesla Towers to create electric barriers between sentries
+        </div>
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">Before defense:</span> Every player holds Orbital Laser or Orbital Railcannon for Harvesters
+        </div>
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">During defense:</span> Sentries shred Voteless and deal sustained hip joint damage to Harvesters
+        </div>
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">During defense:</span> Players call down Orbital Lasers on Harvesters the instant they appear
+        </div>
+        <div class="p-3 bg-background/50 rounded">
+          <span class="text-fs-gold font-semibold">During defense:</span> Team provides backup sustained fire with Autocannons/Quasars
+        </div>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+      <div class="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
+        <div class="text-sm font-semibold text-green-400 mb-2">✓ What Works</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• Pre-positioned Autocannon Sentries (sustained hip joint DPS)</div>
+          <div>• Orbital Lasers used immediately on Harvester spawns</div>
+          <div>• Team brings ONLY sustained-fire weapons (no burst damage)</div>
+          <div>• Focus-fire one Harvester at a time using callouts</div>
+          <div>• Accept some player deaths as acceptable losses</div>
+        </div>
+      </div>
+      
+      <div class="p-4 bg-red-500/10 rounded-lg border border-red-500/30">
+        <div class="text-sm font-semibold text-red-400 mb-2">❌ What Fails</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• Trying to kill Harvesters with primary weapons alone</div>
+          <div>• Using Eagle strikes (too slow, Harvesters survive)</div>
+          <div>• Splitting fire across multiple Harvesters</div>
+          <div>• Not pre-positioning sentries (you don't have time during defense)</div>
+          <div>• Bringing anti-infantry loadouts instead of anti-heavy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<Callout variant="tip">
+**Advanced Tactic — Hip Joint Rotation:** Harvesters have THREE hip joints (one per leg). If you destroy one joint completely, the Harvester becomes crippled and moves 50% slower. Experienced teams will focus-fire ONE hip joint first, cripple the Harvester, then finish it at leisure. This is more ammo-efficient than spreading damage across all three joints.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> Scenario 4: Voteless Swarm Management
+
+<div class="space-y-6 mb-8">
+
+**Situation:** Massive waves of Voteless (mind-controlled humanoid zombies) rush your position. Unlike Terminid bugs that are organic threats, Voteless move unpredictably, can use cover, and spawn in groups of 20-50 during major engagements.
+
+**Why This Matters:** While individually weak, Voteless are the Illuminate's answer to Terminid swarms. They overwhelm through numbers while shielded elites attack from range. Mishandling Voteless leads to getting surrounded and melee'd to death while trying to fight Overseers.
+
+</div>
+
+### Voteless Behavior & Counters
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🧟
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Swarm Behavior</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Voteless sprint directly at nearest Helldiver. No tactical behavior—pure aggression. Groups of 5-15 arrive every 10-15 seconds during combat.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">HP:</span> <span class="text-foreground/70">~150 (very fragile)</span></div>
+      <div><span class="text-fs-gold font-semibold">Speed:</span> <span class="text-foreground/70">Fast sprint</span></div>
+      <div><span class="text-fs-gold font-semibold">Attack:</span> <span class="text-foreground/70">Melee only</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-2xl">
+        🔥
+      </div>
+      <h3 class="text-lg font-semibold text-yellow-500">Best Counters</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Fire damage is king. Voteless burn easily and fire spreads through groups. Incendiary weapons handle 20+ Voteless passively while you fight elites.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Top Tier:</span> <span class="text-foreground/70">Cookout, Incinerator</span></div>
+      <div><span class="text-fs-gold font-semibold">Good:</span> <span class="text-foreground/70">Breaker, Dominator</span></div>
+      <div><span class="text-fs-gold font-semibold">Avoid:</span> <span class="text-foreground/70">Single-target precision weapons</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-2xl">
+        ⚡
+      </div>
+      <h3 class="text-lg font-semibold text-purple-500">Alternative: Arc Weapons</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Arc Thrower chains between Voteless, stunning and damaging entire groups. Less raw DPS than fire but better crowd control.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Arc Thrower:</span> <span class="text-foreground/70">Chains to 5-8 enemies</span></div>
+      <div><span class="text-fs-gold font-semibold">Tesla Tower:</span> <span class="text-foreground/70">Area denial stratagem</span></div>
+      <div><span class="text-fs-gold font-semibold">Benefit:</span> <span class="text-foreground/70">Also damages Overseers</span></div>
+    </div>
+  </div>
+</div>
+
+### Weapon Effectiveness Against Voteless Swarms
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Swarm Clear Speed</th>
+        <th class="text-center p-3 text-primary font-semibold">Ammo Efficiency</th>
+        <th class="text-center p-3 text-primary font-semibold">Multitask (Elite + Swarm)</th>
+        <th class="text-center p-3 text-primary font-semibold">Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-green-500/5">
+        <td class="p-3 font-medium text-foreground">SG-451 Cookout</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Excellent</div>
+          <div class="text-xs text-foreground/60">20+ kills per mag</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Best</div>
+          <div class="text-xs text-foreground/60">Fire DoT = ammo-free kills</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Yes</div>
+          <div class="text-xs text-foreground/60">Strips Overseer shields too</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-semibold">S-TIER</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-green-500/5">
+        <td class="p-3 font-medium text-foreground">FLAM-40 Incinerator</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Excellent</div>
+          <div class="text-xs text-foreground/60">Kills 30+ in one stream</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Best</div>
+          <div class="text-xs text-foreground/60">High fuel capacity</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Limited</div>
+          <div class="text-xs text-foreground/60">Poor vs shields at range</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-semibold">S-TIER</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Arc Thrower</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Very Good</div>
+          <div class="text-xs text-foreground/60">Chain kills 5-8</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Excellent</div>
+          <div class="text-xs text-foreground/60">Infinite ammo (heat)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Yes</div>
+          <div class="text-xs text-foreground/60">Stuns elites + kills swarms</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">A-TIER</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SG-225 Breaker</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Good</div>
+          <div class="text-xs text-foreground/60">3-5 kills per mag</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Moderate</div>
+          <div class="text-xs text-foreground/60">Frequent reloads</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Limited</div>
+          <div class="text-xs text-foreground/60">Weak vs shields</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">B-TIER</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">AR-23 Liberator</td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Moderate</div>
+          <div class="text-xs text-foreground/60">5-8 bursts per kill</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400 font-semibold">Moderate</div>
+          <div class="text-xs text-foreground/60">2-3 kills per mag</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Yes</div>
+          <div class="text-xs text-foreground/60">Good vs all targets</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">B-TIER</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">R-63 Diligence</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Poor</div>
+          <div class="text-xs text-foreground/60">1 kill per shot</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Poor</div>
+          <div class="text-xs text-foreground/60">10 kills per mag max</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Yes</div>
+          <div class="text-xs text-foreground/60">Excellent vs elites</div>
+        </td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">C-TIER (needs support)</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Tactical Response: Swarm + Elite Combinations
+
+<div class="space-y-6 mb-8">
+
+<div class="p-6 bg-gradient-to-br from-primary/10 to-card/50 rounded-lg border-2 border-primary/30">
+  <h3 class="text-xl font-bold text-foreground mb-4">The Core Problem: Dual Threat Management</h3>
+  <div class="text-sm text-foreground/80 mb-4">
+    Illuminate are designed so Voteless and elites arrive simultaneously. You can't ignore Voteless to focus elites (they'll melee kill you). You can't ignore elites to focus Voteless (Overseers will snipe you). Standard prioritization fails.
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="p-4 bg-red-500/10 rounded-lg border-2 border-red-500/30">
+      <div class="text-lg font-semibold text-red-400 mb-3">❌ Common Mistakes</div>
+      <div class="space-y-2 text-xs text-foreground/80">
+        <div class="p-2 bg-background/50 rounded">
+          <span class="font-semibold text-red-400">Tunnel Vision:</span> Focusing Overseer while Voteless surround and melee kill you from behind
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="font-semibold text-red-400">Panic Kiting:</span> Running from Voteless but into Overseer line-of-fire
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="font-semibold text-red-400">Ammo Waste:</span> Trying to precision-kill every Voteless individually (wastes 300+ rounds)
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="font-semibold text-red-400">Team Splitting:</span> "You handle Voteless, I'll fight the Overseer" — both players die
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-green-500/10 rounded-lg border-2 border-green-500/30">
+      <div class="text-lg font-semibold text-green-400 mb-3">✓ Correct Approach</div>
+      <div class="space-y-2 text-xs text-foreground/80">
+        <div class="p-2 bg-background/50 rounded">
+          <span class="font-semibold text-green-400">Passive AoE:</span> Use incendiary/arc weapons that kill Voteless passively while you aim at elites
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="font-semibold text-green-400">Circular Kiting:</span> Team moves in a circle, Voteless chase, elites stay at range, team shoots elites while backing away
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="font-semibold text-green-400">Fire Funneling:</span> Drop incendiary grenades to create fire walls, Voteless run through and die, you focus elites
+        </div>
+        <div class="p-2 bg-background/50 rounded">
+          <span class="font-semibold text-green-400">Stratagem Usage:</span> Tesla Tower or Gatling Sentry handles Voteless automatically while team DPS's elites
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-gradient-to-br from-yellow-500/10 to-card/50 rounded-lg border-2 border-yellow-500/30">
+  <h3 class="text-xl font-bold text-yellow-500 mb-4">Squad Loadout for Mixed Engagements</h3>
+  <div class="text-sm text-foreground/80 mb-4">
+    Optimal 4-player composition for handling Voteless swarms + shielded elites simultaneously:
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="p-4 bg-background/50 rounded-lg border-l-4 border-primary">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-2xl">1️⃣</span>
+        <div class="text-sm font-semibold text-primary">Primary DPS (Elite Killer)</div>
+      </div>
+      <div class="text-xs text-foreground/80 space-y-1 mb-3">
+        <div><span class="text-fs-gold">Primary:</span> AR-23 Liberator (versatile)</div>
+        <div><span class="text-fs-gold">Support:</span> Autocannon (sustained Overseer DPS)</div>
+        <div><span class="text-fs-gold">Grenade:</span> Thermite (sticks to elites)</div>
+        <div><span class="text-fs-gold">Stratagem:</span> Orbital Laser (Harvester killer)</div>
+      </div>
+      <div class="text-xs text-green-400">
+        Role: Focuses exclusively on shields. Never shoots Voteless unless forced.
+      </div>
+    </div>
+    
+    <div class="p-4 bg-background/50 rounded-lg border-l-4 border-yellow-500">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-2xl">2️⃣</span>
+        <div class="text-sm font-semibold text-yellow-500">Hybrid (Crowd + Elite)</div>
+      </div>
+      <div class="text-xs text-foreground/80 space-y-1 mb-3">
+        <div><span class="text-fs-gold">Primary:</span> SG-451 Cookout (fire AoE)</div>
+        <div><span class="text-fs-gold">Support:</span> Quasar Cannon (charged shots)</div>
+        <div><span class="text-fs-gold">Grenade:</span> Incendiary (area denial)</div>
+        <div><span class="text-fs-gold">Stratagem:</span> Eagle Cluster (clears groups)</div>
+      </div>
+      <div class="text-xs text-green-400">
+        Role: Shoots into both Voteless and elites. Fire damage handles crowds passively while contributing to shield breaks.
+      </div>
+    </div>
+    
+    <div class="p-4 bg-background/50 rounded-lg border-l-4 border-green-500">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-2xl">3️⃣</span>
+        <div class="text-sm font-semibold text-green-500">Crowd Control Specialist</div>
+      </div>
+      <div class="text-xs text-foreground/80 space-y-1 mb-3">
+        <div><span class="text-fs-gold">Primary:</span> SG-225 Breaker (close-range clear)</div>
+        <div><span class="text-fs-gold">Support:</span> Arc Thrower (chain stun)</div>
+        <div><span class="text-fs-gold">Grenade:</span> Stun (crowd disable)</div>
+        <div><span class="text-fs-gold">Stratagem:</span> Tesla Tower (area denial)</div>
+      </div>
+      <div class="text-xs text-green-400">
+        Role: Dedicated Voteless management. Keeps swarms off the elite DPS players.
+      </div>
+    </div>
+    
+    <div class="p-4 bg-background/50 rounded-lg border-l-4 border-purple-500">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-2xl">4️⃣</span>
+        <div class="text-sm font-semibold text-purple-500">Support / Watcher Hunter</div>
+      </div>
+      <div class="text-xs text-foreground/80 space-y-1 mb-3">
+        <div><span class="text-fs-gold">Primary:</span> LAS-16 Sickle (infinite ammo precision)</div>
+        <div><span class="text-fs-gold">Support:</span> Machine Gun (sustained fire)</div>
+        <div><span class="text-fs-gold">Grenade:</span> Gas (area denial)</div>
+        <div><span class="text-fs-gold">Stratagem:</span> Resupply Pack (team ammo)</div>
+      </div>
+      <div class="text-xs text-green-400">
+        Role: Kills every Watcher immediately. Provides sustained fire on elites. Resupplies team mid-fight.
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-4 p-3 bg-yellow-500/10 rounded border border-yellow-500/30">
+    <div class="text-xs font-semibold text-yellow-400 mb-1">TEAM SYNERGY</div>
+    <div class="text-xs text-foreground/80">
+      This composition ensures someone is ALWAYS killing Voteless (players 2-3) while someone is ALWAYS pressuring elites (players 1-2). Player 4 prevents reinforcement cascades by instantly killing Watchers. No role overlap = maximum efficiency.
+    </div>
+  </div>
+</div>
+
+</div>
+
+<Callout variant="tip">
+**Pro Tactic — Fire Corridor:** When defending objectives, pre-place Incendiary Mines in a line 15m from the objective. Voteless charge through the fire corridor and die before reaching you. Meanwhile, your team focuses on Overseers and Harvesters without worrying about melee threats. This is the META tactic for Helldive defenses.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Radio className="inline-block mr-3 mb-1" size={32} /> Comprehensive Loadout Recommendations
+
+<div class="space-y-6 mb-8">
+
+Based on all scenarios covered, here are the proven loadout archetypes for Illuminate missions. Mix and match based on your squad composition, but ensure team coverage of all threat types.
+
+</div>
+
+### Meta Loadouts by Role
+
+<div class="space-y-6 mb-8">
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">The "Cookout Carnage" Build</h3>
+      <p class="text-sm text-foreground/60">Highest Illuminate win rate on Helldive</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-green-400">S</div>
+      <div class="text-xs text-foreground/60">tier rating</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="space-y-3">
+      <div class="p-4 bg-card/70 rounded-lg border border-primary/20">
+        <div class="text-sm font-semibold text-primary mb-2">Primary Weapon</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">SG-451 Cookout</div>
+        <div class="text-xs text-foreground/80">
+          Incendiary shotgun that melts shields and burns swarms. Fire DoT continues through reload windows, preventing shield regen.
+        </div>
+      </div>
+      
+      <div class="p-4 bg-card/70 rounded-lg border border-primary/20">
+        <div class="text-sm font-semibold text-primary mb-2">Secondary Weapon</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">P-4 Senator</div>
+        <div class="text-xs text-foreground/80">
+          High-damage revolver for finishing weakened elites or emergency Watcher kills at range.
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="p-4 bg-card/70 rounded-lg border border-primary/20">
+        <div class="text-sm font-semibold text-primary mb-2">Support Weapon</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">MG-43 Machine Gun</div>
+        <div class="text-xs text-foreground/80">
+          200-round mag for sustained shield-breaking. Backup when Cookout runs dry or for range engagements.
+        </div>
+      </div>
+      
+      <div class="p-4 bg-card/70 rounded-lg border border-primary/20">
+        <div class="text-sm font-semibold text-primary mb-2">Grenade</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">G-16 Thermite</div>
+        <div class="text-xs text-foreground/80">
+          Sticks to elites, burns through shields, guaranteed damage even when kiting.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-primary font-semibold mb-1">Stratagem 1</div>
+      <div class="text-sm font-bold text-foreground">Orbital Laser</div>
+      <div class="text-xs text-foreground/70">Harvester killer</div>
+    </div>
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-primary font-semibold mb-1">Stratagem 2</div>
+      <div class="text-sm font-bold text-foreground">Tesla Tower</div>
+      <div class="text-xs text-foreground/70">Voteless area denial</div>
+    </div>
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-primary font-semibold mb-1">Stratagem 3</div>
+      <div class="text-sm font-bold text-foreground">Resupply Pack</div>
+      <div class="text-xs text-foreground/70">Sustain for team</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
+      <div class="text-sm font-semibold text-green-400 mb-2">✓ STRENGTHS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Handles all threat types</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Fire prevents shield regen</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Passive Voteless clear</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Close-mid range king</span>
+      </div>
+    </div>
+    <div class="p-4 bg-red-500/10 rounded-lg border border-red-500/30">
+      <div class="text-sm font-semibold text-red-400 mb-2">— TRADE-OFFS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Weak beyond 30m</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Ammo-hungry</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">No anti-Watcher specialty</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-4 p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-sm font-semibold text-primary mb-2">WHEN TO USE</div>
+    <div class="text-xs text-foreground/80">
+      This is the current Helldive meta for Illuminate missions. The Cookout's fire damage is broken against shields—it's the only weapon that continues damaging during reload windows, making shield regeneration nearly impossible. Use this build when your team needs a generalist who can handle everything. Pair with precision Watcher hunters for best results.
+    </div>
+  </div>
+</div>
+
+<div class="p-8 bg-gradient-to-br from-purple-500/10 via-card/50 to-purple-500/5 rounded-lg border-2 border-purple-500/30">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-purple-500/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">The "Watcher Hunter" Build</h3>
+      <p class="text-sm text-foreground/60">Reinforcement denial specialist</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-green-400">A</div>
+      <div class="text-xs text-foreground/60">tier rating</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="space-y-3">
+      <div class="p-4 bg-card/70 rounded-lg border border-purple-500/20">
+        <div class="text-sm font-semibold text-purple-500 mb-2">Primary Weapon</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">LAS-16 Sickle</div>
+        <div class="text-xs text-foreground/80">
+          Infinite ammo laser rifle. Never run out of Watcher-killing capacity. Perfect accuracy for instant scout elimination.
+        </div>
+      </div>
+      
+      <div class="p-4 bg-card/70 rounded-lg border border-purple-500/20">
+        <div class="text-sm font-semibold text-purple-500 mb-2">Secondary Weapon</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">P-113 Verdict</div>
+        <div class="text-xs text-foreground/80">
+          Auto-pistol for emergency close-range Voteless clear when surrounded.
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="p-4 bg-card/70 rounded-lg border border-purple-500/20">
+        <div class="text-sm font-semibold text-purple-500 mb-2">Support Weapon</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">Autocannon</div>
+        <div class="text-xs text-foreground/80">
+          For elite DPS when Watchers are clear. High-pen rounds strip Overseer shields and hit Harvester hip joints.
+        </div>
+      </div>
+      
+      <div class="p-4 bg-card/70 rounded-lg border border-purple-500/20">
+        <div class="text-sm font-semibold text-purple-500 mb-2">Grenade</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">G-10 Incendiary</div>
+        <div class="text-xs text-foreground/80">
+          Area denial for when Voteless swarm while hunting Watchers.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-purple-500 font-semibold mb-1">Stratagem 1</div>
+      <div class="text-sm font-bold text-foreground">Orbital Laser</div>
+      <div class="text-xs text-foreground/70">Harvester removal</div>
+    </div>
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-purple-500 font-semibold mb-1">Stratagem 2</div>
+      <div class="text-sm font-bold text-foreground">Eagle Airstrike</div>
+      <div class="text-xs text-foreground/70">Emergency Watcher clear</div>
+    </div>
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-purple-500 font-semibold mb-1">Stratagem 3</div>
+      <div class="text-sm font-bold text-foreground">Resupply Pack</div>
+      <div class="text-xs text-foreground/70">Team sustain</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
+      <div class="text-sm font-semibold text-green-400 mb-2">✓ STRENGTHS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Infinite Watcher kills</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Never runs out of ammo</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Long-range precision</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Team utility (Resupply)</span>
+      </div>
+    </div>
+    <div class="p-4 bg-red-500/10 rounded-lg border border-red-500/30">
+      <div class="text-sm font-semibold text-red-400 mb-2">— TRADE-OFFS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Weak vs swarms</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Relies on team for crowd control</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Sickle overheats</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-4 p-4 bg-purple-500/10 rounded-lg border border-purple-500/20">
+    <div class="text-sm font-semibold text-purple-500 mb-2">WHEN TO USE</div>
+    <div class="text-xs text-foreground/80">
+      Every Helldive team needs ONE dedicated Watcher hunter. This build ensures that role never runs out of ammo or capabilities. The Sickle's infinite ammo means you can kill 50+ Watchers per mission without resupply concerns. Pair with Cookout users who handle crowds while you focus exclusively on reinforcement denial.
+    </div>
+  </div>
+</div>
+
+<div class="p-8 bg-gradient-to-br from-yellow-500/10 via-card/50 to-yellow-500/5 rounded-lg border-2 border-yellow-500/30">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-yellow-500/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">The "Arc Conductor" Build</h3>
+      <p class="text-sm text-foreground/60">Crowd control + shield strip hybrid</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-green-400">A</div>
+      <div class="text-xs text-foreground/60">tier rating</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="space-y-3">
+      <div class="p-4 bg-card/70 rounded-lg border border-yellow-500/20">
+        <div class="text-sm font-semibold text-yellow-500 mb-2">Primary Weapon</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">AR-23 Liberator</div>
+        <div class="text-xs text-foreground/80">
+          Versatile assault rifle for Watchers and general combat. Reliable backup when Arc Thrower on cooldown.
+        </div>
+      </div>
+      
+      <div class="p-4 bg-card/70 rounded-lg border border-yellow-500/20">
+        <div class="text-sm font-semibold text-yellow-500 mb-2">Secondary Weapon</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">P-4 Senator</div>
+        <div class="text-xs text-foreground/80">
+          High-damage finisher for weakened elites after arc stun.
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="p-4 bg-card/70 rounded-lg border border-yellow-500/20">
+        <div class="text-sm font-semibold text-yellow-500 mb-2">Support Weapon</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">ARC-3 Arc Thrower</div>
+        <div class="text-xs text-foreground/80">
+          Chains between 5-8 enemies. Stuns Overseers, kills Voteless, disrupts shields through chain lightning.
+        </div>
+      </div>
+      
+      <div class="p-4 bg-card/70 rounded-lg border border-yellow-500/20">
+        <div class="text-sm font-semibold text-yellow-500 mb-2">Grenade</div>
+        <div class="text-lg font-bold text-fs-gold mb-1">G-4 Gas</div>
+        <div class="text-xs text-foreground/80">
+          Blinds groups, creates area denial, forces enemies into arc chain zones.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-yellow-500 font-semibold mb-1">Stratagem 1</div>
+      <div class="text-sm font-bold text-foreground">Tesla Tower</div>
+      <div class="text-xs text-foreground/70">Static arc field</div>
+    </div>
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-yellow-500 font-semibold mb-1">Stratagem 2</div>
+      <div class="text-sm font-bold text-foreground">Arc Thrower Sentry</div>
+      <div class="text-xs text-foreground/70">Auto crowd control</div>
+    </div>
+    <div class="p-3 bg-background/50 rounded">
+      <div class="text-xs text-yellow-500 font-semibold mb-1">Stratagem 3</div>
+      <div class="text-sm font-bold text-foreground">Orbital EMS Strike</div>
+      <div class="text-xs text-foreground/70">Emergency disable</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
+      <div class="text-sm font-semibold text-green-400 mb-2">✓ STRENGTHS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Best crowd control</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Stuns elites</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Chain damage</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Infinite ammo (heat)</span>
+      </div>
+    </div>
+    <div class="p-4 bg-red-500/10 rounded-lg border border-red-500/30">
+      <div class="text-sm font-semibold text-red-400 mb-2">— TRADE-OFFS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Lower raw DPS vs fire</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Charge time</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Friendly-fire risk</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-4 p-4 bg-yellow-500/10 rounded-lg border border-yellow-500/20">
+    <div class="text-sm font-semibold text-yellow-500 mb-2">WHEN TO USE</div>
+    <div class="text-xs text-foreground/80">
+      Arc weapons excel in defensive scenarios where Voteless funnel through chokepoints. The chain lightning can hit 8+ enemies per shot, making it more efficient than fire weapons when enemies cluster. The stun effect also buys time for teammates to strip shields. Use this build when your team needs superior crowd control and you have other players handling raw elite DPS.
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Tactical Principles
+
+<div class="space-y-6 mb-10">
+
+After mastering all scenarios, the Illuminate come down to three core principles that override everything else:
+
+</div>
+
+### The Three Laws of Illuminate Combat
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+  <div class="p-6 bg-gradient-to-br from-yellow-500/10 to-card/50 rounded-lg border-2 border-yellow-500/30">
+    <div class="text-center mb-4">
+      <div class="text-6xl mb-3">👁️</div>
+      <h3 class="text-2xl font-bold text-yellow-500">LAW #1</h3>
+      <div class="text-sm text-foreground/80 mt-2">Watchers Are Always Priority #1</div>
+    </div>
+    <div class="text-xs text-foreground/80 space-y-2">
+      <p>No matter what you're fighting—Harvester, Crescent Overseer, 50 Voteless—if a Watcher appears, STOP and kill it first.</p>
+      <p>One missed Watcher cascades into 12+ reinforcements including more Watchers. This creates exponential spawns that make missions unwinnable.</p>
+      <p class="text-yellow-400 font-semibold">If you violate this law, you will fail.</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-gradient-to-br from-primary/10 to-card/50 rounded-lg border-2 border-primary/30">
+    <div class="text-center mb-4">
+      <div class="text-6xl mb-3">🔵</div>
+      <h3 class="text-2xl font-bold text-primary">LAW #2</h3>
+      <div class="text-sm text-foreground/80 mt-2">Sustained Fire Beats Burst Damage</div>
+    </div>
+    <div class="text-xs text-foreground/80 space-y-2">
+      <p>Shields regenerate after 5 seconds. Single-shot explosives (500kg, Railcannon, EAT) only break shields—enemies survive and shields return.</p>
+      <p>Sustained-fire weapons (Cookout, Machine Gun, Sickle) + DoT effects (fire, arc) prevent regeneration and secure kills.</p>
+      <p class="text-primary font-semibold">If you bring burst-damage loadouts, you will waste stratagems.</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-gradient-to-br from-purple-500/10 to-card/50 rounded-lg border-2 border-purple-500/30">
+    <div class="text-center mb-4">
+      <div class="text-6xl mb-3">🎯</div>
+      <h3 class="text-2xl font-bold text-purple-500">LAW #3</h3>
+      <div class="text-sm text-foreground/80 mt-2">Weak Points Are Counter-Intuitive</div>
+    </div>
+    <div class="text-xs text-foreground/80 space-y-2">
+      <p>Overseer heads = NOT weak points (aim chest). Harvester eyes = NOT weak points (aim hip joints).</p>
+      <p>The Illuminate are designed to trap players who rely on "headshot always best" muscle memory from other games.</p>
+      <p class="text-purple-500 font-semibold">If you don't learn correct weak points, you will waste ammo and die.</p>
+    </div>
+  </div>
+</div>
+
+### Common Fatal Errors (Helldive Level)
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Fatal Error</th>
+        <th class="text-center p-3 text-primary font-semibold">Why It Kills You</th>
+        <th class="text-center p-3 text-primary font-semibold">Correct Response</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-red-400">Ignoring a Watcher to finish an elite</td>
+        <td class="text-center p-3 text-xs text-foreground/80">
+          Watcher summons Warp Ship → 12+ enemies spawn → Now fighting elite + 12 reinforcements → team wipes
+        </td>
+        <td class="text-center p-3 text-xs text-green-400">
+          Stop DPS on elite, kill Watcher, resume elite fight (yes, even if elite at 10% HP)
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-red-400">Using 500kg bomb on shielded Harvester</td>
+        <td class="text-center p-3 text-xs text-foreground/80">
+          Breaks shield only → Harvester survives with 3000 HP → Shield regens → Stratagem completely wasted
+        </td>
+        <td class="text-center p-3 text-xs text-green-400">
+          Use Orbital Laser (sustained damage) or sustained primary fire on hip joints
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-red-400">All 4 players reloading simultaneously</td>
+        <td class="text-center p-3 text-xs text-foreground/80">
+          5-second fire gap → All elite shields fully regenerate → All previous damage wasted → team has no ammo
+        </td>
+        <td class="text-center p-3 text-xs text-green-400">
+          Stagger reloads: 2 players reload while 2 maintain fire, then swap
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-red-400">Splitting fire across multiple Overseers</td>
+        <td class="text-center p-3 text-xs text-foreground/80">
+          Damage 3 Overseers to 50% HP → All shields regen → 0 kills achieved → wasted 1000+ rounds
+        </td>
+        <td class="text-center p-3 text-xs text-green-400">
+          Team focus-fires ONE Overseer until dead, then move to next (sequential targeting)
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-red-400">Bringing only precision weapons (Diligence, Railgun)</td>
+        <td class="text-center p-3 text-xs text-foreground/80">
+          Cannot handle Voteless swarms → Get surrounded and melee'd to death → Precision means nothing when dead
+        </td>
+        <td class="text-center p-3 text-xs text-green-400">
+          Mix loadouts: 2 players crowd control (Cookout/Arc), 2 players precision (Sickle/Autocannon)
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-red-400">Standing still to aim at weak points</td>
+        <td class="text-center p-3 text-xs text-foreground/80">
+          Overseer beam sweep one-shots you → Harvester stomp one-shots you → Voteless surround and melee
+        </td>
+        <td class="text-center p-3 text-xs text-green-400">
+          Constant movement while shooting (kiting). Never stand still for more than 2-3 seconds
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="warning">
+**The Illuminate Difficulty Cliff:** New players often report that Illuminate go from "manageable" at difficulty 6 to "impossible" at difficulty 7. This is because the reinforcement cascade mechanics become unforgiving at higher difficulties. One mistake = mission failure. The faction is designed to punish imperfect play. Accept that Illuminate Helldives require near-perfect execution—there's no room for error.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
