@@ -38,6 +38,7 @@ const {
       title=`${title ? capitalizeFirstLetter(title) + " | " + SITE.title : SITE.title}`
       description={description}
     />
+      <script is:inline src="/js/toc-scroll-spy.js"></script>
   </head>
   <body
     class=`font-sans ${hide_toc && hide_sidenav && max_width ? "" : "bg-card"}`

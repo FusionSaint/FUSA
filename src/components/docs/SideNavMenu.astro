@@ -9,7 +9,7 @@ const pathname: string = new URL(Astro.request.url).pathname;
 const { class: className } = Astro.props;
 ---
 
-<ul class:list={["list-none m-0", className]}>
+<ul class:list={["list-none m-0", level === 0 ? "space-y-4" : "space-y-1", className]}>
   {
     items
       .filter((item) => !item.draft)
@@ -17,20 +17,48 @@ const { class: className } = Astro.props;
         const label = item.title
           ? capitalizeFirstLetter(item.title)
           : capitalizeFirstLetter(item.slug.split("/").pop() || "");
-        const className = `
-        ${level === 0 ? "font-semibold" : "text-muted-foreground"}
-        ${pathname === "/" + item.slug ? "text-primary" : "no-underline"}
-        `.trim();
+        
+        const isActive = pathname === "/" + item.slug || pathname === "/" + item.slug + "/";
+        const hasChildren = item.children && item.children.length > 0;
+        
+        // Style based on level and active state
+        const textStyle = level === 0 
+          ? "font-semibold text-base text-primary" 
+          : "font-normal text-sm text-primary";
+        
+        const activeStyle = isActive 
+          ? "font-bold" 
+          : "";
+        
+        // Indentation based on level - using explicit classes for Tailwind
+        let indentClass = "";
+        if (level === 1) indentClass = "pl-4";
+        else if (level === 2) indentClass = "pl-8";
+        else if (level === 3) indentClass = "pl-12";
+        
         return (
           <li class="w-full">
             <a
               href={`/${item.slug}`}
-              class={`${className}  text-sm leading-none w-full`}
+              class={`
+                block py-1.5 leading-tight w-full no-underline
+                hover:text-primary hover:font-semibold transition-colors
+                ${indentClass}
+                ${textStyle}
+                ${activeStyle}
+              `.trim()}
             >
               {label}
             </a>
-            {item.children.length > 0 && (
-              <Astro.self items={item.children} level={level + 1} />
+            
+            {hasChildren && (
+              <div class="mt-1">
+                <Astro.self 
+                  items={item.children} 
+                  level={level + 1}
+                  class="mt-1 mb-2"
+                />
+              </div>
             )}
           </li>
         );

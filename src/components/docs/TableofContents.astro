@@ -12,17 +12,40 @@ const { class: className } = Astro.props;
 
 {
   hasToC && (
-    <div class:list={["relative", className]}>
-      <h2 class="text-xl border-none italic">On This Page</h2>
-      <ul class="list-none m-0">
-        {toc.map((heading) => (
-          <li class=`${heading.depth === 2 ? "font-semibold" : "text-muted-foreground"}`>
-            <a href={`#${heading.slug}`} class="text-sm w-full leading-none no-underline">
-              {heading.text}
+    <div class:list={["relative", className]} id="table-of-contents">
+      <h2 class="text-xl border-none italic mb-4">On This Page</h2>
+      <nav id="toc-nav">
+        <ul class="list-none m-0 space-y-2">
+          {toc.map((heading) => (
+            <li class={`${heading.depth === 2 ? "font-semibold" : "text-muted-foreground"}`}>
+              <a 
+                href={`#${heading.slug}`}
+                data-toc-link={heading.slug}
+                class="toc-link text-base w-full leading-relaxed no-underline hover:text-primary transition-colors block"
+              >
+                {heading.text}
               </a>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   )
 }
+
+<style is:global>
+  /* Active state for TOC links - using multiple selectors for specificity */
+  .toc-link.active,
+  a.toc-link.active,
+  #toc-nav .toc-link.active {
+    color: #FFC247 !important;  /* Gold color */
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+  
+  /* Extra visual indicator */
+  .toc-link.active::before {
+    content: "▸ ";
+    color: #FFC247;  /* Gold color */
+  }
+</style>

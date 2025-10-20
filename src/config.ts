@@ -20,7 +20,48 @@ export const menu_items: { title: string; href: string }[] = [
 
 export const side_nav_menu_order: string[] = [
   "getting-started",
+  
+  // Battlefield 6
+  "Battlefield6",
+  "Battlefield6/settings",
+  "Battlefield6/experience",
+  "Battlefield6/hud-optimization",
+  "Battlefield6/loadouts",
+  "Battlefield6/weapon-customization",
+  "Battlefield6/tipsntricks",
+  "Battlefield6/patchnotes",
+  
+  // Company of Heroes - NOTE: lowercase 'o' in "of"
+  "Companyofheroes",
+  "Companyofheroes/compare",
+  "Companyofheroes/soviets",
+  "Companyofheroes/uk",
+  "Companyofheroes/usa",
+  "Companyofheroes/waffenss",
+  "Companyofheroes/Wehrmacht",
+  
+  // Dune
+  "Dune",
+  "Dune/factions",
+  "Dune/strategies",
+  
+  // Helldivers 2
+  "Helldivers2",
+  "Helldivers2/loadout",
+  "Helldivers2/mines",
+  "Helldivers2/shipmodules",
+  "Helldivers2/stratagem",
+  "Helldivers2/weapons",
+  "Helldivers2/factionstrategies",
+  "Helldivers2/factionstrategies/automatons",
+  "Helldivers2/factionstrategies/terminids",
+  "Helldivers2/factionstrategies/illuminate",
+  "Helldivers2/warbonds",
+  "Helldivers2/warbonds/comparison",
+  "Helldivers2/warbonds/faq",
+  "Helldivers2/warbonds/priority",
 ];
+
 
 export const docconfig = {
   hide_table_of_contents: false,
