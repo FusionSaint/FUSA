@@ -60,6 +60,7 @@ export const side_nav_menu_order: string[] = [
   "Helldivers2/warbonds/comparison",
   "Helldivers2/warbonds/faq",
   "Helldivers2/warbonds/priority",
+  "Helldivers2/patchnotes/410Patch",
 ];
 
 

@@ -1,0 +1,1500 @@
+---
+title: Patch 4.1.0 "Into the Unjust Updated"
+---
+
+import Callout from "@/components/Callout.astro";
+
+<div class="space-y-6 mb-8">
+
+**Patch 4.1.0 "Into the Unjust" delivers the most comprehensive balance overhaul in Helldivers 2 history**, with over 200 bug fixes, sweeping weapon buffs, enemy rebalances, and major performance optimizations. This patch fundamentally reshapes the game's balance philosophy, making nearly every weapon more lethal and addressing long-standing pain points.
+
+Released on October 23, 2025, this update focuses entirely on refinement and polish—no new content, but a complete rebalancing of the existing arsenal. Arrowhead reworked armor penetration mechanics, buffed close-range weapons, nerfed problematic enemies, and optimized performance across the board. This is the foundation update competitive players have been waiting for.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🎯 Patch Overview
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔧
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Bug Fixes</h3>
+    </div>
+    <div class="text-3xl font-bold text-fs-gold mb-2">200+</div>
+    <p class="text-sm text-foreground/80">Comprehensive fixes across gameplay, crashes, and visuals</p>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Weapon Buffs</h3>
+    </div>
+    <div class="text-3xl font-bold text-fs-gold mb-2">ALL</div>
+    <p class="text-sm text-foreground/80">Every primary, sidearm, throwable, and stratagem improved</p>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        👾
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Enemy Balance</h3>
+    </div>
+    <div class="text-3xl font-bold text-fs-gold mb-2">Major</div>
+    <p class="text-sm text-foreground/80">Rupture Warriors nerfed, spawn rates adjusted, weak spots added</p>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⚡
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Performance</h3>
+    </div>
+    <div class="text-3xl font-bold text-fs-gold mb-2">Optimized</div>
+    <p class="text-sm text-foreground/80">Physics, AI, effects, and rendering all streamlined</p>
+  </div>
+</div>
+
+<Callout variant="info">
+**Balance Philosophy Shift:** This patch introduces a new armor penetration system where light-penetration weapons deal a higher percentage of damage to "durable" enemies, giving them a clear tactical role versus medium-penetration arms. This fundamentally changes weapon selection strategy.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🔫 Primary Weapon Buffs
+
+<div class="space-y-6 mb-8">
+
+**Every primary weapon received meaningful improvements** across damage, durable damage, stagger, or utility. Assault rifles, SMGs, shotguns, and marksman rifles all got substantial buffs to improve time-to-kill and weapon feel. The changes prioritize making each weapon class feel more impactful in its intended role.
+
+</div>
+
+### Assault Rifles
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage Change</th>
+        <th class="text-center p-3 text-primary font-semibold">Durable Damage</th>
+        <th class="text-left p-3 text-primary font-semibold">Additional Changes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">AR-23 Liberator</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">80</div>
+          <div class="text-fs-gold font-semibold">90</div>
+          <div class="text-xs text-green-400">(+10)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">15</div>
+          <div class="text-fs-gold font-semibold">22</div>
+          <div class="text-xs text-green-400">(+7)</div>
+        </td>
+        <td class="p-3 text-foreground/80">Standard AR baseline buff</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">AR-23C Liberator Concussive</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">55</div>
+          <div class="text-fs-gold font-semibold">65</div>
+          <div class="text-xs text-green-400">(+10)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">—</div>
+        </td>
+        <td class="p-3 text-foreground/80">Improved stagger utility</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">AR-23E Liberator Explosive</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">50</div>
+          <div class="text-fs-gold font-semibold">60</div>
+          <div class="text-xs text-green-400">(+10)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">—</div>
+        </td>
+        <td class="p-3 text-foreground/80">Better AoE clearing</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">AR-61 Tenderizer</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">90</div>
+          <div class="text-fs-gold font-semibold">110</div>
+          <div class="text-xs text-green-400">(+20)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">18</div>
+          <div class="text-fs-gold font-semibold">27</div>
+          <div class="text-xs text-green-400">(+9)</div>
+        </td>
+        <td class="p-3 text-foreground/80">Significant damage increase</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Submachine Guns (SMGs)
+
+<div class="space-y-6 mb-8">
+
+**SMGs received the most dramatic close-range buffs** with increased damage and enhanced damage falloff to reinforce their short-range specialist role. These changes make SMGs devastating in CQB while clearly defining their effective range.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage Change</th>
+        <th class="text-center p-3 text-primary font-semibold">Durable Damage</th>
+        <th class="text-left p-3 text-primary font-semibold">Key Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SMG-37 Defender</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">80</div>
+          <div class="text-fs-gold font-semibold">100</div>
+          <div class="text-xs text-green-400">(+20)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">8</div>
+          <div class="text-fs-gold font-semibold">18</div>
+          <div class="text-xs text-green-400">(+10)</div>
+        </td>
+        <td class="p-3 text-foreground/80">Massive CQB buff</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SMG-72 Pummeler</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">40</div>
+          <div class="text-fs-gold font-semibold">50</div>
+          <div class="text-xs text-green-400">(+10)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">—</div>
+        </td>
+        <td class="p-3 text-foreground/80">Improved stagger + damage</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">MP-98 Knight</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">85</div>
+          <div class="text-fs-gold font-semibold">100</div>
+          <div class="text-xs text-green-400">(+15)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">17</div>
+          <div class="text-fs-gold font-semibold">25</div>
+          <div class="text-xs text-green-400">(+8)</div>
+        </td>
+        <td class="p-3 text-foreground/80">High RoF shredder</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip">
+**Close-Range Meta:** The SMG buffs with enhanced damage falloff mean these weapons now excel at sub-20m engagements but drop off sharply beyond that. Pair with a long-range stratagem for optimal loadout balance.
+</Callout>
+
+### Shotguns
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ❌
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">SG-8S Slugger (Before)</div>
+        <div class="text-xs text-foreground/60">Precision shotgun</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Damage</span>
+        <span class="text-fs-gold font-semibold">280</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Durable Damage</span>
+        <span class="text-fs-gold font-semibold">75</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">ISSUES</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Lower damage output</li>
+        <li>• Less effective vs armor</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ✓
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">SG-8S Slugger (After)</div>
+        <div class="text-xs text-foreground/60">Heavy-hitting precision</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Damage</span>
+        <span class="text-green-400 font-bold">330 <span class="text-xs">(+50)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Durable Damage</span>
+        <span class="text-green-400 font-bold">90 <span class="text-xs">(+15)</span></span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">BENEFITS</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• 18% damage increase</li>
+        <li>• 20% better vs armor</li>
+        <li>• One-shot more enemies</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Shotgun</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage Change</th>
+        <th class="text-left p-3 text-primary font-semibold">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SG-8 Punisher</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Buffed</div>
+        </td>
+        <td class="p-3 text-foreground/80">Increased pellet damage</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SG-8P Punisher Plasma</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Buffed</div>
+        </td>
+        <td class="p-3 text-foreground/80">Better energy projectile damage</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SG-451 Cookout</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Buffed</div>
+        </td>
+        <td class="p-3 text-foreground/80">Improved incendiary effectiveness</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Marksman & Sniper Rifles
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage</th>
+        <th class="text-center p-3 text-primary font-semibold">Durable</th>
+        <th class="text-left p-3 text-primary font-semibold">Key Changes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">R-63 Diligence</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">125 → 150</div>
+          <div class="text-xs text-green-400">(+25)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">+12</div>
+        </td>
+        <td class="p-3 text-foreground/80">20% damage increase</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">R-63CS Diligence Counter Sniper</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">200 → 240</div>
+          <div class="text-xs text-green-400">(+40)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">+24</div>
+        </td>
+        <td class="p-3 text-foreground/80">Improved one-shot potential</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">JAR-5 Dominator</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">300 → 350</div>
+          <div class="text-xs text-green-400">(+50)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">+45</div>
+        </td>
+        <td class="p-3 text-foreground/80">Massive damage boost</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="success">
+**Marksman Rifles Viable:** The substantial damage buffs to marksman rifles make them competitive choices for precision players. The R-63CS and JAR-5 now reliably one-shot medium enemies with headshots.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🔪 Sidearm & Melee Buffs
+
+<div class="space-y-6 mb-8">
+
+**Sidearms and melee weapons received significant buffs to serve as viable backup options** rather than emergency last resorts. Pistols got close-range damage increases with enhanced falloff, while melee weapons became more lethal across the board.
+
+</div>
+
+### Pistols
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <h3 class="text-lg font-semibold text-primary">P-2 Peacemaker</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Standard service pistol</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">85 → 95 (+10)</span></div>
+      <div><span class="text-fs-gold font-semibold">Durable:</span> <span class="text-foreground/70">17 → 23 (+6)</span></div>
+      <div><span class="text-fs-gold font-semibold">Change:</span> <span class="text-green-400">Better emergency weapon</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <h3 class="text-lg font-semibold text-primary">P-4 Senator</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">High-power revolver</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">175 → 200 (+25)</span></div>
+      <div><span class="text-fs-gold font-semibold">Durable:</span> <span class="text-foreground/70">52 → 60 (+8)</span></div>
+      <div><span class="text-fs-gold font-semibold">Change:</span> <span class="text-green-400">One-shot light enemies</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <h3 class="text-lg font-semibold text-primary">P-113 Verdict</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Burst-fire handgun</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Per-shot:</span> <span class="text-foreground/70">Damage buffed</span></div>
+      <div><span class="text-fs-gold font-semibold">Burst:</span> <span class="text-foreground/70">3-round accuracy</span></div>
+      <div><span class="text-fs-gold font-semibold">Change:</span> <span class="text-green-400">Rapid finisher</span></div>
+    </div>
+  </div>
+</div>
+
+### Melee Weapons
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Melee Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage Change</th>
+        <th class="text-left p-3 text-primary font-semibold">Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">CQC-42 Machete</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">170 → 200</div>
+          <div class="text-xs text-green-400">(+30 / +18%)</div>
+        </td>
+        <td class="p-3 text-foreground/80">Now one-shots more light enemies</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">LAS-7 Dagger (melee mode)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Buffed</div>
+        </td>
+        <td class="p-3 text-foreground/80">Improved energy blade damage</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">All melee weapons</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Fixed AP display</div>
+        </td>
+        <td class="p-3 text-foreground/80">Correct armor penetration values now shown</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip">
+**Sidearm Strategy:** With the sidearm buffs, consider running a specialist primary (sniper, flamethrower) paired with a strong pistol for close-range defense. The P-4 Senator is now viable for finishing wounded targets.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 💣 Throwable Buffs
+
+<div class="space-y-6 mb-8">
+
+**All grenades and throwables received substantial lethality improvements** through increased damage, better armor penetration, or enhanced utility. Explosive throwables hit harder, and specialized grenades gained improved targeting or area effects.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💥
+      </div>
+      <h3 class="text-lg font-semibold text-primary">G-7 Pineapple</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Frag grenade with shrapnel buffs</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Shrapnel:</span> <span class="text-foreground/70">More fragments</span></div>
+      <div><span class="text-fs-gold font-semibold">Radius:</span> <span class="text-foreground/70">Larger explosion</span></div>
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-green-400">Per-fragment increased</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🧨
+      </div>
+      <h3 class="text-lg font-semibold text-primary">TED-63 Dynamite</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">High-explosive demolition charge</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">700 → 1000 (+43%)</span></div>
+      <div><span class="text-fs-gold font-semibold">AP:</span> <span class="text-foreground/70">Medium → Heavy</span></div>
+      <div><span class="text-fs-gold font-semibold">Role:</span> <span class="text-green-400">Anti-heavy explosive</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-primary">G-50 Seeker</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Homing grenade with targeting improvements</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">400 → 500 (+25%)</span></div>
+      <div><span class="text-fs-gold font-semibold">Priority:</span> <span class="text-foreground/70">Flies + marked targets</span></div>
+      <div><span class="text-fs-gold font-semibold">Use:</span> <span class="text-green-400">Anti-air specialist</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔥
+      </div>
+      <h3 class="text-lg font-semibold text-primary">G-10 Incendiary</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Fire grenade area denial</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Burn:</span> <span class="text-foreground/70">Duration increased</span></div>
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">Per-tick buffed</span></div>
+      <div><span class="text-fs-gold font-semibold">Coverage:</span> <span class="text-green-400">Better spread</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⚡
+      </div>
+      <h3 class="text-lg font-semibold text-primary">G-23 Stun</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">EMP crowd control grenade</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Stun:</span> <span class="text-foreground/70">Duration improved</span></div>
+      <div><span class="text-fs-gold font-semibold">Radius:</span> <span class="text-foreground/70">Affect area increased</span></div>
+      <div><span class="text-fs-gold font-semibold">Effect:</span> <span class="text-green-400">Reliably disables</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💨
+      </div>
+      <h3 class="text-lg font-semibold text-primary">G-12 High Explosive</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Impact grenade with increased blast</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">Blast damage up</span></div>
+      <div><span class="text-fs-gold font-semibold">AP:</span> <span class="text-foreground/70">Better penetration</span></div>
+      <div><span class="text-fs-gold font-semibold">Use:</span> <span class="text-green-400">Quick clear</span></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**Throwable Strategy:** The TED-63 Dynamite's upgrade to Heavy armor penetration makes it the go-to anti-heavy throwable. Reserve it for Chargers, Hulks, and armored targets—use standard grenades for infantry clearing.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🎯 Stratagem Buffs
+
+<div class="space-y-6 mb-8">
+
+**Support weapons, orbital strikes, and equipment stratagems all received meaningful improvements** across damage, capacity, cooldowns, and utility. Heavy weapons hit harder, supply stratagems carry more, and cooldown-based stratagems cycle faster.
+
+</div>
+
+### Support Weapons
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Stratagem</th>
+        <th class="text-center p-3 text-primary font-semibold">Primary Buff</th>
+        <th class="text-left p-3 text-primary font-semibold">Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">FLAM-40 Flamethrower</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">130 → 150 capacity</div>
+          <div class="text-xs text-green-400">(+1 starting canister)</div>
+        </td>
+        <td class="p-3 text-foreground/80">More sustained fire before reload</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">AC-8 Autocannon</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">260 → 325 damage</div>
+          <div class="text-xs text-green-400">(+25%)</div>
+        </td>
+        <td class="p-3 text-foreground/80">Significantly improved lethality</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">APW-1 Anti-Materiel Rifle</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Durable damage up</div>
+          <div class="text-xs text-green-400">(+extra ammo)</div>
+        </td>
+        <td class="p-3 text-foreground/80">Better vs armored + more shots</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">RS-422 Railgun</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Charge damage up</div>
+        </td>
+        <td class="p-3 text-foreground/80">Higher charged shot damage</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">MG-206 Heavy Machine Gun</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Damage buffed</div>
+        </td>
+        <td class="p-3 text-foreground/80">Sustained DPS increase</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Orbital & Eagle Strikes
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🛰️
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary">Orbital Railcannon</h3>
+        <div class="text-xs text-foreground/60">Precision orbital strike</div>
+      </div>
+    </div>
+    <div class="space-y-2 mb-4">
+      <div class="flex justify-between items-center text-sm">
+        <span class="text-foreground/70">Old Cooldown</span>
+        <span class="text-red-400 font-semibold">210s</span>
+      </div>
+      <div class="flex justify-between items-center text-sm">
+        <span class="text-foreground/70">New Cooldown</span>
+        <span class="text-green-400 font-bold">180s (-30s)</span>
+      </div>
+    </div>
+    <p class="text-xs text-foreground/80">Available 14% more frequently, enabling more consistent heavy target elimination</p>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ✈️
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary">Eagle Strikes (All)</h3>
+        <div class="text-xs text-foreground/60">Airstrike improvements</div>
+      </div>
+    </div>
+    <div class="space-y-2 mb-4">
+      <div class="text-sm">
+        <span class="text-foreground/70">Various buffs to:</span>
+      </div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Damage output increased</li>
+        <li>• Accuracy improvements</li>
+        <li>• Effect radius optimization</li>
+      </ul>
+    </div>
+    <p class="text-xs text-foreground/80">All Eagle stratagems more reliable and lethal</p>
+  </div>
+</div>
+
+### Exosuits
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">EXO-45 Patriot Exosuit</h3>
+      <p class="text-sm text-foreground/60">Mech platform • Heavy fire support</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">⬆️</div>
+      <div class="text-xs text-foreground/60">Major buffs</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="space-y-3">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Rotary Gun Ammo</span>
+        <span class="text-fs-gold font-bold">1000 → 1350</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Change</span>
+        <span class="text-green-400 font-bold">+35% capacity</span>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Missile AP</span>
+        <span class="text-fs-gold font-bold">Improved angles</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Impact</span>
+        <span class="text-green-400 font-bold">Better vs armor</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">TACTICAL IMPACT</div>
+    <p class="text-sm text-foreground/80">The Patriot Exosuit is now more viable for sustained engagements with increased ammo capacity and improved armor-penetration angles on missiles. Better suited for extended defense missions.</p>
+  </div>
+</div>
+
+<Callout variant="success">
+**Stratagem Meta Shift:** The Autocannon's 25% damage buff and Flamethrower's capacity increase make these two of the strongest support weapons post-patch. The Orbital Railcannon's cooldown reduction makes it more reliable for objective-based missions.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 👾 Enemy Rebalances
+
+<div class="space-y-6 mb-8">
+
+**Major enemy rebalancing across all three factions** addresses community complaints while maintaining challenge. The Rupture Warrior Terminids received the most significant nerfs, while Illuminate and Automaton enemies had their health pools, weak spots, and spawn rates adjusted for fairness.
+
+</div>
+
+### Terminids
+
+<div class="p-8 bg-gradient-to-br from-red-500/10 via-card/50 to-red-500/5 rounded-lg border-2 border-red-500/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-red-500/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Rupture Warrior (Major Nerf)</h3>
+      <p class="text-sm text-foreground/60">Burrowing mantis-type enemy • Community pain point</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-red-400">⬇️</div>
+      <div class="text-xs text-foreground/60">Heavily nerfed</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">NERFS APPLIED</div>
+      <div class="space-y-2">
+        <div class="p-3 bg-card/50 rounded border border-border text-sm">
+          <span class="text-foreground/70">Underground speed:</span> <span class="text-red-400 font-semibold">Much slower</span>
+        </div>
+        <div class="p-3 bg-card/50 rounded border border-border text-sm">
+          <span class="text-foreground/70">Surface frequency:</span> <span class="text-red-400 font-semibold">More often</span>
+        </div>
+        <div class="p-3 bg-card/50 rounded border border-border text-sm">
+          <span class="text-foreground/70">Burrow attack:</span> <span class="text-red-400 font-semibold">Slower + smaller hitbox</span>
+        </div>
+        <div class="p-3 bg-card/50 rounded border border-border text-sm">
+          <span class="text-foreground/70">Turret destruction:</span> <span class="text-red-400 font-semibold">Must surface first</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">PLAYER BENEFITS</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>✓ Easier to track underground movement</li>
+        <li>✓ More opportunities to damage</li>
+        <li>✓ Attacks more telegraphed/dodgeable</li>
+        <li>✓ Turrets no longer instantly destroyed</li>
+        <li>✓ Overall "less unfair" engagement</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
+    <div class="text-xs text-green-400 font-semibold mb-2">COMMUNITY RESPONSE</div>
+    <p class="text-sm text-foreground/80">Widely praised change addressing the #1 player complaint. Rupture Warriors are now challenging but fair, rather than frustrating and cheap.</p>
+  </div>
+</div>
+
+### Other Terminid Changes
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Enemy</th>
+        <th class="text-center p-3 text-primary font-semibold">Change Type</th>
+        <th class="text-left p-3 text-primary font-semibold">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Dragon Roach (flying)</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Spawn nerf</div>
+        </td>
+        <td class="p-3 text-foreground/80">~50% reduction at diff 5-6, ~40% at 7-9, ~33% at diff 10</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Dragon Roach wings</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Weak spot buff</div>
+        </td>
+        <td class="p-3 text-foreground/80">Destroying wings = instant kill, wings vulnerable to explosions</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Bile Spewer</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Weak spot buff</div>
+        </td>
+        <td class="p-3 text-foreground/80">Larger mouth weak spot (but slightly more fire resistant)</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Rupture Spewer</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Timing adjust</div>
+        </td>
+        <td class="p-3 text-foreground/80">Adjusted unburrow timing for fairer engagements</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">General Terminids</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Fire vulnerability</div>
+        </td>
+        <td class="p-3 text-foreground/80">Slightly reduced to compensate for health decreases</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip">
+**Anti-Terminid Strategy:** Focus fire on Dragon Roach wings with explosive weapons—destroying wings instantly kills them. For Rupture Warriors, use area denial (mines, turrets) in their surfacing zones since they move slower underground now.
+</Callout>
+
+### Illuminate
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        👽
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary">Fleshmob Brute</h3>
+        <div class="text-xs text-foreground/60">Heavy infantry unit</div>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <div class="p-2 bg-card/30 rounded text-sm">
+        <span class="text-foreground/70">Health:</span>
+        <span class="text-red-400 font-semibold ml-2">6000 → 5000</span>
+        <span class="text-xs text-green-400 ml-2">(-17%)</span>
+      </div>
+      <div class="p-2 bg-card/30 rounded text-sm">
+        <span class="text-foreground/70">Weak Spot:</span>
+        <span class="text-fs-gold font-semibold ml-2">Face (NEW)</span>
+      </div>
+      <div class="p-2 bg-card/30 rounded text-sm">
+        <span class="text-foreground/70">Impact:</span>
+        <span class="text-green-400 ml-2">Extra damage when shot in face</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        👁️
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary">Elevated Overseer</h3>
+        <div class="text-xs text-foreground/60">Support/command unit</div>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <div class="p-2 bg-card/30 rounded text-sm">
+        <span class="text-foreground/70">Torso HP:</span>
+        <span class="text-red-400 font-semibold ml-2">600 → 450</span>
+        <span class="text-xs text-green-400 ml-2">(-25%)</span>
+      </div>
+      <div class="p-2 bg-card/30 rounded text-sm">
+        <span class="text-foreground/70">Armor:</span>
+        <span class="text-red-400 font-semibold ml-2">Slightly reduced</span>
+      </div>
+      <div class="p-2 bg-card/30 rounded text-sm">
+        <span class="text-foreground/70">Impact:</span>
+        <span class="text-green-400 ml-2">Easier to eliminate quickly</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-card/50 rounded-lg border-l-4 border-primary mb-8">
+  <div class="text-xs text-primary font-semibold mb-3">LEVIATHAN REWORK</div>
+  <div class="space-y-2 text-sm text-foreground/80">
+    <p><span class="text-fs-gold font-semibold">New Weapons:</span> Entirely new beam-based weaponry system</p>
+    <p><span class="text-fs-gold font-semibold">Spawn Restriction:</span> No longer spawns outside city biomes</p>
+    <p><span class="text-fs-gold font-semibold">Impact:</span> More predictable encounters, better balanced for environment</p>
+  </div>
+</div>
+
+### Automatons
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Automaton Unit</th>
+        <th class="text-center p-3 text-primary font-semibold">Change</th>
+        <th class="text-left p-3 text-primary font-semibold">Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Base Troopers (in bases)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">AI improvement</div>
+        </td>
+        <td class="p-3 text-foreground/80">Won't call reinforcements without visual confirmation</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Heavy War Strider</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Grenade nerf</div>
+        </td>
+        <td class="p-3 text-foreground/80">Fires 2 fewer grenades per salvo, less frequent volleys</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Heavy War Strider</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Weak spots added</div>
+        </td>
+        <td class="p-3 text-foreground/80">New weak spots: eyes and rear vents</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Heavy War Strider</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Physics adjust</div>
+        </td>
+        <td class="p-3 text-foreground/80">Explosions no longer ragdoll players aggressively</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Command Bunker Turrets</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">Physics fix</div>
+        </td>
+        <td class="p-3 text-foreground/80">No more knockback/ragdoll from explosions</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Scout Strider / Devastator</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Durability buff</div>
+        </td>
+        <td class="p-3 text-foreground/80">Slight armor/HP increases to balance other changes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="info">
+**Stealth Meta:** The AI improvement to base Automaton troopers means stealth approaches are now more viable. Breaking line-of-sight before detection prevents alarm calls, rewarding tactical infiltration.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🔧 Bug Fixes & QoL
+
+<div class="space-y-6 mb-8">
+
+**Over 200 bugs squashed across every system** including crashes, gameplay issues, weapon bugs, mission glitches, and visual problems. This comprehensive fix pass addresses both major pain points and minor annoyances that have accumulated since launch.
+
+</div>
+
+### Critical Mission Fixes
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">NUKE NURSERY</div>
+    <p class="text-sm text-foreground/80 mb-2">Can now call stratagems in cave mission area</p>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Previously impossible due to bug
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">DESTROY SPORE LUNG</div>
+    <p class="text-sm text-foreground/80 mb-2">Hellbomb no longer falls through cave ceilings</p>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Mission completion now reliable
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">MINING DRILL</div>
+    <p class="text-sm text-foreground/80 mb-2">Stratagem lands correctly, not on cave tops</p>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Objective placement fixed
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">REPEL INVASION FLEET</div>
+    <p class="text-sm text-foreground/80 mb-2">Illuminate dropships take correct damage</p>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Damage calculation corrected
+    </div>
+  </div>
+</div>
+
+### Crash Fixes
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Crash Type</th>
+        <th class="text-left p-3 text-primary font-semibold">Resolution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Illuminate enemy encounters</td>
+        <td class="p-3 text-foreground/80">Multiple rare crash scenarios resolved</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Hot-join + ready-up simultaneous</td>
+        <td class="p-3 text-foreground/80">Race condition fixed, no more crashes</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Repeated session re-joins</td>
+        <td class="p-3 text-foreground/80">Memory leak eliminated</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Eagle-1 ship memory leak</td>
+        <td class="p-3 text-foreground/80">Proper cleanup when not removed from session</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Game shutdown</td>
+        <td class="p-3 text-foreground/80">Exit crash during shutdown resolved</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Vehicle turret leaning</td>
+        <td class="p-3 text-foreground/80">Crash when leaning out fixed</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Weapon & Equipment Fixes
+
+<div class="space-y-4 mb-8">
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="text-lg">🎯</span>
+      <span class="font-semibold text-foreground">Armor Penetration Display</span>
+    </div>
+    <p class="text-sm text-foreground/80">All melee weapons and grenades now show correct AP values in stats menu (previously incorrectly showed "Medium")</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="text-lg">🔭</span>
+      <span class="font-semibold text-foreground">MS-11 Solo Silo Scope</span>
+    </div>
+    <p class="text-sm text-foreground/80">First-person scope view adjusted to sit further from camera for better visibility</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="text-lg">🔄</span>
+      <span class="font-semibold text-foreground">Reload Animation Glitch</span>
+    </div>
+    <p class="text-sm text-foreground/80">Fixed animation issues when using armor perks that boost reload speed</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="text-lg">🚀</span>
+      <span class="font-semibold text-foreground">FAF-14 Spear Launcher</span>
+    </div>
+    <p class="text-sm text-foreground/80">Can now properly lock onto Automaton AA turrets as intended</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="text-lg">📐</span>
+      <span class="font-semibold text-foreground">Point-Blank Accuracy</span>
+    </div>
+    <p class="text-sm text-foreground/80">Bug causing projectiles to not hit dead-center of reticle at point-blank range fixed</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="text-lg">🎮</span>
+      <span class="font-semibold text-foreground">Flamethrower Haptics</span>
+    </div>
+    <p class="text-sm text-foreground/80">Controller haptic feedback now persists properly while firing</p>
+  </div>
+</div>
+
+### Gameplay & Equipment Fixes
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-4 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-2">LIFT-860 JETPACK</div>
+    <p class="text-sm text-foreground/80">Can now remain aiming down sights when activating (no forced third-person)</p>
+  </div>
+
+  <div class="p-4 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-2">LIFT-182 WARP JETPACK</div>
+    <p class="text-sm text-foreground/80">No longer gets stuck floating in mid-air occasionally</p>
+  </div>
+
+  <div class="p-4 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-2">RESUPPLY RACK</div>
+    <p class="text-sm text-foreground/80">Can no longer be climbed (exploit fixed)</p>
+  </div>
+
+  <div class="p-4 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-2">ADRENO-DEFIBRILLATOR</div>
+    <p class="text-sm text-foreground/80">Animation bug with perk resolved</p>
+  </div>
+
+  <div class="p-4 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-2">HIVE LORD BOSS</div>
+    <p class="text-sm text-foreground/80">Body parts now spawn correctly when defeated</p>
+  </div>
+
+  <div class="p-4 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-2">VEHICLE SEATS</div>
+    <p class="text-sm text-foreground/80">Can't be occupied by two players simultaneously anymore</p>
+  </div>
+</div>
+
+### Network & Multiplayer Fixes
+
+<div class="space-y-4 mb-8">
+  <div class="p-4 rounded-lg border-2 border-primary/20 bg-card/30">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-2xl">🌐</span>
+      <span class="font-semibold text-primary text-lg">Cross-Platform Stability</span>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-2">
+      <li>✓ Fixed disconnection when 3-player cross-play lobby joins solo player</li>
+      <li>✓ Improved stability under poor network conditions</li>
+      <li>✓ Resolved rare issue preventing player from re-joining prior host</li>
+    </ul>
+  </div>
+</div>
+
+### Visual & Audio Polish
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Category</th>
+        <th class="text-left p-3 text-primary font-semibold">Fix</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Character mesh</td>
+        <td class="p-3 text-foreground/80">Fixed arm clipping in certain animations</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Extraction shuttle</td>
+        <td class="p-3 text-foreground/80">Reduced terrain clipping on landing</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Player avatars</td>
+        <td class="p-3 text-foreground/80">Fixed flicker when covered in mud/snow</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">CR10 Mega Nest</td>
+        <td class="p-3 text-foreground/80">Plugged map hole covered by terrain</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Shop UI</td>
+        <td class="p-3 text-foreground/80">Saudi Riyal currency symbol now displays correctly</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Oil extractor rigs</td>
+        <td class="p-3 text-foreground/80">Reverse sound no longer plays indefinitely</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Controller vibration</td>
+        <td class="p-3 text-foreground/80">Won't act up when plugging/unplugging on PC</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="success">
+**Stability Upgrade:** The extensive crash fixes and network improvements make co-op gameplay significantly more reliable. Cross-platform groups should see far fewer disconnections and session issues.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## ⚡ Performance Optimizations
+
+<div class="space-y-6 mb-8">
+
+**Major performance and stability improvements across all systems** with a focus on physics optimization, AI streamlining, and visual effect efficiency. These changes target frame drops, stuttering, and memory issues that have plagued high-intensity scenarios.
+
+</div>
+
+### Core Engine Optimizations
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border-2 border-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        🔬
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">Physics & AI Systems</div>
+        <div class="text-xs text-foreground/60">Code optimization</div>
+      </div>
+    </div>
+    
+    <ul class="text-sm text-foreground/80 space-y-2 mb-4">
+      <li>• Stripped redundant calculation code</li>
+      <li>• Systems only enable when needed</li>
+      <li>• Reduced CPU overhead significantly</li>
+    </ul>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">IMPACT</div>
+      <p class="text-xs text-foreground/80">Smoother performance in high-enemy-count scenarios</p>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-card/30 rounded-lg border-2 border-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        🎮
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">Drop-In Sequence</div>
+        <div class="text-xs text-foreground/60">Hive World missions</div>
+      </div>
+    </div>
+    
+    <ul class="text-sm text-foreground/80 space-y-2 mb-4">
+      <li>• Optimized mission start sequence</li>
+      <li>• Reduced stuttering on entry</li>
+      <li>• Smoother pod landing transitions</li>
+    </ul>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">IMPACT</div>
+      <p class="text-xs text-foreground/80">Fewer frame drops during mission start</p>
+    </div>
+  </div>
+</div>
+
+### Visual Rendering Optimizations
+
+<div class="space-y-3 mb-8">
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Character LOD System</span>
+      <span class="text-fs-gold font-semibold">Optimized</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+    </div>
+    <p class="text-xs text-foreground/60 mt-1">Improved level-of-detail switching for better frame rates</p>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Snow Distribution & Rendering</span>
+      <span class="text-fs-gold font-semibold">Reworked</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 90%"></div>
+    </div>
+    <p class="text-xs text-foreground/60 mt-1">Better visuals AND better performance on snow biomes</p>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Fire & Explosion Effects</span>
+      <span class="text-fs-gold font-semibold">Optimized</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 80%"></div>
+    </div>
+    <p class="text-xs text-foreground/60 mt-1">Particle and lighting systems streamlined</p>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Status Effect Physics</span>
+      <span class="text-fs-gold font-semibold">Refined</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 75%"></div>
+    </div>
+    <p class="text-xs text-foreground/60 mt-1">More efficient particle systems for status effects</p>
+  </div>
+</div>
+
+### Faction-Specific Optimizations
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Category</th>
+        <th class="text-left p-3 text-primary font-semibold">Optimization</th>
+        <th class="text-left p-3 text-primary font-semibold">Performance Gain</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Automaton explosions</td>
+        <td class="p-3 text-foreground/80">Converted to shader effects from particles</td>
+        <td class="p-3 text-green-400">Significantly less GPU load</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Acid rain effects</td>
+        <td class="p-3 text-foreground/80">Resource usage reduced</td>
+        <td class="p-3 text-green-400">Better frame rates in rain</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Dragon Roach fire attack</td>
+        <td class="p-3 text-foreground/80">Optimized particle system</td>
+        <td class="p-3 text-green-400">Less stuttering vs flyers</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Audio input/output</td>
+        <td class="p-3 text-foreground/80">Performance improvements</td>
+        <td class="p-3 text-green-400">No sound-related slowdowns</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="info">
+**Performance Expectations:** Players should notice reduced hitching during intense combat, smoother frame rates in high-enemy-count situations, faster load times, and improved stability (fewer crashes or memory issues). Arrowhead indicates more optimizations are planned for future patches.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 📊 Patch Impact Summary
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <h3 class="text-2xl font-bold text-foreground mb-6 pb-4 border-b border-primary/20">What This Means for Competitive Play</h3>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-3">MAJOR BUFFS</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>✓ All weapons more lethal, faster TTK across board</li>
+        <li>✓ SMGs and pistols viable for CQB specialists</li>
+        <li>✓ Throwables and stratagems pack bigger punch</li>
+        <li>✓ Performance improvements enable smoother gameplay</li>
+        <li>✓ Mission completion more reliable (bug fixes)</li>
+      </ul>
+    </div>
+    
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-3">ENEMY ADJUSTMENTS</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>✓ Rupture Warriors dramatically nerfed (fair now)</li>
+        <li>✓ Spawn rates reduced at higher difficulties</li>
+        <li>✓ New weak spots reward precision aim</li>
+        <li>✓ Less cheap deaths from unfair mechanics</li>
+        <li>✓ Better enemy AI and encounter design</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">COMPETITIVE IMPLICATIONS</div>
+    <p class="text-sm text-foreground/80">This patch fundamentally shifts the meta toward weapon diversity and tactical flexibility. With nearly every weapon buffed, player skill in weapon selection and positioning matters more than sticking to a single "best" loadout. High-difficulty missions (7-10) are now more accessible while still challenging, as spawn rate reductions and enemy nerfs remove frustrating RNG deaths without eliminating difficulty. Expect faster clear times and more aggressive playstyles to become viable.</p>
+  </div>
+</div>
+
+### Recommended Loadout Adjustments
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">CLOSE QUARTERS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ SMG-37 Defender now viable primary</li>
+      <li>✓ Shotguns hit much harder</li>
+      <li>✓ Flamethrower with more fuel</li>
+      <li>✗ Don't ignore sidearms anymore</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: Bug swarms, city environments
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">PRECISION PLAY</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Marksman rifles one-shot more</li>
+      <li>✓ Target new enemy weak spots</li>
+      <li>✓ AMR with extra ammo magazines</li>
+      <li>✗ Don't spam—pick shots carefully</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: Automatons, Illuminate
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">HEAVY HITTERS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Autocannon 25% damage buff</li>
+      <li>✓ Dynamite now Heavy AP</li>
+      <li>✓ Railcannon 30s faster cooldown</li>
+      <li>✗ Don't waste on light enemies</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: High-difficulty heavies
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Meta Prediction:** Expect to see more weapon diversity in high-level play as previously underpowered options become competitive. The SMG buffs in particular enable aggressive, mobile playstyles that were difficult to execute effectively pre-patch.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🔗 Official Resources
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        📄
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Official Patch Notes</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Full technical changelog from Arrowhead Game Studios</p>
+    <a 
+      href="https://arrowhead.zendesk.com/hc/en-us/articles/23133013749276--Into-the-Unjust-4-1-0" 
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors bg-primary/20 hover:bg-primary/30 text-primary px-4 py-2"
+    >
+      Read Full Notes →
+    </a>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎮
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Helldivers 2 Steam</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Community discussions and patch feedback</p>
+    <a 
+      href="https://store.steampowered.com/app/553850/HELLDIVERS_2/" 
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors bg-primary/20 hover:bg-primary/30 text-primary px-4 py-2"
+    >
+      Visit Steam Page →
+    </a>
+  </div>
+</div>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
