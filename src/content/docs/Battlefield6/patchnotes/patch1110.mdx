@@ -1,0 +1,987 @@
+---
+title: Patch Notes 1.1.1.0 — Season 1 Patch Notes
+---
+
+import Callout from "@/components/Callout.astro";
+import { Target, Move, Eye, Volume2, Crosshair, Shield, Zap, AlertTriangle } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Update 1.1.1.0 fundamentally reshapes Battlefield 6's competitive landscape.** Launching October 28, 2025 alongside Season 1, this patch delivers critical weapon dispersion fixes, comprehensive movement refinements, and game-changing visibility improvements. The weapon bloom that plagued competitive play since beta? Fixed. Movement jank? Eliminated. Blinding sun ruining your lane holds? Gone.
+
+This is the foundation patch competitive players demanded. Precision shooting now rewards skill over RNG, movement mechanics behave predictably, and environmental visibility no longer costs you gunfights. For FusionSaint tactical players, this update represents a clear shift toward skill-based mechanics—but one critical vehicle balance issue remains unaddressed.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Crosshair className="inline-block mr-3 mb-1" size={32} /> Weapon Dispersion Overhaul
+
+<div class="space-y-6 mb-8">
+
+The centerpiece change that transforms competitive gunplay. DICE implemented a damage-based dispersion rebalancing system that rewards precision over spray-and-pray tactics.
+
+</div>
+
+### Core Dispersion Changes
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-red-500/30">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ⬇
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Low-Damage, High-ROF Weapons</div>
+        <div class="text-xs text-foreground/60">SMGs • Light ARs</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Dispersion Buildup</span>
+        <span class="text-red-400 font-semibold">INCREASED</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Sustained Fire Accuracy</span>
+        <span class="text-red-400 font-semibold">REDUCED</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">IMPACT</div>
+      <p class="text-xs text-foreground/80">Holding trigger at mid-range now significantly less effective. Burst-firing becomes mandatory for consistency.</p>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ⬆
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">High-Damage Weapons</div>
+        <div class="text-xs text-foreground/60">DMRs • Heavy ARs • ALL LMGs</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Dispersion Buildup</span>
+        <span class="text-green-400 font-bold">DECREASED</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Sustained Fire Accuracy</span>
+        <span class="text-green-400 font-bold">IMPROVED</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">META IMPACT</div>
+      <p class="text-xs text-foreground/80">LMGs ascend to S-tier dominance at mid-long range. Deliberate marksmanship now outperforms volume of fire.</p>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Tactical Takeaway:** The meta now heavily favors LMGs at 15-75m. DRS IAR and RPK-M become the new competitive standard for objective play. SMG specialists must close distance or switch to burst-firing.
+</Callout>
+
+### Critical Bug Fixes
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🏃
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Sprint-to-ADS</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Fixed dispersion not properly settling after sprinting while ADS. Previously, residual high-spread values persisted into engagements.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Status:</span> <span class="text-foreground/70">FIXED</span></div>
+      <div><span class="text-fs-gold font-semibold">Impact:</span> <span class="text-foreground/70">High</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Movement Penalty</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Dispersion no longer increases too rapidly when beginning movement. Particularly punishing to controller players previously.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Status:</span> <span class="text-foreground/70">FIXED</span></div>
+      <div><span class="text-fs-gold font-semibold">Impact:</span> <span class="text-foreground/70">Medium</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⬇️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Prone Transition</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Sprint-to-prone transition now correctly reduces dispersion, making drop-shotting tactically viable instead of random.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Status:</span> <span class="text-foreground/70">FIXED</span></div>
+      <div><span class="text-fs-gold font-semibold">Impact:</span> <span class="text-foreground/70">Medium</span></div>
+    </div>
+  </div>
+</div>
+
+### Additional Weapon Adjustments
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon Type</th>
+        <th class="text-center p-3 text-primary font-semibold">Change</th>
+        <th class="text-center p-3 text-primary font-semibold">Competitive Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Automatic Weapons</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Improved Reticle Settling</div>
+          <div class="text-xs text-foreground/60">Between bursts</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Burst-firing measurably more efficient</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Sniper Rifles (Non-Recon)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Spread Penalty Removed</div>
+          <div class="text-xs text-foreground/60">Added weapon sway during zoom</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Maintains Recon precision advantage</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Jump-Peek Accuracy</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Penalty Duration Reduced</div>
+          <div class="text-xs text-foreground/60">Still present as anti-bunny-hop</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">No longer lingers excessively after landing</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Move className="inline-block mr-3 mb-1" size={32} /> Movement System Refinement
+
+<div class="space-y-6 mb-8">
+
+DICE delivered comprehensive movement polish addressing the "jank" that defined early access feedback. Every transition executes faster, animations stay centered, and hitboxes actually match what you see.
+
+</div>
+
+### Animation & Transition Improvements
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">LANDING ANIMATIONS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Faster settling after landing</li>
+      <li>✓ Stays properly centered</li>
+      <li>✓ No more side-shifting</li>
+      <li>✓ Reduced "bouncing" effect</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Impact: Reliable shooting after drops
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">STANCE TRANSITIONS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Noticeably faster execution</li>
+      <li>✓ Critical for peek-shooting</li>
+      <li>✓ Improved crouch/stand/prone</li>
+      <li>✓ Better angle holding</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Impact: Competitive positional play
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">VAULTING SYSTEM</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ No more getting stuck</li>
+      <li>✓ Vault-from-slide works</li>
+      <li>✓ Natural hand placement</li>
+      <li>✓ Reliable repeated vaults</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Impact: Consistent mobility
+    </div>
+  </div>
+</div>
+
+### Hitbox Alignment Fixes
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Precision Hitbox Update</h3>
+      <p class="text-sm text-foreground/60">Competitive Integrity Restored</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">100%</div>
+      <div class="text-xs text-foreground/60">visual accuracy</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-2">BEFORE UPDATE</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>✗ Hitboxes misaligned with models</li>
+        <li>✗ Upper body/head shots inconsistent</li>
+        <li>✗ Visual hits not registering</li>
+        <li>✗ Frustrating competitive play</li>
+      </ul>
+    </div>
+    
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-green-400 font-semibold mb-2">AFTER UPDATE</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>✓ Hitboxes match visual models</li>
+        <li>✓ Accurate upper body/head detection</li>
+        <li>✓ Shots land where aimed</li>
+        <li>✓ Reliable competitive integrity</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">TACTICAL SIGNIFICANCE</div>
+    <p class="text-sm text-foreground/80">This fix eliminates the most frustrating aspect of competitive play—hitting targets visually but dealing no damage. Precision aim now consistently rewards with precision results.</p>
+  </div>
+</div>
+
+### Movement Mechanic Details
+
+<div class="space-y-3 mb-8">
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Steady Aim Consistency</span>
+      <span class="text-fs-gold font-semibold">Greatly Improved</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 90%"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Sight Centering Accuracy</span>
+      <span class="text-fs-gold font-semibold">Significantly Better</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Peeking Reliability</span>
+      <span class="text-fs-gold font-semibold">Fixed</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 95%"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Mounting Near Walls</span>
+      <span class="text-fs-gold font-semibold">Works Correctly</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 100%"></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="success">
+**Competitive Impact:** Movement now rewards calculated positioning over erratic mobility. Faster transitions enable reliable peek-shooting, while hitbox fixes ensure shots connect where aimed. This is the foundation for consistent tactical play.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Eye className="inline-block mr-3 mb-1" size={32} /> Visibility & Lighting Overhaul
+
+<div class="space-y-6 mb-8">
+
+Perhaps the most universally praised changes—DICE eliminated the "blinding sun" problem and fixed interior lighting across all maps. Target identification is now fast and reliable in every environment.
+
+</div>
+
+### Major Visibility Improvements
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+    <div class="text-xs text-primary font-semibold mb-3">🌞 EXPOSURE TRANSITIONS</div>
+    <p class="text-sm text-foreground/80 mb-4">Fixed the notorious problem where exiting buildings into sunlight caused temporary blindness. No more losing fights because you stepped outside.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Lane Holding</span>
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Aggressive Pushing</span>
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Target Acquisition</span>
+    </div>
+  </div>
+
+  <div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+    <div class="text-xs text-primary font-semibold mb-3">🏠 INTERIOR LIGHTING</div>
+    <p class="text-sm text-foreground/80 mb-4">Comprehensive tuning across all maps. Interior spaces now properly lit for target identification without washing out details or creating dark corners.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+CQC Clarity</span>
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Room Clearing</span>
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Defensive Holds</span>
+    </div>
+  </div>
+
+  <div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+    <div class="text-xs text-primary font-semibold mb-3">💨 FOG & SMOKE PERSISTENCE</div>
+    <p class="text-sm text-foreground/80 mb-4">Decreased substantially after destruction events. Breach a wall and engage immediately rather than waiting for visual obstruction to clear.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Breach Tactics</span>
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Post-Explosion</span>
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Immediate Engage</span>
+    </div>
+  </div>
+
+  <div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30">
+    <div class="text-xs text-primary font-semibold mb-3">🎯 CONTRAST & CLARITY</div>
+    <p class="text-sm text-foreground/80 mb-4">Overall improvements across every environment. Better separation between targets and backgrounds, especially at long range with cluttered sightlines.</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Long Range</span>
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Target Tracking</span>
+      <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Precision ADS</span>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**For Lane Holders:** The exposure transition fix is massive. No more blinding when pushing from interior to exterior. You can now confidently move between environments without losing visual control of your sector.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Volume2 className="inline-block mr-3 mb-1" size={32} /> Audio System Improvements
+
+<div class="space-y-6 mb-8">
+
+Complete audio overhaul with new projectile effects and critical competitive awareness fixes. Directional information now works correctly.
+
+</div>
+
+### New Audio Features
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-xs text-fs-gold font-semibold mb-2">🚀 PROJECTILE FLYBY</div>
+    <p class="text-sm text-foreground/80">New sound effects for missiles, rocket pods, and cannon shells passing near you. Better spatial awareness of incoming fire.</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-xs text-fs-gold font-semibold mb-2">💥 DESTRUCTION AUDIO</div>
+    <p class="text-sm text-foreground/80">Refined destruction and explosion sounds. Clearer differentiation between explosion types and distances.</p>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-xs text-fs-gold font-semibold mb-2">🎚️ MIXING BALANCE</div>
+    <p class="text-sm text-foreground/80">Overall audio mix improvements for better competitive sound balance. Footsteps remain distinct during heavy combat.</p>
+  </div>
+</div>
+
+### Critical Competitive Audio Fixes
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Audio Bug</th>
+        <th class="text-center p-3 text-primary font-semibold">Previous Issue</th>
+        <th class="text-center p-3 text-primary font-semibold">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Directional Callouts</td>
+        <td class="text-center p-3 text-foreground/80">Played incorrect directions</td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-semibold">FIXED</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Knife Footsteps</td>
+        <td class="text-center p-3 text-foreground/80">Missing when knife equipped</td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-semibold">FIXED</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Defibrillator Loop</td>
+        <td class="text-center p-3 text-foreground/80">Persisted after vaulting</td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-semibold">FIXED</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Suppression Audio</td>
+        <td class="text-center p-3 text-foreground/80">Too loud during sustained fire</td>
+        <td class="text-center p-3">
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-semibold">ADJUSTED</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> Progression & Unlock Changes
+
+<div class="space-y-6 mb-8">
+
+Massive XP increases and challenge requirement nerfs accelerate progression. Competitive players reach meta builds faster—creating more skill-based environments.
+
+</div>
+
+### XP Gain Adjustments
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-sm font-semibold text-foreground">Match Completion XP</div>
+      <div class="text-3xl font-bold text-fs-gold">+10%</div>
+    </div>
+    <p class="text-xs text-foreground/60">Win or lose, you earn more XP just for completing matches</p>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-sm font-semibold text-foreground">Daily Bonus XP</div>
+      <div class="text-3xl font-bold text-fs-gold">+40%</div>
+    </div>
+    <p class="text-xs text-foreground/60">First wins of the day provide substantially increased rewards</p>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-sm font-semibold text-foreground">First 20 Attachment Ranks</div>
+      <div class="text-3xl font-bold text-primary">~2x</div>
+    </div>
+    <p class="text-xs text-foreground/60">Almost twice as fast to unlock initial attachments per weapon</p>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-sm font-semibold text-foreground">Meta Builds Access</div>
+      <div class="text-3xl font-bold text-primary">↑↑</div>
+    </div>
+    <p class="text-xs text-foreground/60">Faster progression means more players with optimized loadouts</p>
+  </div>
+</div>
+
+### Challenge Requirement Nerfs
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Challenge</th>
+        <th class="text-center p-3 text-primary font-semibold">Before</th>
+        <th class="text-center p-3 text-primary font-semibold">After</th>
+        <th class="text-center p-3 text-primary font-semibold">Reduction</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Adrenaline Injector Kills</td>
+        <td class="text-center p-3 text-foreground/80">30</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">3</div>
+        </td>
+        <td class="text-center p-3 text-green-400 font-bold">-90%</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Vehicle Repairs</td>
+        <td class="text-center p-3 text-foreground/80">6000</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">1000</div>
+        </td>
+        <td class="text-center p-3 text-green-400 font-bold">-83%</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Objective Captures</td>
+        <td class="text-center p-3 text-foreground/80">100</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">40</div>
+        </td>
+        <td class="text-center p-3 text-green-400 font-bold">-60%</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Squad Assist Kills</td>
+        <td class="text-center p-3 text-foreground/80">200</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">100</div>
+        </td>
+        <td class="text-center p-3 text-green-400 font-bold">-50%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="info">
+**Competitive Perspective:** Faster unlock times create more skill-based environments. When more players have access to meta builds, gunfights reward aim and positioning over time investment in unlocks.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Shield className="inline-block mr-3 mb-1" size={32} /> Map-Specific Fixes & Quality of Life
+
+<div class="space-y-6 mb-8">
+
+Comprehensive fixes across all maps addressing spawning issues, out-of-bounds errors, misaligned assets, and mode-specific problems.
+
+</div>
+
+### Maps Receiving Updates
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold text-primary mb-2">Mirak Valley</div>
+    <ul class="text-xs text-foreground/80 space-y-1">
+      <li>• Spawn point fixes</li>
+      <li>• Collision improvements</li>
+      <li>• Out-of-bounds adjustments</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold text-primary mb-2">Siege of Cairo</div>
+    <ul class="text-xs text-foreground/80 space-y-1">
+      <li>• Asset alignment fixes</li>
+      <li>• Texture improvements</li>
+      <li>• Vehicle path corrections</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold text-primary mb-2">Liberation Peak</div>
+    <ul class="text-xs text-foreground/80 space-y-1">
+      <li>• Lighting adjustments</li>
+      <li>• Spawn logic improvements</li>
+      <li>• Visual polish</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold text-primary mb-2">New Sobek City</div>
+    <ul class="text-xs text-foreground/80 space-y-1">
+      <li>• Interior lighting fixes</li>
+      <li>• Collision updates</li>
+      <li>• Performance optimization</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold text-primary mb-2">Manhattan Bridge</div>
+    <ul class="text-xs text-foreground/80 space-y-1">
+      <li>• Structure collision fixes</li>
+      <li>• Out-of-bounds refinements</li>
+      <li>• Visual improvements</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="text-sm font-semibold text-primary mb-2">All Maps</div>
+    <ul class="text-xs text-foreground/80 space-y-1">
+      <li>• Visibility improvements</li>
+      <li>• Lighting consistency</li>
+      <li>• General polish pass</li>
+    </ul>
+  </div>
+</div>
+
+### Mode-Specific Improvements
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20">
+    <div class="text-sm font-semibold text-primary mb-3">🏴 Rush Mode</div>
+    <ul class="text-sm text-foreground/80 space-y-2">
+      <li>✓ Visible bomb meshes on armed M-COMs</li>
+      <li>✓ Better visual feedback for objective status</li>
+      <li>✓ Improved defender spawn logic</li>
+      <li>✓ Attacker progression tweaks</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20">
+    <div class="text-sm font-semibold text-primary mb-3">⏱️ Overtime System</div>
+    <ul class="text-sm text-foreground/80 space-y-2">
+      <li>✓ Updated visualization across all modes</li>
+      <li>✓ Clearer overtime start indicators</li>
+      <li>✓ Better contested point feedback</li>
+      <li>✓ Improved end-of-round clarity</li>
+    </ul>
+  </div>
+</div>
+
+### UI & HUD Enhancements
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">NEW FEATURES</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>✓ Unlock markers on items</li>
+      <li>✓ 3D gadget previews</li>
+      <li>✓ Functionality videos</li>
+      <li>✓ Better attachment info</li>
+    </ul>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">FIXED ISSUES</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>✓ 16:10 aspect ratio display</li>
+      <li>✓ HUD element alignment</li>
+      <li>✓ Minimap clarity</li>
+      <li>✓ Objective marker accuracy</li>
+    </ul>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">IMPROVEMENTS</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>✓ Loadout screen polish</li>
+      <li>✓ Faster menu navigation</li>
+      <li>✓ Better stat presentation</li>
+      <li>✓ Collection tracking</li>
+    </ul>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <AlertTriangle className="inline-block mr-3 mb-1" size={32} /> The IFV MR Missile Problem
+
+<div class="space-y-6 mb-8">
+
+**Update 1.1.1.0 makes zero mention of the IFV MR Missile issue**—the most complained-about balance problem since launch. This is the elephant in the room that threatens to overshadow an otherwise excellent patch.
+
+</div>
+
+<Callout variant="warning">
+**Critical Balance Issue:** IFVs equipped with laser-guided MR Missiles can one-shot aircraft from anywhere on the map. Countermeasures prove completely ineffective. Pilots report no incoming warnings before missiles hit, and lock-on indicators often don't appear. Air gameplay is currently broken.
+</Callout>
+
+### The Problem Breakdown
+
+<div class="p-8 bg-gradient-to-br from-red-500/10 via-card/50 to-red-500/5 rounded-lg border-2 border-red-500/30 mb-8">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center text-3xl">
+      ⚠️
+    </div>
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">IFV MR Missile Issues</h3>
+      <p class="text-sm text-foreground/60">Making air vehicles completely unplayable</p>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div class="p-4 bg-card/70 rounded-lg border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-2">CURRENT STATE</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>✗ One-shot kills on all aircraft</li>
+        <li>✗ Unlimited range across entire map</li>
+        <li>✗ No incoming warning for pilots</li>
+        <li>✗ Countermeasures completely ineffective</li>
+        <li>✗ Often provides no lock-on indicator</li>
+        <li>✗ Goes through flares and obstacles</li>
+      </ul>
+    </div>
+    
+    <div class="p-4 bg-card/70 rounded-lg border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-2">COMMUNITY FEEDBACK</div>
+      <div class="text-sm text-foreground/80 space-y-3">
+        <p>"The game is unplayable for air units right now. You cannot even evade these missiles if you're flaring behind 4 mountains."</p>
+        <p>"Why even bother using anti-aircraft tanks when IFVs with MR Missiles can fill that role ten times better?"</p>
+        <p>"You just [explode] without warning or counterplay."</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-red-500/10 rounded-lg border border-red-500/30">
+    <div class="text-xs text-red-400 font-semibold mb-2">META IMPACT</div>
+    <p class="text-sm text-foreground/80">Competent IFV drivers render air vehicles unplayable. Meta forces ground dominance until DICE implements expected nerf/rework. Tactical teams must prioritize Engineer focus on IFVs before pushing objectives—leaving MR Missile platforms active denies all air support and mobile spawn options.</p>
+  </div>
+</div>
+
+### Community Frustration
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-red-500">
+    <div class="text-xs text-red-400 font-semibold mb-3">PRIORITY SIGNALING</div>
+    <p class="text-sm text-foreground/80">Players invested hundreds of hours mastering air vehicles feel abandoned when DICE releases comprehensive patch touching nearly every system except the one breaking air gameplay.</p>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-red-500">
+    <div class="text-xs text-red-400 font-semibold mb-3">COSMETICS VS BALANCE</div>
+    <p class="text-sm text-foreground/80">The contrast between extensive cosmetic development for Season 1 and zero acknowledgment of game-breaking balance issue created genuine resentment in pilot community.</p>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-red-500">
+    <div class="text-xs text-red-400 font-semibold mb-3">COMPETITIVE INTEGRITY</div>
+    <p class="text-sm text-foreground/80">Air superiority, historically a key competitive element, becomes impossible. Teams with skilled IFV drivers have uncontested air denial with single vehicle.</p>
+  </div>
+</div>
+
+<Callout variant="warning">
+**FusionSaint Recommendation:** Avoid air vehicles in competitive play until IFV balance patch arrives. Focus Engineer squads on destroying IFVs before objective pushes. If enemy team has skilled IFV drivers, ground-based tactics become mandatory.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Meta Impact Summary
+
+<div class="space-y-6 mb-8">
+
+Update 1.1.1.0 fundamentally restructures the competitive meta through weapon dispersion changes and movement refinements.
+
+</div>
+
+### New Weapon Tier Rankings
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Tier</th>
+        <th class="text-left p-3 text-primary font-semibold">Weapons</th>
+        <th class="text-center p-3 text-primary font-semibold">Optimal Range</th>
+        <th class="text-center p-3 text-primary font-semibold">Why It's Meta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3">
+          <span class="px-3 py-1.5 bg-fs-gold/20 text-fs-gold text-xs rounded-full font-bold">S-TIER</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">DRS IAR, RPK-M, M250</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">15-75m</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Reduced dispersion makes LMGs laser-accurate at range</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3">
+          <span class="px-3 py-1.5 bg-primary/20 text-primary text-xs rounded-full font-bold">A-TIER</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">SCW-10, SGX, M87A1</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0-15m</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">CQC dominance unchanged, higher dispersion matters less</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3">
+          <span class="px-3 py-1.5 bg-primary/20 text-primary text-xs rounded-full font-bold">A-TIER</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">Heavy ARs, DMRs</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">40-75m</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Dispersion reduction benefits high-damage platforms</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3">
+          <span class="px-3 py-1.5 bg-foreground/20 text-foreground text-xs rounded-full font-bold">B-TIER</span>
+        </td>
+        <td class="p-3 font-medium text-foreground">Light ARs, Carbines</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">20-40m</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Increased dispersion requires strict burst-firing discipline</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Optimal Squad Composition
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <h3 class="text-xl font-bold text-foreground mb-6">4-Man Competitive Squad Meta</h3>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="text-3xl">⚔️</div>
+        <div>
+          <div class="text-sm font-semibold text-primary">1x Assault</div>
+          <div class="text-xs text-foreground/60">Frontline + Deploy Beacon</div>
+        </div>
+      </div>
+      <p class="text-xs text-foreground/80">Dual primary weapons for all ranges, forward spawn capability</p>
+    </div>
+
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="text-3xl">🔧</div>
+        <div>
+          <div class="text-sm font-semibold text-primary">1x Engineer</div>
+          <div class="text-xs text-foreground/60">Anti-Armor Specialist</div>
+        </div>
+      </div>
+      <p class="text-xs text-foreground/80">RPG-7V2 + mines, critical for vehicle meta and IFV denial</p>
+    </div>
+
+    <div class="p-5 bg-card/70 rounded-lg border-2 border-fs-gold shadow-lg shadow-fs-gold/20">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="text-3xl">🏥</div>
+        <div>
+          <div class="text-sm font-semibold text-fs-gold">1x Support</div>
+          <div class="text-xs text-foreground/60">MUST PROTECT</div>
+        </div>
+      </div>
+      <p class="text-xs text-foreground/80">1.7s revive + self-heal. Squad lynchpin—losing Support collapses sustain</p>
+    </div>
+
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="text-3xl">🎯</div>
+        <div>
+          <div class="text-sm font-semibold text-primary">1x Recon</div>
+          <div class="text-xs text-foreground/60">Intelligence + Overwatch</div>
+        </div>
+      </div>
+      <p class="text-xs text-foreground/80">Motion Sensor + Laser Designator for battlefield intelligence</p>
+    </div>
+  </div>
+</div>
+
+### Key Tactical Adjustments
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">BURST-FIRING MANDATORY</div>
+    <p class="text-sm text-foreground/80 mb-2">Extended spray at mid-long range now heavily punished. Improved reticle settling rewards tap-firing discipline.</p>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary mt-3">
+      Practice 3-5 round bursts at 30m+
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">RANGE SPECIALIZATION</div>
+    <p class="text-sm text-foreground/80 mb-2">Pick 100 economy enforces specialized builds. Match loadout to map sectors—generalists lose to specialists.</p>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary mt-3">
+      Build for one range bracket
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">PROTECT THE SUPPORT</div>
+    <p class="text-sm text-foreground/80 mb-2">Support class defines squad viability. Fast revives + self-heal create infinite sustain. Core tactical doctrine.</p>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary mt-3">
+      Support death = reposition
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">AVOID AIR UNTIL FIX</div>
+    <p class="text-sm text-foreground/80 mb-2">IFV MR Missiles make air unplayable. Ground-based tactics mandatory until balance patch.</p>
+    <div class="text-xs px-3 py-2 bg-fs-gold/10 rounded text-fs-gold mt-3">
+      Focus Engineer on IFVs first
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">CALCULATED POSITIONING</div>
+    <p class="text-sm text-foreground/80 mb-2">Movement refinements reward pre-aiming over reaction flicks. Faster stance transitions enable peek-shooting.</p>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary mt-3">
+      Hold angles, don't chase
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">VISIBILITY ADVANTAGE</div>
+    <p class="text-sm text-foreground/80 mb-2">Lighting fixes enable faster target ID. Reduced fog/smoke means immediate post-breach engagement capability.</p>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary mt-3">
+      Push aggressively post-patch
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Verdict
+
+<div class="space-y-6 mb-8">
+
+Update 1.1.1.0 delivers on core competitive necessities. Weapon dispersion bugs eliminated, movement consistency established, visibility improved, hitboxes aligned. This is the foundation patch tactical players demanded.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-green-500/10 rounded-lg border-2 border-green-500/30">
+    <div class="text-sm font-semibold text-green-400 mb-3">✓ WHAT WORKS</div>
+    <ul class="text-sm text-foreground/80 space-y-2">
+      <li>• Dispersion fixes restore skill-based accuracy</li>
+      <li>• Movement refinements enable reliable positional play</li>
+      <li>• Visibility improvements provide competitive clarity</li>
+      <li>• Hitbox alignment ensures shots connect accurately</li>
+      <li>• Progression changes create more skill-based environments</li>
+      <li>• LMG meta rewards precision over spray-and-pray</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-red-500/10 rounded-lg border-2 border-red-500/30">
+    <div class="text-sm font-semibold text-red-400 mb-3">✗ CRITICAL GAPS</div>
+    <ul class="text-sm text-foreground/80 space-y-2">
+      <li>• IFV MR Missile completely unaddressed</li>
+      <li>• Air vehicle gameplay remains broken</li>
+      <li>• Vehicle meta warped until future fix</li>
+      <li>• Priority signaling concerns from community</li>
+      <li>• LMG dominance likely needs future nerf</li>
+      <li>• Small-mode focus over large-scale warfare</li>
+    </ul>
+  </div>
+</div>
+
+<Callout variant="success">
+**For FusionSaint Tactical Players:** This patch provides exactly what competitive gameplay needs—consistent mechanics, predictable outcomes, and skill-based gunplay. Master burst-firing patterns, optimize Pick 100 specialized builds, protect your Support player, and avoid air vehicles until IFV balance arrives. The weapon dispersion overhaul is the most important competitive change since launch.
+</Callout>
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <h3 class="text-xl font-bold text-foreground mb-4">What's Next for BF6 Meta</h3>
+  <div class="space-y-3 text-sm text-foreground/80">
+    <p><span class="text-fs-gold font-semibold">Next 30 Days:</span> Expect LMG dominance nerfs for DRS IAR and RPK-M. SCW-10 and SGX likely receive balance adjustments. IFV MR Missile rework confirmed as DICE priority.</p>
+    <p><span class="text-fs-gold font-semibold">Season 1 Impact:</span> Larger maps shift meta toward long-range precision builds. Battle Royale mode (if released) creates separate meta with adjusted TTK and vehicle balance.</p>
+    <p><span class="text-fs-gold font-semibold">Long-Term:</span> Challenge nerfs mean more players reach meta builds sooner, creating skill-based environments. Movement philosophy emphasizes tactical positioning over erratic mobility.</p>
+  </div>
+</div>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
+
+---
+
+<div class="text-center text-sm text-foreground/60 mt-8">
+**Last Updated:** October 26, 2025 • **Patch Version:** 1.1.1.0 • **Release Date:** October 28, 2025
+</div>

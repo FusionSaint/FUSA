@@ -1,0 +1,659 @@
+---
+title: XP Farming — Weapon & Career Leveling Guide
+---
+
+import Callout from "@/components/Callout.astro";
+import { Target, Zap, Trophy, Users, Flag, Swords, AlertTriangle } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**The XP grind in Battlefield 6 is real.** Whether you're racing to unlock weapon attachments or pushing for the next career rank, understanding which game modes yield the most experience points is critical to efficient progression.
+
+Different modes reward different playstyles—some prioritize raw kill counts for weapon XP, while others shower you with points for objective captures and teamwork. This guide breaks down the most efficient leveling strategies based on Season 1 launch data, including what happened to those notorious Portal XP farm servers.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> The Core XP Systems
+
+<div class="space-y-6 mb-8">
+
+Battlefield 6 tracks two primary progression paths that players often confuse. Understanding the difference is key to optimizing your grind.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary">Weapon XP</h3>
+        <div class="text-xs text-foreground/60">Individual gun progression</div>
+      </div>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Earned exclusively through kills and weapon usage. Unlocks attachments, optics, and weapon mastery levels.</p>
+    <div class="text-xs space-y-2">
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Primary Source</span>
+        <span class="text-fs-gold font-semibold">Kills</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Best Modes</span>
+        <span class="text-fs-gold font-semibold">TDM, Domination</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-fs-gold/20 flex items-center justify-center text-2xl">
+        ⭐
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-fs-gold">Career XP</h3>
+        <div class="text-xs text-foreground/60">Overall rank progression</div>
+      </div>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Earned through kills, objectives, teamwork, and support actions. Unlocks new weapons, gadgets, and rank rewards.</p>
+    <div class="text-xs space-y-2">
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Primary Sources</span>
+        <span class="text-fs-gold font-semibold">Objectives + Teamwork</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Best Modes</span>
+        <span class="text-fs-gold font-semibold">Conquest, Breakthrough</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Pro Tip:** You'll naturally earn both types of XP in any mode, but your mode choice dramatically affects the *rate* at which each progresses. Choose based on your current priority.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Game Mode XP Breakdown
+
+<div class="space-y-6 mb-8">
+
+Not all modes are created equal when it comes to XP farming. Here's the tactical breakdown of what each mode offers.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Game Mode</th>
+        <th class="text-center p-3 text-primary font-semibold">Weapon XP</th>
+        <th class="text-center p-3 text-primary font-semibold">Career XP</th>
+        <th class="text-center p-3 text-primary font-semibold">Best For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Team Deathmatch</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">⚡ Very High</div>
+          <div class="text-xs text-foreground/60">Constant kills</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">⚠️ Low</div>
+          <div class="text-xs text-foreground/60">No objectives</div>
+        </td>
+        <td class="text-center p-3 text-fs-gold font-semibold">Weapon Grinding</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Domination</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">⚡ Very High</div>
+          <div class="text-xs text-foreground/60">High kill density</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">⚡ Very High</div>
+          <div class="text-xs text-foreground/60">Fast obj flips</div>
+        </td>
+        <td class="text-center p-3 text-fs-gold font-semibold">All-Around Best</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Conquest</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">Moderate</div>
+          <div class="text-xs text-foreground/60">Spread out combat</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">⚡ Highest</div>
+          <div class="text-xs text-foreground/60">Huge obj bonuses</div>
+        </td>
+        <td class="text-center p-3 text-fs-gold font-semibold">Career Rank</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Breakthrough</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">High</div>
+          <div class="text-xs text-foreground/60">Dense combat zones</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">High</div>
+          <div class="text-xs text-foreground/60">Sector bonuses</div>
+        </td>
+        <td class="text-center p-3 text-fs-gold font-semibold">Balanced Hybrid</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Rush</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">Moderate</div>
+          <div class="text-xs text-foreground/60">Focused combat</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">Moderate</div>
+          <div class="text-xs text-foreground/60">M-COM bonuses</div>
+        </td>
+        <td class="text-center p-3 text-fs-gold font-semibold">Quick Sessions</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Swords className="inline-block mr-3 mb-1" size={32} /> Strategy 1: Weapon XP Farming (TDM Method)
+
+<div class="space-y-6 mb-8">
+
+If your priority is unlocking attachments and maxing weapon mastery levels, Team Deathmatch is your proving ground.
+
+</div>
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">TDM Weapon Grinding</h3>
+      <p class="text-sm text-foreground/60">Pure Combat • Infantry Only • Fast Matches</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">~1,500</div>
+      <div class="text-xs text-foreground/60">Weapon XP / 10 min</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">WHY IT WORKS</div>
+      <div class="space-y-2 text-sm text-foreground/80">
+        <div class="flex items-start gap-2">
+          <span class="text-green-400">✓</span>
+          <span>Constant combat with zero downtime—respawn directly into action</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-green-400">✓</span>
+          <span>Small maps mean high engagement frequency and more kills per minute</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-green-400">✓</span>
+          <span>Short matches allow multiple end-of-round XP bonuses per hour</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-green-400">✓</span>
+          <span>All XP funnels directly into weapon progression with no dilution</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">TRADE-OFFS</div>
+      <div class="space-y-2 text-sm text-foreground/80">
+        <div class="flex items-start gap-2">
+          <span class="text-red-400">−</span>
+          <span>Minimal career rank progression compared to objective modes</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-red-400">−</span>
+          <span>No squad bonuses or teamwork XP multipliers</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-red-400">−</span>
+          <span>Can become repetitive without objective variety</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">OPTIMIZATION TACTICS</div>
+    <p class="text-sm text-foreground/80">Stick with one weapon per session to concentrate all kill XP into a single mastery track. Activate XP boosters before starting your TDM grind session to amplify both kill rewards and end-of-match bonuses. Players report achieving approximately one weapon mastery level per well-played TDM match.</p>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Weapon Mastery Tip:** Focus on weapons you'll actually use in competitive play. Getting your primary to max level is more valuable than spreading progress thin across multiple guns.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Flag className="inline-block mr-3 mb-1" size={32} /> Strategy 2: Career XP Farming (PTFO Method)
+
+<div class="space-y-6 mb-8">
+
+"Play the F***ing Objective"—the classic Battlefield mantra exists for a reason. Objective-focused gameplay yields massive career XP multipliers.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ✗
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Kill-Only Playstyle</div>
+        <div class="text-xs text-foreground/60">Ignoring objectives</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">XP per Kill</span>
+        <span class="text-fs-gold font-semibold">~100 XP</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Bonus Multipliers</span>
+        <span class="text-fs-gold font-semibold">None</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Squad XP</span>
+        <span class="text-fs-gold font-semibold">Minimal</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">OPPORTUNITY COST</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Missing huge objective capture bonuses (500+ XP each)</li>
+        <li>• No ribbon/accolade accumulation for bonus XP</li>
+        <li>• Slower overall progression compared to teammates</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ✓
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">Objective-Focused PTFO</div>
+        <div class="text-xs text-foreground/60">Maximizing all XP sources</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Flag Capture</span>
+        <span class="text-green-400 font-bold">~500 XP <span class="text-xs">(+400%)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Defensive Kills</span>
+        <span class="text-green-400 font-bold">~200 XP <span class="text-xs">(2x bonus)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Squad Bonuses</span>
+        <span class="text-green-400 font-bold">+50% XP <span class="text-xs">(constant)</span></span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">TOTAL XP MULTIPLIER</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Objective bonuses dwarf raw kill XP by 4-5x per event</li>
+        <li>• Ribbon rewards at match end for sustained objective play</li>
+        <li>• Fastest path to rank-locked weapon and gadget unlocks</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="space-y-4 mb-8">
+
+### Support Class = Easy Mode Leveling
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+  <div class="text-sm text-foreground/80 mb-3">
+  Playing as a medic or support class on objectives creates an XP feedback loop. Every revive, heal, ammo resupply, or vehicle repair grants XP on top of your normal scoring. Combined with objective defense bonuses, support players can top the scoreboard without leading in kills.
+  </div>
+  <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary font-semibold">
+    Reviving teammates on contested objectives = Double XP (revive bonus + objective defense)
+  </div>
+</div>
+
+</div>
+
+<Callout variant="success">
+**Conquest Yields Peak Career XP:** A single well-played Conquest match with active objective play regularly yields 3,000–5,000+ career XP—far exceeding what's possible in TDM. This is why veteran players always recommend "PTFO" for fastest progression.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Trophy className="inline-block mr-3 mb-1" size={32} /> Strategy 3: The Domination Meta (Best of Both)
+
+<div class="space-y-6 mb-8">
+
+After the Portal XP farm nerfs, one mode emerged as the undisputed champion of legitimate XP farming: **Domination**.
+
+</div>
+
+<div class="p-8 bg-gradient-to-br from-fs-gold/10 via-card/50 to-fs-gold/5 rounded-lg border-2 border-fs-gold/30 mb-8 shadow-lg">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-fs-gold/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">🏆 Domination Meta Strategy</h3>
+      <p class="text-sm text-foreground/60">Infantry Only • 3 Flags • Constant Action • Small Maps</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">4,000+</div>
+      <div class="text-xs text-foreground/60">Total XP / 10 min match</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
+    <div class="p-4 bg-card/70 rounded-lg border border-fs-gold/20">
+      <div class="text-xs text-fs-gold font-semibold mb-2">WEAPON XP</div>
+      <div class="text-2xl font-bold text-foreground mb-1">~4,500</div>
+      <div class="text-xs text-foreground/60">Per match average</div>
+      <div class="mt-3 text-xs text-green-400">↑ Same as TDM rates</div>
+    </div>
+    <div class="p-4 bg-card/70 rounded-lg border border-fs-gold/20">
+      <div class="text-xs text-fs-gold font-semibold mb-2">CAREER XP</div>
+      <div class="text-2xl font-bold text-foreground mb-1">~5,000</div>
+      <div class="text-xs text-foreground/60">Per match average</div>
+      <div class="mt-3 text-xs text-green-400">↑ Near Conquest levels</div>
+    </div>
+    <div class="p-4 bg-card/70 rounded-lg border border-fs-gold/20">
+      <div class="text-xs text-fs-gold font-semibold mb-2">EFFICIENCY</div>
+      <div class="text-2xl font-bold text-foreground mb-1">~900</div>
+      <div class="text-xs text-foreground/60">XP per minute</div>
+      <div class="mt-3 text-xs text-green-400">↑ Highest in game</div>
+    </div>
+  </div>
+
+  <div class="space-y-3 mb-6">
+    <div class="p-3 bg-fs-gold/10 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">⚡ CONSTANT FLAG TURNOVER</div>
+      <div class="text-sm text-foreground/80">With only 3 capture points on small maps, flags change hands constantly. Each capture/neutralize grants objective XP while maintaining non-stop combat for weapon kills.</div>
+    </div>
+    <div class="p-3 bg-fs-gold/10 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">💥 HIGH KILL DENSITY</div>
+      <div class="text-sm text-foreground/80">All players cluster around contested flags, creating target-rich environments. Multi-kills, killstreaks, and defensive bonuses trigger constantly.</div>
+    </div>
+    <div class="p-3 bg-fs-gold/10 rounded">
+      <div class="text-xs text-fs-gold font-semibold mb-1">⏱️ SHORT MATCH CYCLES</div>
+      <div class="text-sm text-foreground/80">Matches typically end in 10-12 minutes, meaning more end-of-round XP bonuses per hour compared to 30+ minute Conquest games.</div>
+    </div>
+  </div>
+
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">📊 THE NUMBERS DON'T LIE</div>
+    <p class="text-sm text-foreground/80">Post-nerf analysis confirms Domination as the fastest legitimate XP farm in Battlefield 6. Players report consistently hitting 4,000+ weapon XP per match while simultaneously earning near-Conquest levels of career XP from objective play. This dual-track efficiency makes it the meta choice for serious progression grinding.</p>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Server Browser Tip:** Use the Portal server browser to find active Domination servers. Filter for "Official" or "XP Enabled" tags to ensure full progression credit. Custom Domination servers still grant normal XP as long as they're PvP-only.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <AlertTriangle className="inline-block mr-3 mb-1" size={32} /> Portal XP Farming Status
+
+<div class="space-y-6 mb-8">
+
+The elephant in the room: What happened to Portal XP farms? Here's the current state after DICE's patch 3.1.1 crackdown.
+
+</div>
+
+<Callout variant="warning">
+**CRITICAL UPDATE:** Portal bot farming has been effectively killed as a viable progression method. Weapon XP in bot lobbies was reduced to ~1/20th normal rates, and weapon mastery progression is now completely disabled against AI opponents.
+</Callout>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-5 bg-red-500/10 rounded-lg border-2 border-red-500/30">
+    <div class="text-xs text-red-400 font-semibold mb-3">❌ WHAT NO LONGER WORKS</div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="flex items-start gap-2">
+        <span class="text-red-400">✗</span>
+        <span>Bot farming lobbies (weapon XP disabled entirely)</span>
+      </div>
+      <div class="flex items-start gap-2">
+        <span class="text-red-400">✗</span>
+        <span>AFK XP cycling servers (career XP only, no weapon progress)</span>
+      </div>
+      <div class="flex items-start gap-2">
+        <span class="text-red-400">✗</span>
+        <span>Modified Portal servers with cheesy rulesets</span>
+      </div>
+      <div class="flex items-start gap-2">
+        <span class="text-red-400">✗</span>
+        <span>Challenge progression in any bot-based modes</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 bg-green-500/10 rounded-lg border-2 border-green-500/30">
+    <div class="text-xs text-green-400 font-semibold mb-3">✓ WHAT STILL WORKS</div>
+    <div class="space-y-2 text-sm text-foreground/80">
+      <div class="flex items-start gap-2">
+        <span class="text-green-400">✓</span>
+        <span>Portal PvP servers (full XP if player-vs-player only)</span>
+      </div>
+      <div class="flex items-start gap-2">
+        <span class="text-green-400">✓</span>
+        <span>Custom game modes with "XP Enabled" tag</span>
+      </div>
+      <div class="flex items-start gap-2">
+        <span class="text-green-400">✓</span>
+        <span>All official matchmaking modes (full progression)</span>
+      </div>
+      <div class="flex items-start gap-2">
+        <span class="text-green-400">✓</span>
+        <span>XP boosters and double-XP events (when active)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="space-y-4 mb-8">
+
+### Developer Response to XP Farms
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+  <p class="text-sm text-foreground/80 mb-3">
+  In response to the Portal XP farm epidemic, DICE implemented two key changes: (1) Weapon mastery and challenge progression completely disabled in bot lobbies, and (2) Match completion and objective XP bonuses increased by ~15-20% in official modes to compensate for the removal of easy farming.
+  </p>
+  <div class="text-xs text-foreground/60 italic">
+  The message was clear: Players are expected to earn progression through legitimate gameplay, but official modes were rebalanced to make that grind more reasonable.
+  </div>
+</div>
+
+</div>
+
+<Callout variant="success">
+**Silver Lining:** The Portal nerf forced DICE to improve official mode XP rates. Early weapon levels now require less XP, and objective play rewards were buffed. The grind is actually more fair than at launch—if you play legitimately.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Users className="inline-block mr-3 mb-1" size={32} /> Quick Reference: XP Farming Decision Matrix
+
+<div class="space-y-6 mb-8">
+
+Can't decide which mode to play? Use this decision tree based on your current goal.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">🎯 GOAL: WEAPON MASTERY</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li><span class="text-fs-gold font-semibold">1st Choice:</span> Domination</li>
+      <li><span class="text-fs-gold font-semibold">2nd Choice:</span> Team Deathmatch</li>
+      <li><span class="text-fs-gold font-semibold">3rd Choice:</span> Breakthrough (high-density sectors)</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: Unlocking attachments, maxing gun levels
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">⭐ GOAL: CAREER RANK</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li><span class="text-fs-gold font-semibold">1st Choice:</span> Conquest (large maps)</li>
+      <li><span class="text-fs-gold font-semibold">2nd Choice:</span> Breakthrough</li>
+      <li><span class="text-fs-gold font-semibold">3rd Choice:</span> Domination</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-fs-gold/10 rounded text-fs-gold">
+      Best for: Rank-locked unlocks, overall progression
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">🏆 GOAL: MAX EFFICIENCY</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li><span class="text-fs-gold font-semibold">1st Choice:</span> Domination (always)</li>
+      <li><span class="text-fs-gold font-semibold">2nd Choice:</span> Breakthrough</li>
+      <li><span class="text-fs-gold font-semibold">Avoid:</span> Rush (lower XP density)</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Best for: Limited playtime, balanced progression
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Additional XP Optimization Tactics
+
+<div class="space-y-6 mb-8">
+
+Regardless of which mode you choose, these universal tactics amplify your XP gains across the board.
+
+</div>
+
+<div class="space-y-3 mb-8">
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">XP Boosters (15/30/60 min)</span>
+      <span class="text-fs-gold font-semibold">Critical Priority</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 95%"></div>
+    </div>
+    <div class="text-xs text-foreground/60 mt-1">Stack with high-XP modes like Domination for exponential gains. Save 60-min boosters for dedicated grinding sessions.</div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Squad Play & Following Orders</span>
+      <span class="text-fs-gold font-semibold">High Priority</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+    </div>
+    <div class="text-xs text-foreground/60 mt-1">Squad XP bonuses apply to ALL actions. Staying with your squad and completing squad leader objectives grants +50% XP multipliers consistently.</div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Daily & Weekly Missions</span>
+      <span class="text-fs-gold font-semibold">High Priority</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 80%"></div>
+    </div>
+    <div class="text-xs text-foreground/60 mt-1">Completing daily missions awards flat XP bonuses on top of match earnings. Weekly missions offer even larger rewards—prioritize these during grinding sessions.</div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Double XP Events</span>
+      <span class="text-fs-gold font-semibold">Wait for These</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 100%"></div>
+    </div>
+    <div class="text-xs text-foreground/60 mt-1">Double XP weekends haven't started yet (pre-Season 1), but when they arrive, pair them with Domination + XP boosters for maximum value. This is when hardcore grinding pays off most.</div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between text-sm mb-1">
+      <span class="text-foreground/80">Match Completion Bonuses</span>
+      <span class="text-fs-gold font-semibold">Moderate Priority</span>
+    </div>
+    <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 65%"></div>
+    </div>
+    <div class="text-xs text-foreground/60 mt-1">Finishing matches grants flat XP regardless of performance. Don't quit early—even losing teams get completion bonuses that add up over multiple matches.</div>
+  </div>
+</div>
+
+<Callout variant="info">
+**Season 1 Note:** As of this guide (October 2025 launch), Season 1 hasn't started yet. Once seasonal content drops, expect battle pass XP bonuses, seasonal challenges with large XP rewards, and potentially new high-XP modes. Check back for updates.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Recommendations
+
+<div class="space-y-6 mb-8">
+
+After analyzing all available data, here's the tactical approach for efficient Battlefield 6 progression in the post-Portal-nerf environment.
+
+</div>
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/20 mb-8">
+  <h3 class="text-lg font-semibold text-primary mb-4">The Optimal Grinding Strategy</h3>
+  
+  <div class="space-y-4 text-sm text-foreground/80">
+    <div>
+      <span class="text-fs-gold font-semibold">For Weapon Mastery Priority:</span> Main Domination, supplement with TDM when Domination servers are full. Expect ~4,500 weapon XP per 10-minute match with decent performance. This is the fastest legitimate weapon grind available.
+    </div>
+    
+    <div>
+      <span class="text-fs-gold font-semibold">For Career Rank Priority:</span> Main Conquest on large maps, actively playing objectives and supporting your squad. A full Conquest match yields 4,000-6,000+ career XP depending on team performance and your objective participation.
+    </div>
+    
+    <div>
+      <span class="text-fs-gold font-semibold">For Balanced Progression:</span> Rotate between Domination (60% of playtime) and Conquest (40% of playtime). This ensures you're not neglecting either progression path and keeps gameplay varied enough to avoid burnout.
+    </div>
+    
+    <div>
+      <span class="text-fs-gold font-semibold">For Limited Playtime:</span> Pure Domination with XP boosters active. Maximize your XP-per-minute rate when you can't commit to hour-long sessions. You'll progress both systems simultaneously at the fastest rate possible.
+    </div>
+  </div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border border-border mb-8">
+  <h4 class="text-sm font-semibold text-foreground mb-3">Why Portal Farms Were Nerfed (And Why That's Good)</h4>
+  <p class="text-sm text-foreground/80 mb-3">
+  The Portal XP farm epidemic created a two-tier playerbase: Those who exploited bots to unlock everything in days, and those who played legitimately and fell behind. DICE's aggressive nerf restored competitive balance—now everyone progresses at similar rates through actual gameplay.
+  </p>
+  <p class="text-sm text-foreground/80">
+  The compensatory buffs to official mode XP rates mean the grind is actually more reasonable than at launch. Players who complained about slow progression were often comparing legitimate play to bot farming, which was never the intended experience. With Portal farms dead, the playing field is level—and Domination gives you a legitimate, high-efficiency path to progression without exploits.
+  </p>
+</div>
+
+<Callout variant="success">
+**Bottom Line:** The "fastest" way to level in Battlefield 6 is to play Domination aggressively while following squad orders and completing objectives. This isn't an exploit or a cheese—it's just tactical mode selection combined with engaged gameplay. No shortcuts needed.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
