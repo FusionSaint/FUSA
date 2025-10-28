@@ -1,0 +1,1056 @@
+---
+title: REDSEC – Optimal Settings
+---
+
+import Callout from "@/components/Callout.astro";
+import { Monitor, Gamepad2, Maximize2, Settings, Wifi, Headphones, Eye, Crosshair, Zap } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Battlefield 6's new REDSEC battle royale mode** has arrived with 100-player chaos on massive maps—and the great news is that it runs on the same engine as base BF6, meaning your optimizations carry over seamlessly. This guide provides elite, competition-ready settings to maximize framerate, minimize latency, and enhance visibility for both BF6 multiplayer and REDSEC.
+
+Our focus: **high FPS, low input lag, crystal-clear enemy visibility**. Whether you're in 128-player Conquest or the final circle of REDSEC, these settings will give you the competitive edge you need.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Monitor className="inline-block mr-3 mb-1" size={32} /> Graphics Settings: Performance & Visibility
+
+The goal is to eliminate visual clutter while maintaining competitive clarity. Most settings should be Low or Off, with strategic exceptions for visibility.
+
+<div class="space-y-6 mb-8">
+
+### Core Visual Settings
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎨
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Texture Quality</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Keep detailed surfaces for enemy visibility with minimal FPS cost.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Recommended:</span> <span class="text-foreground/70">High</span></div>
+      <div><span class="text-fs-gold font-semibold">If &lt;8GB VRAM:</span> <span class="text-foreground/70">Low</span></div>
+      <div><span class="text-fs-gold font-semibold">Impact:</span> <span class="text-green-400">Minimal FPS cost</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔍
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Texture Filtering</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Sharpens distant textures and players without performance impact.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Recommended:</span> <span class="text-foreground/70">Ultra/Overkill</span></div>
+      <div><span class="text-fs-gold font-semibold">Impact:</span> <span class="text-green-400">Zero FPS cost</span></div>
+      <div><span class="text-fs-gold font-semibold">Benefit:</span> <span class="text-foreground/70">Clearer long-range targets</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🌳
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Mesh Quality</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Controls foliage density and world geometry detail. CPU-intensive.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Recommended:</span> <span class="text-foreground/70">Medium</span></div>
+      <div><span class="text-fs-gold font-semibold">CPU-Bound Systems:</span> <span class="text-foreground/70">Low</span></div>
+      <div><span class="text-fs-gold font-semibold">Why:</span> <span class="text-foreground/70">Reduces cover for enemies to hide</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        🌿
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Undergrowth Quality</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Vegetation density—lower reveals hidden enemies.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Recommended:</span> <span class="text-foreground/70">Low</span></div>
+      <div><span class="text-fs-gold font-semibold">Benefit:</span> <span class="text-green-400">+GPU performance</span></div>
+      <div><span class="text-fs-gold font-semibold">Visibility:</span> <span class="text-green-400">See through foliage</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        💥
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Effects Quality</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Particle effects from explosions and debris.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Recommended:</span> <span class="text-foreground/70">Low</span></div>
+      <div><span class="text-fs-gold font-semibold">Prevents:</span> <span class="text-foreground/70">6-8% FPS drop in chaos</span></div>
+      <div><span class="text-fs-gold font-semibold">Clarity:</span> <span class="text-green-400">Clearer view during explosions</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        🌫️
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Volumetric Quality</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Fog, smoke, and atmospheric effects.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Recommended:</span> <span class="text-foreground/70">Low</span></div>
+      <div><span class="text-fs-gold font-semibold">FPS Gain:</span> <span class="text-green-400">Up to 10%</span></div>
+      <div><span class="text-fs-gold font-semibold">Visibility:</span> <span class="text-green-400">Thins smoke/fog</span></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Competitive Priority**: Set Undergrowth, Effects, and Volumetric to **Low**. These three settings have the highest impact on both FPS and enemy visibility through environmental clutter.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+### Lighting & Shadow Configuration
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        💡
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-red-400">Lighting Quality</div>
+        <div class="text-xs text-foreground/60">Low</div>
+      </div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Simplifies global lighting calculations</li>
+      <li>✓ Minimal visual difference in gameplay</li>
+      <li>✓ Frees up GPU/CPU resources</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        🔦
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-red-400">Local Light & Shadow</div>
+        <div class="text-xs text-foreground/60">Low</div>
+      </div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Reduces dynamic light sources</li>
+      <li>✓ Improves performance in dense scenes</li>
+      <li>✓ Negligible competitive impact</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ☀️
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">Sun Shadow Quality</div>
+        <div class="text-xs text-foreground/60">Medium (sweet spot)</div>
+      </div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Balanced shadow detail vs performance</li>
+      <li>✓ Avoids ~20% FPS hit from Ultra</li>
+      <li>✓ Maintains important shadow information</li>
+    </ul>
+    <div class="mt-3 p-2 bg-primary/10 rounded text-xs text-primary">
+      Low available if you need more FPS
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl">
+        🎭
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Shadow Filtering</div>
+        <div class="text-xs text-foreground/60">PCF (not PCSS)</div>
+      </div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Less demanding than PCSS</li>
+      <li>✓ Clean shadow appearance</li>
+      <li>✓ Better for competitive FPS</li>
+    </ul>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+### Post-Processing & Advanced Effects
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Setting</th>
+        <th class="text-center p-3 text-primary font-semibold">Recommended</th>
+        <th class="text-left p-3 text-primary font-semibold">Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Reflection Quality</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Low</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">SSR overrides most reflections anyway—save GPU power</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Screen Space Reflections (SSR)</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Off</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Costly post-process effect—notable FPS boost when disabled</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Ambient Occlusion / SSGI</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Off</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">SSGI High cuts FPS by 30-35%—extreme performance cost</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Post-Processing Quality</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Low</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Removes bloom, lens flare, color grading—clearer image</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">High Fidelity Objects</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Medium</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">CPU-intensive—Medium balances detail without bottlenecking</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Motion Blur (World & Weapon)</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">0% (Off)</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Eliminates blur during movement—crucial for tracking targets</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Film Grain</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Off</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Adds visual noise—removes clarity</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Chromatic Aberration</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Off</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Color fringing effect—obscures distant enemies</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Vignette</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Off</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Darkens screen edges—"shadows for enemies to hide in"</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="warning">
+**Critical for Visibility**: Disable ALL post-processing effects (motion blur, film grain, chromatic aberration, vignette). These cinematic effects only obscure targets and reduce clarity in competitive play.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+### Image Quality Settings
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">BRIGHTNESS</div>
+    <div class="mb-4">
+      <div class="flex items-center justify-between text-sm mb-2">
+        <span class="text-foreground/80">World Brightness</span>
+        <span class="text-fs-gold font-semibold">50-60</span>
+      </div>
+      <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+        <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 55%"></div>
+      </div>
+    </div>
+    <p class="text-xs text-foreground/70">Calibrate so dark areas are visible without washing out the image—prevents enemies hiding in shadows</p>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">SHARPNESS</div>
+    <div class="mb-4">
+      <div class="flex items-center justify-between text-sm mb-2">
+        <span class="text-foreground/80">Image Sharpness</span>
+        <span class="text-fs-gold font-semibold">70-75%</span>
+      </div>
+      <div class="h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+        <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 72%"></div>
+      </div>
+    </div>
+    <p class="text-xs text-foreground/70">Moderate sharpening makes enemy silhouettes clearer—avoid 100% (too crunchy)</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Maximize2 className="inline-block mr-3 mb-1" size={32} /> Display & Performance Settings
+
+Maximize framerate and minimize input lag with these advanced configurations.
+
+<div class="space-y-6 mb-8">
+
+### Core Display Configuration
+
+</div>
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Optimal Display Setup</h3>
+      <p class="text-sm text-foreground/60">Core settings for maximum performance</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">144+</div>
+      <div class="text-xs text-foreground/60">target FPS</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="space-y-3">
+      <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded border border-primary/20">
+        <span class="font-semibold">Mode</span>
+        <span class="text-fs-gold font-bold">Fullscreen / Borderless</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded border border-primary/20">
+        <span class="font-semibold">Resolution</span>
+        <span class="text-fs-gold font-bold">Native (100% scale)</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded border border-primary/20">
+        <span class="font-semibold">Refresh Rate</span>
+        <span class="text-fs-gold font-bold">Maximum (144Hz+)</span>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded border border-primary/20">
+        <span class="font-semibold">VSync</span>
+        <span class="text-red-400 font-bold">Off</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded border border-primary/20">
+        <span class="font-semibold">Dynamic Res Scale</span>
+        <span class="text-red-400 font-bold">Off</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-3 bg-card/70 rounded border border-primary/20">
+        <span class="font-semibold">Adaptive Sync</span>
+        <span class="text-green-400 font-bold">G-Sync/FreeSync On</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">SETUP NOTES</div>
+    <p class="text-sm text-foreground/80">Use native resolution at maximum refresh rate. VSync OFF to avoid input lag—use adaptive sync (G-Sync/FreeSync) instead for tear-free frames without latency penalty.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+### Anti-Aliasing & Upscaling Strategy
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-xl">
+        🟢
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">NVIDIA GPUs</div>
+        <div class="text-xs text-foreground/60">RTX 20/30/40/50 series</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Method</span>
+        <span class="text-fs-gold font-semibold">DLSS 4.0 Quality</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Frame Generation</span>
+        <span class="text-red-400 font-semibold">Off (competitive)</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Native Alt</span>
+        <span class="text-foreground/70">DLAA (if high FPS)</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">BENEFITS</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• DLSS Quality boosts FPS at 1440p/4K</li>
+        <li>• Lower input lag than native+frame-gen</li>
+        <li>• DLAA for maximum quality if GPU powerful</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        🔴
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">AMD GPUs</div>
+        <div class="text-xs text-foreground/60">RX 6000/7000 series</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Method</span>
+        <span class="text-fs-gold font-semibold">FSR 4.0 Quality</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Alternative</span>
+        <span class="text-foreground/70">FSR Balanced</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Native</span>
+        <span class="text-foreground/70">FSR AA only</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">OPTIMIZATION</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Quality/Balanced for best image/FPS trade-off</li>
+        <li>• Use upscaling at higher resolutions</li>
+        <li>• Native + FSR AA if GPU handles it</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<Callout variant="info">
+**Frame Generation Note**: While DLSS/FSR frame generation nearly doubles framerates, it adds latency from interpolated frames. For competitive play, use Quality upscaling without frame-gen to maintain true responsiveness.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+### Advanced Performance Tweaks
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Setting</th>
+        <th class="text-center p-3 text-primary font-semibold">Value</th>
+        <th class="text-left p-3 text-primary font-semibold">Impact & Reasoning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Frame Rate Limiter</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Monitor Hz + 10</div>
+          <div class="text-xs text-foreground/60">(e.g., 154 for 144Hz)</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Caps just above refresh rate to stabilize frame pacing—prevents GPU overwork</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Future Frame Rendering</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">Off</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Disabling eliminates frame queue for minimum input delay—only enable if severe CPU bottleneck</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">NVIDIA Reflex Low Latency</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">On + Boost</div>
+          <div class="text-xs text-red-400">(Currently bugged)</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">⚠️ Known bug caps FPS to 60 or triggers frame-gen—test carefully or leave OFF until patched</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="warning">
+**Reflex Bug Alert**: As of REDSEC launch, enabling NVIDIA Reflex may inadvertently cap framerates to ~60 FPS or activate frame generation incorrectly. Test it on your system—if you experience issues, keep it disabled until DICE patches it.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Eye className="inline-block mr-3 mb-1" size={32} /> Camera & Interface Settings
+
+Critical configurations for maximum situational awareness and target visibility.
+
+<div class="space-y-6 mb-8">
+
+### Field of View Configuration
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-primary/10 rounded-lg border-2 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">INFANTRY FOV</div>
+    <div class="text-center mb-4">
+      <div class="text-4xl font-bold text-fs-gold mb-1">105-120</div>
+      <div class="text-xs text-foreground/60">horizontal degrees</div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Maximum peripheral awareness</li>
+      <li>✓ 105-110 = sweet spot for most</li>
+      <li>✓ 120 for REDSEC battle royale</li>
+      <li>⚠️ Higher = smaller distant targets</li>
+    </ul>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-foreground font-semibold mb-3">VEHICLE 3RD PERSON FOV</div>
+    <div class="text-center mb-4">
+      <div class="text-4xl font-bold text-fs-gold mb-1">83</div>
+      <div class="text-xs text-foreground/60">recommended</div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Broad view around vehicle</li>
+      <li>✓ Spot flanking enemies</li>
+      <li>✓ No extreme fisheye effect</li>
+    </ul>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-foreground font-semibold mb-3">WEAPON FOV</div>
+    <div class="text-center mb-4">
+      <div class="text-4xl font-bold text-fs-gold mb-1">Wide</div>
+      <div class="text-xs text-foreground/60">maximum visibility</div>
+    </div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>✓ Gun held further from screen</li>
+      <li>✓ More visible screen real estate</li>
+      <li>✓ No effect on actual recoil/aim</li>
+    </ul>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+### Visual Distraction Elimination
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-4 rounded-lg bg-red-500/10 border border-red-500/30">
+    <div class="flex items-center justify-between mb-2">
+      <span class="text-sm font-semibold text-foreground">World Motion Blur</span>
+      <span class="text-red-400 font-bold text-lg">0%</span>
+    </div>
+    <p class="text-xs text-foreground/70">Eliminates blur during camera movement—crystal clear tracking</p>
+  </div>
+
+  <div class="p-4 rounded-lg bg-red-500/10 border border-red-500/30">
+    <div class="flex items-center justify-between mb-2">
+      <span class="text-sm font-semibold text-foreground">Weapon Motion Blur</span>
+      <span class="text-red-400 font-bold text-lg">0%</span>
+    </div>
+    <p class="text-xs text-foreground/70">Removes weapon animation blur—see clearly while firing</p>
+  </div>
+
+  <div class="p-4 rounded-lg bg-red-500/10 border border-red-500/30">
+    <div class="flex items-center justify-between mb-2">
+      <span class="text-sm font-semibold text-foreground">Camera Shake Amount</span>
+      <span class="text-red-400 font-bold text-lg">20%</span>
+    </div>
+    <p class="text-xs text-foreground/70">Minimum allowed—reduces explosion shake, maintains aim stability</p>
+  </div>
+
+  <div class="p-4 rounded-lg bg-red-500/10 border border-red-500/30">
+    <div class="flex items-center justify-between mb-2">
+      <span class="text-sm font-semibold text-foreground">Weapon DOF</span>
+      <span class="text-red-400 font-bold text-lg">Off</span>
+    </div>
+    <p class="text-xs text-foreground/70">No depth-of-field blur—background stays in focus</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+### SOVIS Enemy Visibility Filter
+
+<div class="p-8 bg-gradient-to-br from-green-500/10 via-card/50 to-green-500/5 rounded-lg border-2 border-green-500/30 mb-8">
+  <div class="flex items-start gap-6">
+    <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center text-3xl flex-shrink-0">
+      👁️
+    </div>
+    <div class="flex-1">
+      <h3 class="text-xl font-bold text-green-400 mb-2">SOVIS Filter (Soldier Visibility)</h3>
+      <div class="mb-4">
+        <span class="text-2xl font-bold text-fs-gold">ON</span>
+        <span class="text-sm text-foreground/60 ml-3">— Mandatory for Competitive</span>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <div class="text-xs text-green-400 font-semibold mb-2">WHAT IT DOES</div>
+          <ul class="text-sm text-foreground/80 space-y-1">
+            <li>✓ Increases contrast on player models</li>
+            <li>✓ Prevents blending into lighting/fog</li>
+            <li>✓ Adds subtle highlight to enemies</li>
+            <li>✓ Makes targets pop from backgrounds</li>
+          </ul>
+        </div>
+        
+        <div>
+          <div class="text-xs text-green-400 font-semibold mb-2">PERFORMANCE</div>
+          <ul class="text-sm text-foreground/80 space-y-1">
+            <li>• Virtually no FPS impact</li>
+            <li>• Minimal visual difference</li>
+            <li>• Massive visibility advantage</li>
+            <li>• Works in smoke/fog/shadows</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+        <p class="text-sm text-foreground/80"><strong class="text-green-400">Bottom Line:</strong> SOVIS is effectively a built-in "enemy highlight" feature. The only downside is slightly less realistic lighting on characters—a tiny trade-off for winning more gunfights. Always enable for competitive play.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Pro Visibility Stack**: Enable SOVIS Filter + Custom Enemy HUD Colors (bright pink/orange) + Ally Outlines. This combination creates a layered visibility system where enemies are instantly recognizable through any environmental conditions.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Headphones className="inline-block mr-3 mb-1" size={32} /> Audio Configuration
+
+Sound is your early-warning system—optimize for tactical audio intelligence.
+
+<div class="space-y-6 mb-8">
+
+### Audio Mix & Volume Settings
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Audio Channel</th>
+        <th class="text-center p-3 text-primary font-semibold">Volume</th>
+        <th class="text-left p-3 text-primary font-semibold">Reasoning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Audio Mix Profile</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Headphones/Night Mode</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Compresses dynamic range—makes footsteps louder, explosions quieter for balanced audio cues</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Master Volume</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">100%</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Maximum audio detail—adjust system volume if too loud, not in-game</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Music Volume</td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-semibold">0-20%</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Music masks tactical sounds—disable or keep very low for competitive</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Sound Effects</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">100%</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Footsteps, gunfire, vehicles—need these loud and clear</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Voice-Over / Radio</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">100%</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Commander callouts, objective alerts—critical situational info</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">UI / Interface</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">100%</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Spot markers, objective captures—audio cues for map events</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Hit Indicator Sound</td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-semibold">On</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Audio confirmation of shots landing—essential damage feedback</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-3">3D AUDIO SETUP</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>✓ Use quality headphones (over speakers)</li>
+      <li>✓ Enable Windows Sonic / Dolby Atmos if available</li>
+      <li>✓ Test spatial audio vs stereo—pick what gives best directionality</li>
+      <li>✓ Positional audio crucial for 360° awareness</li>
+    </ul>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-red-400 font-semibold mb-3">AVOID THESE TRAPS</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>✗ War Tapes mix (too loud, masks footsteps)</li>
+      <li>✗ High music volume (covers tactical sounds)</li>
+      <li>✗ Tinnitus ringing effect (blocks enemy sounds)</li>
+      <li>✗ VOIP too loud (balance comms vs gameplay)</li>
+    </ul>
+  </div>
+</div>
+
+<Callout variant="info">
+**Audio Intelligence**: In REDSEC battle royale, sound awareness is even more critical since deaths are permanent for the round. Hearing footsteps, door opens, or reloads before visual contact gives you the first-shot advantage.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> REDSEC-Specific Considerations
+
+Key differences between base BF6 and REDSEC mode that affect settings optimization.
+
+<div class="space-y-6 mb-8">
+
+### Performance Profile Comparison
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl">
+        🎮
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">BASE BF6</div>
+        <div class="text-xs text-foreground/60">Conquest / Breakthrough</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 text-xs text-foreground/80 mb-4">
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span>Max Players:</span>
+        <span class="text-fs-gold font-semibold">128</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span>Destruction Level:</span>
+        <span class="text-fs-gold font-semibold">Very High</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span>CPU Load:</span>
+        <span class="text-yellow-400 font-semibold">High-Extreme</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span>GPU Load:</span>
+        <span class="text-yellow-400 font-semibold">Variable</span>
+      </div>
+    </div>
+    
+    <p class="text-xs text-foreground/70">128-player modes with massive destruction can max out both CPU and GPU—especially in dense combat zones</p>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ⚔️
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">REDSEC MODE</div>
+        <div class="text-xs text-foreground/60">Battle Royale</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 text-xs text-foreground/80 mb-4">
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span>Max Players:</span>
+        <span class="text-fs-gold font-semibold">100</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span>Destruction Level:</span>
+        <span class="text-fs-gold font-semibold">Moderate-High</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span>CPU Load:</span>
+        <span class="text-red-400 font-semibold">Extreme</span>
+      </div>
+      <div class="flex justify-between p-2 bg-card/50 rounded">
+        <span>GPU Load:</span>
+        <span class="text-green-400 font-semibold">Lower than BF6</span>
+      </div>
+    </div>
+    
+    <p class="text-xs text-foreground/70">⚠️ REDSEC is even more CPU-bound than base BF6—large open map + 100 players = heavy CPU demand. GPU may actually be underutilized.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+### CPU Optimization for REDSEC
+
+<div class="p-6 bg-red-500/10 rounded-lg border-2 border-red-500/30 mb-8">
+  <div class="flex items-start gap-4">
+    <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl flex-shrink-0">
+      🔥
+    </div>
+    <div class="flex-1">
+      <h4 class="text-lg font-semibold text-red-400 mb-2">If CPU-Bottlenecked in REDSEC:</h4>
+      <p class="text-sm text-foreground/80 mb-4">REDSEC can push CPUs harder than base BF6, especially in 4K where GPU usage may be low while CPU maxes out. If you notice CPU pegged at 100% with low GPU usage and FPS drops:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="p-3 bg-card/50 rounded border border-border">
+          <div class="text-xs text-red-400 font-semibold mb-2">LOWER THESE</div>
+          <ul class="text-xs text-foreground/80 space-y-1">
+            <li>• <strong>Mesh Quality</strong> → Medium or Low</li>
+            <li>• <strong>High Fidelity Objects</strong> → Medium or Low</li>
+            <li>• <strong>Future Frame Rendering</strong> → Consider ON (only if desperate)</li>
+          </ul>
+        </div>
+        
+        <div class="p-3 bg-card/50 rounded border border-border">
+          <div class="text-xs text-green-400 font-semibold mb-2">CAN RAISE THESE</div>
+          <ul class="text-xs text-foreground/80 space-y-1">
+            <li>• GPU settings if headroom exists</li>
+            <li>• Shadows/Effects (if GPU underutilized)</li>
+            <li>• Resolution (if CPU not maxed)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Smart Adjustment**: If you ran High Mesh in base BF6 smoothly but REDSEC stutters, drop to Medium Mesh. The CPU demand of the large battle royale map means you may need lower CPU-heavy settings than in standard multiplayer.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+### Settings Carryover & Verification
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">GOOD NEWS</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ BF6 and REDSEC share same settings menu</li>
+      <li>✓ All graphics/audio configs carry over</li>
+      <li>✓ No need to reconfigure from scratch</li>
+      <li>✓ Same engine, same optimization principles</li>
+    </ul>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-red-500">
+    <div class="text-xs text-red-400 font-semibold mb-3">POST-PATCH CHECKLIST</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>□ Verify SOVIS Filter still enabled</li>
+      <li>□ Confirm Motion Blur = 0%</li>
+      <li>□ Check Reflex setting (bug status)</li>
+      <li>□ Test any new options added</li>
+    </ul>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 📋 Quick Reference: Optimal Settings Summary
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+
+### Graphics - Core Settings
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6 text-sm">
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Textures</span>
+    <span class="text-fs-gold font-semibold">High</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Filtering</span>
+    <span class="text-fs-gold font-semibold">Ultra</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Mesh</span>
+    <span class="text-fs-gold font-semibold">Medium</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Undergrowth</span>
+    <span class="text-red-400 font-semibold">Low</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Effects</span>
+    <span class="text-red-400 font-semibold">Low</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Volumetric</span>
+    <span class="text-red-400 font-semibold">Low</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Lighting</span>
+    <span class="text-red-400 font-semibold">Low</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Sun Shadows</span>
+    <span class="text-fs-gold font-semibold">Medium</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">SSGI/AO</span>
+    <span class="text-red-400 font-semibold">Off</span>
+  </div>
+</div>
+
+### Display & Performance
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6 text-sm">
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Resolution</span>
+    <span class="text-fs-gold font-semibold">Native 100%</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Upscaling</span>
+    <span class="text-fs-gold font-semibold">DLSS/FSR Quality</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Frame Gen</span>
+    <span class="text-red-400 font-semibold">Off</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">FFR</span>
+    <span class="text-red-400 font-semibold">Off</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Reflex</span>
+    <span class="text-yellow-400 font-semibold">Test (bugged)</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">VSync</span>
+    <span class="text-red-400 font-semibold">Off</span>
+  </div>
+</div>
+
+### Camera & Interface
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6 text-sm">
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Infantry FOV</span>
+    <span class="text-fs-gold font-semibold">105-120</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Weapon FOV</span>
+    <span class="text-fs-gold font-semibold">Wide</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Motion Blur</span>
+    <span class="text-red-400 font-semibold">0%</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Camera Shake</span>
+    <span class="text-fs-gold font-semibold">20%</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">SOVIS Filter</span>
+    <span class="text-green-400 font-semibold">On</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Brightness</span>
+    <span class="text-fs-gold font-semibold">50-60</span>
+  </div>
+</div>
+
+### Audio Essentials
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Mix</span>
+    <span class="text-fs-gold font-semibold">Headphones</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Music</span>
+    <span class="text-red-400 font-semibold">0-20%</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Effects</span>
+    <span class="text-green-400 font-semibold">100%</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Voice/Radio</span>
+    <span class="text-green-400 font-semibold">100%</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">Hit Indicator</span>
+    <span class="text-green-400 font-semibold">On</span>
+  </div>
+  <div class="p-2 bg-card/50 rounded flex justify-between">
+    <span class="text-foreground/70">3D Audio</span>
+    <span class="text-fs-gold font-semibold">Enabled</span>
+  </div>
+</div>
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Notes & Strategy
+
+<div class="space-y-6 mb-8">
+
+These settings prioritize three competitive pillars: **framerate, responsiveness, and visibility**. Whether you're in BF6's chaotic 128-player Conquest or REDSEC's tactical battle royale, this configuration ensures you're seeing enemies clearly, reacting instantly, and maintaining smooth performance.
+
+The beauty of REDSEC using the same engine means **you don't need separate configs**—these optimizations work seamlessly across both modes. Just remember that REDSEC may demand slightly lower CPU-heavy settings due to the large map and player count, so adjust Mesh/High Fidelity Objects if you experience stuttering.
+
+</div>
+
+<Callout variant="success">
+**Competitive Edge Achieved**: With proper settings, you transform BF6/REDSEC from a visually cluttered experience into a tactical clarity simulator. Every setting here trades unnecessary visual flair for functional advantage—clearer sightlines, faster frames, instant reactions.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
