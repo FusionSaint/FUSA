@@ -30,7 +30,10 @@ export const side_nav_menu_order: string[] = [
   "Battlefield6/weapon-customization",
   "Battlefield6/tipsntricks",
   "Battlefield6/patchnotes/launchpatch",
-  
+  "Battlefield6/redsec/firestorm",
+  "Battlefield6/redsec/loot",
+  "Battlefield6/redsec/tactics",
+
   // Company of Heroes - NOTE: lowercase 'o' in "of"
   "Companyofheroes",
   "Companyofheroes/compare",

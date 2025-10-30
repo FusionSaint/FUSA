@@ -1,0 +1,682 @@
+---
+title: Loot and Map Interactions
+---
+
+import Callout from "@/components/Callout.astro";
+
+<div class="space-y-6 mb-8">
+
+**Surviving REDSEC means mastering Fort Lyndon's unique loot economy.** Color-coded crates, class-locked vaults, upgrade kits, and mission rewards create a dynamic gear progression system that rewards map knowledge and tactical coordination.
+
+This guide breaks down every loot source, interactive element, and class-specific advantage in Season 1. Learn what's inside each crate type, where to find critical upgrades, and how to leverage your class for maximum squad advantage.
+
+</div>
+
+<div class="p-4 bg-amber-500/10 rounded-lg border-l-4 border-amber-500 mb-8">
+  <div class="flex items-start gap-3">
+    <div class="text-2xl">⚠️</div>
+    <div>
+      <div class="text-sm font-semibold text-amber-400 mb-1">SEASON 1 CONTENT</div>
+      <div class="text-xs text-foreground/70">Last verified: October 2025. Loot tables and spawn rates may change with seasonal updates. Check patch notes for current meta.</div>
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 📦 Loot Crate Types
+
+<div class="space-y-6 mb-8">
+
+Fort Lyndon's loot system uses color-coded crates with distinct rarity tiers and content pools. Understanding what each crate type offers is fundamental to efficient looting and squad gearing.
+
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+  
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-green-500/30 hover:border-green-500/50 transition-colors">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        📦
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-green-400">Common Crates</h3>
+        <div class="text-xs text-foreground/60">Green • High Spawn Rate</div>
+      </div>
+    </div>
+    
+    <p class="text-sm text-foreground/80 mb-4">Most plentiful containers on the map. Essential for early-game gearing but expect repetitive loot pools.</p>
+    
+    <div class="space-y-2 mb-4">
+      <div class="text-xs font-semibold text-green-400 mb-2">TYPICAL CONTENTS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-card/70 text-foreground/80 text-xs rounded-full">Basic Weapons</span>
+        <span class="px-3 py-1.5 bg-card/70 text-foreground/80 text-xs rounded-full">Ammo</span>
+        <span class="px-3 py-1.5 bg-card/70 text-foreground/80 text-xs rounded-full">Throwables</span>
+        <span class="px-3 py-1.5 bg-card/70 text-foreground/80 text-xs rounded-full">Basic Gadgets</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">STRATEGY</div>
+      <p class="text-xs text-foreground/80">Hit these at drop-in for immediate upgrades over your starting pistol. Don't linger—move to rare crates quickly.</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-red-500/40 hover:border-red-500/60 transition-colors shadow-lg shadow-red-500/10">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-red-400">Rare Crates</h3>
+        <div class="text-xs text-foreground/60">Black & Red • Medium Spawn</div>
+      </div>
+    </div>
+    
+    <p class="text-sm text-foreground/80 mb-4">"Pax Armata" style containers with superior weapon quality and occasional Strike Package call-ins.</p>
+    
+    <div class="space-y-2 mb-4">
+      <div class="text-xs font-semibold text-red-400 mb-2">TYPICAL CONTENTS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-card/70 text-foreground/80 text-xs rounded-full">High-Tier Weapons</span>
+        <span class="px-3 py-1.5 bg-card/70 text-foreground/80 text-xs rounded-full">More Gadgets</span>
+        <span class="px-3 py-1.5 bg-fs-gold/20 text-fs-gold text-xs rounded-full font-semibold">Strike Packages</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">STRIKE PACKAGES</div>
+      <p class="text-xs text-foreground/80">Artillery strikes, smokescreen drops, UAV recon drones. Game-changing abilities worth prioritizing.</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/30 flex items-center justify-center text-2xl">
+        ⭐
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-primary">Class Crates</h3>
+        <div class="text-xs text-foreground/60">Red w/ Icon • Rare Spawn</div>
+      </div>
+    </div>
+    
+    <p class="text-sm text-foreground/80 mb-4">Adaptive loot that tailors contents to the opener's class. Highest-value containers on the map.</p>
+    
+    <div class="space-y-2 mb-4">
+      <div class="text-xs font-semibold text-primary mb-2">ADAPTIVE CONTENTS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-card/70 text-foreground/80 text-xs rounded-full">Signature Weapons</span>
+        <span class="px-3 py-1.5 bg-card/70 text-foreground/80 text-xs rounded-full">Class Gadgets</span>
+        <span class="px-3 py-1.5 bg-fs-gold/20 text-fs-gold text-xs rounded-full font-semibold">Top-Tier Gear</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-primary/10 rounded border border-primary/30">
+      <div class="text-xs text-primary font-semibold mb-1">SQUAD COORDINATION</div>
+      <p class="text-xs text-foreground/80">Only one player needs to open it. Let the class member who needs the loot interact to maximize value.</p>
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="tip">
+**Class Crate Examples:** Recon opens → Sniper/DMR + recon gadgets. Assault opens → AR/Carbine + assault gadgets. Support opens → LMG + support gear. Engineer opens → SMG + engineer tools.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🔧 Additional Loot Sources
+
+<div class="space-y-6 mb-8">
+
+Crates aren't the only gear sources in REDSEC. These alternative loot mechanics provide specialized items, upgrades, and strategic advantages that supplement the core crate system.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🚑
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Vehicle Loot</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Parked vehicles contain themed supplies. Ambulances hold medical gear (defibs, health pouches), box trucks hide weapons/ammo.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best for:</span> <span class="text-foreground/70">Topping off specific categories (healing, ammo)</span></div>
+      <div><span class="text-fs-gold font-semibold">Spawn pattern:</span> <span class="text-foreground/70">Fixed vehicle locations around Fort Lyndon</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        📡
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Mission Drops</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Complete in-match contracts to trigger supply drops. Reward crates contain high-tier weapons with pre-equipped attachments.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Risk/Reward:</span> <span class="text-foreground/70">High—visible drop, but superior firepower</span></div>
+      <div><span class="text-fs-gold font-semibold">Bonus:</span> <span class="text-foreground/70">May include Custom Weapon Drop tokens</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎒
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Weapon Upgrade Kits</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Thin satchels with weapon-type icons. Boost gun rarity by adding attachments without finding a new weapon.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Usage:</span> <span class="text-foreground/70">Hold interact while holding compatible gun</span></div>
+      <div><span class="text-fs-gold font-semibold">Upgrade paths:</span> <span class="text-foreground/70">Choose accuracy, mobility, or reload focus</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ❓
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Intel Caches</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Briefcases marked with "?" icon. Collectible intel items that grant Career XP toward progression unlocks.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Value:</span> <span class="text-foreground/70">No combat advantage, but accelerates unlocks</span></div>
+      <div><span class="text-fs-gold font-semibold">Access:</span> <span class="text-foreground/70">Any class can pick up</span></div>
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="info">
+**Custom Weapon Drops:** These tokens let you summon pre-made loadout guns from your main game "Favorited" weapons. Mission rewards are the primary source.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🎯 Weapon Upgrade Kit Deep Dive
+
+<div class="space-y-6 mb-8">
+
+Upgrade kits are easily overlooked but critical for mid-match power scaling. Here's how to maximize their value.
+
+</div>
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Weapon Upgrade Kit System</h3>
+      <p class="text-sm text-foreground/60">Scale Your Arsenal Without Replacement</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">+1</div>
+      <div class="text-xs text-foreground/60">Rarity Tier</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="space-y-3">
+      <div class="text-xs text-primary font-semibold mb-2">HOW IT WORKS</div>
+      <div class="p-3 bg-card/70 rounded text-sm space-y-2">
+        <div class="flex items-start gap-2">
+          <div class="text-fs-gold font-bold">1.</div>
+          <div class="text-foreground/80">Find kit in crates or on shelves/tables</div>
+        </div>
+        <div class="flex items-start gap-2">
+          <div class="text-fs-gold font-bold">2.</div>
+          <div class="text-foreground/80">Equip compatible weapon (matching icon type)</div>
+        </div>
+        <div class="flex items-start gap-2">
+          <div class="text-fs-gold font-bold">3.</div>
+          <div class="text-foreground/80">Hold interact key to apply kit</div>
+        </div>
+        <div class="flex items-start gap-2">
+          <div class="text-fs-gold font-bold">4.</div>
+          <div class="text-foreground/80">Choose upgrade path (accuracy vs mobility vs reload)</div>
+        </div>
+        <div class="flex items-start gap-2">
+          <div class="text-fs-gold font-bold">5.</div>
+          <div class="text-foreground/80">Gun gains attachments instantly</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="text-xs text-primary font-semibold mb-2">UPGRADE PATHS</div>
+      <div class="space-y-2">
+        <div class="p-3 bg-card/50 rounded border border-border">
+          <div class="text-sm font-semibold text-foreground mb-1">Accuracy Focus</div>
+          <div class="text-xs text-foreground/70">Adds stability attachments, reduces recoil pattern</div>
+        </div>
+        <div class="p-3 bg-card/50 rounded border border-border">
+          <div class="text-sm font-semibold text-foreground mb-1">Mobility Focus</div>
+          <div class="text-xs text-foreground/70">Improves ADS speed, movement speed, handling</div>
+        </div>
+        <div class="p-3 bg-card/50 rounded border border-border">
+          <div class="text-sm font-semibold text-foreground mb-1">Reload Focus</div>
+          <div class="text-xs text-foreground/70">Faster reload times, larger magazine capacity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">ADVANTAGES</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Keep familiar weapon</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Common spawns</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Flexible builds</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Stashable</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">LIMITATIONS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">One-time use</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Can't remove</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Max: Advanced tier</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">PRO TIP</div>
+    <p class="text-sm text-foreground/80">Don't waste kits on weapons you're about to replace. Use them on guns you're comfortable with and plan to keep through mid-game. Store extras in inventory for later decisions.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🎖️ Class-Specific Map Interactions
+
+<div class="space-y-6 mb-8">
+
+REDSEC integrates class abilities into map design. Certain interactive elements are locked behind class restrictions, creating squad synergy opportunities.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+  <div class="p-6 bg-gradient-to-br from-amber-500/10 to-card/50 rounded-lg border-2 border-amber-500/30">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-14 h-14 rounded-full bg-amber-500/20 flex items-center justify-center text-3xl">
+        🔧
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-amber-400">Engineer Vaults</h3>
+        <div class="text-xs text-foreground/60">Class-Exclusive Loot Access</div>
+      </div>
+    </div>
+    
+    <div class="space-y-4 mb-4">
+      <p class="text-sm text-foreground/80">Heavy-duty locked safes and vault doors scattered across Fort Lyndon. Only Engineers can crack them open using their Repair Tool gadget.</p>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-xs font-semibold text-amber-400 mb-2">UNLOCK PROCESS</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• Locate locked vault (heavy safe or vault door)</div>
+          <div>• Engineer interacts with Repair Tool equipped</div>
+          <div>• Complete progress bar (several seconds)</div>
+          <div>• Vault opens, revealing rare loot cache</div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-amber-500/10 rounded border border-amber-500/30">
+        <div class="text-xs font-semibold text-amber-400 mb-1">LOOT QUALITY</div>
+        <div class="text-xs text-foreground/80">High-quality weapons, abundant gadgets, ammo. Worth prioritizing if you have an Engineer on squad.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-gradient-to-br from-blue-500/10 to-card/50 rounded-lg border-2 border-blue-500/30">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-14 h-14 rounded-full bg-blue-500/20 flex items-center justify-center text-3xl">
+        🔭
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-blue-400">Recon Intel</h3>
+        <div class="text-xs text-foreground/60">Information Warfare Advantage</div>
+      </div>
+    </div>
+    
+    <div class="space-y-4 mb-4">
+      <p class="text-sm text-foreground/80">Recon excels at intel gathering through gadgets rather than exclusive map unlockables. No recon-only safes, but superior battlefield awareness.</p>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-xs font-semibold text-blue-400 mb-2">RECON TOOLS</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• Recon Drone for aerial scouting</div>
+          <div>• Sensor gadgets detect nearby enemies</div>
+          <div>• Counter-camper devices reveal hidden threats</div>
+          <div>• Natural fit for signal antenna missions</div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-blue-500/10 rounded border border-blue-500/30">
+        <div class="text-xs font-semibold text-blue-400 mb-1">STRATEGIC VALUE</div>
+        <div class="text-xs text-foreground/80">Informational advantage through threat detection and objective location. Helps squad avoid ambushes and plan rotations.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center text-3xl">
+        🏥
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-green-400">Support</h3>
+        <div class="text-xs text-foreground/60">Squad Sustainability</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <p class="text-sm text-foreground/80">No exclusive map unlockables, but critical team support through Supply Bag and medic abilities.</p>
+      
+      <div class="space-y-2">
+        <div class="flex items-center justify-between text-xs p-2 bg-card/70 rounded">
+          <span class="text-foreground/80">Supply Bag</span>
+          <span class="text-fs-gold font-semibold">Ammo/Armor Refills</span>
+        </div>
+        <div class="flex items-center justify-between text-xs p-2 bg-card/70 rounded">
+          <span class="text-foreground/80">Medic Abilities</span>
+          <span class="text-fs-gold font-semibold">Faster Revives</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-14 h-14 rounded-full bg-red-500/20 flex items-center justify-center text-3xl">
+        🔫
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-red-400">Assault</h3>
+        <div class="text-xs text-foreground/60">Combat Specialist</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <p class="text-sm text-foreground/80">All-round fighter with combat perks. No special map interactions but superior direct engagement tools.</p>
+      
+      <div class="space-y-2">
+        <div class="flex items-center justify-between text-xs p-2 bg-card/70 rounded">
+          <span class="text-foreground/80">Weapon Swap</span>
+          <span class="text-fs-gold font-semibold">Faster</span>
+        </div>
+        <div class="flex items-center justify-between text-xs p-2 bg-card/70 rounded">
+          <span class="text-foreground/80">Anti-Armor</span>
+          <span class="text-fs-gold font-semibold">Extra Gadget</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="tip">
+**Squad Synergy:** Coordinate Class Crate usage. The opener determines loot type—let your Engineer open if they need SMGs/tools, let Recon open for snipers/DMRs, etc.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🗺️ Critical Map Features
+
+<div class="space-y-6 mb-8">
+
+Beyond loot containers, Fort Lyndon includes strategic interactive elements that affect squad mobility, respawn economy, and vehicle access.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔑
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Vehicle Terminals & Keycards</h3>
+    </div>
+    
+    <div class="space-y-3">
+      <p class="text-sm text-foreground/80">Heavy vehicles (tanks, etc.) require Vehicle Key Cards to unlock from designated garages. Keycards primarily earned through mission completion.</p>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-xs font-semibold text-primary mb-2">UNLOCK PROCESS</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>1. Complete mission to earn keycard</div>
+          <div>2. Locate vehicle garage on map (tank icon)</div>
+          <div>3. Use keycard at terminal to spawn vehicle</div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-amber-500/10 rounded border border-amber-500/30">
+        <div class="text-xs text-amber-400 font-semibold mb-1">⚠️ RISK FACTOR</div>
+        <div class="text-xs text-foreground/80">Vehicles are conspicuous—loud engine noise and HUD indicators alert enemies. High reward but high visibility.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-green-500/30 hover:border-green-500/50 transition-colors">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        📡
+      </div>
+      <h3 class="text-lg font-semibold text-green-400">Respawn Towers</h3>
+    </div>
+    
+    <div class="space-y-3">
+      <p class="text-sm text-foreground/80">Redeploy stations allow limited squad respawns. Radio tower structures scattered across Fort Lyndon enable eliminated teammates to rejoin.</p>
+      
+      <div class="p-3 bg-card/70 rounded">
+        <div class="text-xs font-semibold text-green-400 mb-2">ACTIVATION</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>1. Interact with respawn tower</div>
+          <div>2. Loud siren alerts nearby enemies</div>
+          <div>3. Stay near tower during progress circle</div>
+          <div>4. All dead squadmates respawn at location</div>
+        </div>
+      </div>
+      
+      <div class="space-y-2">
+        <div class="flex items-center justify-between text-xs p-2 bg-card/70 rounded border border-border">
+          <span class="text-foreground/80">Uses per tower</span>
+          <span class="text-fs-gold font-semibold">One-time only</span>
+        </div>
+        <div class="flex items-center justify-between text-xs p-2 bg-card/70 rounded border border-border">
+          <span class="text-foreground/80">Free self-revive</span>
+          <span class="text-fs-gold font-semibold">Second Chance (once)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="warning">
+**Respawn Tower Tactics:** Activation is LOUD. Clear the area of threats before starting the progress circle. Position squad members to watch angles during the vulnerable countdown.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 📊 Loot Priority Matrix
+
+<div class="space-y-6 mb-8">
+
+Not all loot sources provide equal value at different match stages. Use this priority framework to optimize your looting path.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Match Phase</th>
+        <th class="text-center p-3 text-primary font-semibold">Priority 1</th>
+        <th class="text-center p-3 text-primary font-semibold">Priority 2</th>
+        <th class="text-center p-3 text-primary font-semibold">Priority 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Early (Drop-in)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Common Crates</div>
+          <div class="text-xs text-foreground/60">Fast basic gearing</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Rare Crates</div>
+          <div class="text-xs text-foreground/60">If accessible</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Vehicle loot nearby</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Mid-Game</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Class Crates</div>
+          <div class="text-xs text-foreground/60">Optimal gear</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Upgrade Kits</div>
+          <div class="text-xs text-foreground/60">Scale current weapons</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Mission drops</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Late-Game</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Engineer Vaults</div>
+          <div class="text-xs text-foreground/60">High-tier cache</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Mission Drops</div>
+          <div class="text-xs text-foreground/60">Custom loadouts</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Rare crate clusters</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Final Circle</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Dead Enemy Loot</div>
+          <div class="text-xs text-foreground/60">Immediate upgrades</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Upgrade Kits</div>
+          <div class="text-xs text-foreground/60">Last-minute scaling</div>
+        </td>
+        <td class="text-center p-3 text-foreground/80">Strike packages</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 💡 Advanced Looting Strategies
+
+<div class="space-y-6 mb-8">
+
+Competitive REDSEC play requires more than knowing what's in each crate. These tactical considerations separate efficient squads from chaotic scavengers.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">PATH EFFICIENCY</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Plan loot routes before dropping</li>
+      <li>✓ Common → Rare → Class progression</li>
+      <li>✓ Avoid backtracking to picked areas</li>
+      <li>✗ Random wandering</li>
+      <li>✗ Over-looting in hot zones</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: Maximizing gear quality per minute
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">SQUAD SPECIALIZATION</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Engineer hits vaults first</li>
+      <li>✓ Recon scouts next zone early</li>
+      <li>✓ Support grabs medical vehicles</li>
+      <li>✗ Everyone loots same building</li>
+      <li>✗ Ignoring class advantages</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Best for: Coordinated squad efficiency
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-amber-500">
+    <div class="text-xs text-amber-400 font-semibold mb-3">RISK MANAGEMENT</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Fast loot high-traffic areas</li>
+      <li>✓ Clear angles before opening crates</li>
+      <li>✓ Use mission drops as bait/traps</li>
+      <li>✗ Tunnel vision on single crate</li>
+      <li>✗ Ignoring audio cues while looting</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-amber-500/10 rounded text-amber-400">
+      Best for: Surviving contested drops
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="success">
+**Economy Management:** Don't hoard upgrade kits or keycards expecting "perfect timing." Use them when they provide immediate tactical advantage—survivability now beats theoretical optimization later.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🎓 Key Takeaways
+
+<div class="space-y-4 mb-8">
+
+<div class="p-5 bg-primary/10 rounded-lg border border-primary/30">
+  <div class="text-sm font-semibold text-primary mb-2">Color-Coded Crate System</div>
+  <p class="text-sm text-foreground/80">Green = basic gear, Black/Red = high-tier + Strike Packages, Red w/ Icon = adaptive class loot. Prioritize Class Crates when spotted.</p>
+</div>
+
+<div class="p-5 bg-primary/10 rounded-lg border border-primary/30">
+  <div class="text-sm font-semibold text-primary mb-2">Don't Sleep on Upgrade Kits</div>
+  <p class="text-sm text-foreground/80">Thin satchels boost gun rarity without replacement. Common spawns, choose accuracy/mobility/reload paths. Use on weapons you're keeping.</p>
+</div>
+
+<div class="p-5 bg-primary/10 rounded-lg border border-primary/30">
+  <div class="text-sm font-semibold text-primary mb-2">Engineer = Vault Access</div>
+  <p class="text-sm text-foreground/80">Only Engineers unlock safes/vaults using Repair Tool. High-tier loot inside. Always run at least one Engineer in squad composition.</p>
+</div>
+
+<div class="p-5 bg-primary/10 rounded-lg border border-primary/30">
+  <div class="text-sm font-semibold text-primary mb-2">Mission Economy</div>
+  <p class="text-sm text-foreground/80">Completing contracts triggers supply drops with pre-kitted weapons and Custom Weapon Drop tokens. Risk/reward balance—visible drops attract enemies.</p>
+</div>
+
+<div class="p-5 bg-primary/10 rounded-lg border border-primary/30">
+  <div class="text-sm font-semibold text-primary mb-2">Respawn Towers are One-Use</div>
+  <p class="text-sm text-foreground/80">Clear area before activation. Loud siren alerts enemies. Each tower only works once. Use Second Chance first when possible.</p>
+</div>
+
+</div>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

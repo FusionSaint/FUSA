@@ -1,0 +1,1009 @@
+---
+title: REDSEC Tactics
+---
+
+import Callout from "@/components/Callout.astro";
+import { Users, MapPin, Package, Shield, Zap, Skull, Target } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**REDSEC changes the battle royale formula** by blending Battlefield's tactical teamwork with BR survival mechanics. The respawn system, mission contracts, and instant-death firestorm require a completely different strategic approach than traditional BRs.
+
+This guide breaks down the core tactical decisions you'll make every match—from leveraging your Second Chance redeploy to knowing which missions are worth the risk and how to survive the brutal endgame.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Shield className="inline-block mr-3 mb-1" size={32} /> Respawn System: Your Second Chance
+
+<div class="space-y-6 mb-8">
+
+REDSEC's respawn mechanics fundamentally change how aggressive you can play. Understanding when and how to use redeployment keeps your squad in the fight longer.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl">
+        1️⃣
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">First Death (Free Redeploy)</div>
+        <div class="text-xs text-foreground/60">Automatic • ~30 second delay</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Cost</span>
+        <span class="text-fs-gold font-semibold">Free</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Gear on Respawn</span>
+        <span class="text-red-400 font-bold">None</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">XP Bonus (if unused)</span>
+        <span class="text-green-400 font-bold">+Bonus XP</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-primary/10 rounded border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-1">BEST PRACTICE</div>
+      <p class="text-xs text-foreground/80">Don't save this just for XP. Rejoining the fight is usually more valuable than the bonus points.</p>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-fs-gold/20 flex items-center justify-center text-xl">
+        2️⃣
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Additional Respawns</div>
+        <div class="text-xs text-foreground/60">Requires Redeploy Tower</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Cost</span>
+        <span class="text-fs-gold font-semibold">Teammate Activation</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Tower Activation</span>
+        <span class="text-foreground/80 font-bold">Several seconds</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Audio Alert</span>
+        <span class="text-red-400 font-bold">LOUD horn</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">RISKS</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Horn alerts all nearby teams</li>
+        <li>• Teammate must stay in tower radius</li>
+        <li>• Easy target for third parties</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Revive vs. Respawn:** If a teammate is only downed (not eliminated), always revive them normally to save their Second Chance. Keep squadmates alive to avoid burning respawn systems until absolutely necessary.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Mission Risk Assessment
+
+<div class="space-y-6 mb-8">
+
+Missions are **essential for top-tier loot and vehicle keycards**, but not all contracts are created equal. Choose wisely based on your squad's position and combat readiness.
+
+</div>
+
+### Low-Risk Missions (Prioritize These)
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        📡
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Signal Decryption</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Align two radio antennas at marked locations. Brief exposure while adjusting each antenna.</p>
+    <div class="text-xs space-y-1 mb-3">
+      <div><span class="text-fs-gold font-semibold">Risk Level:</span> <span class="text-green-400">Low</span></div>
+      <div><span class="text-fs-gold font-semibold">Time Required:</span> <span class="text-foreground/70">~60 seconds</span></div>
+      <div><span class="text-fs-gold font-semibold">Reward:</span> <span class="text-foreground/70">Standard loot</span></div>
+    </div>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      ✓ Minimal PvP risk
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔒
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Weapons Cache</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Retrieve bolt cutters, then open locked weapons cache. Best low-risk mission for gear upgrades.</p>
+    <div class="text-xs space-y-1 mb-3">
+      <div><span class="text-fs-gold font-semibold">Risk Level:</span> <span class="text-green-400">Low</span></div>
+      <div><span class="text-fs-gold font-semibold">Time Required:</span> <span class="text-foreground/70">~90 seconds</span></div>
+      <div><span class="text-fs-gold font-semibold">Reward:</span> <span class="text-fs-gold">High-tier weapons</span></div>
+    </div>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      ⭐ RECOMMENDED START
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">
+        💾
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Data Extraction</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Download intel from computer, deliver data drive to extraction drone. Watch for drone shootdowns.</p>
+    <div class="text-xs space-y-1 mb-3">
+      <div><span class="text-fs-gold font-semibold">Risk Level:</span> <span class="text-green-400">Low-Medium</span></div>
+      <div><span class="text-fs-gold font-semibold">Time Required:</span> <span class="text-foreground/70">~2 minutes</span></div>
+      <div><span class="text-fs-gold font-semibold">Reward:</span> <span class="text-foreground/70">Equipment + XP</span></div>
+    </div>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      ✓ Safe if squad covers
+    </div>
+  </div>
+</div>
+
+### High-Risk Missions (Squad Combat Required)
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-red-500/30">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Headhunter</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Eliminate marked HVT enemy player. Guaranteed PvP engagement.</p>
+    <div class="text-xs space-y-1 mb-3">
+      <div><span class="text-fs-gold font-semibold">Risk Level:</span> <span class="text-red-400">High</span></div>
+      <div><span class="text-fs-gold font-semibold">Requires:</span> <span class="text-foreground/70">Direct combat</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-red-500/30">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        ⚠️
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">Marked</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Your squad is tracked by nearby enemies until you destroy tracking devices.</p>
+    <div class="text-xs space-y-1 mb-3">
+      <div><span class="text-fs-gold font-semibold">Risk Level:</span> <span class="text-red-400">Very High</span></div>
+      <div><span class="text-fs-gold font-semibold">Status:</span> <span class="text-foreground/70">Visible to enemies</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-red-500/30">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        👑
+      </div>
+      <h3 class="text-lg font-semibold text-red-400">High Value Asset</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">King-of-the-Hill style objective. Multiple squads can contest the capture zone.</p>
+    <div class="text-xs space-y-1 mb-3">
+      <div><span class="text-fs-gold font-semibold">Risk Level:</span> <span class="text-red-400">Very High</span></div>
+      <div><span class="text-fs-gold font-semibold">Type:</span> <span class="text-foreground/70">Multi-team objective</span></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**Counter-Missions Alert:** Some missions trigger counter-missions for rival squads, who can steal your objective for rewards. If you see a counter-mission opportunity, prepare for guaranteed PvP combat.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <MapPin className="inline-block mr-3 mb-1" size={32} /> Drop Location Strategy
+
+<div class="space-y-6 mb-8">
+
+Fort Lyndon has **21 named POIs** with varying loot quality and risk profiles. Your landing choice sets the pace for the entire match.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Drop Zone</th>
+        <th class="text-center p-3 text-primary font-semibold">Loot Quality</th>
+        <th class="text-center p-3 text-primary font-semibold">Contest Risk</th>
+        <th class="text-left p-3 text-primary font-semibold">Best For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Downtown / Boutique District</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">S-Tier</div>
+          <div class="text-xs text-foreground/60">Premium loot + Class Chests</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-bold">VERY HIGH</div>
+          <div class="text-xs text-foreground/60">3-5 squads expected</div>
+        </td>
+        <td class="text-left p-3 text-foreground/80">Aggressive teams who want immediate combat. Land on rooftops for early weapons.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Chemical Storage</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">A-Tier</div>
+          <div class="text-xs text-foreground/60">Great loot + vertical cover</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400 font-bold">HIGH</div>
+          <div class="text-xs text-foreground/60">2-3 squads expected</div>
+        </td>
+        <td class="text-left p-3 text-foreground/80">CQB specialists. Multi-level structures reward strong building clears.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Lyndon Oilworks</td>
+        <td class="text-center p-3">
+          <div class="text-primary font-semibold">B-Tier</div>
+          <div class="text-xs text-foreground/60">Solid loot + vehicles</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-bold">MEDIUM</div>
+          <div class="text-xs text-foreground/60">1-2 squads expected</div>
+        </td>
+        <td class="text-left p-3 text-foreground/80">Balanced start. Good cover and rotation options with vehicle spawns.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Redline Storage</td>
+        <td class="text-center p-3">
+          <div class="text-primary font-semibold">B-Tier</div>
+          <div class="text-xs text-foreground/60">Solid loot + warehouses</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-bold">MEDIUM</div>
+          <div class="text-xs text-foreground/60">1-2 squads expected</div>
+        </td>
+        <td class="text-left p-3 text-foreground/80">Mid-game focused teams. Eastern map position for flexible rotations.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Vista Hills</td>
+        <td class="text-center p-3">
+          <div class="text-primary font-semibold">B-Tier</div>
+          <div class="text-xs text-foreground/60">Residential spread loot</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-bold">MEDIUM</div>
+          <div class="text-xs text-foreground/60">1-2 squads expected</div>
+        </td>
+        <td class="text-left p-3 text-foreground/80">House-to-house looting. Good sightlines to spot third parties.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Lighthouse / Combat Training</td>
+        <td class="text-center p-3">
+          <div class="text-foreground font-semibold">C-Tier</div>
+          <div class="text-xs text-foreground/60">Adequate gear</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">LOW</div>
+          <div class="text-xs text-foreground/60">0-1 squads expected</div>
+        </td>
+        <td class="text-left p-3 text-foreground/80">Safe edge drops for late-game survival focus. Quiet early looting.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Golf Course</td>
+        <td class="text-center p-3">
+          <div class="text-foreground font-semibold">C-Tier</div>
+          <div class="text-xs text-foreground/60">Sparse but adequate</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">LOW</div>
+          <div class="text-xs text-foreground/60">0-1 squads expected</div>
+        </td>
+        <td class="text-left p-3 text-foreground/80">Open terrain with long sightlines. Risk moving between buildings.</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Radar Site / The Seal</td>
+        <td class="text-center p-3">
+          <div class="text-primary font-semibold">B-Tier</div>
+          <div class="text-xs text-foreground/60">Moderate + high ground</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-bold">MEDIUM</div>
+          <div class="text-xs text-foreground/60">1-2 squads expected</div>
+        </td>
+        <td class="text-left p-3 text-foreground/80">Elevated positions for Recon. Early intel advantage but must rotate fast.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-red-500">
+    <div class="text-xs text-red-400 font-semibold mb-3">HOT DROP STRATEGY</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Land on rooftops for first weapon</li>
+      <li>✓ Squad stays together on landing</li>
+      <li>✓ Grab Class Chests immediately</li>
+      <li>✗ Don't split up before armed</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-red-500/10 rounded text-red-400">
+      Expect to use Second Chance
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">BALANCED DROP STRATEGY</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Loot route through 3-4 buildings</li>
+      <li>✓ Watch for vault locations (Engineers)</li>
+      <li>✓ Grab vehicle for fast rotation</li>
+      <li>✗ Don't overstay if circle is far</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for consistent wins
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">SAFE DROP STRATEGY</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Clear entire POI methodically</li>
+      <li>✓ Complete low-risk mission early</li>
+      <li>✓ Plan inward rotation immediately</li>
+      <li>✗ Don't linger—gear won't be S-tier</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/10 rounded text-green-400">
+      Late-game survival priority
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Class Chest Priority:** Red crates with class symbols contain specialized gear for your role. Engineers may get vault access tools, Supports get extra medical supplies. Always prioritize Class Chests over standard loot.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Users className="inline-block mr-3 mb-1" size={32} /> Squad Composition & Class Synergy
+
+<div class="space-y-6 mb-8">
+
+REDSEC's class system requires strategic squad composition. In a full four-player squad, **having one of each class provides maximum tactical flexibility**—you'll have every tool available from anti-vehicle firepower to reconnaissance and sustain.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center text-2xl">
+        ⚔️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Assault</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Frontline breacher and aggressive entry specialist.</p>
+    <div class="text-xs space-y-1 mb-4">
+      <div><span class="text-fs-gold font-semibold">Primary Tool:</span> <span class="text-foreground/70">Assault Ladder</span></div>
+      <div><span class="text-fs-gold font-semibold">Secondary:</span> <span class="text-foreground/70">Adrenaline Injector</span></div>
+      <div><span class="text-fs-gold font-semibold">Combat Role:</span> <span class="text-foreground/70">Close-mid range aggression</span></div>
+    </div>
+    <div class="p-3 bg-primary/10 rounded border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-1">KEY TACTICS</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Deploy ladders to access rooftops/windows</li>
+        <li>• Lead building breaches</li>
+        <li>• Use injector in critical 1v1 fights</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/30 flex items-center justify-center text-2xl">
+        🔧
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Engineer</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Anti-vehicle specialist and vault access. Essential for endgame.</p>
+    <div class="text-xs space-y-1 mb-4">
+      <div><span class="text-fs-gold font-semibold">Primary Tool:</span> <span class="text-foreground/70">Repair Tool (opens vaults)</span></div>
+      <div><span class="text-fs-gold font-semibold">Secondary:</span> <span class="text-foreground/70">Rocket Launcher / AT weapons</span></div>
+      <div><span class="text-fs-gold font-semibold">Combat Role:</span> <span class="text-foreground/70">Anti-armor + loot access</span></div>
+    </div>
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">TOP-TIER CLASS</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Opens locked vaults for S-tier loot</li>
+        <li>• Counters late-game tanks</li>
+        <li>• Can repair friendly vehicles</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-fs-gold/20 flex items-center justify-center text-2xl">
+        🏥
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Support</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Squad sustainment and ammo supply. Backbone of prolonged fights.</p>
+    <div class="text-xs space-y-1 mb-4">
+      <div><span class="text-fs-gold font-semibold">Primary Tool:</span> <span class="text-foreground/70">Ammo Supply Bag</span></div>
+      <div><span class="text-fs-gold font-semibold">Secondary:</span> <span class="text-foreground/70">Medical supplies / cover</span></div>
+      <div><span class="text-fs-gold font-semibold">Combat Role:</span> <span class="text-foreground/70">Sustain + faster revives</span></div>
+    </div>
+    <div class="p-3 bg-primary/10 rounded border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-1">CRITICAL MECHANIC</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Stand on Supply Bag for 20-30s = max ammo</li>
+        <li>• Running over bag = only ~20 bullets</li>
+        <li>• Revives teammates faster than other classes</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔭
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Recon</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Intelligence gathering and long-range elimination specialist.</p>
+    <div class="text-xs space-y-1 mb-4">
+      <div><span class="text-fs-gold font-semibold">Primary Tool:</span> <span class="text-foreground/70">UAV Drone / Motion Sensors</span></div>
+      <div><span class="text-fs-gold font-semibold">Secondary:</span> <span class="text-foreground/70">Spotting gadgets</span></div>
+      <div><span class="text-fs-gold font-semibold">Combat Role:</span> <span class="text-foreground/70">Intel + long-range support</span></div>
+    </div>
+    <div class="p-3 bg-primary/10 rounded border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-1">INTEL ADVANTAGE</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Constantly mark enemy positions</li>
+        <li>• Scout rotation paths for squad</li>
+        <li>• Detect ambushes before engagement</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### Recommended Squad Compositions
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Squad Size</th>
+        <th class="text-left p-3 text-primary font-semibold">Classes</th>
+        <th class="text-left p-3 text-primary font-semibold">Strengths</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Duos</td>
+        <td class="p-3 text-foreground/80">
+          <span class="text-fs-gold font-semibold">Assault + Engineer</span>
+        </td>
+        <td class="p-3 text-foreground/80">Aggressive offense with vault access and anti-vehicle capability</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Duos (Alt)</td>
+        <td class="p-3 text-foreground/80">
+          <span class="text-fs-gold font-semibold">Assault + Support</span>
+        </td>
+        <td class="p-3 text-foreground/80">Sustained combat with infinite ammo and fast revives</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Trios</td>
+        <td class="p-3 text-foreground/80">
+          <span class="text-fs-gold font-semibold">Assault + Engineer + Support</span>
+        </td>
+        <td class="p-3 text-foreground/80">Balanced aggression with sustain and anti-armor</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Trios (Alt)</td>
+        <td class="p-3 text-foreground/80">
+          <span class="text-fs-gold font-semibold">Assault + Engineer + Recon</span>
+        </td>
+        <td class="p-3 text-foreground/80">Intel-focused with offensive power (requires disciplined ammo use)</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Quads</td>
+        <td class="p-3 text-foreground/80">
+          <span class="text-fs-gold font-semibold">All Four Classes</span>
+        </td>
+        <td class="p-3 text-foreground/80">Maximum flexibility and tactical options for every situation</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="success">
+**Engineer Priority:** In most situations, having at least one Engineer provides the best overall value—vault access for top-tier loot and anti-vehicle firepower for late game. If you're unsure about composition, start with Engineer.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Package className="inline-block mr-3 mb-1" size={32} /> Gear Optimization & Upgrade System
+
+<div class="space-y-6 mb-8">
+
+REDSEC's weapon rarity system and upgrade mechanics require active management throughout the match. Don't run with Common guns when you have upgrade kits in inventory.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20">
+    <div class="mb-4">
+      <h3 class="text-lg font-semibold text-primary mb-2">Weapon Upgrade System</h3>
+      <p class="text-sm text-foreground/80">Instantly boost weapon stats with Upgrade Kits found in loot</p>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="p-3 bg-card/30 rounded border border-border">
+        <div class="text-xs text-foreground/60 mb-1">Common → Rare</div>
+        <div class="text-sm text-fs-gold font-semibold">Rare Upgrade Kit</div>
+      </div>
+      <div class="p-3 bg-card/30 rounded border border-border">
+        <div class="text-xs text-foreground/60 mb-1">Rare → Epic</div>
+        <div class="text-sm text-fs-gold font-semibold">Epic Upgrade Kit</div>
+      </div>
+      <div class="p-3 bg-card/30 rounded border border-primary/30">
+        <div class="text-xs text-foreground/60 mb-1">Epic → Legendary</div>
+        <div class="text-sm text-fs-gold font-semibold">Legendary Upgrade Kit</div>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-primary/10 rounded border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-1">PRO TIP</div>
+      <p class="text-xs text-foreground/80">Upgrade instantly from inventory—no special stations required. Do it immediately when you find kits.</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20">
+    <div class="mb-4">
+      <h3 class="text-lg font-semibold text-primary mb-2">Ammo Management</h3>
+      <p class="text-sm text-foreground/80">Shared pools by weapon category—swap guns freely</p>
+    </div>
+    
+    <div class="space-y-2 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/30 rounded">
+        <span class="text-foreground/70">Assault Rifle</span>
+        <span class="text-fs-gold font-semibold">AR Ammo Pool</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/30 rounded">
+        <span class="text-foreground/70">SMG</span>
+        <span class="text-fs-gold font-semibold">SMG Ammo Pool</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/30 rounded">
+        <span class="text-foreground/70">Sniper Rifle</span>
+        <span class="text-fs-gold font-semibold">Sniper Ammo Pool</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/30 rounded">
+        <span class="text-foreground/70">LMG</span>
+        <span class="text-fs-gold font-semibold">LMG Ammo Pool</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">BENEFIT</div>
+      <p class="text-xs text-foreground/80">Switch between different ARs without worrying about ammo compatibility. All ARs share the same pool.</p>
+    </div>
+  </div>
+</div>
+
+### Hidden Loot Sources
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-center mb-3">
+      <div class="text-3xl mb-2">🚑</div>
+      <div class="text-sm font-semibold text-primary">Ambulances</div>
+    </div>
+    <div class="text-xs text-center text-foreground/80">
+      Medical gear, defibrillators, armor plates
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-center mb-3">
+      <div class="text-3xl mb-2">📦</div>
+      <div class="text-sm font-semibold text-primary">Box Trucks</div>
+    </div>
+    <div class="text-xs text-center text-foreground/80">
+      Ammo crates, weapon upgrades in cargo area
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-center mb-3">
+      <div class="text-3xl mb-2">🚚</div>
+      <div class="text-sm font-semibold text-primary">Military Trucks</div>
+    </div>
+    <div class="text-xs text-center text-foreground/80">
+      Equipment upgrades, tactical gear
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**Custom Weapon Drops:** Mission rewards sometimes include Custom Weapon Drop tokens. Use these in safe locations to pull ONE pre-configured weapon from your loadouts. Choose wisely—if you already have a strong primary, grab a sniper or LMG to cover different ranges.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> Advanced Tactical Mechanics
+
+<div class="space-y-6 mb-8">
+
+Master these unique REDSEC mechanics to gain significant advantages over squads that ignore them.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🤜
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-foreground">Shakedown Interrogation</h3>
+        <p class="text-xs text-foreground/60">Melee downed enemies for intel</p>
+      </div>
+    </div>
+    
+    <div class="mb-4">
+      <p class="text-sm text-foreground/80 mb-3">Instead of finishing downed enemies immediately, use the melee button to interrogate them. This reveals the exact positions of all their surviving squadmates on your minimap.</p>
+    </div>
+    
+    <div class="grid grid-cols-2 gap-3 mb-4">
+      <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+        <div class="text-xs text-green-400 font-semibold mb-1">BENEFITS</div>
+        <ul class="text-xs text-foreground/80 space-y-1">
+          <li>• Wallhack on enemy team</li>
+          <li>• Detect flanks/revives</li>
+          <li>• Prevent third parties</li>
+        </ul>
+      </div>
+      <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+        <div class="text-xs text-red-400 font-semibold mb-1">RISKS</div>
+        <ul class="text-xs text-foreground/80 space-y-1">
+          <li>• Brief animation lock</li>
+          <li>• Exposed during process</li>
+          <li>• Need safe position</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-primary/10 rounded">
+      <div class="text-xs text-primary font-semibold mb-1">WHEN TO USE</div>
+      <p class="text-xs text-foreground/80">Always shakedown when you've cleared immediate threats or have cover. Call out revealed positions to squad before eliminating.</p>
+    </div>
+  </div>
+
+  <div class="p-8 bg-gradient-to-br from-fs-gold/10 via-card/50 to-fs-gold/5 rounded-lg border-2 border-fs-gold/30">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full bg-fs-gold/20 flex items-center justify-center text-2xl">
+        📦
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-foreground">Support Bag Refill Trick</h3>
+        <p class="text-xs text-foreground/60">Max ammo restoration method</p>
+      </div>
+    </div>
+    
+    <div class="mb-4">
+      <p class="text-sm text-foreground/80 mb-3">Running over a Support's Ammo Bag only gives ~20 bullets. But <span class="text-fs-gold font-semibold">standing on the deployed bag for 20-30 seconds fully restocks your ammo</span> to maximum capacity.</p>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="p-3 bg-card/30 rounded border border-border">
+        <div class="text-xs text-foreground/60 mb-1">Quick Grab (running over)</div>
+        <div class="text-sm font-semibold text-foreground">~20 bullets only</div>
+      </div>
+      <div class="p-3 bg-fs-gold/10 rounded border-2 border-fs-gold/30">
+        <div class="text-xs text-fs-gold mb-1">Full Refill (standing 20-30s)</div>
+        <div class="text-sm font-semibold text-foreground">Maximum ammo capacity</div>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded">
+      <div class="text-xs text-green-400 font-semibold mb-1">SQUAD PROTOCOL</div>
+      <p class="text-xs text-foreground/80">After fights or before major engagements, have Support drop bag in cover. Take turns doing full 30s refills—it's essentially a free ammo crate.</p>
+    </div>
+  </div>
+</div>
+
+### Engineer Vault Exploitation
+
+<div class="p-6 bg-card/50 rounded-lg border-2 border-primary/20 mb-8">
+  <div class="flex items-center justify-between mb-4">
+    <div>
+      <h3 class="text-lg font-semibold text-primary mb-1">Locked Vault Strategy</h3>
+      <p class="text-sm text-foreground/60">Only Engineers can access—plan routes accordingly</p>
+    </div>
+    <div class="text-5xl">🔓</div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+    <div>
+      <div class="text-xs text-fs-gold font-semibold mb-2">VAULT LOCATIONS (Common)</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Industrial areas (Chemical Storage, Oilworks)</li>
+        <li>• Military bases (Combat Training, Radar Site)</li>
+        <li>• Warehouse districts (Redline Storage)</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-xs text-fs-gold font-semibold mb-2">VAULT LOOT</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• S-tier weapons and armor</li>
+        <li>• Killstreak-style gadgets</li>
+        <li>• Vehicle keycards (tanks)</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">TACTICAL ROUTING</div>
+    <p class="text-sm text-foreground/80">If running Engineer, plan your drop/rotation to pass at least one vault. Free S-tier loot that most squads can't access. Hit vault early before rotating to circle.</p>
+  </div>
+</div>
+
+<Callout variant="info">
+**Communication Priority:** Use ping system constantly—mark enemies, loot, vehicles, and mission objectives. Even without voice chat, frequent pings keep squads coordinated and focused on the same targets.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Skull className="inline-block mr-3 mb-1" size={32} /> Firestorm Survival & Endgame Dominance
+
+<div class="space-y-6 mb-8">
+
+REDSEC's firestorm zone is **instantly lethal**—there is no grace period or health chip damage. One step into the red wall means immediate death. This fundamentally changes positioning and rotation priorities.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-red-500/10 rounded-lg border-2 border-red-500/30">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ☠️
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-red-400">Firestorm Mechanics</div>
+        <div class="text-xs text-foreground/60">Instant death zone</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="p-3 bg-card/30 rounded border border-red-500/20">
+        <div class="text-xs text-red-400 font-semibold mb-1">Contact Damage</div>
+        <div class="text-sm text-foreground">Instant down—no survivability</div>
+      </div>
+      <div class="p-3 bg-card/30 rounded border border-red-500/20">
+        <div class="text-xs text-red-400 font-semibold mb-1">Healing Strategy</div>
+        <div class="text-sm text-foreground">None—you cannot outheal it</div>
+      </div>
+      <div class="p-3 bg-card/30 rounded border border-red-500/20">
+        <div class="text-xs text-red-400 font-semibold mb-1">Warning System</div>
+        <div class="text-sm text-foreground">Red skull icon + distance meter</div>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-red-500/20 rounded">
+      <div class="text-xs text-red-400 font-semibold mb-1">CRITICAL RULE</div>
+      <p class="text-xs text-foreground">Plan rotations EARLY. Never fight with firestorm at your back. If enemies block your path to zone, rotate around or use smoke—dying to storm helps no one.</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl">
+        🚗
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">Vehicle Rotation Strategy</div>
+        <div class="text-xs text-foreground/60">Critical for zone positioning</div>
+      </div>
+    </div>
+    
+    <div class="space-y-2 mb-4">
+      <div class="p-3 bg-card/30 rounded border border-border">
+        <div class="text-xs text-primary font-semibold mb-1">Early/Mid Game</div>
+        <p class="text-xs text-foreground/80">Use civilian vehicles to outrun zone or reposition to better areas</p>
+      </div>
+      <div class="p-3 bg-card/30 rounded border border-border">
+        <div class="text-xs text-primary font-semibold mb-1">Final Circles</div>
+        <p class="text-xs text-foreground/80">Ditch vehicles before entering—noise attracts all remaining squads</p>
+      </div>
+      <div class="p-3 bg-fs-gold/10 rounded border border-fs-gold/30">
+        <div class="text-xs text-fs-gold font-semibold mb-1">Tank Exception</div>
+        <p class="text-xs text-foreground/80">If you secured a tank, save it for final 4-5 teams</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Tank Endgame Strategy
+
+<div class="p-8 bg-gradient-to-br from-fs-gold/10 via-card/50 to-primary/5 rounded-lg border-2 border-fs-gold/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-fs-gold/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Vehicle Keycard → Tank Access</h3>
+      <p class="text-sm text-foreground/60">Mission reward • Vault unlock required</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">🏆</div>
+      <div class="text-xs text-foreground/60">Win condition</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">ACQUISITION PROCESS</div>
+      <ol class="text-sm text-foreground/80 space-y-2">
+        <li><span class="text-fs-gold font-bold">1.</span> Complete mission that rewards Vehicle Keycard</li>
+        <li><span class="text-fs-gold font-bold">2.</span> Locate corresponding tank vault on map</li>
+        <li><span class="text-fs-gold font-bold">3.</span> Use keycard to unlock vault and deploy tank</li>
+        <li><span class="text-fs-gold font-bold">4.</span> Engineer can repair/refuel if needed</li>
+      </ol>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Armor Rating</span>
+        <span class="text-fs-gold font-bold">Extremely High</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Main Cannon Damage</span>
+        <span class="text-fs-gold font-bold">Devastating</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Ammunition</span>
+        <span class="text-red-400 font-bold">Limited</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Vulnerability</span>
+        <span class="text-red-400 font-bold">Focused AT fire</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">❌ DON'T DO THIS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Deploy tank early/mid-game</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Burn ammo on random fights</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Announce position to all squads</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">✓ OPTIMAL STRATEGY</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Save for final 4-5 teams</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Park in power position</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Let zone force enemies to you</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-fs-gold/10 rounded-lg border border-fs-gold/20">
+    <div class="text-xs text-fs-gold font-semibold mb-2">WHY WAIT FOR ENDGAME?</div>
+    <p class="text-sm text-foreground/80">Mid-game tank usage burns ammo and makes you a priority target for ALL squads. But a tank appearing in the final circle is nearly unstoppable—most teams won't have heavy AT weapons left, and concentrated firepower decides fights. Patience = wins.</p>
+  </div>
+</div>
+
+### Final Circle Positioning
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">HIGH GROUND PRIORITY</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>✓ Rotate early to elevated positions</li>
+      <li>✓ Force enemies to push uphill</li>
+      <li>✓ Better sightlines for Recon</li>
+      <li>✗ Don't give up height for kills</li>
+    </ul>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">CIRCLE EDGE CONTROL</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>✓ Position with zone at your back</li>
+      <li>✓ Gatekeep teams rotating late</li>
+      <li>✓ Use firestorm as shield</li>
+      <li>✗ Don't hug edge too long (can be cornered)</li>
+    </ul>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">COVER DISCIPLINE</div>
+    <ul class="text-sm space-y-2 text-foreground/80">
+      <li>✓ Use buildings/rocks as hard cover</li>
+      <li>✓ Smoke grenades for repositioning</li>
+      <li>✓ Coordinate gadget usage (EMP, mines)</li>
+      <li>✗ Don't chase kills into open ground</li>
+    </ul>
+  </div>
+</div>
+
+<Callout variant="warning">
+**Positioning > Kills:** In REDSEC's endgame, the squad with superior positioning almost always wins. Avoid chasing eliminations if it compromises your zone position. Let the firestorm and circle pressure do the work—disciplined teams win, aggressive teams die to storm.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Final Tactical Summary
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-fs-gold/5 rounded-lg border-2 border-primary/30 mb-8">
+  <h3 class="text-2xl font-bold text-foreground mb-6">Path to Victory</h3>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="space-y-4">
+      <div class="p-4 bg-card/50 rounded-lg border border-primary/20">
+        <div class="text-sm font-semibold text-primary mb-2">1. Smart Drop & Loadout</div>
+        <p class="text-xs text-foreground/80">Choose drop based on squad comfort. Prioritize Class Chests and Engineer vault access. Upgrade weapons immediately with found kits.</p>
+      </div>
+      
+      <div class="p-4 bg-card/50 rounded-lg border border-primary/20">
+        <div class="text-sm font-semibold text-primary mb-2">2. Mission Selection</div>
+        <p class="text-xs text-foreground/80">Complete low-risk missions (Weapons Cache, Signal Decryption) for S-tier loot. Avoid high-risk contracts unless squad is combat-ready.</p>
+      </div>
+      
+      <div class="p-4 bg-card/50 rounded-lg border border-primary/20">
+        <div class="text-sm font-semibold text-primary mb-2">3. Class Synergy</div>
+        <p class="text-xs text-foreground/80">Leverage every class ability. Engineer vaults, Support ammo refills, Recon intel, Assault breaching. Fight together, not solo.</p>
+      </div>
+    </div>
+    
+    <div class="space-y-4">
+      <div class="p-4 bg-card/50 rounded-lg border border-primary/20">
+        <div class="text-sm font-semibold text-primary mb-2">4. Advanced Mechanics</div>
+        <p class="text-xs text-foreground/80">Shakedown downed enemies for intel. Use Support bag full refill trick before fights. Communicate constantly with pings.</p>
+      </div>
+      
+      <div class="p-4 bg-card/50 rounded-lg border border-primary/20">
+        <div class="text-sm font-semibold text-primary mb-2">5. Zone Awareness</div>
+        <p class="text-xs text-foreground/80">Rotate early—firestorm is instant death. Never fight with zone at your back. Use vehicles for repositioning, not combat.</p>
+      </div>
+      
+      <div class="p-4 bg-card/50 rounded-lg border border-fs-gold/30">
+        <div class="text-sm font-semibold text-fs-gold mb-2">6. Endgame Execution</div>
+        <p class="text-xs text-foreground/80">Position for final circle > chasing kills. If you have tank, deploy only in final 4-5 teams. High ground + zone edge control = victory.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="success">
+**Remember:** REDSEC rewards tactical squads who work together over solo heroes. Use your Second Chance wisely, complete missions for gear advantages, and always prioritize positioning over eliminations. The team that reaches final circle alive and well-equipped consistently wins.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
