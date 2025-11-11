@@ -1,0 +1,1317 @@
+---
+title: Short-Range Weapon TTK Guide (0-30m)
+---
+
+import Callout from "@/components/Callout.astro";
+import { Zap, Crosshair, Target, Shield, TrendingUp, AlertCircle } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Short-range combat (0-30m) is where 80%+ of Battlefield 6 kills occur.** Understanding close-quarters TTK is critical because this is where weapon choice, reaction time, and positioning determine survival. Season 1's spread mechanics overhaul fundamentally changed CQB dynamics—burst control now matters even at knife-fighting distances.
+
+This guide provides comprehensive data on weapon performance in close quarters, covering everything from point-blank (less than 10m) to extended CQB ranges (20-30m). Every engagement distance presents different weapon viability, and understanding these breakpoints separates good players from great ones.
+
+</div>
+
+<Callout variant="info">
+**Context:** This guide focuses on 0-30m engagements where most combat occurs. For mid-to-long range data (50-100m), see our [Long-Range TTK Guide](#). For understanding why Season 1 changed close-quarters meta, see our [Season 1 Meta Analysis](#).
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> The Close-Quarters Meta: Speed Kills
+
+<div class="space-y-6 mb-8">
+
+At close range, time-to-kill becomes the dominant factor. Positioning and aim matter, but if your weapon has a 0.25s TTK and theirs has 0.15s, you lose the trade assuming equal accuracy. The CQB meta heavily favors high fire-rate weapons with good hip-fire accuracy.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/30 shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/30 flex items-center justify-center text-2xl">
+        ⚡
+      </div>
+      <h3 class="text-lg font-semibold text-primary">S-Tier: Elite SMGs</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">KV9 (Vector) and PW5A3 (MP5) dominate point-blank with 75-150ms TTK. Unmatched fire rates and mobility make them CQB kings.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best Pick:</span> <span class="text-foreground/70">KV9 (Vector)</span></div>
+      <div><span class="text-fs-gold font-semibold">TTK Range:</span> <span class="text-foreground/70">0.075-0.25s</span></div>
+      <div><span class="text-fs-gold font-semibold">Optimal Range:</span> <span class="text-foreground/70">0-15m</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-primary">A-Tier: Versatile Carbines</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">M4A1 and M277 maintain 0.15-0.30s TTK through 30m with superior handling. Best all-around weapons for mixed engagement distances.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best Pick:</span> <span class="text-foreground/70">M4A1</span></div>
+      <div><span class="text-fs-gold font-semibold">TTK Range:</span> <span class="text-foreground/70">0.15-0.30s</span></div>
+      <div><span class="text-fs-gold font-semibold">Optimal Range:</span> <span class="text-foreground/70">5-40m</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <h3 class="text-lg font-semibold text-primary">A-Tier: High-Damage ARs</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">TR-7 and KORD compete with SMGs at close range while maintaining 30m+ effectiveness. 3-shot kill potential at point-blank.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best Pick:</span> <span class="text-foreground/70">TR-7</span></div>
+      <div><span class="text-fs-gold font-semibold">TTK Range:</span> <span class="text-foreground/70">0.17-0.35s</span></div>
+      <div><span class="text-fs-gold font-semibold">Optimal Range:</span> <span class="text-foreground/70">10-40m</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💥
+      </div>
+      <h3 class="text-lg font-semibold text-primary">B-Tier: Shotguns</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">12M Auto delivers instant kills at less than 10m but becomes unreliable beyond 15m. High-risk, high-reward positioning-dependent weapons.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best Pick:</span> <span class="text-foreground/70">12M Auto</span></div>
+      <div><span class="text-fs-gold font-semibold">TTK Range:</span> <span class="text-foreground/70">Instant-0.20s</span></div>
+      <div><span class="text-fs-gold font-semibold">Optimal Range:</span> <span class="text-foreground/70">0-10m only</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border/50">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-2xl">
+        🔨
+      </div>
+      <h3 class="text-lg font-semibold text-foreground">C-Tier: LMGs</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">DRS-IAR maintains competitive TTK but suffers from slower ADS and movement. Viable but not optimal for pure CQB.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Best Pick:</span> <span class="text-foreground/70">DRS-IAR</span></div>
+      <div><span class="text-fs-gold font-semibold">TTK Range:</span> <span class="text-foreground/70">0.23-0.35s</span></div>
+      <div><span class="text-fs-gold font-semibold">Drawback:</span> <span class="text-foreground/70">Slower handling</span></div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border/50">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-2xl">
+        🎯
+      </div>
+      <h3 class="text-lg font-semibold text-foreground">D-Tier: DMRs</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">Marksman rifles lose to automatics in CQB due to lower fire rates. SVK's 0.40s TTK can't compete with 0.075-0.20s weapons.</p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Status:</span> <span class="text-foreground/70">Functional but outclassed</span></div>
+      <div><span class="text-fs-gold font-semibold">TTK Range:</span> <span class="text-foreground/70">0.40-0.60s</span></div>
+      <div><span class="text-fs-gold font-semibold">Use Case:</span> <span class="text-foreground/70">Mixed-range loadouts</span></div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**The 15m Threshold:** This distance marks where SMG dominance begins to fade. At less than 15m, SMGs win almost every engagement. At 15-30m, carbines and ARs become competitive or superior. Understanding this breakpoint helps you position appropriately for your loadout.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Shield className="inline-block mr-3 mb-1" size={32} /> Armor Plate System Impact
+
+<div class="space-y-6 mb-8">
+
+**Critical:** Battlefield 6's armor plate system adds 50 effective hit points, fundamentally changing every TTK calculation. Players spawn with 100 HP but can equip armor plates for 150 total effective health. This transforms weapon balance significantly.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ⚠️
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">WITHOUT Armor Plates (100 HP)</div>
+        <div class="text-xs text-foreground/60">Base health state</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">KV9 (Vector) STK:</span>
+        <span class="text-fs-gold font-semibold">4 shots</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">KV9 TTK:</span>
+        <span class="text-green-400 font-bold">0.075s</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">M4A1 STK:</span>
+        <span class="text-fs-gold font-semibold">4 shots</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">M4A1 TTK:</span>
+        <span class="text-green-400 font-bold">0.15s</span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">ADVANTAGE</div>
+      <p class="text-xs text-foreground/80">Faster kills, SMGs excel, aggressive play rewarded</p>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/30">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        🛡️
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">WITH Armor Plates (150 HP)</div>
+        <div class="text-xs text-foreground/60">+50 effective health</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">KV9 (Vector) STK:</span>
+        <span class="text-red-400 font-semibold">6 shots <span class="text-xs">(+2)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">KV9 TTK:</span>
+        <span class="text-red-400 font-bold">0.15s <span class="text-xs">(2x slower!)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">M4A1 STK:</span>
+        <span class="text-red-400 font-semibold">6 shots <span class="text-xs">(+2)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">M4A1 TTK:</span>
+        <span class="text-red-400 font-bold">0.30s <span class="text-xs">(2x slower!)</span></span>
+      </div>
+    </div>
+    
+    <div class="p-3 bg-primary/20 rounded border border-primary/30">
+      <div class="text-xs text-primary font-semibold mb-1">META SHIFT</div>
+      <p class="text-xs text-foreground/80">High-damage weapons gain advantage, TTK doubles, defensive play viable</p>
+    </div>
+  </div>
+</div>
+
+<div class="p-6 bg-yellow-500/10 rounded-lg border-2 border-yellow-500/30 mb-8">
+  <div class="flex items-start gap-4">
+    <div class="text-4xl">💡</div>
+    <div class="flex-1">
+      <div class="text-lg font-semibold text-yellow-400 mb-3">Why This Matters for Weapon Selection</div>
+      <p class="text-sm text-foreground/80 mb-3">
+        Armor plates <span class="text-yellow-400 font-semibold">dramatically shift weapon meta</span>. The KV9's insane 75ms TTK becomes 150ms against armored opponents—suddenly it's just "good" instead of "broken." Higher-damage weapons like the TR-7 benefit more from armor plates because they require fewer additional shots (3→4 instead of 4→6).
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="p-3 bg-card/50 rounded border border-yellow-500/20">
+          <div class="text-xs text-yellow-400 font-semibold mb-1">LOW DAMAGE WEAPONS</div>
+          <p class="text-xs text-foreground/80">Get punished harder. Vector goes from 4→6 shots (+50% more), losing speed advantage.</p>
+        </div>
+        <div class="p-3 bg-card/50 rounded border border-yellow-500/20">
+          <div class="text-xs text-yellow-400 font-semibold mb-1">HIGH DAMAGE WEAPONS</div>
+          <p class="text-xs text-foreground/80">Scale better. TR-7 goes from 3→4 shots (+33%), maintaining competitive TTK.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**Important:** All TTK values in this guide assume 100 HP targets unless specified. In real matches, expect 30-50% of opponents to have armor plates, effectively doubling your TTK in many engagements. Always assume armor in competitive play.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Crosshair className="inline-block mr-3 mb-1" size={32} /> Point-Blank Range (less than 10m): Pure Speed
+
+<div class="space-y-6 mb-8">
+
+At knife-fighting distances, hip-fire accuracy and fire rate dominate. This is SMG territory—if you're using anything else at less than 10m, you're at a disadvantage unless you land headshots.
+
+</div>
+
+### Submachine Guns: The Close-Quarters Kings
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage</th>
+        <th class="text-center p-3 text-primary font-semibold">RPM</th>
+        <th class="text-center p-3 text-primary font-semibold">STK (100 HP)</th>
+        <th class="text-center p-3 text-primary font-semibold">TTK</th>
+        <th class="text-center p-3 text-primary font-semibold">STK (150 HP)</th>
+        <th class="text-left p-3 text-primary font-semibold">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">KV9 (Vector)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">25</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">1200</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">4</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">0.075s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">6</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Fastest TTK in game, melts at less than 10m</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">PW5A3 (MP5)</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">24</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">920</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">5</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">0.13s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">7</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Better range extension than Vector</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SCW-10</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">23</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">950</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">5</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400">0.13s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">7</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Balanced, good control</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">PP-29</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">22</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">900</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">5</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">0.13s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">7</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Massive 53-round magazine</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">GZ-M6</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">20</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">1000</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">5</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">0.15s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">8</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Lower damage tier, falls behind</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Carbines & Assault Rifles: The Versatile Options
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Class</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage</th>
+        <th class="text-center p-3 text-primary font-semibold">RPM</th>
+        <th class="text-center p-3 text-primary font-semibold">STK</th>
+        <th class="text-center p-3 text-primary font-semibold">TTK</th>
+        <th class="text-left p-3 text-primary font-semibold">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">M4A1</td>
+        <td class="text-center p-3">
+          <div class="text-xs text-foreground/60">Carbine</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">25</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">900</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">4</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0.15s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Best all-rounder, competitive CQB</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">M277</td>
+        <td class="text-center p-3">
+          <div class="text-xs text-foreground/60">Carbine</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">25</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">850</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">4</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0.16s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Lower recoil alternative to M4A1</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">TR-7</td>
+        <td class="text-center p-3">
+          <div class="text-xs text-foreground/60">AR</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">33</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">720</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">3</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">0.10s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">3-shot kill beats SMGs if accurate</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">KORD 6P67</td>
+        <td class="text-center p-3">
+          <div class="text-xs text-foreground/60">AR</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">27</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">750</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">4</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">0.16s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Good balance, manageable recoil</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SOR-556</td>
+        <td class="text-center p-3">
+          <div class="text-xs text-foreground/60">AR</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">25</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">800</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">4</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">0.15s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">High RPM compensates lower damage</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-xl">
+        ⚡
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Why KV9 Dominates less than 10m</div>
+        <div class="text-xs text-foreground/60">The math behind 75ms TTK</div>
+      </div>
+    </div>
+    
+    <p class="text-sm text-foreground/80 mb-4">
+      The Vector's <span class="text-green-400 font-semibold">1200 RPM fire rate</span> is unmatched. Combined with 25 damage per shot and Hollow Point ammunition optimizations, it delivers 4-shot kills in 75 milliseconds—faster than human reaction time. No other weapon comes close at point-blank range.
+    </p>
+    
+    <div class="p-3 bg-primary/10 rounded border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-1">COMPETITIVE REALITY</div>
+      <p class="text-xs text-foreground/80">If you and your opponent start shooting simultaneously at 8m, and they have a KV9 while you have anything else, <span class="text-red-400 font-semibold">you die before you can fire your 4th shot</span>. This is why the Vector is S-tier CQB.</p>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center text-xl">
+        🎯
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">TR-7: The Accuracy Answer</div>
+        <div class="text-xs text-foreground/60">High-damage beats high-RPM</div>
+      </div>
+    </div>
+    
+    <p class="text-sm text-foreground/80 mb-4">
+      The TR-7's <span class="text-yellow-400 font-semibold">3-shot kill</span> at point-blank lets it compete with SMGs—but only if you land every shot. Its 0.10s theoretical TTK beats most SMGs, but the 720 RPM means <span class="text-red-400 font-semibold">missing once extends TTK to 0.25s</span>, losing the trade.
+    </p>
+    
+    <div class="p-3 bg-yellow-500/10 rounded border border-yellow-500/30">
+      <div class="text-xs text-yellow-400 font-semibold mb-1">SKILL REQUIREMENT</div>
+      <p class="text-xs text-foreground/80">TR-7 requires 75%+ accuracy to compete with SMGs at less than 10m. Below that threshold, SMGs' forgiveness makes them superior.</p>
+    </div>
+  </div>
+</div>
+
+### Shotguns: The Instant Delete Button
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Type</th>
+        <th class="text-center p-3 text-primary font-semibold">One-Shot Range</th>
+        <th class="text-center p-3 text-primary font-semibold">Max Effective</th>
+        <th class="text-left p-3 text-primary font-semibold">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">12M Auto</td>
+        <td class="text-center p-3">
+          <div class="text-xs text-foreground/60">Auto</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">0-8m</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">15m</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Full-auto, forgiving pellet spread</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">MCS-880</td>
+        <td class="text-center p-3">
+          <div class="text-xs text-foreground/60">Pump</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">0-10m</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">12m</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Longer one-shot range, slower follow-up</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">DXR-1</td>
+        <td class="text-center p-3">
+          <div class="text-xs text-foreground/60">Slug</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">N/A</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/80">30m+</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Precision slug, requires aim</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="warning">
+**Shotgun Reality Check:** Shotguns deliver instant kills at less than 10m but become unreliable beyond 15m. They're high-risk, high-reward weapons that demand aggressive positioning and corner control. If you miss your first shot or face multiple opponents, you're likely dead. Use only in tight corridors and indoor objectives.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Short-Medium Range (10-20m): The Transition Zone
+
+<div class="space-y-6 mb-8">
+
+The 10-20m bracket is where weapon balance shifts. SMGs lose their overwhelming advantage, carbines become competitive, and high-damage assault rifles start to shine. Understanding this transition is critical for positioning.
+
+</div>
+
+### Comparative Performance at 15m
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Class</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage @ 15m</th>
+        <th class="text-center p-3 text-primary font-semibold">STK</th>
+        <th class="text-center p-3 text-primary font-semibold">TTK</th>
+        <th class="text-center p-3 text-primary font-semibold">Recoil</th>
+        <th class="text-left p-3 text-primary font-semibold">Viability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">M4A1</td>
+        <td class="text-center p-3 text-xs text-foreground/60">Carbine</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">22-24</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">5</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">0.20s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400">Low</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Optimal range, S-tier here</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">TR-7</td>
+        <td class="text-center p-3 text-xs text-foreground/60">AR</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">30-32</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">3-4</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">0.17-0.25s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400">High</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Dominates with control</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">PW5A3 (MP5)</td>
+        <td class="text-center p-3 text-xs text-foreground/60">SMG</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">20-22</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">5-6</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">0.20-0.26s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400">Low</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Still competitive, fading</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">KV9 (Vector)</td>
+        <td class="text-center p-3 text-xs text-foreground/60">SMG</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">18-20</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">6</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">0.25s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">High</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Falling off, recoil difficult</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">DRS-IAR</td>
+        <td class="text-center p-3 text-xs text-foreground/60">LMG</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">24-25</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">4-5</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">0.23-0.31s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400">Med</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Functional, mobility hurts</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SVK-8.6</td>
+        <td class="text-center p-3 text-xs text-foreground/60">DMR</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">50</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">2</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">0.40s</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400">Low</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Outclassed by automatics</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-start gap-4">
+    <div class="text-4xl">🎯</div>
+    <div class="flex-1">
+      <div class="text-lg font-semibold text-primary mb-3">The 15m Sweet Spot Explained</div>
+      <p class="text-sm text-foreground/80 mb-4">
+        At 15 meters, <span class="text-primary font-semibold">carbines reach their optimal range</span> while SMGs begin suffering from damage fall-off. The M4A1's 0.20s TTK with low recoil beats the Vector's deteriorating 0.25s with difficult recoil control. This is why the M4A1 is considered the best all-around weapon—it maintains S-tier performance from 10-40m.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="p-3 bg-card/50 rounded border border-primary/20">
+          <div class="text-xs text-primary font-semibold mb-1">SMGs</div>
+          <p class="text-xs text-foreground/80">Losing damage, recoil increasing, effectiveness declining rapidly</p>
+        </div>
+        <div class="p-3 bg-card/50 rounded border border-primary/20">
+          <div class="text-xs text-primary font-semibold mb-1">CARBINES</div>
+          <p class="text-xs text-foreground/80">Peak performance zone—optimal TTK with manageable recoil</p>
+        </div>
+        <div class="p-3 bg-card/50 rounded border border-primary/20">
+          <div class="text-xs text-primary font-semibold mb-1">ARs</div>
+          <p class="text-xs text-foreground/80">Strong here, even better at 20-30m where their range advantage grows</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <TrendingUp className="inline-block mr-3 mb-1" size={32} /> Extended CQB (20-30m): AR Territory
+
+<div class="space-y-6 mb-8">
+
+At 20-30 meters, assault rifles establish dominance. SMGs become largely unviable, carbines maintain competitiveness, and high-damage ARs shine. This is the final range bracket before transitioning to true mid-range combat.
+
+</div>
+
+### Performance at 30m
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Weapon</th>
+        <th class="text-center p-3 text-primary font-semibold">Class</th>
+        <th class="text-center p-3 text-primary font-semibold">Damage</th>
+        <th class="text-center p-3 text-primary font-semibold">STK</th>
+        <th class="text-center p-3 text-primary font-semibold">TTK</th>
+        <th class="text-left p-3 text-primary font-semibold">Assessment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">TR-7</td>
+        <td class="text-center p-3 text-xs text-foreground/60">AR</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">28-30</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">4</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">0.25s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">S-tier, optimal range zone</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">KORD 6P67</td>
+        <td class="text-center p-3 text-xs text-foreground/60">AR</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">25-27</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">4</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">0.24s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Excellent, better control than TR-7</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">M4A1</td>
+        <td class="text-center p-3 text-xs text-foreground/60">Carbine</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">20-22</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">5-6</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">0.30-0.40s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Still functional, near max range</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">DRS-IAR</td>
+        <td class="text-center p-3 text-xs text-foreground/60">LMG</td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">24-25</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">4-5</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-foreground/70">0.28-0.35s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Competitive, ammo advantage</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">PW5A3 (MP5)</td>
+        <td class="text-center p-3 text-xs text-foreground/60">SMG</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">16-18</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">6-7</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">0.40-0.52s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Unviable, too many shots required</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">KV9 (Vector)</td>
+        <td class="text-center p-3 text-xs text-foreground/60">SMG</td>
+        <td class="text-center p-3">
+          <div class="text-red-400">15-17</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">7-8</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">0.50-0.70s</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Completely ineffective, avoid</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-green-500/30">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-xl">
+        ✓
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-green-400">What Works at 30m</div>
+        <div class="text-xs text-foreground/60">Optimal weapon classes</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="p-3 bg-card/50 rounded">
+        <div class="text-sm font-semibold text-foreground mb-1">High-Damage ARs</div>
+        <p class="text-xs text-foreground/70">TR-7, KORD, SOR-556 maintain 4-5 shot kills with fast TTK. This is their optimal engagement range.</p>
+      </div>
+      
+      <div class="p-3 bg-card/50 rounded">
+        <div class="text-sm font-semibold text-foreground mb-1">Carbines (Marginal)</div>
+        <p class="text-xs text-foreground/70">M4A1/M277 functional but near damage fall-off limits. Prefer ARs if available.</p>
+      </div>
+      
+      <div class="p-3 bg-card/50 rounded">
+        <div class="text-sm font-semibold text-foreground mb-1">LMGs</div>
+        <p class="text-xs text-foreground/70">DRS-IAR competitive with magazine advantage. Good for sustained suppression.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-red-500/30">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ✗
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-red-400">What Fails at 30m</div>
+        <div class="text-xs text-foreground/60">Avoid these weapon classes</div>
+      </div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="p-3 bg-card/50 rounded">
+        <div class="text-sm font-semibold text-foreground mb-1">All SMGs</div>
+        <p class="text-xs text-foreground/70">Damage fall-off crippling. 7-9 shot requirements with challenging recoil = death sentence.</p>
+      </div>
+      
+      <div class="p-3 bg-card/50 rounded">
+        <div class="text-sm font-semibold text-foreground mb-1">Shotguns</div>
+        <p class="text-xs text-foreground/70">Completely non-functional beyond 15m. Pellet spread too wide for consistent damage.</p>
+      </div>
+      
+      <div class="p-3 bg-card/50 rounded">
+        <div class="text-sm font-semibold text-foreground mb-1">Low-Damage ARs</div>
+        <p class="text-xs text-foreground/70">Standard 23-25 damage ARs struggle here. Stick with high-damage tier (TR-7, KORD).</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Callout variant="warning">
+**The 30m Cliff:** This distance represents the edge of "close-quarters" combat. Beyond 30m, you enter mid-range territory where weapon selection becomes critical. If you're running an SMG and see 30m+ engagements forming, immediately reposition or expect to lose trades against competent opponents.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <AlertCircle className="inline-block mr-3 mb-1" size={32} /> Weapon Showcases: CQB Champions
+
+<div class="space-y-6 mb-8">
+
+These weapons define close-quarters meta. Mastering one of these for your preferred engagement distance maximizes your CQB effectiveness.
+
+</div>
+
+### KV9 (Vector): The Point-Blank King
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">KV9 (Vector) Submachine Gun</h3>
+      <p class="text-sm text-foreground/60">Full-Automatic SMG • Point-Blank Specialist • Aggressive Playstyle</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">1200</div>
+      <div class="text-xs text-foreground/60">Rounds Per Minute</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">CORE STATISTICS</div>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Damage:</span>
+          <span class="text-fs-gold font-semibold">25</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">STK (less than 10m):</span>
+          <span class="text-fs-gold font-semibold">4</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">TTK (less than 10m):</span>
+          <span class="text-green-400 font-bold">0.075s</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">STK (Armored):</span>
+          <span class="text-red-400">6</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Magazine:</span>
+          <span class="text-foreground/80">30 rounds</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Reload:</span>
+          <span class="text-foreground/80">2.0s</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Optimal Range</span>
+        <span class="text-fs-gold font-bold">0-10m</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Max Effective</span>
+        <span class="text-foreground/80">15m</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Hip-Fire Accuracy</span>
+        <span class="text-green-400 font-bold">Excellent</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Mobility</span>
+        <span class="text-green-400">Fast (SMG class)</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">STRENGTHS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Fastest TTK in game (0.075s)</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Unbeatable less than 10m</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Excellent hip-fire</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+High mobility</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Fast reload (2.0s)</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">WEAKNESSES</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Useless beyond 15m</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Severe damage fall-off</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-High recoil (1200 RPM)</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Small magazine (30)</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Ammo consumption</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">WEAPON PHILOSOPHY</div>
+    <p class="text-sm text-foreground/80">
+      The KV9 is <span class="text-primary font-semibold">built for one purpose: deleting enemies at point-blank range</span>. Its 1200 RPM fire rate delivers a 4-shot kill in 75 milliseconds—faster than human reaction time. This makes it mathematically unbeatable in confined spaces like corridors, buildings, and objective rooms. However, <span class="text-red-400 font-semibold">attempting to use it beyond 15m is suicide</span>. Damage fall-off cripples the weapon, and recoil makes sustained fire impossible. The Vector demands aggressive positioning and corner control. You must force enemies into your optimal range or you're at a massive disadvantage. Best paired with tactical equipment that enables close approaches (smoke grenades, flashbangs) and played in tight map sectors.
+    </p>
+  </div>
+</div>
+
+### M4A1: The All-Around Champion
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">M4A1 Carbine</h3>
+      <p class="text-sm text-foreground/60">Full-Automatic Carbine • All-Range Versatility • Consistency Focus</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">900</div>
+      <div class="text-xs text-foreground/60">Rounds Per Minute</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">CORE STATISTICS</div>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Damage:</span>
+          <span class="text-fs-gold font-semibold">25</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">STK (less than 10m):</span>
+          <span class="text-fs-gold font-semibold">4</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">TTK (CQB):</span>
+          <span class="text-fs-gold font-semibold">0.15-0.20s</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">TTK (30m):</span>
+          <span class="text-foreground/80">0.30-0.40s</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Magazine:</span>
+          <span class="text-foreground/80">30 rounds</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Reload:</span>
+          <span class="text-foreground/80">2.2s</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Optimal Range</span>
+        <span class="text-fs-gold font-bold">10-25m</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Max Effective</span>
+        <span class="text-foreground/80">40m</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Recoil Control</span>
+        <span class="text-green-400 font-bold">Easy</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Handling</span>
+        <span class="text-green-400">Excellent (Carbine)</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">STRENGTHS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Versatile 5-40m effectiveness</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Easy recoil control</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Fast handling/ADS</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Competitive CQB TTK</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Forgiving (900 RPM)</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Low skill floor</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">WEAKNESSES</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Loses to SMGs less than 10m</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Loses to ARs 30m+</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Not "best" at any range</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Standard magazine (30)</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Aggressive fall-off >20m</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">WEAPON PHILOSOPHY</div>
+    <p class="text-sm text-foreground/80">
+      The M4A1 is consistently ranked the <span class="text-primary font-semibold">#1-2 overall weapon in Battlefield 6</span> because it's never bad. While specialists like the Vector dominate point-blank or DMRs rule long-range, the M4A1 maintains 80-90% of their effectiveness across the entire 5-40m spectrum. Its easy recoil control, fast handling, and forgiving 900 RPM fire rate make it the ideal weapon for players who encounter varied engagement distances. <span class="text-green-400 font-semibold">This is the weapon you choose when you don't know what range you'll be fighting at</span>. The M4A1 never forces you to reposition due to range disadvantage—it's always "good enough," and often better than specialists outside their narrow optimal zones.
+    </p>
+  </div>
+</div>
+
+### TR-7: The Skill-Ceiling Powerhouse
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">TR-7 Assault Rifle</h3>
+      <p class="text-sm text-foreground/60">Full-Automatic AR • High-Damage Specialist • Recoil Mastery Required</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">33</div>
+      <div class="text-xs text-foreground/60">Damage per Shot</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">CORE STATISTICS</div>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Fire Rate:</span>
+          <span class="text-fs-gold font-semibold">720 RPM</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">STK (less than 10m):</span>
+          <span class="text-green-400 font-bold">3</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">TTK (CQB):</span>
+          <span class="text-green-400 font-bold">0.10-0.17s</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">TTK (30m):</span>
+          <span class="text-fs-gold font-semibold">0.25s</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Magazine:</span>
+          <span class="text-foreground/80">30 rounds</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-foreground/70">Reload:</span>
+          <span class="text-foreground/80">2.5s</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Optimal Range</span>
+        <span class="text-fs-gold font-bold">10-40m</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Max Effective</span>
+        <span class="text-foreground/80">75m</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Recoil Control</span>
+        <span class="text-red-400 font-bold">Very Hard</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Skill Requirement</span>
+        <span class="text-red-400">High (70%+ accuracy)</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">STRENGTHS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Highest AR damage (33)</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+3-shot kill capability</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Competes with SMGs in CQB</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Effective to 75m</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">+Fastest AR TTK</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">WEAKNESSES</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Hardest AR recoil</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Punishes missed shots</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-High skill floor</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Small magazine (30)</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">-Burst control mandatory</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">WEAPON PHILOSOPHY</div>
+    <p class="text-sm text-foreground/80">
+      The TR-7 is <span class="text-primary font-semibold">Battlefield 6's ultimate skill-ceiling weapon</span>. Its 33 damage per shot enables 3-shot kills at close range (0.10s TTK) and maintains 4-shot performance out to 75m—making it competitive everywhere from CQB to long range. However, <span class="text-red-400 font-semibold">brutal recoil demands mastery</span>. Season 1's burst-fire mechanics are mandatory; sustained spray results in shots flying everywhere. This weapon rewards players with exceptional recoil control and target tracking. <span class="text-yellow-400 font-semibold">If your accuracy is below 65%, use the M4A1 or KORD instead</span>—the TR-7's theoretical power only manifests with precision. For skilled players, it's arguably the best overall weapon in Battlefield 6, dominating 10m to 75m engagements.
+    </p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Tactical Positioning Guide
+
+<div class="space-y-6 mb-8">
+
+Knowing your weapon's optimal range is critical. Here's how to position based on your loadout.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">IF RUNNING SMG</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Hold tight corridors and rooms</li>
+      <li>✓ Use smoke to close distance</li>
+      <li>✓ Play aggressive on objectives</li>
+      <li>✓ Avoid open areas entirely</li>
+      <li>✗ Never challenge 20m+ engagements</li>
+      <li>✗ Don't hold sightlines</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Force enemies into less than 15m or reposition
+    </div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">IF RUNNING CARBINE</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Flex between CQB and mid-range</li>
+      <li>✓ Take mixed-distance fights</li>
+      <li>✓ Hold 15-25m angles</li>
+      <li>✓ Push when needed</li>
+      <li>✗ Avoid pure point-blank rushes</li>
+      <li>✗ Don't challenge 50m+ snipers</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-fs-gold/20 rounded text-fs-gold">
+      Most versatile positioning option
+    </div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">IF RUNNING AR</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Hold 20-40m sightlines</li>
+      <li>✓ Take mid-range duels confidently</li>
+      <li>✓ Play defensively positioned</li>
+      <li>✓ Let SMGs come to you</li>
+      <li>✗ Don't rush into buildings</li>
+      <li>✗ Avoid extreme CQB</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/20 rounded text-green-400">
+      Maintain distance advantage
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Cross-Reference Navigation
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors">
+    <div class="text-xs text-primary font-semibold mb-2">UNDERSTAND THE META</div>
+    <h3 class="text-lg font-bold text-foreground mb-3">Season 1 Meta Analysis</h3>
+    <p class="text-sm text-foreground/80 mb-4">
+      Why did close-quarters combat change? Learn about the spread mechanics overhaul, armor plate system, and why burst-fire control now matters even at knife-fighting distances.
+    </p>
+    <a 
+      href="#" 
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+    >
+      View Meta Guide →
+    </a>
+  </div>
+  
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors">
+    <div class="text-xs text-primary font-semibold mb-2">LONG-RANGE DATA</div>
+    <h3 class="text-lg font-bold text-foreground mb-3">Long-Range TTK Guide</h3>
+    <p class="text-sm text-foreground/80 mb-4">
+      Need data for 50-100m engagements? The long-range guide covers where SMGs become useless and DMRs dominate. See how weapon rankings flip at distance.
+    </p>
+    <a 
+      href="#" 
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+    >
+      View Long-Range Guide →
+    </a>
+  </div>
+</div>
+
+<Callout variant="info">
+**Data Accuracy:** All TTK values derived from confirmed in-game testing and community damage analysis. Shots-to-kill counts verified in firing range at measured distances. Values represent body-shot performance without armor plates unless specified—actual results may vary with limb shots, headshots, or armor. This data reflects Season 1 patch 1.1.1.0 balance state and will be updated following future patches.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

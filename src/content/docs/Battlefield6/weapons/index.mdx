@@ -1,0 +1,464 @@
+---
+title: Battlefield 6 — Weapons Guide Hub
+hide_breadcrumbs: true
+---
+
+import Callout from "@/components/Callout.astro";
+import { Target, Zap, Settings, TrendingUp, BookOpen } from "lucide-react";
+
+<div class="space-y-6 mb-10">
+
+**Welcome to the comprehensive Battlefield 6 weapons intelligence center.** This section contains everything you need to master weapon selection, customization, and tactical deployment across all engagement distances. Season 1's spread mechanics overhaul fundamentally changed weapon balance—understanding these systems separates good players from elite ones.
+
+Whether you're optimizing loadouts for competitive play, researching time-to-kill data for specific ranges, or learning the Season 1 meta shifts, you'll find data-driven, tactical guidance here. All content is updated for Season 1 patch 1.1.1.0 and reflects current competitive meta.
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## What You'll Find Here
+
+<div class="space-y-8 mb-10">
+
+### <Target className="inline-block mr-2 mb-1" size={28} /> Time-to-Kill (TTK) Analysis
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors">
+    <div class="flex items-start gap-4 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl flex-shrink-0">
+        ⚡
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-foreground mb-2">Short-Range TTK Guide (0-30m)</h3>
+        <p class="text-sm text-foreground/80 mb-3">
+          Comprehensive close-quarters combat data covering point-blank (less than 10m), transition zones (10-20m), and extended CQB (20-30m). Learn where SMGs dominate, why the Vector is unbeatable at knife-fighting range, and how armor plates double your TTK.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">SMG Rankings</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Carbine Data</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">AR Performance</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Armor Plates</span>
+        </div>
+        <a 
+          href="/battlefield6/weapons/srweaponttk" 
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+        >
+          View Short-Range Guide →
+        </a>
+      </div>
+    </div>
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">MOST POPULAR</div>
+      <p class="text-xs text-foreground/80">80%+ of Battlefield kills occur at 0-30m. Essential reading for every player.</p>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors">
+    <div class="flex items-start gap-4 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl flex-shrink-0">
+        🎯
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-foreground mb-2">Long-Range TTK Guide (50-100m)</h3>
+        <p class="text-sm text-foreground/80 mb-3">
+          Mid-to-long range weapon performance where damage fall-off separates viable weapons from liabilities. Discover why DMRs dominate 50m+, how LMGs maintain effectiveness, and why most SMGs/carbines become completely unviable.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">DMR Dominance</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">LMG Data</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">AR Fall-off</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Sniper Rifles</span>
+        </div>
+        <a 
+          href="/battlefield6/weapons/lrweaponttk" 
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+        >
+          View Long-Range Guide →
+        </a>
+      </div>
+    </div>
+    <div class="p-3 bg-primary/10 rounded border border-primary/30">
+      <div class="text-xs text-primary font-semibold mb-1">COMPETITIVE ESSENTIAL</div>
+      <p class="text-xs text-foreground/80">Critical for understanding weapon viability at distance and loadout selection.</p>
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**New to TTK analysis?** Start with the Short-Range guide—it covers where most combat happens and includes the armor plate system explanation that applies to all ranges.
+</Callout>
+
+### <TrendingUp className="inline-block mr-2 mb-1" size={28} /> Meta Analysis & Strategy
+
+<div class="space-y-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors">
+    <div class="flex items-start gap-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl flex-shrink-0">
+        📊
+      </div>
+      <div class="flex-1">
+        <h3 class="text-lg font-bold text-foreground mb-2">Season 1 Meta Changes Analysis</h3>
+        <p class="text-sm text-foreground/80 mb-3">
+          Deep dive into what changed in Season 1 and why. Covers the spread mechanics overhaul that rewards burst fire, armor plate system impact, attachment effectiveness shifts, and comprehensive weapon tier rankings by class. This is your foundation for understanding the current meta.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+          <div class="p-2 bg-card/50 rounded border border-border text-center">
+            <div class="text-xs text-foreground/60">Covered</div>
+            <div class="text-sm font-semibold text-fs-gold">Spread Mechanics</div>
+          </div>
+          <div class="p-2 bg-card/50 rounded border border-border text-center">
+            <div class="text-xs text-foreground/60">Covered</div>
+            <div class="text-sm font-semibold text-fs-gold">Armor System</div>
+          </div>
+          <div class="p-2 bg-card/50 rounded border border-border text-center">
+            <div class="text-xs text-foreground/60">Covered</div>
+            <div class="text-sm font-semibold text-fs-gold">Attachment Meta</div>
+          </div>
+          <div class="p-2 bg-card/50 rounded border border-border text-center">
+            <div class="text-xs text-foreground/60">Covered</div>
+            <div class="text-sm font-semibold text-fs-gold">Tier Rankings</div>
+          </div>
+        </div>
+        <a 
+          href="/battlefield6/weapons/s1metachanges" 
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+        >
+          View Meta Analysis →
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-yellow-500/10 rounded-lg border-2 border-yellow-500/30">
+    <div class="flex items-start gap-3">
+      <div class="text-2xl">💡</div>
+      <div class="flex-1">
+        <div class="text-sm font-semibold text-yellow-400 mb-1">Recommended Reading Order</div>
+        <p class="text-xs text-foreground/80">
+          Start with <span class="text-yellow-400 font-semibold">Season 1 Meta Changes</span> to understand why weapon balance shifted, then dive into <span class="text-yellow-400 font-semibold">Short-Range TTK</span> for practical CQB data. Add <span class="text-yellow-400 font-semibold">Long-Range TTK</span> when you're ready to optimize for distance engagements.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+### <Settings className="inline-block mr-2 mb-1" size={28} /> Weapon Customization & Loadouts
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors">
+    <div class="flex items-start gap-4 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl flex-shrink-0">
+        🔧
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-foreground mb-2">Weapon Customization Guide</h3>
+        <p class="text-sm text-foreground/80 mb-3">
+          Complete attachment optimization guide covering optics, barrels, magazines, grips, and ammunition types. Learn which attachments actually matter, optimal configurations for different playstyles, and how to avoid trap attachments that sound good but hurt performance.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Attachment Tiers</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Optimal Builds</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Trade-offs</span>
+        </div>
+        <a 
+          href="/battlefield6/weapons/weapon-customization" 
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+        >
+          View Customization Guide →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors">
+    <div class="flex items-start gap-4 mb-4">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl flex-shrink-0">
+        📋
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-foreground mb-2">Meta Loadouts</h3>
+        <p class="text-sm text-foreground/80 mb-3">
+          Pre-built loadout templates for different roles and playstyles. Includes complete weapon configurations, attachment selections, equipment choices, and tactical philosophy for each build. Copy-paste ready for immediate competitive use.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Role Templates</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Full Builds</span>
+          <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Quick Start</span>
+        </div>
+        <a 
+          href="/battlefield6/weapons/loadouts" 
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+        >
+          View Loadouts →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Quick Navigation by Goal
+
+<div class="space-y-6 mb-10">
+
+Choose your path based on what you're trying to accomplish:
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">🎯 I WANT TO UNDERSTAND...</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li><a href="/battlefield6/weapons/s1metachanges" class="text-primary hover:underline">Why weapons feel different in Season 1</a></li>
+      <li><a href="/battlefield6/weapons/s1metachanges" class="text-primary hover:underline">What changed with spread mechanics</a></li>
+      <li><a href="/battlefield6/weapons/srweaponttk" class="text-primary hover:underline">How armor plates affect combat</a></li>
+      <li><a href="/battlefield6/weapons/s1metachanges" class="text-primary hover:underline">Which weapons are meta right now</a></li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Start: Season 1 Meta Analysis
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-fs-gold">
+    <div class="text-xs text-fs-gold font-semibold mb-3">⚡ I NEED DATA ON...</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li><a href="/battlefield6/weapons/srweaponttk" class="text-primary hover:underline">Which SMG has fastest TTK</a></li>
+      <li><a href="/battlefield6/weapons/lrweaponttk" class="text-primary hover:underline">Best weapons for 50m+ engagements</a></li>
+      <li><a href="/battlefield6/weapons/srweaponttk" class="text-primary hover:underline">M4A1 vs Vector comparison</a></li>
+      <li><a href="/battlefield6/weapons/lrweaponttk" class="text-primary hover:underline">When SMGs become unviable</a></li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-fs-gold/20 rounded text-fs-gold">
+      Start: Short or Long-Range TTK
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500">
+    <div class="text-xs text-green-400 font-semibold mb-3">🔧 I WANT TO BUILD...</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li><a href="/battlefield6/weapons/weapon-customization" class="text-primary hover:underline">Optimal weapon attachments</a></li>
+      <li><a href="/battlefield6/weapons/loadouts" class="text-primary hover:underline">Complete loadout for my role</a></li>
+      <li><a href="/battlefield6/weapons/weapon-customization" class="text-primary hover:underline">Best optic for my weapon</a></li>
+      <li><a href="/battlefield6/weapons/loadouts" class="text-primary hover:underline">Competitive-ready setup</a></li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-green-500/20 rounded text-green-400">
+      Start: Customization or Loadouts
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Weapon Class Quick Reference
+
+<div class="space-y-6 mb-10">
+
+Not sure which weapon class suits your playstyle? Here's a quick overview to help you choose where to focus your research.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Class</th>
+        <th class="text-center p-3 text-primary font-semibold">Optimal Range</th>
+        <th class="text-center p-3 text-primary font-semibold">Skill Floor</th>
+        <th class="text-left p-3 text-primary font-semibold">Best For</th>
+        <th class="text-left p-3 text-primary font-semibold">Top Weapons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">SMGs</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0-15m</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400">Low</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Aggressive CQB, flanking, objective rushes</td>
+        <td class="p-3 text-foreground/80 text-xs">KV9 (Vector), PW5A3 (MP5)</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Carbines</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">10-40m</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400">Low</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">All-around versatility, mixed ranges</td>
+        <td class="p-3 text-foreground/80 text-xs">M4A1, M277</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Assault Rifles</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">20-50m</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400">Medium-High</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Mid-range dominance, recoil control</td>
+        <td class="p-3 text-foreground/80 text-xs">TR-7, KORD 6P67, SOR-556</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">LMGs</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">30-60m</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-yellow-400">Medium</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Sustained fire, suppression, defense</td>
+        <td class="p-3 text-foreground/80 text-xs">DRS-IAR, M240L</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">DMRs</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">50-200m</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">High</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Long-range precision, skilled marksmen</td>
+        <td class="p-3 text-foreground/80 text-xs">SVK-8.6, M433</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Sniper Rifles</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">75m+</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-red-400">Very High</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Extreme range, headshot specialists</td>
+        <td class="p-3 text-foreground/80 text-xs">Mini Scout, M2010 ESR</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Shotguns</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">0-10m</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400">Low-Medium</div>
+        </td>
+        <td class="p-3 text-foreground/80 text-xs">Extreme CQB, corner control</td>
+        <td class="p-3 text-foreground/80 text-xs">12M Auto, MCS-880</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip">
+**New to Battlefield 6?** We recommend starting with the **M4A1 Carbine**. It's effective from 5-40m, has easy recoil control, and never forces you into disadvantageous engagements. Once you understand engagement distances, branch into specialists like SMGs for CQB or ARs for mid-range.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Content Philosophy
+
+<div class="space-y-6 mb-8">
+
+All weapons guides on FusionSaint follow a consistent philosophy: **data-driven, tactical, and actionable**. We don't provide generic tips—we provide the exact information competitive players need to make informed decisions.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-2xl mb-3">📊</div>
+    <div class="text-sm font-semibold text-foreground mb-2">Data-Driven</div>
+    <p class="text-xs text-foreground/80">
+      Every TTK value, damage number, and weapon comparison is backed by in-game testing and community verification. No speculation, no "feels like"—just numbers.
+    </p>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-2xl mb-3">🎯</div>
+    <div class="text-sm font-semibold text-foreground mb-2">Tactically Focused</div>
+    <p class="text-xs text-foreground/80">
+      We explain the "why" behind weapon choices. Understanding damage fall-off, engagement distances, and positioning is more valuable than memorizing tier lists.
+    </p>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-2xl mb-3">⚡</div>
+    <div class="text-sm font-semibold text-foreground mb-2">Immediately Actionable</div>
+    <p class="text-xs text-foreground/80">
+      Every guide is designed to improve your gameplay today. Copy loadouts, apply positioning principles, and see results in your next match.
+    </p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Staying Current
+
+<div class="space-y-4 mb-8">
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/30">
+  <div class="flex items-start gap-4">
+    <div class="text-4xl">🔄</div>
+    <div class="flex-1">
+      <div class="text-lg font-semibold text-primary mb-3">Patch Tracking & Updates</div>
+      <p class="text-sm text-foreground/80 mb-3">
+        Weapon balance changes frequently with patches. All guides in this section reflect <span class="text-primary font-semibold">Season 1 patch 1.1.1.0</span> (October 28, 2025) as the current baseline. When significant balance changes occur, we update TTK data, tier rankings, and meta analysis accordingly.
+      </p>
+      <div class="p-3 bg-card/50 rounded border border-primary/20">
+        <div class="text-xs text-primary font-semibold mb-1">WHAT TRIGGERS UPDATES</div>
+        <div class="text-xs text-foreground/80 space-y-1">
+          <div>• Major weapon damage changes (±5 damage or more)</div>
+          <div>• Fire rate adjustments (±50 RPM or more)</div>
+          <div>• New weapons added to the game</div>
+          <div>• Spread mechanics or recoil system changes</div>
+          <div>• Attachment rebalancing that affects meta builds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<Callout variant="info">
+**See outdated information?** Weapon balance evolves, and we work to keep guides current. If you notice data that doesn't match in-game performance after a patch, let us know through our feedback channels.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Beyond Weapons
+
+<div class="space-y-6 mb-8">
+
+Looking for other aspects of competitive Battlefield 6 optimization? Check out our other guide sections:
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-border/50 hover:border-primary/50 transition-colors">
+    <div class="text-sm font-semibold text-foreground mb-2">⚙️ Settings & Optimization</div>
+    <p class="text-xs text-foreground/80 mb-3">
+      Graphics settings, FOV configuration, input optimization, and audio setup for competitive advantage.
+    </p>
+    <a href="/battlefield6/settings" class="text-xs text-primary hover:underline">View Settings Guides →</a>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-border/50 hover:border-primary/50 transition-colors">
+    <div class="text-sm font-semibold text-foreground mb-2">📰 Patch Notes</div>
+    <p class="text-xs text-foreground/80 mb-3">
+      Latest balance changes, new content, bug fixes, and detailed analysis of how patches affect meta.
+    </p>
+    <a href="/battlefield6/patchnotes" class="text-xs text-primary hover:underline">View Patch Notes →</a>
+  </div>
+</div>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="#" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
