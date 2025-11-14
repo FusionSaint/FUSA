@@ -1,0 +1,521 @@
+---
+title: "REDSEC Momentum Meta: Why Time Beats Loot Every Match"
+pubDate: 2025-11-14
+author: FusionSaint
+tags: ["REDSEC", "Meta", "Strategy"]
+description: "The squad movement system that's dominating high-level REDSEC. Chain contracts faster, win more games."
+image: "/images/blog/redsec-momentum.jpg"
+---
+
+import Callout from "@/components/Callout.astro";
+import { Timer, TrendingUp, Users, Zap, Target, RotateCw } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Your squad drops hot, wins the landing fight, loots for 3 minutes... and loses to a team with white armor and base weapons.** Sound familiar? 
+
+You're not losing to better players. You're losing to better **momentum** — the hidden resource that determines 80% of REDSEC outcomes before the final circle even forms.
+
+</div>
+
+<Callout variant="info">
+**The Core Truth:** Squads that chain contracts 40% faster generate 2.5x more cash and control 3x more map presence by minute 10. Loot quality becomes irrelevant when you're ahead on economy.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Timer className="inline-block mr-3 mb-1" size={32} /> The Momentum Benchmarks That Win Games
+
+<div class="space-y-6 mb-8">
+
+Forget K/D. These are the only metrics that matter in high-level REDSEC. Hit these numbers and you're already outperforming 80% of lobbies.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🚁
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Drop → Contract</h3>
+    </div>
+    <div class="text-3xl font-bold text-fs-gold mb-2">&lt;35s</div>
+    <p class="text-sm text-foreground/80">From feet on ground to first contract started</p>
+    <div class="mt-4 h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 90%"></div>
+    </div>
+    <div class="text-xs text-foreground/60 mt-1">Critical Priority</div>
+  </div>
+  
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        ⏱️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Contract Uptime</h3>
+    </div>
+    <div class="text-3xl font-bold text-fs-gold mb-2">≥70%</div>
+    <p class="text-sm text-foreground/80">Portion of match with active contracts</p>
+    <div class="mt-4 h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+    </div>
+    <div class="text-xs text-foreground/60 mt-1">Very High Priority</div>
+  </div>
+  
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔄
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Between Contracts</h3>
+    </div>
+    <div class="text-3xl font-bold text-fs-gold mb-2">&lt;20s</div>
+    <p class="text-sm text-foreground/80">Maximum downtime between completions</p>
+    <div class="mt-4 h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 85%"></div>
+    </div>
+    <div class="text-xs text-foreground/60 mt-1">Very High Priority</div>
+  </div>
+  
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💀
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Full Wipe Time</h3>
+    </div>
+    <div class="text-3xl font-bold text-fs-gold mb-2">Never</div>
+    <p class="text-sm text-foreground/80">Stagger spawns to maintain presence</p>
+    <div class="mt-4 h-2 bg-card/50 rounded-full overflow-hidden border border-border">
+      <div class="h-full bg-gradient-to-r from-primary/50 to-primary" style="width: 100%"></div>
+    </div>
+    <div class="text-xs text-foreground/60 mt-1">Essential</div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Users className="inline-block mr-3 mb-1" size={32} /> Squad Roles That Maintain Momentum
+
+<div class="space-y-6 mb-8">
+
+Clear responsibilities prevent hesitation — momentum's worst enemy. Every player has **one primary job** that keeps the squad moving.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30">
+    <div class="flex items-center justify-between mb-4">
+      <div>
+        <h3 class="text-xl font-bold text-foreground mb-1">🧭 Pathfinder (IGL)</h3>
+        <p class="text-sm text-foreground/60">The Navigation Engine</p>
+      </div>
+      <div class="text-4xl font-bold text-fs-gold">1</div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Primary Task</span>
+        <span class="text-fs-gold font-bold">Route Planning</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Key Binding</span>
+        <span class="text-fs-gold font-bold">F (Quick Mark)</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Death Priority</span>
+        <span class="text-fs-gold font-bold">Last</span>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-2">RESPONSIBILITIES</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Pre-marks next 2 contracts while current runs</li>
+        <li>• Calls rotation timing ("Two finish, two go")</li>
+        <li>• Manages macro decisions and cutoffs</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center justify-between mb-4">
+      <div>
+        <h3 class="text-xl font-bold text-foreground mb-1">⚔️ Striker</h3>
+        <p class="text-sm text-foreground/60">The Pace Setter</p>
+      </div>
+      <div class="text-4xl font-bold text-fs-gold">2</div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Primary Task</span>
+        <span class="text-fs-gold font-bold">Site Clearing</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Loadout Focus</span>
+        <span class="text-fs-gold font-bold">SMG/Breaching</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Death Priority</span>
+        <span class="text-fs-gold font-bold">First</span>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-card/30 rounded-lg border border-border/50">
+      <div class="text-xs text-foreground/70 font-semibold mb-2">RESPONSIBILITIES</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• First into objectives, clears fast</li>
+        <li>• Pushes angles to create space</li>
+        <li>• Carries breach charges/C5</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center justify-between mb-4">
+      <div>
+        <h3 class="text-xl font-bold text-foreground mb-1">🛡️ Anchor</h3>
+        <p class="text-sm text-foreground/60">The Insurance Policy</p>
+      </div>
+      <div class="text-4xl font-bold text-fs-gold">3</div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Primary Task</span>
+        <span class="text-fs-gold font-bold">Squad Survival</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Position</span>
+        <span class="text-fs-gold font-bold">50m Behind</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Death Priority</span>
+        <span class="text-fs-gold font-bold">Never</span>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-card/30 rounded-lg border border-border/50">
+      <div class="text-xs text-foreground/70 font-semibold mb-2">RESPONSIBILITIES</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Maintains safe respawn option</li>
+        <li>• Holds vehicle for rotates</li>
+        <li>• Places spawn beacons</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center justify-between mb-4">
+      <div>
+        <h3 class="text-xl font-bold text-foreground mb-1">📦 Quartermaster</h3>
+        <p class="text-sm text-foreground/60">The Supply Chain</p>
+      </div>
+      <div class="text-4xl font-bold text-fs-gold">4</div>
+    </div>
+    
+    <div class="space-y-3 mb-4">
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Primary Task</span>
+        <span class="text-fs-gold font-bold">Resource Flow</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Buy Priority</span>
+        <span class="text-fs-gold font-bold">Plates → Ammo</span>
+      </div>
+      <div class="flex items-center justify-between text-sm p-3 bg-card/50 rounded border border-border">
+        <span class="font-semibold">Death Priority</span>
+        <span class="text-fs-gold font-bold">Second</span>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-card/30 rounded-lg border border-border/50">
+      <div class="text-xs text-foreground/70 font-semibold mb-2">RESPONSIBILITIES</div>
+      <ul class="text-sm text-foreground/80 space-y-1">
+        <li>• Buys while rotating (never stops)</li>
+        <li>• Manages team economy</li>
+        <li>• Deploys ammo crates mid-fight</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Zap className="inline-block mr-3 mb-1" size={32} /> Movement Rules That Create Time
+
+<div class="space-y-6 mb-8">
+
+These principles separate tournament squads from pub stompers. Master these and you'll consistently finish top 5.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">RULE #1: ROUTE > FIGHT</div>
+    <div class="text-2xl font-bold text-fs-gold mb-3">Skip 70% of Fights</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✔ Smoke through contested areas</li>
+      <li>✔ Wide rotate around teams</li>
+      <li>✗ Chase for kills</li>
+      <li>✗ Stop for every gunshot</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Time saved: 45s per skipped fight
+    </div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">RULE #2: TRIANGLE CHAINS</div>
+    <div class="text-2xl font-bold text-fs-gold mb-3">3-Contract Loops</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✔ Pick 3 nearby objectives</li>
+      <li>✔ Loop them clockwise</li>
+      <li>✗ Zig-zag across map</li>
+      <li>✗ Random contract selection</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Distance saved: 400m per loop
+    </div>
+  </div>
+  
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">RULE #3: VEHICLE DISCIPLINE</div>
+    <div class="text-2xl font-bold text-fs-gold mb-3">Tool, Not Home</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✔ Park facing next objective</li>
+      <li>✔ Everyone exits together</li>
+      <li>✗ Loot from vehicle</li>
+      <li>✗ Circle for kills</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Time saved: 30s per rotation
+    </div>
+  </div>
+</div>
+
+<Callout variant="tip">
+**The Two-Two Split:** At 50% contract completion, two players finish while two rotate early. This creates a 20-second overlap that compounds into minutes of advantage.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Target className="inline-block mr-3 mb-1" size={32} /> Micro-Optimizations That Compound
+
+<div class="space-y-6 mb-8">
+
+Small changes that save 2-3 seconds each. Do all of them and you're saving 2+ minutes per match.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Optimization</th>
+        <th class="text-center p-3 text-primary font-semibold">Key Bind</th>
+        <th class="text-center p-3 text-primary font-semibold">Time Saved</th>
+        <th class="text-left p-3 text-primary font-semibold">Implementation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Pre-Swap Kits</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Tab → 1-4</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">3s/buy</div>
+        </td>
+        <td class="p-3 text-foreground/80">Swap loadouts at buy station before opening menu</td>
+      </tr>
+      
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Quick Contract Accept</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">F (Hold)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">2s/contract</div>
+        </td>
+        <td class="p-3 text-foreground/80">Hold interact while approaching marker</td>
+      </tr>
+      
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Ping + Move</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">Mouse 5</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">1s/ping</div>
+        </td>
+        <td class="p-3 text-foreground/80">Ping while sprinting, never stop</td>
+      </tr>
+      
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Staggered Reloads</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">R (Timed)</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">5s/fight</div>
+        </td>
+        <td class="p-3 text-foreground/80">One reloads, one covers, two push</td>
+      </tr>
+      
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Smoke Skip</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">G</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">20s/fight</div>
+        </td>
+        <td class="p-3 text-foreground/80">Smoke contested objectives, complete without fighting</td>
+      </tr>
+      
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Running Revive</td>
+        <td class="text-center p-3">
+          <div class="text-fs-gold font-semibold">E + W</div>
+        </td>
+        <td class="text-center p-3">
+          <div class="text-green-400 font-bold">4s/revive</div>
+        </td>
+        <td class="p-3 text-foreground/80">Start revive, Pathfinder breaks to next marker</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <RotateCw className="inline-block mr-3 mb-1" size={32} /> The 10-Minute Momentum Drill
+
+<div class="space-y-6 mb-8">
+
+Practice this with your squad until it's muscle memory. If you can consistently hit these times, you're operating at tournament level.
+
+</div>
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-2xl font-bold text-foreground mb-1">Contract Chain Drill</h3>
+      <p class="text-sm text-foreground/60">3 Contracts • 5:30 Target • No Deaths</p>
+    </div>
+    <div class="text-right">
+      <div class="text-5xl font-bold text-fs-gold">5:30</div>
+      <div class="text-xs text-foreground/60">target time</div>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">CONTRACT A (0:00 - 1:45)</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>📍 Land → Contract: &lt;35s</li>
+        <li>⚡ Complete: 1:10</li>
+        <li>🔄 Pathfinder marks B at 50%</li>
+        <li>💰 No looting (grab only ammo)</li>
+      </ul>
+    </div>
+    
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">CONTRACT B (1:45 - 3:30)</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>🚗 Vehicle rotate: 15s</li>
+        <li>💊 Buy plates while moving</li>
+        <li>⚡ Complete: 1:30</li>
+        <li>🔄 Mark C at 50%</li>
+      </ul>
+    </div>
+    
+    <div class="p-5 bg-card/70 rounded-lg border border-primary/20">
+      <div class="text-xs text-primary font-semibold mb-3">CONTRACT C (3:30 - 5:30)</div>
+      <ul class="text-sm text-foreground/80 space-y-2">
+        <li>🏃 Sprint rotate: 20s</li>
+        <li>💨 Smoke if contested</li>
+        <li>⚡ Complete: 1:40</li>
+        <li>✅ Total time: &lt;5:30</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <div>
+      <div class="text-xs text-green-400 font-semibold mb-2">SUCCESS METRICS</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Zero full wipes</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">&lt;120s total downtime</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">3 contracts chained</span>
+        <span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">70%+ uptime</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-xs text-red-400 font-semibold mb-2">COMMON FAILURES</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Looting between contracts</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Fighting unnecessary teams</span>
+        <span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Poor route selection</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">DRILL PHILOSOPHY</div>
+    <p class="text-sm text-foreground/80">Run this drill 5 times per session. Track your times. When you can hit 5:30 consistently, reduce target to 5:00. Top teams complete this in 4:30 with zero deaths.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## The Bottom Line
+
+<div class="p-8 bg-gradient-to-r from-primary/5 via-card/50 to-fs-gold/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="text-2xl font-bold text-primary mb-4">Momentum > Loot > Kills</div>
+  
+  <div class="space-y-4 text-foreground/90">
+    <p>**REDSEC isn't a battle royale. It's a race.** The squad that completes the most contracts in the least time wins — regardless of gear quality or kill count.</p>
+    
+    <p>If your squad moves 40% faster than the lobby average, you'll generate:</p>
+  </div>
+  
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-6">
+    <div class="text-center p-3 bg-card/50 rounded border border-border">
+      <div class="text-2xl font-bold text-fs-gold">2.5x</div>
+      <div class="text-xs text-foreground/60">More Cash</div>
+    </div>
+    <div class="text-center p-3 bg-card/50 rounded border border-border">
+      <div class="text-2xl font-bold text-fs-gold">3x</div>
+      <div class="text-xs text-foreground/60">Map Control</div>
+    </div>
+    <div class="text-center p-3 bg-card/50 rounded border border-border">
+      <div class="text-2xl font-bold text-fs-gold">80%</div>
+      <div class="text-xs text-foreground/60">Win Rate</div>
+    </div>
+    <div class="text-center p-3 bg-card/50 rounded border border-border">
+      <div class="text-2xl font-bold text-fs-gold">4+</div>
+      <div class="text-xs text-foreground/60">KillStreaks</div>
+    </div>
+  </div>
+  
+  <div class="text-lg font-semibold text-primary">Start tracking momentum metrics instead of K/D. You'll win more games immediately.</div>
+</div>
+
+<Callout variant="success">
+**Ready to implement?** Load up REDSEC with your squad, assign roles, and run the 10-minute drill. Share your best times in our Discord. Teams hitting sub-5:00 get the Momentum Master role.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a 
+    href="/battlefield6" 
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ← More Battlefield 6 Guides
+  </a>
+</div>

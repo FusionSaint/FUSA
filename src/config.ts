@@ -15,7 +15,8 @@ export const LOCALE = {
 } as const;
 
 export const menu_items: { title: string; href: string }[] = [
-  // { title: "Home", href: "/" },
+  { title: "Home", href: "/getting-started" },
+  { title: "Blog", href: "/blog" },
 ];
 
 export const side_nav_menu_order: string[] = [
@@ -74,6 +75,32 @@ export const side_nav_menu_order: string[] = [
   "Helldivers2/patchnotes/410Patch",
 ];
 
+// Blog tag taxonomy
+export const BLOG_TAGS = [
+  // Content Type
+  'meta',
+  'patch notes',
+  'guide update',
+  'site updates',
+  
+  // Game Systems
+  'weapons',
+  'loadouts',
+  'tactics',
+  'settings',
+  'loot',
+  
+  // Game Modes
+  'redsec',           // REDSEC Battle Royale
+  'conquest',         // Standard BF6 modes
+  
+  // Technical
+  'optimization',     // PC performance, FPS, hardware
+  
+  // Philosophy/Community
+  'competitive mindset',
+  'stream recap',
+] as const;
 
 export const docconfig = {
   hide_table_of_contents: false,

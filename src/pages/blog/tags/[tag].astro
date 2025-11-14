@@ -1,0 +1,118 @@
+---
+// src/pages/blog/tags/[tag].astro
+import { getCollection } from 'astro:content';
+import BlogLayout from '@/layouts/BlogLayout.astro';
+
+// Generate a page for each unique tag found in all blog posts
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog');
+  
+  // Collect all unique tags from all posts
+  const allTags = new Set<string>();
+  allPosts.forEach(post => {
+    post.data.tags?.forEach(tag => allTags.add(tag));
+  });
+  
+  // Create a route for each tag
+  return Array.from(allTags).map(tag => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+
+// Get all posts that include this specific tag
+const allPosts = await getCollection('blog');
+const taggedPosts = allPosts
+  .filter(post => post.data.tags?.includes(tag))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+// Format tag for display (capitalize first letter)
+const displayTag = tag.charAt(0).toUpperCase() + tag.slice(1);
+---
+
+<BlogLayout 
+  title={`${displayTag} Posts`}
+  description={`All blog posts tagged with "${displayTag}"`}
+>
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Page header with tag name and count -->
+    <div class="mb-12">
+      <a 
+        href="/blog" 
+        class="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-4"
+      >
+        ← Back to Blog
+      </a>
+      
+      <h1 class="text-4xl font-bold text-foreground mb-2">
+        Posts tagged: <span class="text-fs-gold">{displayTag}</span>
+      </h1>
+      <p class="text-foreground/70">
+        {taggedPosts.length} {taggedPosts.length === 1 ? 'post' : 'posts'} found
+      </p>
+    </div>
+
+    <!-- List of posts with this tag (same card style as blog index) -->
+    <div class="space-y-6">
+      {taggedPosts.map(post => {
+        const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        return (
+          <article class="p-6 rounded-lg border-2 border-border bg-card/30 hover:border-primary/50 transition-colors">
+            <a href={`/blog/${post.slug}`} class="block">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <h2 class="text-2xl font-semibold text-foreground hover:text-primary transition-colors">
+                  {post.data.title}
+                </h2>
+                
+                {post.data.game && (
+                  <span class="px-3 py-1 text-xs rounded-full bg-primary/20 text-primary whitespace-nowrap">
+                    {post.data.game}
+                  </span>
+                )}
+              </div>
+
+              <p class="text-foreground/70 mb-4">{post.data.description}</p>
+
+              <div class="flex items-center gap-4 text-sm text-foreground/60">
+                <time datetime={post.data.pubDate.toISOString()}>
+                  {formattedDate}
+                </time>
+                
+                {post.data.tags && post.data.tags.length > 0 && (
+                  <>
+                    <span>•</span>
+                    <div class="flex gap-2">
+                      {post.data.tags.map(postTag => (
+                        <span class="text-fs-gold">{postTag}</span>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            </a>
+          </article>
+        );
+      })}
+    </div>
+
+    <!-- No posts message (edge case but good to handle) -->
+    {taggedPosts.length === 0 && (
+      <div class="text-center py-12">
+        <p class="text-foreground/60">No posts found with this tag.</p>
+        <a 
+          href="/blog"
+          class="inline-block mt-4 text-primary hover:text-primary/80 transition-colors"
+        >
+          View all posts →
+        </a>
+      </div>
+    )}
+  </div>
+</BlogLayout>

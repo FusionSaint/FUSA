@@ -1,6 +1,5 @@
 ---
 import { Button } from "@/components/ui/button";
-
 import { menu_items } from "@/config";
 
 const pathname = new URL(Astro.request.url).pathname;
@@ -9,25 +8,25 @@ const pathname_part = pathname.split("/")[1];
 
 <div class="flex gap-4">
   {
-    menu_items.map((item) => (
-      <a href={item.href}>
-        <Button
-          variant={
-            "/" + pathname_part === "/" + item.href.split("/")[1]
-              ? "secondary"
-              : "ghost"
-          }
-          key={item.href}
-          className={
-            "/" + pathname_part === "/" + item.href.split("/")[1]
-              ? "text-foreground"
-              : "text-muted-foreground"
-          }
-          client:load
-        >
-          {item.title}
-        </Button>
-      </a>
-    ))
+    menu_items.map((item) => {
+      const isActive = "/" + pathname_part === "/" + item.href.split("/")[1];
+      
+      return (
+        <a href={item.href}>
+          <Button
+            variant="ghost"
+            key={item.href}
+            className={
+              isActive
+                ? "text-fs-gold font-semibold border-b-2 border-fs-gold rounded-none hover:bg-transparent"
+                : "text-foreground hover:text-primary"
+            }
+            client:load
+          >
+            {item.title}
+          </Button>
+        </a>
+      );
+    })
   }
 </div>

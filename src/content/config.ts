@@ -18,6 +18,19 @@ const docs = defineCollection({
   }),
 });
 
+const blog = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.date(),
+    author: z.string().default('FusionSaint Team'),
+    tags: z.array(z.string()).optional(),
+    game: z.string().optional(),
+  }),
+});
+
 export const collections = {
   docs,
+  blog,
 };

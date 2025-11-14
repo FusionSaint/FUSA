@@ -1,0 +1,46 @@
+---
+// src/layouts/BlogLayout.astro
+import HeadSEO from "@/components/core/HeadSEO.astro";
+import Header from "@/components/core/Header.astro";
+import Footer from "@/components/core/Footer.astro";
+import { Copy } from "@/components/core/Copy";
+import { capitalizeFirstLetter } from "@/lib/utils";
+import { LOCALE, SITE } from "@/config";
+
+// This interface defines what props this layout expects
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang={LOCALE.lang ?? "en"} class="scroll-smooth">
+  <head>
+    <!-- Uses your existing HeadSEO component for meta tags and SEO -->
+    <HeadSEO
+      title={`${capitalizeFirstLetter(title)} | ${SITE.title}`}
+      description={description}
+    />
+  </head>
+  <body class="font-sans bg-card">
+    <!-- Your existing Copy component for code copying functionality -->
+    <Copy client:only="react" />
+    
+    <div class="flex flex-col min-h-screen">
+      <!-- Reuses your existing header with navigation -->
+      <Header class="border-b bg-background" />
+      
+      <!-- Main content area - simpler than DocsLayout, no sidebars -->
+      <main class="flex-1 container mx-auto">
+        <!-- The slot is where page content gets inserted -->
+        <slot />
+      </main>
+      
+      <!-- Your existing footer -->
+      <Footer />
+    </div>
+  </body>
+</html>
