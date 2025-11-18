@@ -1,0 +1,498 @@
+---
+title: Patch Notes 1.1.2.0 - California Resistance
+hide_breadcrumbs: false
+---
+
+import Callout from "@/components/Callout.astro";
+import { Monitor, Gamepad2, Settings, Headphones } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+  <p>
+    <strong>Battlefield 6 Update 1.1.2.0 — “California Resistance”</strong> is a November&nbsp;2025 patch that combines a big
+    content drop (new map, mode, weapons, missions, Portal toys) with a deep round of tuning and bug fixes.
+  </p>
+  <p>
+    The headline change is a <strong>full reversion of aim assist to its Open Beta tuning</strong>, alongside improved controller
+    responsiveness, <strong>lower weapon spread and recoil on key rifles</strong>, polished gadgets, clearer challenge tracking,
+    and dozens of fixes to soldiers, vehicles, audio, and UI. This page breaks down what’s new and—critically—what it means
+    for <strong>competitive keyboard &amp; mouse players on PC</strong>.
+  </p>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Monitor className="inline-block mr-3 mb-1" size={32} /> California Resistance: New Content Drop
+
+<div class="space-y-6 mb-8">
+  <p>
+    Update 1.1.2.0 is themed around the <strong>California Resistance</strong> event, with a new Southern California map, a
+    demolition-focused limited-time mode, fresh weapons, and new toys for Gauntlet and Portal. It’s not just a balance patch—
+    it’s a content refresh that gives you new ways to grind, experiment, and sweat.
+  </p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🌴
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Eastwood — New Map</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">
+      A Southern California-inspired battlefield featuring suburban blocks, commercial strips, and open approaches.
+      Available in all official modes, with combined-arms chaos in Conquest.
+    </p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Highlights:</span> Tanks, helicopters, and even a drivable golf cart.</div>
+      <div><span class="text-fs-gold font-semibold">Playstyle:</span> Mid–long sightlines with brutal point-holds in town.</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        💣
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Sabotage — Limited-Time Mode</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">
+      Event-only mode centered on attacking and defending objectives with heavy use of explosives and denial tools.
+    </p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Focus:</span> Objective demolition, counterplay, and utility usage.</div>
+      <div><span class="text-fs-gold font-semibold">Tip:</span> Bring explosives and crowd control—this is not a farming mode.</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🔫
+      </div>
+      <h3 class="text-lg font-semibold text-primary">New Weapons — DB-12 &amp; M357 “Trait”</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">
+      Two unlockable firearms: a close-range semi-auto shotgun and a hard-hitting sidearm revolver.
+    </p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">DB-12:</span> CQB lane bully, punishes tight chokes and stairs.</div>
+      <div><span class="text-fs-gold font-semibold">M357 “Trait”:</span> High-caliber backup for precision players.</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🚙
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Gauntlet Mission — “Rodeo”</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">
+      New Gauntlet mission focused on vehicle control and car-on-car violence. Fight over multiple vehicle spawns and cash out
+      by fragging from the driver’s seat or gunner’s chair.
+    </p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Scoring:</span> Bonus points for kills while driving or gunning.</div>
+      <div><span class="text-fs-gold font-semibold">Mindset:</span> Treat vehicles as mobile power positions, not taxis.</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🧪
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Portal — Sandbox &amp; Fort Lyndon</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">
+      Portal gains a blank-slate Sandbox map plus Fort&nbsp;Lyndon segments, and the beloved Golf Cart as a usable vehicle.
+    </p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Sandbox:</span> Flat testbed for custom modes, aim drills, or goofy setups.</div>
+      <div><span class="text-fs-gold font-semibold">Golf Cart:</span> Now in the toolbox for custom experiences.</div>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+        🎟️
+      </div>
+      <h3 class="text-lg font-semibold text-primary">Event Track, Attachments &amp; Battle Pickups</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-3">
+      Extra progression and rewards tied to the California Resistance event, plus a new underbarrel and upcoming map pickups.
+    </p>
+    <div class="text-xs space-y-1">
+      <div><span class="text-fs-gold font-semibold">Bonus Path:</span> Limited-time California Resistance Battle Pass track with themed rewards.</div>
+      <div><span class="text-fs-gold font-semibold">Slim Handstop:</span> New grip unlocked via challenge, focused on handling and control.</div>
+      <div><span class="text-fs-gold font-semibold">Battle Pickups:</span> High-power, low-ammo weapons spawning at key map locations later in the cycle.</div>
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="tip">
+Use the <strong>event period</strong> to knock out challenges on Eastwood and in Sabotage while the lobbies are focused there.
+It’s the fastest way to progress the California Resistance path and learn the new map under pressure.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Settings className="inline-block mr-3 mb-1" size={32} /> Core Gameplay Changes &amp; Fixes
+
+<div class="space-y-6 mb-8">
+  <p>
+    Under the hood, 1.1.2.0 is a <strong>feel patch</strong>: aim assist is reverted, controllers are snappier, weapons are more
+    accurate, gadgets are less janky, and challenge tracking is clearer. This section is the high-level snapshot before we drill
+    into aim assist and PC specifics.
+  </p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <h3 class="text-sm font-semibold text-primary mb-2">Aim Assist Reverted to Open Beta</h3>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Launch/post-launch aim assist values (heavy long-range slowdown) are gone.</li>
+      <li>• <span class="text-fs-gold font-semibold">Consistent slowdown</span> across all ranges, matching Open Beta feel.</li>
+      <li>• All aim-assist settings reset to default to match the new baseline.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <h3 class="text-sm font-semibold text-primary mb-2">Controller Responsiveness Upgrade</h3>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Improved input latency and stick response for smoother soldier/aim movement.</li>
+      <li>• Fixed “Standard” acceleration preset (now correctly ~<span class="text-fs-gold font-semibold">70%</span>, not 50%).</li>
+      <li>• Better deadzone handling, including PS5 controllers used on PC.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <h3 class="text-sm font-semibold text-primary mb-2">Weapon Accuracy &amp; Recoil Tweaks</h3>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Fixed a bug that made dispersion ramp up too quickly during sustained fire.</li>
+      <li>• <span class="text-fs-gold font-semibold">Global spread reduction</span> across weapons: shots land closer to where you aim.</li>
+      <li>• Non-Recon snipers gain accuracy; rifles like LMR27, M39, SVDM get reduced recoil/variation.</li>
+      <li>• Controller-only ~25% recoil smoothing remains active for now.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <h3 class="text-sm font-semibold text-primary mb-2">Gadget Polish &amp; Friendly Destruction</h3>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Smoother interactions for deployables like mortar, laser designator, supply crates.</li>
+      <li>• <span class="text-fs-gold font-semibold">Friendly explosives and some gadgets can now be damaged/detonated by allies.</span></li>
+      <li>• Enables cleaning up bad placements—but adds teamkill risk if people aren’t careful.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <h3 class="text-sm font-semibold text-primary mb-2">Challenge Tracking &amp; UI Clarity</h3>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Challenge descriptions are clearer about required <span class="text-fs-gold font-semibold">weapons, modes, or actions</span>.</li>
+      <li>• Progression bars and trackers update more reliably.</li>
+      <li>• Less guesswork when chasing unlocks (weapons, attachments, ribbons).</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <h3 class="text-sm font-semibold text-primary mb-2">Soldiers, Vehicles, Audio &amp; UI Fixes</h3>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Fixes for bounce/landing issues, vaulting from water, ladder deaths, and hit-reg after exiting vehicles.</li>
+      <li>• Vehicle corrections: IFV guided missile damage, UH-79 hitbox and seating, removal of unintended missile aim assist.</li>
+      <li>• Audio overhauls: new ping sound cues, fixed missing reload/VO/ambient sounds, cleaner squad death audio.</li>
+      <li>• HUD: clearer kill log for bleed-outs, restored tutorial prompts, stance-change feedback messages, and more.</li>
+    </ul>
+  </div>
+
+</div>
+
+<Callout variant="info">
+For most players, this patch will feel like <strong>more stable, more predictable Battlefield</strong>: fewer “I swear I hit him”
+moments, less sticky long-range aim assist, and smoother movement and sound.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Gamepad2 className="inline-block mr-3 mb-1" size={32} /> Aim Assist: Before vs. After
+
+<div class="space-y-6 mb-8">
+  <p>
+    The most controversial system at launch was <strong>crossplay aim assist</strong>. 1.1.2.0 doesn’t delete it—it <em>reverts</em> it.
+    The goal: keep controller aiming helpful at mid-range without feeling like an aimbot at distance or fighting you on high-zoom scopes.
+  </p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">
+        ❌
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-foreground">Launch Aim Assist (Pre-1.1.2.0)</div>
+        <div class="text-xs text-foreground/60">Live game before the California Resistance patch</div>
+      </div>
+    </div>
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Long-range slowdown</span>
+        <span class="text-fs-gold font-semibold">Very high</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">High-zoom smoothness</span>
+        <span class="text-fs-gold font-semibold">Inconsistent</span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Crossplay perception</span>
+        <span class="text-fs-gold font-semibold">“Controller advantage”</span>
+      </div>
+    </div>
+    <div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+      <div class="text-xs text-red-400 font-semibold mb-1">DRAWBACKS</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Overly sticky at range, especially with high-zoom optics.</li>
+        <li>• Muscle memory broke between close and long range aiming.</li>
+        <li>• Many PC players felt forced into disabling crossplay via config hacks.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">
+        ✓
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-primary">Open Beta Aim Assist (Post-1.1.2.0)</div>
+        <div class="text-xs text-foreground/60">Now the standard across all ranges</div>
+      </div>
+    </div>
+    <div class="space-y-3 mb-4">
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Long-range slowdown</span>
+        <span class="text-green-400 font-bold">Moderate <span class="text-xs">(more manual input)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">High-zoom smoothness</span>
+        <span class="text-green-400 font-bold">Improved <span class="text-xs">(less fighting the slowdown)</span></span>
+      </div>
+      <div class="flex justify-between items-center text-sm p-2 bg-card/50 rounded">
+        <span class="text-foreground/70">Crossplay perception</span>
+        <span class="text-green-400 font-bold">More fair <span class="text-xs">(skill matters)</span></span>
+      </div>
+    </div>
+    <div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">BENEFITS</div>
+      <ul class="text-xs text-foreground/80 space-y-1">
+        <li>• Consistent slowdown model from hipfire to sniper zoom.</li>
+        <li>• Easier to build and keep muscle memory on controller.</li>
+        <li>• Reduced “free beams” at long range in mixed KB/M + controller lobbies.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="warning">
+Aim assist is <strong>still on</strong> and still meaningful for controller users—it’s just pulled back from the post-launch extremes. 
+If you hated crossplay before, give it another try after this patch before you write it off again.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Gamepad2 className="inline-block mr-3 mb-1" size={32} /> What This Means for Keyboard &amp; Mouse (PC)
+
+<div class="space-y-6 mb-8">
+  <p>
+    1.1.2.0 doesn’t add new mouse-specific tech, but it <strong>changes the ecosystem you’re aiming in</strong>. Crossplay is fairer,
+    weapons are more accurate, and you get a new melee keybind that actually matters in tight fights.
+  </p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">CROSSPLAY BALANCE</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Controller aim assist at range is toned down; tracking is less “on rails.”</li>
+      <li>✓ Long-range duels lean more on <span class="text-fs-gold font-semibold">raw tracking &amp; positioning</span>.</li>
+      <li>✗ Don’t assume controllers are weak—close-range assist is still strong.</li>
+      <li>✗ You still can’t officially disable crossplay on PC; expect mixed lobbies.</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: KB/M players who avoided crossplay due to “aimbot pad” frustration.
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">GUNPLAY CONSISTENCY</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ Global spread reduction rewards <span class="text-fs-gold font-semibold">good recoil control and micro-corrections</span>.</li>
+      <li>✓ Non-Recon snipers and semi-autos feel more reliable for precision players.</li>
+      <li>✗ Old “burst only” habits may be over-cautious now—test longer bursts.</li>
+      <li>✗ You’ll notice if your crosshair discipline is sloppy; bullets track your mistakes better.</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: Players who rely on headshots, tap firing, and pixel peeking.
+    </div>
+  </div>
+
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-3">MELEE &amp; INPUT QUALITY-OF-LIFE</div>
+    <ul class="text-sm space-y-2 text-foreground/80 mb-4">
+      <li>✓ New keybind to <span class="text-fs-gold font-semibold">instantly equip your knife</span> (no hold required).</li>
+      <li>✓ Great candidate for a side mouse button or easily reached keyboard key.</li>
+      <li>✓ Hit-reg bug after leaving vehicles is fixed—fewer “ghost bullets” when you exit and shoot.</li>
+      <li>✗ The quick-knife swap doesn’t auto-melee; you still need to click to attack.</li>
+    </ul>
+    <div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+      Best for: Aggressive entry players and flankers who live in close-quarters.
+    </div>
+  </div>
+
+</div>
+
+<Callout variant="tip">
+On PC, the biggest wins are <strong>less random spread</strong> and <strong>more honest crossplay gunfights</strong>. If your aim is solid,
+this patch leans the sandbox a little more in your favor.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Settings className="inline-block mr-3 mb-1" size={32} /> Post-Patch Checklist
+
+<div class="space-y-6 mb-8">
+  <p>
+    After 1.1.2.0 installs, take 10–15 minutes to harden your settings and re-sync your muscle memory. Treat this like
+    a mini-setup audit, not just a “queue and pray” patch.
+  </p>
+</div>
+
+<div class="space-y-3 mb-8">
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center justify-between mb-2">
+      <div class="text-sm font-semibold text-primary">✅ Controller Aim &amp; Movement Settings (If You Ever Use a Pad)</div>
+      <div class="text-xl">🎯</div>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Re-check aim assist strength and slowdown—everything was reset to defaults.</li>
+      <li>• Confirm the <span class="text-fs-gold font-semibold">Standard</span> acceleration preset feels right now that it’s fixed.</li>
+      <li>• Dial in deadzones again, especially if you’re on PS5 controller on PC.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center justify-between mb-2">
+      <div class="text-sm font-semibold text-primary">✅ Bind the New Quick-Knife Key (PC KB/M)</div>
+      <div class="text-xl">🗡️</div>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• In Key Bindings, assign a comfortable key for “Equip Melee Weapon”.</li>
+      <li>• Test how fast you can draw and slash—this should become instinctual.</li>
+      <li>• Consider macroing it to a mouse side button for instant access in CQC.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center justify-between mb-2">
+      <div class="text-sm font-semibold text-primary">✅ Optional: Auto Sprint (Controller)</div>
+      <div class="text-xl">🏃</div>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• New gameplay option: auto sprint when the left stick is fully pushed forward.</li>
+      <li>• Great for reducing L3 spam if you play long sessions on controller.</li>
+      <li>• Test whether constant sprinting meshes with your playstyle and slide/jump timing.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center justify-between mb-2">
+      <div class="text-sm font-semibold text-primary">✅ Video &amp; Performance Pass</div>
+      <div class="text-xl">🖥️</div>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Confirm your FPS cap, V-Sync, and resolution scale after the update.</li>
+      <li>• The previous 300&nbsp;FPS cap on some Nvidia setups has been addressed—decide if you want to run uncapped or hard-cap for consistency.</li>
+      <li>• Revisit DLSS/FSR and graphics presets if you see new headroom or improved stability.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center justify-between mb-2">
+      <div class="text-sm font-semibold text-primary">✅ Challenges &amp; Progression Check</div>
+      <div class="text-xl">📈</div>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Re-open your assignments and weapon/attachment challenges.</li>
+      <li>• Take advantage of clearer descriptions to optimize how you grind (correct modes, weapons, and maps).</li>
+      <li>• Prioritize California Resistance event objectives before the event expires.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center justify-between mb-2">
+      <div class="text-sm font-semibold text-primary">✅ Weapon &amp; Gadget Re-Testing</div>
+      <div class="text-xl">🔍</div>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Hit the range or a low-stress mode and re-learn your main rifles and snipers with the new spread/recoil.</li>
+      <li>• Pay special attention to LMR27, M39, SVDM, and non-Recon snipers—they’re more forgiving now.</li>
+      <li>• Test deployables (C4, mines, support gadgets) with the new friendly-damage behavior so your squad doesn’t grief itself by accident.</li>
+    </ul>
+  </div>
+
+  <div class="p-4 rounded-lg border border-border bg-card/50">
+    <div class="flex items-center justify-between mb-2">
+      <div class="text-sm font-semibold text-primary">✅ Explore the New Content</div>
+      <div class="text-xl">🌐</div>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-1">
+      <li>• Queue into Eastwood and learn its power positions, flanks, and vehicle routes early.</li>
+      <li>• Grind Sabotage while it’s live to pick up event rewards and map reps.</li>
+      <li>• Use Portal Sandbox to test recoil, time-to-kill breakpoints, and silly Golf Cart customs with friends.</li>
+    </ul>
+  </div>
+
+</div>
+
+<Callout variant="tip">
+If you do nothing else, at least: <strong>bind your quick knife</strong>, <strong>re-test your main rifles</strong>, and 
+<strong>learn Eastwood’s lanes</strong>. That alone will put you ahead of most of the lobby on patch week.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Headphones className="inline-block mr-3 mb-1" size={32} /> Sources &amp; Further Reading
+
+<div class="space-y-4 mb-8 text-sm text-foreground/80">
+  <p>
+    This page is based on cross-checked information from the official Battlefield 6 Update 1.1.2.0 patch notes, major gaming news
+    outlets, and community testing and discussion focused specifically on the November&nbsp;2025 <strong>California Resistance</strong> patch.
+  </p>
+  <ul class="list-disc list-inside space-y-1">
+    <li>Official Battlefield 6 Update 1.1.2.0 patch notes (EA/DICE).</li>
+    <li>GameSpot coverage of the patch and aim assist changes.</li>
+    <li>Additional summaries from sites like TwistedVoxel and GamesRadar.</li>
+    <li>Community feedback and testing from forums and Reddit.</li>
+  </ul>
+  <p class="text-foreground/60">
+    As future micro-patches and hotfixes land, treat this page as the <strong>1.1.2.0 baseline</strong> and cross-check against 
+    newer notes for any follow-up tuning.
+  </p>
+</div>
+
+<div class="text-center mt-16 mb-8">
+  <a
+    href="#"
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary border border-primary/60"
+  >
+    ↑ Back to Top
+  </a>
+</div>
