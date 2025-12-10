@@ -1,0 +1,830 @@
+---
+title: Battlefield 6 Patch 1.1.3.0 — Winter Offensive Update
+---
+
+import Callout from "@/components/Callout.astro";
+import { AlertTriangle, Snowflake, Settings, Headphones, Monitor, Gamepad2 } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+**Battlefield 6's Winter Offensive update (Patch 1.1.3.0) launched December 9, 2025**, bringing seasonal content, major gameplay refinements, and critical fixes—but also introducing a significant PC stuttering bug requiring immediate attention. This guide covers everything PC players need to know: critical issues, settings verification, audio overhauls, and tactical implications of the update.
+
+The patch represents the final major content drop for Season 1, featuring the time-limited Ice Lock Empire State map, Freeze mechanic event mode, and the Ice Climbing Axe melee weapon. More importantly for competitive play, the update delivers substantial improvements to hit registration, weapon handling, audio clarity, and soldier visibility.
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <AlertTriangle className="inline-block mr-3 mb-1" size={32} /> Critical PC Issues - Read First
+
+<Callout variant="warning">
+**Day-one stuttering bug affecting PC players.** DICE acknowledged the issue and provided a temporary workaround while working on a proper fix. Apply this immediately if experiencing FPS drops.
+</Callout>
+
+<div class="space-y-6 mb-8">
+Multiple players reported severe FPS stutters every 5-20 seconds post-update, even on high-end systems that previously ran flawlessly. Content creator TriggerBF (400+ hours, zero prior issues) documented stutters disrupting gameplay across all modes. The problem appears related to Steam's friends list integration.
+</div>
+
+### Immediate Workaround
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/30 mb-8">
+<div class="text-sm font-semibold text-primary mb-3">TEMPORARY FIX - STEAM USERS</div>
+
+<div class="space-y-3">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-lg font-bold flex-shrink-0">1</div>
+<div>
+<div class="font-semibold text-foreground mb-1">Open Steam Friends & Chat</div>
+<div class="text-sm text-foreground/70">Click the Friends icon in Steam client</div>
+</div>
+</div>
+
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-lg font-bold flex-shrink-0">2</div>
+<div>
+<div class="font-semibold text-foreground mb-1">Go Offline</div>
+<div class="text-sm text-foreground/70">Click your profile → "Go Offline"</div>
+</div>
+</div>
+
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-lg font-bold flex-shrink-0">3</div>
+<div>
+<div class="font-semibold text-foreground mb-1">Launch Battlefield 6</div>
+<div class="text-sm text-foreground/70">Stuttering should be eliminated or significantly reduced</div>
+</div>
+</div>
+</div>
+
+<div class="mt-4 p-3 bg-card/50 rounded text-xs text-foreground/70">
+<strong>Status:</strong> DICE is actively investigating. This is a temporary workaround until they deploy a proper fix. Community reports indicate 70-80% success rate with this method.
+</div>
+</div>
+
+### Additional PC Issues
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="p-4 rounded-lg border border-red-500/30 bg-red-500/10">
+<div class="text-sm font-semibold text-red-400 mb-2">Menu UI Broken</div>
+<div class="text-xs text-foreground/80 mb-3">Some players cannot select highlighted mode tiles. Menu appears functional but clicks don't register.</div>
+<div class="text-xs text-fs-gold">Workaround: Use custom server browser instead of main menu tiles</div>
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+<div class="text-sm font-semibold text-foreground mb-2">Settings May Reset</div>
+<div class="text-xs text-foreground/80 mb-3">DICE "mitigated" the bug but isolated cases still occur. Settings can randomly reset during patch updates.</div>
+<div class="text-xs text-fs-gold">Action: Verify all custom settings immediately after patching</div>
+</div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Snowflake className="inline-block mr-3 mb-1" size={32} /> Winter Offensive Content
+
+<div class="space-y-6 mb-8">
+The seasonal event introduces time-limited content available only during the Winter Offensive period. All content is accessible through standard multiplayer modes and Battlefield Portal during the event window.
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">🗺️</div>
+<h3 class="text-lg font-semibold text-primary">Ice Lock Empire State</h3>
+</div>
+<p class="text-sm text-foreground/80 mb-3">Winter-shrouded variant of Empire State with frozen streets and seasonal visuals. Purely aesthetic transformation—no ice physics or sliding mechanics.</p>
+<div class="text-xs space-y-1">
+<div><span class="text-fs-gold font-semibold">Duration:</span> <span class="text-foreground/70">Limited to event period</span></div>
+<div><span class="text-fs-gold font-semibold">Modes:</span> <span class="text-foreground/70">Domination, Conquest, Gauntlet</span></div>
+<div><span class="text-fs-gold font-semibold">Portal:</span> <span class="text-foreground/70">Available for custom experiences</span></div>
+</div>
+</div>
+
+<div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">❄️</div>
+<h3 class="text-lg font-semibold text-primary">Freeze Mechanic</h3>
+</div>
+<p class="text-sm text-foreground/80 mb-3">Sub-zero temperatures gradually freeze soldiers outside heat zones, causing damage at 100% freeze level. Creates tactical layer around heat management.</p>
+<div class="text-xs space-y-1">
+<div><span class="text-fs-gold font-semibold">Trigger:</span> <span class="text-foreground/70">Exposure to cold outside HQs</span></div>
+<div><span class="text-fs-gold font-semibold">Damage:</span> <span class="text-foreground/70">DoT at 100% until 35% HP</span></div>
+<div><span class="text-fs-gold font-semibold">Counters:</span> <span class="text-foreground/70">Sprint, Adrenaline, heat zones, fire</span></div>
+</div>
+</div>
+
+<div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl">⛏️</div>
+<h3 class="text-lg font-semibold text-primary">Ice Climbing Axe</h3>
+</div>
+<p class="text-sm text-foreground/80 mb-3">New melee weapon unlockable through Winter Offensive Bonus Battle Pass. Features unique takedown animations and environmental interactions.</p>
+<div class="text-xs space-y-1">
+<div><span class="text-fs-gold font-semibold">Unlock:</span> <span class="text-foreground/70">Tier 11 of Bonus Path</span></div>
+<div><span class="text-fs-gold font-semibold">Cost:</span> <span class="text-foreground/70">110 Bonus Path Points</span></div>
+<div><span class="text-fs-gold font-semibold">Features:</span> <span class="text-foreground/70">Custom takedowns, lethal melee</span></div>
+</div>
+</div>
+</div>
+
+<Callout variant="info">
+**Community Reception:** The Freeze mechanic received mixed feedback. Many players report it has minimal gameplay impact due to abundant heat zones and easy countermeasures. The mechanic primarily serves as thematic flavor rather than a significant tactical challenge.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Settings className="inline-block mr-3 mb-1" size={32} /> Post-Patch Settings Checklist
+
+<div class="space-y-6 mb-8">
+**Verify these settings immediately after installing the patch.** While DICE improved the settings-reset bug, isolated cases still occur. Taking five minutes to check your configuration can save frustration during competitive matches.
+</div>
+
+### Priority 1 - Critical Settings
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+<div class="text-xs text-primary font-semibold mb-3">MOUSE SENSITIVITY</div>
+<div class="text-sm text-foreground/80 mb-3">Verify your exact sensitivity value. Slider range expanded to 200% (previously 100%) but your existing value should remain unchanged.</div>
+<div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+<strong>Action:</strong> Settings → Mouse & Keyboard → Sensitivity
+</div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+<div class="text-xs text-primary font-semibold mb-3">KEYBINDS</div>
+<div class="text-sm text-foreground/80 mb-3">Check all custom keybindings, especially weapon switching, gadgets, and vehicle controls. Settings reset bug prioritizes reverting custom binds.</div>
+<div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+<strong>Action:</strong> Settings → Key Bindings → Verify custom binds
+</div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+<div class="text-xs text-primary font-semibold mb-3">GRAPHICS SETTINGS</div>
+<div class="text-sm text-foreground/80 mb-3">FOV, resolution, quality preset, and upscaling settings should be verified. These directly impact gameplay feel and competitive advantage.</div>
+<div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+<strong>Action:</strong> Settings → Graphics → Verify all custom values
+</div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+<div class="text-xs text-primary font-semibold mb-3">AUDIO MIX</div>
+<div class="text-sm text-foreground/80 mb-3">Major audio changes in this patch may affect your preferred mix. Wartapes users should definitely re-test as friendly footsteps are now quieter.</div>
+<div class="text-xs px-3 py-2 bg-primary/10 rounded text-primary">
+<strong>Action:</strong> Settings → Audio → Test in firing range
+</div>
+</div>
+</div>
+
+### Priority 2 - Performance Settings
+
+<div class="p-6 bg-card/30 rounded-lg border border-border mb-8">
+<div class="text-sm font-semibold text-foreground mb-4">Graphics Settings Review</div>
+
+<div class="space-y-3">
+<div class="flex justify-between items-center text-sm p-3 bg-card/50 rounded">
+<span class="text-foreground/70">AMD FSR Frame Generation</span>
+<div class="text-right">
+<div class="text-red-400 font-bold text-xs mb-1">DISABLE IF STUTTERING</div>
+<div class="text-xs text-foreground/60">Known to cause frame time issues</div>
+</div>
+</div>
+
+<div class="flex justify-between items-center text-sm p-3 bg-card/50 rounded">
+<span class="text-foreground/70">NVIDIA Reflex</span>
+<div class="text-right">
+<div class="text-red-400 font-bold text-xs mb-1">DISABLE IF STUTTERING</div>
+<div class="text-xs text-foreground/60">Bugged when used with Frame Gen</div>
+</div>
+</div>
+
+<div class="flex justify-between items-center text-sm p-3 bg-card/50 rounded">
+<span class="text-foreground/70">V-Sync</span>
+<div class="text-right">
+<div class="text-fs-gold font-bold text-xs mb-1">OFF</div>
+<div class="text-xs text-foreground/60">Reduces input latency</div>
+</div>
+</div>
+
+<div class="flex justify-between items-center text-sm p-3 bg-card/50 rounded">
+<span class="text-foreground/70">Display Mode</span>
+<div class="text-right">
+<div class="text-fs-gold font-bold text-xs mb-1">FULLSCREEN (EXCLUSIVE)</div>
+<div class="text-xs text-foreground/60">Better frame pacing than Borderless</div>
+</div>
+</div>
+
+<div class="flex justify-between items-center text-sm p-3 bg-card/50 rounded">
+<span class="text-foreground/70">FPS Cap</span>
+<div class="text-right">
+<div class="text-fs-gold font-bold text-xs mb-1">SLIGHTLY BELOW REFRESH</div>
+<div class="text-xs text-foreground/60">E.g., 118 on 120Hz monitor</div>
+</div>
+</div>
+</div>
+</div>
+
+### Priority 3 - Controller Settings (If Applicable)
+
+<div class="p-6 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="text-xl font-bold text-foreground mb-1">Dynamic Response Curve - Improved</h3>
+<p class="text-sm text-foreground/60">Controller input responsiveness significantly enhanced</p>
+</div>
+</div>
+
+<div class="space-y-3 mb-4">
+<div class="p-4 bg-card/70 rounded-lg border border-primary/20">
+<div class="text-sm font-semibold text-foreground mb-2">What Changed</div>
+<div class="text-xs text-foreground/80">The "Dynamic" joystick response curve option was rebuilt to better match player expectations. Community reports describe controller aim as "night and day" better post-patch, with snappier response and smoother tracking.</div>
+</div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+<div>
+<div class="text-xs text-green-400 font-semibold mb-2">IF YOU USE CONTROLLER</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Re-test Dynamic curve</span>
+<span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">More responsive aiming</span>
+<span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Better tracking</span>
+</div>
+</div>
+<div>
+<div class="text-xs text-primary font-semibold mb-2">LOCATION</div>
+<div class="text-xs text-foreground/80">Settings → Controller → Aim Settings → Response Curve → Dynamic</div>
+</div>
+</div>
+
+<div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+<div class="text-xs text-primary font-semibold mb-2">NOTE ON AIM ASSIST</div>
+<p class="text-sm text-foreground/80">Aim assist revert to Open Beta values occurred in <strong>Patch 1.1.2.0</strong>, NOT this update. If aim assist feels different, it's due to prior patch changes, not 1.1.3.0.</p>
+</div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Headphones className="inline-block mr-3 mb-1" size={32} /> Audio System Overhaul
+
+<div class="space-y-6 mb-8">
+**Patch 1.1.3.0 delivers the most comprehensive audio improvements since launch.** Footstep clarity, enemy positioning, distance definition, and memory optimization received dedicated attention. These changes fundamentally alter how sound functions in competitive play.
+</div>
+
+### Before vs. After - Audio Comparison
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="p-6 bg-card/30 rounded-lg border border-border">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">✗</div>
+<div>
+<div class="text-sm font-semibold text-foreground">PRE-PATCH AUDIO</div>
+<div class="text-xs text-foreground/60">Inconsistent and unreliable</div>
+</div>
+</div>
+
+<div class="space-y-3 mb-4">
+<div class="text-xs text-foreground/80 p-3 bg-card/50 rounded">
+<strong>Footsteps:</strong> Frequently lost in audio mix, especially at distance or behind player
+</div>
+<div class="text-xs text-foreground/80 p-3 bg-card/50 rounded">
+<strong>Distance:</strong> Poor separation between close/mid/far ranges
+</div>
+<div class="text-xs text-foreground/80 p-3 bg-card/50 rounded">
+<strong>Vehicles:</strong> Silent tanks and vehicles due to memory issues
+</div>
+<div class="text-xs text-foreground/80 p-3 bg-card/50 rounded">
+<strong>Dampening:</strong> Enemy audio muffled when taking damage or during notifications
+</div>
+</div>
+
+<div class="p-3 bg-red-500/10 rounded border border-red-500/30">
+<div class="text-xs text-red-400 font-semibold mb-1">COMPETITIVE IMPACT</div>
+<ul class="text-xs text-foreground/80 space-y-1">
+<li>• Cannot reliably hear flanking enemies</li>
+<li>• Poor situational awareness</li>
+<li>• Inconsistent audio cues</li>
+</ul>
+</div>
+</div>
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">✓</div>
+<div>
+<div class="text-sm font-semibold text-primary">POST-PATCH AUDIO</div>
+<div class="text-xs text-foreground/60">Enhanced clarity and reliability</div>
+</div>
+</div>
+
+<div class="space-y-3 mb-4">
+<div class="text-xs text-foreground/80 p-3 bg-card/50 rounded">
+<strong>Footsteps:</strong> Clear at all distances, especially improved behind player and at range
+</div>
+<div class="text-xs text-foreground/80 p-3 bg-card/50 rounded">
+<strong>Distance:</strong> Distinct close/mid/far acoustic separation with better reflections
+</div>
+<div class="text-xs text-foreground/80 p-3 bg-card/50 rounded">
+<strong>Vehicles:</strong> Optimized memory handling, more reliable engine/movement sounds
+</div>
+<div class="text-xs text-foreground/80 p-3 bg-card/50 rounded">
+<strong>Dampening:</strong> Reduced/removed muffling during damage and notifications
+</div>
+</div>
+
+<div class="p-3 bg-green-500/10 rounded border border-green-500/30">
+<div class="text-xs text-green-400 font-semibold mb-1">COMPETITIVE ADVANTAGES</div>
+<ul class="text-xs text-foreground/80 space-y-1">
+<li>• Detect flanking enemies earlier</li>
+<li>• Better map awareness</li>
+<li>• Predictable audio response</li>
+</ul>
+</div>
+</div>
+</div>
+
+### Detailed Audio Changes
+
+<div class="space-y-4 mb-8">
+<div class="p-5 bg-card/50 rounded-lg border border-border">
+<div class="text-sm font-semibold text-primary mb-2">Enemy Movement Audio</div>
+<div class="text-xs text-foreground/80 space-y-2">
+<p>• <span class="text-fs-gold font-semibold">Increased overall volume</span> for enemy footsteps and movement</p>
+<p>• <span class="text-fs-gold font-semibold">Additional boost</span> when enemies are behind the player</p>
+<p>• <span class="text-fs-gold font-semibold">Greater readability at distance</span> - hear threats from farther away</p>
+<p>• <span class="text-fs-gold font-semibold">Balanced enemy-specific layers</span> for clearer cloth and gear cues</p>
+<p>• <span class="text-fs-gold font-semibold">Improved distant world reflections</span> to better convey space and positioning</p>
+</div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border border-border">
+<div class="text-sm font-semibold text-primary mb-2">Friendly/Self Footsteps</div>
+<div class="text-xs text-foreground/80 space-y-2">
+<p>• <span class="text-fs-gold font-semibold">Reduced volume</span> in Wartapes, Wartapes VAL, and REDSEC audio mixes</p>
+<p>• Prevents friendly steps from drowning out enemy audio cues</p>
+<p>• <span class="text-fs-gold font-semibold">Re-test your audio mix</span> if you use Wartapes - balance has shifted significantly</p>
+</div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border border-border">
+<div class="text-sm font-semibold text-primary mb-2">Footstep Trigger System</div>
+<div class="text-xs text-foreground/80 space-y-2">
+<p>• <span class="text-fs-gold font-semibold">Refactored triggers</span> for more reliable response across different speeds and stances</p>
+<p>• <span class="text-fs-gold font-semibold">Small balancing tweaks</span> on outlier materials (gravel, wooden stairs)</p>
+<p>• <span class="text-fs-gold font-semibold">Removed limitations</span> on maximum number of close-range enemy audio sources</p>
+<p>• More footsteps can play simultaneously in hectic close-quarters fights</p>
+</div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border border-border">
+<div class="text-sm font-semibold text-primary mb-2">Memory & Performance</div>
+<div class="text-xs text-foreground/80 space-y-2">
+<p>• <span class="text-fs-gold font-semibold">Optimized memory handling</span> for most in-game sounds</p>
+<p>• <span class="text-fs-gold font-semibold">Improved prioritization</span> - important sounds (footsteps, vehicles) less likely to drop out</p>
+<p>• <span class="text-fs-gold font-semibold">Partially fixed</span> vehicle audio cutting out during matches</p>
+<p>• Better performance on large REDSEC maps with 128 players</p>
+</div>
+</div>
+</div>
+
+<Callout variant="tip">
+**Recommendation:** Drop into the firing range or a bot match immediately after patching. Test your current audio mix and compare it to other profiles (3D Headphones, Headphones, Stereo, Wartapes). The footstep changes are dramatic enough that your pre-patch preference might not be optimal anymore.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Monitor className="inline-block mr-3 mb-1" size={32} /> Major Gameplay Improvements
+
+<div class="space-y-6 mb-8">
+Beyond audio, the patch addresses fundamental gameplay systems that directly impact competitive performance. These improvements focus on reliability, consistency, and predictability—reducing frustrating moments where the game doesn't respond as expected.
+</div>
+
+### Hit Registration & Netcode
+
+<div class="p-6 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+<div class="text-lg font-bold text-foreground mb-4">Tighter Bullet Detection Across All Scenarios</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-3">
+<div class="p-3 bg-card/70 rounded border border-primary/20">
+<div class="text-xs text-primary font-semibold mb-1">Quick Aim Adjustments</div>
+<div class="text-xs text-foreground/80">Fixed failure when firing during rapid aim movement</div>
+</div>
+<div class="p-3 bg-card/70 rounded border border-primary/20">
+<div class="text-xs text-primary font-semibold mb-1">Zoom Transitions</div>
+<div class="text-xs text-foreground/80">Bullets register properly when firing before fully zoomed</div>
+</div>
+</div>
+
+<div class="space-y-3">
+<div class="p-3 bg-card/70 rounded border border-primary/20">
+<div class="text-xs text-primary font-semibold mb-1">Close-Quarters Clustering</div>
+<div class="text-xs text-foreground/80">Improved registration when multiple players stack in tight spaces</div>
+</div>
+<div class="p-3 bg-card/70 rounded border border-primary/20">
+<div class="text-xs text-primary font-semibold mb-1">Vehicle Transitions</div>
+<div class="text-xs text-foreground/80">Fixed desync after entering/exiting vehicles</div>
+</div>
+</div>
+</div>
+</div>
+
+### Weapon Handling & Recoil
+
+<div class="overflow-x-auto mb-8">
+<table class="w-full text-sm">
+<thead>
+<tr class="border-b-2 border-primary/30">
+<th class="text-left p-3 text-primary font-semibold">Improvement</th>
+<th class="text-center p-3 text-primary font-semibold">Impact</th>
+<th class="text-center p-3 text-primary font-semibold">Weapons Affected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+<td class="p-3 font-medium text-foreground">First-Shot Accuracy</td>
+<td class="text-center p-3">
+<div class="text-fs-gold font-semibold">Fixed</div>
+<div class="text-xs text-foreground/60">Initial bullet hits exactly where aimed</div>
+</td>
+<td class="text-center p-3 text-foreground/80">All weapons</td>
+</tr>
+<tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+<td class="p-3 font-medium text-foreground">Recoil Compensation</td>
+<td class="text-center p-3">
+<div class="text-fs-gold font-semibold">Improved</div>
+<div class="text-xs text-foreground/60">More reliable response to player input</div>
+</td>
+<td class="text-center p-3 text-foreground/80">All weapons</td>
+</tr>
+<tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+<td class="p-3 font-medium text-foreground">Attachment Alignment</td>
+<td class="text-center p-3">
+<div class="text-fs-gold font-semibold">Fixed</div>
+<div class="text-xs text-foreground/60">Attachments no longer throw off aim</div>
+</td>
+<td class="text-center p-3 text-foreground/80">Specific optics/grips</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Specific Weapon Balance Changes
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="p-5 bg-card/50 rounded-lg border border-border">
+<div class="text-sm font-semibold text-primary mb-3">High-ROF LMG/AR Adjustments</div>
+<div class="text-xs text-foreground/80 mb-3">
+<strong>Affected Weapons:</strong> M250 LMG, SG 553R, NVO-228E, RPKM, SOR-300SC
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-xs">
+<span class="text-green-400">↓</span>
+<span class="text-foreground/80">Vertical recoil magnitude reduced</span>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<span class="text-red-400">↑</span>
+<span class="text-foreground/80">Horizontal recoil variation increased</span>
+</div>
+</div>
+<div class="mt-3 p-2 bg-primary/10 rounded text-xs text-foreground/70">
+<strong>Result:</strong> Less kick overall but more spread. Prevents laser-beam accuracy at long range while maintaining close-mid effectiveness.
+</div>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border border-border">
+<div class="text-sm font-semibold text-primary mb-3">Mini Scout Pistol</div>
+<div class="text-xs text-foreground/80 mb-3">
+Marksman pistol received fire rate adjustment
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-xs">
+<span class="text-fs-gold">+100ms</span>
+<span class="text-foreground/80">Minimum time between shots increased</span>
+</div>
+</div>
+<div class="mt-3 p-2 bg-primary/10 rounded text-xs text-foreground/70">
+<strong>Result:</strong> Eliminates rapid-fire exploits. Improves pacing and reduces inconsistent behavior from spam-clicking.
+</div>
+</div>
+</div>
+
+<Callout variant="info">
+**Note:** The SG 553R received the most significant recoil adjustment among the balanced weapons. If this is your main weapon, expect to adjust your burst-fire and range engagement patterns.
+</Callout>
+
+### Soldier Movement & Visibility
+
+<div class="space-y-4 mb-8">
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+<div class="text-sm font-semibold text-primary mb-2">Visibility Enhancements</div>
+<ul class="text-xs space-y-2 text-foreground/80">
+<li>✓ <span class="text-fs-gold font-semibold">Close-range enemy brightness increased</span> - easier to spot targets in low-contrast areas</li>
+<li>✓ <span class="text-fs-gold font-semibold">Prone animations refined</span> - less static, more subtle movement to prevent "invisible sandbag" effect</li>
+<li>✓ <span class="text-fs-gold font-semibold">Reduced head glitching</span> - prone enemies blend less into clutter and dark corners</li>
+</ul>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+<div class="text-sm font-semibold text-primary mb-2">Movement Bug Fixes</div>
+<ul class="text-xs space-y-2 text-foreground/80">
+<li>✓ <span class="text-fs-gold font-semibold">Vaulting exploit fixed</span> - can no longer quick-vault to avoid roadkills</li>
+<li>✓ <span class="text-fs-gold font-semibold">Terrain speed bug resolved</span> - no more slow-motion movement on uneven surfaces</li>
+<li>✓ <span class="text-fs-gold font-semibold">Animation smoothing</span> - ladder climbing, dragging teammates, melee attacks feel fluid</li>
+<li>✓ <span class="text-fs-gold font-semibold">Defibrillator fixed</span> - works properly while vaulting now</li>
+</ul>
+</div>
+</div>
+
+### Map Layout Adjustments - Breakthrough & Rush
+
+<div class="p-6 bg-card/30 rounded-lg border border-border mb-8">
+<div class="text-sm font-semibold text-foreground mb-4">Data-Driven Balance Changes</div>
+<div class="text-xs text-foreground/80 mb-4">
+DICE analyzed win/loss ratios and made targeted tweaks to improve attacker flow and reduce defender oversaturation. Goal: create back-and-forth momentum without undermining defensive play.
+</div>
+
+<div class="space-y-3">
+<div class="flex justify-between items-start text-sm p-3 bg-card/50 rounded">
+<div>
+<div class="font-semibold text-foreground">Siege of Cairo</div>
+<div class="text-xs text-foreground/60">Attackers were stalling at certain sectors</div>
+</div>
+<div class="text-right text-xs">
+<div class="text-fs-gold font-semibold">+Extra Tank</div>
+<div class="text-foreground/60">Sectors 1 & 3</div>
+</div>
+</div>
+
+<div class="flex justify-between items-start text-sm p-3 bg-card/50 rounded">
+<div>
+<div class="font-semibold text-foreground">Manhattan Bridge</div>
+<div class="text-xs text-foreground/60">Defender armor too strong</div>
+</div>
+<div class="text-right text-xs">
+<div class="text-fs-gold font-semibold">Removed Defender Vehicles</div>
+<div class="text-foreground/60">Sectors 2 & 3</div>
+</div>
+</div>
+
+<div class="flex justify-between items-start text-sm p-3 bg-card/50 rounded">
+<div>
+<div class="font-semibold text-foreground">Mirak Valley</div>
+<div class="text-xs text-foreground/60">Defender vehicles causing stalemates</div>
+</div>
+<div class="text-right text-xs">
+<div class="text-fs-gold font-semibold">All Defender Vehicles Removed</div>
+<div class="text-foreground/60">Adjusted Attacker counts</div>
+</div>
+</div>
+</div>
+
+<div class="mt-4 p-3 bg-primary/10 rounded text-xs text-foreground/70">
+<strong>Community Feedback:</strong> Some players criticize these changes for making defenders too vulnerable to armor. Win/loss ratios reportedly shifting closer to 50-50, but at cost of defender frustration.
+</div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## 🎯 What This Means for PC Players
+
+<div class="space-y-6 mb-8">
+**Bottom line for keyboard & mouse warriors:** This patch makes Battlefield 6 feel more responsive, predictable, and fair. Your shots connect when they should, your aim input responds consistently, and audio cues provide reliable tactical information. The stuttering bug is unfortunate but has a workable fix.
+</div>
+
+### Competitive Advantages Post-Patch
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500/50">
+<div class="text-sm font-semibold text-green-400 mb-2">Gunplay</div>
+<ul class="text-xs space-y-1 text-foreground/80">
+<li>• Bullets land where aimed</li>
+<li>• Recoil control more consistent</li>
+<li>• First-shot accuracy reliable</li>
+<li>• Hit reg improved in chaos</li>
+</ul>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500/50">
+<div class="text-sm font-semibold text-green-400 mb-2">Audio Intelligence</div>
+<ul class="text-xs space-y-1 text-foreground/80">
+<li>• Hear flanking enemies earlier</li>
+<li>• Better distance definition</li>
+<li>• Reliable sound response</li>
+<li>• Enhanced map awareness</li>
+</ul>
+</div>
+
+<div class="p-5 bg-card/50 rounded-lg border-l-4 border-green-500/50">
+<div class="text-sm font-semibold text-green-400 mb-2">Aim Precision</div>
+<ul class="text-xs space-y-1 text-foreground/80">
+<li>• Mouse input more responsive</li>
+<li>• Sensitivity range expanded</li>
+<li>• No aim assist to compensate for</li>
+<li>• Pure skill-based gunplay</li>
+</ul>
+</div>
+</div>
+
+### Tactical Adjustments Required
+
+<div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/30 mb-8">
+<div class="text-lg font-bold text-foreground mb-4">Adapt Your Playstyle to New Systems</div>
+
+<div class="space-y-4">
+<div class="p-4 bg-card/50 rounded">
+<div class="text-sm font-semibold text-primary mb-2">Audio Cues Are More Reliable</div>
+<div class="text-xs text-foreground/80">Lean into sound-based positioning. Enemy footsteps are now clear enough to pre-aim corners and anticipate pushes. If you have a quality headset, exploit this advantage for map awareness.</div>
+</div>
+
+<div class="p-4 bg-card/50 rounded">
+<div class="text-sm font-semibold text-primary mb-2">Soldier Visibility Changes</div>
+<div class="text-xs text-foreground/80">You're more visible when prone in low-contrast areas. Reposition frequently rather than camping one spot. The prone animation refinements make stationary targets easier to spot.</div>
+</div>
+
+<div class="p-4 bg-card/50 rounded">
+<div class="text-sm font-semibold text-primary mb-2">Weapon Meta Shifts</div>
+<div class="text-xs text-foreground/80">High-ROF weapons (M250, SG 553R) are less effective at long range due to increased horizontal spread. Adjust your engagement distances or swap to different weapons for range work.</div>
+</div>
+
+<div class="p-4 bg-card/50 rounded">
+<div class="text-sm font-semibold text-primary mb-2">No Heavy Aim Assist at Range</div>
+<div class="text-xs text-foreground/80">Console players don't have enhanced long-range aim slowdown anymore (that was reverted in 1.1.2.0). Crossplay is more balanced—your precision mouse aiming now has clear advantage at distance.</div>
+</div>
+</div>
+</div>
+
+<Callout variant="success">
+**The Patch Improves Skill Expression:** With tighter hit registration, consistent recoil, and reliable audio, mechanical skill matters more than ever. Good aim and positioning are properly rewarded. The game finally feels like it responds to player input correctly.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Advanced Troubleshooting
+
+<div class="space-y-6 mb-8">
+If you're still experiencing issues after applying the Steam offline fix and verifying settings, these advanced solutions address persistent problems reported by the community.
+</div>
+
+### CPU Optimization - user.cfg Method
+
+<div class="p-6 bg-card/30 rounded-lg border border-border mb-8">
+<div class="text-sm font-semibold text-foreground mb-4">Manual CPU Thread Configuration</div>
+<div class="text-xs text-foreground/80 mb-4">
+Some players report significant performance improvements by manually configuring how Battlefield 6 utilizes CPU cores. This fix addresses Windows misclassifying the game as a low-priority process and throttling performance.
+</div>
+
+<div class="space-y-4">
+<div class="p-4 bg-card/50 rounded">
+<div class="text-xs font-semibold text-primary mb-2">STEP 1: Find Your CPU Core/Thread Count</div>
+<div class="text-xs text-foreground/80 space-y-1">
+<p>• Press <kbd>Ctrl + Shift + Esc</kbd> to open Task Manager</p>
+<p>• Go to Performance tab → CPU</p>
+<p>• Note <strong>Cores</strong> (e.g., 8) and <strong>Logical processors</strong> (e.g., 16)</p>
+</div>
+</div>
+
+<div class="p-4 bg-card/50 rounded">
+<div class="text-xs font-semibold text-primary mb-2">STEP 2: Create user.cfg File</div>
+<div class="text-xs text-foreground/80 space-y-1">
+<p>• Navigate to: <code>C:\Program Files (x86)\Steam\steamapps\common\Glacier Events</code></p>
+<p>• Create new text file named: <code>user.cfg</code></p>
+<p>• Open with Notepad</p>
+</div>
+</div>
+
+<div class="p-4 bg-card/50 rounded">
+<div class="text-xs font-semibold text-primary mb-2">STEP 3: Add Configuration</div>
+<div class="text-xs text-foreground/80 mb-2">Copy this template and replace values with YOUR numbers:</div>
+<pre class="text-xs bg-card/70 p-3 rounded overflow-x-auto"><code>Thread.ProcessorCount [YOUR CORE COUNT]
+Thread.MaxProcessorCount [YOUR CORE COUNT]
+Thread.MinFreeProcessorCount 0
+Thread.JobThreadPriority 0
+Thread.MaxWorkerThreadCount [YOUR THREAD COUNT]</code></pre>
+<div class="text-xs text-fs-gold mt-2">Example for 8-core/16-thread CPU:</div>
+<pre class="text-xs bg-primary/10 p-3 rounded overflow-x-auto mt-1"><code>Thread.ProcessorCount 8
+Thread.MaxProcessorCount 8
+Thread.MinFreeProcessorCount 0
+Thread.JobThreadPriority 0
+Thread.MaxWorkerThreadCount 16</code></pre>
+</div>
+
+<div class="p-4 bg-card/50 rounded">
+<div class="text-xs font-semibold text-primary mb-2">STEP 4: Save and Lock File</div>
+<div class="text-xs text-foreground/80 space-y-1">
+<p>• Save the file</p>
+<p>• Right-click → Properties → Check "Read-only"</p>
+<p>• This prevents the game from overwriting your settings</p>
+</div>
+</div>
+</div>
+
+<div class="p-3 bg-green-500/10 rounded border border-green-500/30 text-xs">
+<strong>Reported Results:</strong> CPU usage in menu drops from 35% to 20%, in-game drops from 70-80% to 30-40%, with significantly reduced stuttering.
+</div>
+</div>
+
+### Additional Performance Tweaks
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="p-4 rounded-lg border border-border bg-card/50">
+<div class="text-sm font-semibold text-foreground mb-2">Disable Overlays</div>
+<div class="text-xs text-foreground/80 mb-3">Discord, Steam, GeForce Experience, EA App overlays can cause stuttering and frame drops.</div>
+<div class="text-xs text-fs-gold">Disable all overlays, test performance, re-enable one at a time</div>
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+<div class="text-sm font-semibold text-foreground mb-2">Update GPU Drivers</div>
+<div class="text-xs text-foreground/80 mb-3">NVIDIA released Game Ready drivers with BF6 optimizations. AMD drivers also include performance improvements.</div>
+<div class="text-xs text-fs-gold">Download latest drivers from official manufacturer sites</div>
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+<div class="text-sm font-semibold text-foreground mb-2">Enable XMP/DOCP</div>
+<div class="text-xs text-foreground/80 mb-3">Unstable or slow RAM can cause stuttering that appears as FPS drops. Enable XMP in BIOS.</div>
+<div class="text-xs text-fs-gold">BIOS → AI Tweaker/Memory → Enable XMP Profile 1</div>
+</div>
+
+<div class="p-4 rounded-lg border border-border bg-card/50">
+<div class="text-sm font-semibold text-foreground mb-2">Process Lasso</div>
+<div class="text-xs text-foreground/80 mb-3">Forces Performance Mode for BF6 executable, preventing Windows from throttling the game.</div>
+<div class="text-xs text-fs-gold">Free software - configure Performance Mode for Battlefield6.exe</div>
+</div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Summary & Action Items
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+<div class="text-2xl font-bold text-foreground mb-4">Patch 1.1.3.0 Quick Reference</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<div class="text-sm font-semibold text-primary mb-3">🎯 MUST DO IMMEDIATELY</div>
+<div class="space-y-2 text-xs text-foreground/80">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">1</div>
+<span>Go offline in Steam friends list if stuttering</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">2</div>
+<span>Verify mouse sensitivity and keybinds</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">3</div>
+<span>Test audio mix in firing range</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">4</div>
+<span>Check graphics settings (FSR, Reflex, V-Sync)</span>
+</div>
+</div>
+</div>
+
+<div>
+<div class="text-sm font-semibold text-primary mb-3">✅ MAJOR IMPROVEMENTS</div>
+<div class="space-y-1 text-xs text-foreground/80">
+<div>✓ Hit registration significantly improved</div>
+<div>✓ Audio clarity dramatically enhanced</div>
+<div>✓ Weapon handling more consistent</div>
+<div>✓ Soldier visibility refined</div>
+<div>✓ Movement bugs fixed</div>
+<div>✓ Map balance adjusted for Breakthrough/Rush</div>
+</div>
+</div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+<div>
+<div class="text-xs text-green-400 font-semibold mb-2">COMPETITIVE GAINS</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Reliable gunplay</span>
+<span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Clear audio cues</span>
+<span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Better positioning</span>
+<span class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs rounded-full">Skill expression</span>
+</div>
+</div>
+<div>
+<div class="text-xs text-red-400 font-semibold mb-2">KNOWN ISSUES</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">PC stuttering</span>
+<span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Menu UI bugs</span>
+<span class="px-3 py-1.5 bg-red-500/10 text-red-400 text-xs rounded-full">Settings may reset</span>
+</div>
+</div>
+</div>
+
+<div class="p-4 bg-primary/10 rounded-lg border border-primary/20">
+<div class="text-xs text-primary font-semibold mb-2">WINTER OFFENSIVE EVENT</div>
+<p class="text-sm text-foreground/80">Time-limited content: Ice Lock Empire State map, Freeze mechanic, Ice Climbing Axe melee weapon. Available in Domination, Conquest, and Gauntlet modes during event period.</p>
+</div>
+</div>
+
+<Callout variant="success">
+**The patch makes Battlefield 6 feel significantly better.** Once you work around the stuttering bug, the improvements to gunplay, audio, and game feel are substantial. This is the most polished the game has been since launch.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+<a 
+href="#" 
+class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+>
+↑ Back to Top
+</a>
+</div>
