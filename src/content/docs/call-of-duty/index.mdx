@@ -1,0 +1,172 @@
+---
+title: Call of Duty — Guide Hub
+hide_breadcrumbs: true
+---
+
+import Callout from "@/components/Callout.astro";
+import { ShieldCheck, Crosshair, Settings, Waves, Cpu, Users } from "lucide-react";
+
+<div class="space-y-6 mb-10">
+
+**Welcome to the FusionSaint Call of Duty hub — built for a returning, free-to-play, mouse & keyboard crew.** This is Warzone in the **Black Ops 7 Season&nbsp;4** era: new omnimovement, a reshuffled weapon meta, and the no-loadout **Black Ops Royale** mode running on Avalon. If you stepped away for a year, a lot changed — these guides get you and your squad current fast.
+
+Everything here assumes **PC, M&K, no BO7 ownership required.** Every meta weapon is unlockable free, every setting is competitive-first, and every call is tagged with a confidence level so you know what's confirmed versus community-tested. Snapshot as of **July&nbsp;3, 2026** — the meta is volatile, so treat weapon calls as a moment in time.
+
+</div>
+
+<Callout variant="danger" title="Do This First: The Season 4 Anti-Cheat Gate">
+Season&nbsp;4 requires **TPM&nbsp;2.0** and **Secure Boot** enabled in BIOS to pass Microsoft Azure Attestation (MAA) + RICOCHET. **One squadmate who fails attestation drags the entire party into Casual-only matchmaking.** Every crew PC must pass before a serious night. *(Activision-confirmed.)*
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## What You'll Find Here
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors flex flex-col">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl flex-shrink-0">
+        ⚙️
+      </div>
+      <h3 class="text-lg font-bold text-primary">Competitive Settings & Mechanics</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-4 flex-1">
+      Latency, visibility, and control config for PC/M&K — plus the movement re-orientation a returning player needs: omnimovement, the slide nerf, tac-sprint moving to a perk, and eDPI tuning.
+    </p>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Graphics & Latency</span>
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">eDPI / Input</span>
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Movement Changes</span>
+    </div>
+    <a
+      href="/call-of-duty/settings"
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+    >
+      View Settings & Mechanics →
+    </a>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors flex flex-col">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl flex-shrink-0">
+        🔫
+      </div>
+      <h3 class="text-lg font-bold text-primary">Season 4 Meta Weapons</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-4 flex-1">
+      The standard-BR loadout meta: top weapons by category, meta combos, attachment builds, and the free "best starter" loadout — with M&K-first picks that reward tracking over aim assist.
+    </p>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Tier List</span>
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Attachments</span>
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Free-to-Play</span>
+    </div>
+    <a
+      href="/call-of-duty/meta-weapons"
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+    >
+      View Meta Weapons →
+    </a>
+  </div>
+
+  <div class="p-6 bg-card/50 rounded-lg border-2 border-primary/30 hover:border-primary/50 transition-colors flex flex-col">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-2xl flex-shrink-0">
+        🌊
+      </div>
+      <h3 class="text-lg font-bold text-primary">Black Ops Royale Guide</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-4 flex-1">
+      The no-loadout, ground-loot mode on Avalon. Rarity ladder and archetypes, attachment-kit strategy, map & rotations, the no-Gulag redeploy system, and a first-session crew plan for 5–8 players.
+    </p>
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Ground Loot</span>
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Avalon</span>
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Quads</span>
+    </div>
+    <a
+      href="/call-of-duty/black-ops-royale"
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors px-4 py-2 bg-fs-gold hover:bg-fs-gold/80 text-slate-950"
+    >
+      View Black Ops Royale →
+    </a>
+  </div>
+</div>
+
+<Callout variant="info" title="Two Different Metas">
+The **Meta Weapons** guide covers the *loadout* meta (build a gun, call it in). **Black Ops Royale** is a separate *ground-loot* mode — your Gunsmith builds don't apply there. Read both; they don't overlap.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## Recommended Start Order
+
+<div class="space-y-6 mb-10">
+
+Returning after a break? Run the crew through the guides in this order before committing to a serious battle-royale night.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">1</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Pass the Gate</div>
+    <p class="text-xs text-foreground/80">Every PC: TPM&nbsp;2.0 + Secure Boot on. Confirm MAA passes in a Casual match before anything else.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">2</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Dial In Settings</div>
+    <p class="text-xs text-foreground/80">Apply the <a href="/call-of-duty/settings" class="text-primary hover:underline">Settings & Mechanics</a> baseline, then each player tunes eDPI individually.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">3</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Re-Learn Movement</div>
+    <p class="text-xs text-foreground/80">One firing-range/Rebirth session to feel omnimovement, the slide nerf, and the bunny-hop rhythm.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">4</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Pick Your Mode</div>
+    <p class="text-xs text-foreground/80">Grind the <a href="/call-of-duty/meta-weapons" class="text-primary hover:underline">meta loadout</a> for standard BR, or drop into <a href="/call-of-duty/black-ops-royale" class="text-primary hover:underline">Black Ops Royale</a> for ground loot.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## The FusionSaint Approach
+
+<div class="space-y-6 mb-8">
+
+**Elite. Tactical. Data-Driven.** These guides aren't generic tips — they're built from competitive-standard configs, community-tested TTK data, and Activision patch documentation, with every claim tagged for confidence so you know what to trust.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-2xl mb-3">🎯</div>
+    <div class="text-sm font-semibold text-foreground mb-2">M&K-First</div>
+    <p class="text-xs text-foreground/80">You win on tracking and recoil control, not aim assist. Every pick and setting leans into your input's strengths and away from chaotic CQB where controllers gain most.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-2xl mb-3">🆓</div>
+    <div class="text-sm font-semibold text-foreground mb-2">Free-to-Play Verified</div>
+    <p class="text-xs text-foreground/80">No BO7 purchase needed. Every meta weapon is unlockable and levelable in-mode; blueprints are cosmetic, not a power gate.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-2xl mb-3">🔄</div>
+    <div class="text-sm font-semibold text-foreground mb-2">Snapshot-Honest</div>
+    <p class="text-xs text-foreground/80">The meta shifts every patch. Guides are dated and confidence-tagged, and the <strong>MW4 integration (Oct&nbsp;23, 2026)</strong> will reshuffle everything — spend accordingly.</p>
+  </div>
+</div>
+
+<Callout variant="tip">
+Playing with more than 4 in Black Ops Royale? It's a **Quads-only** mode — two public quads in the same lobby are *opponents, not allies*. To play all 8 together cooperatively you need a **Private Match**. See the [Black Ops Royale guide](/call-of-duty/black-ops-royale) for the full crew plan.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a
+    href="/getting-started"
+    class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow h-10 px-8 bg-fs-gold text-black hover:bg-fs-gold/90"
+  >
+    ← Back to Getting Started
+  </a>
+</div>

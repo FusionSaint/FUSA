@@ -1,0 +1,449 @@
+---
+title: Competitive Settings & Mechanics
+hide_breadcrumbs: false
+---
+
+import Callout from "@/components/Callout.astro";
+import { Monitor, Maximize2, MousePointer2, Move, Headphones, LayoutDashboard, Cpu, Rocket, ShieldCheck } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**These are competitive-optimized PC / mouse & keyboard settings for Warzone in the Black Ops 7 Season&nbsp;4 era** — tuned for the three things that actually win gunfights: lowest latency, highest target clarity, and consistent control. Not prettiness.
+
+This page is built for a returning-after-a-year crew (35+), so it pairs the config with a **movement re-orientation** section covering everything that changed in the last twelve months. Confidence is tagged throughout — competitive-standard consensus, community-tested numbers, and Activision-confirmed items are flagged inline. Snapshot as of **July&nbsp;3, 2026**.
+
+</div>
+
+<Callout variant="danger" title="Step 0 — The Anti-Cheat Gate (Do This First)">
+Season&nbsp;4 requires **TPM&nbsp;2.0** and **Secure Boot** enabled in BIOS to pass Microsoft Azure Attestation (MAA) + the RICOCHET kernel driver. **One party member who fails attestation drags the entire squad into Casual-only matchmaking.** Every crew PC must pass — confirm MAA passes in a Casual match before a serious night. *(Confidence: Activision-confirmed.)*
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Monitor className="inline-block mr-2 mb-1" size={28} /> Graphics & Display
+
+<div class="space-y-6 mb-8">
+
+Goal: lowest latency, highest clarity, stable frametime. Cap your frame rate just under your monitor's refresh to stay inside the NVIDIA Reflex low-latency window, and kill every effect that muddies target reads.
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Display Setting</th>
+        <th class="text-left p-3 text-primary font-semibold">Competitive Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Display Mode</td>
+        <td class="p-3"><span class="text-fs-gold font-semibold">Fullscreen Exclusive</span> — lowest latency</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Resolution / Aspect</td>
+        <td class="p-3"><span class="text-fs-gold font-semibold">Native</span> monitor res & aspect</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Refresh Rate</td>
+        <td class="p-3"><span class="text-fs-gold font-semibold">Monitor max</span> (144&nbsp;/&nbsp;240+)</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">V-Sync</td>
+        <td class="p-3"><span class="text-fs-gold font-semibold">Off</span></td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Frame Rate Cap</td>
+        <td class="p-3">Custom cap <span class="text-fs-gold font-semibold">~3–5 FPS below</span> monitor refresh (stay in Reflex window)</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">NVIDIA Reflex</td>
+        <td class="p-3"><span class="text-fs-gold font-semibold">On + Boost</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### <Maximize2 className="inline-block mr-2 mb-1" size={24} /> Field of View
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-2">FIELD OF VIEW</div>
+    <div class="text-2xl font-bold text-fs-gold mb-1">110–120</div>
+    <p class="text-xs text-foreground/80">High FOV for peripheral awareness. Balance against target size at range.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-2">ADS FOV</div>
+    <div class="text-2xl font-bold text-fs-gold mb-1">Affected</div>
+    <p class="text-xs text-foreground/80">Competitive standard — keeps consistency and awareness while aiming down sights.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-xs text-primary font-semibold mb-2">WEAPON FOV / MOTION</div>
+    <div class="text-2xl font-bold text-fs-gold mb-1">Minimize</div>
+    <p class="text-xs text-foreground/80">Reduce weapon obstruction wherever an option exists.</p>
+  </div>
+</div>
+
+### Quality — Visibility & FPS Priority
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Setting</th>
+        <th class="text-center p-3 text-primary font-semibold">Value</th>
+        <th class="text-left p-3 text-primary font-semibold">Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Texture Quality</td>
+        <td class="text-center p-3"><span class="text-fs-gold font-semibold">Med–High</span></td>
+        <td class="p-3 text-foreground/80">Minimal comp impact; drop if VRAM-bound</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Shadows</td>
+        <td class="text-center p-3"><span class="text-fs-gold font-semibold">Low</span></td>
+        <td class="p-3 text-foreground/80">FPS + reduces visual clutter</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Particle / Effects</td>
+        <td class="text-center p-3"><span class="text-fs-gold font-semibold">Low</span></td>
+        <td class="p-3 text-foreground/80">Clarity in fights</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Ambient Occlusion</td>
+        <td class="text-center p-3"><span class="text-red-400 font-semibold">Off</span></td>
+        <td class="p-3 text-foreground/80">FPS</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Screen-Space Reflections</td>
+        <td class="text-center p-3"><span class="text-red-400 font-semibold">Off</span></td>
+        <td class="p-3 text-foreground/80">FPS</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Depth of Field</td>
+        <td class="text-center p-3"><span class="text-red-400 font-semibold">Off</span></td>
+        <td class="p-3 text-foreground/80">Obscures targets</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Motion Blur (World + Weapon)</td>
+        <td class="text-center p-3"><span class="text-red-400 font-semibold">Off</span></td>
+        <td class="p-3 text-foreground/80">Obscures targets</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Film Grain</td>
+        <td class="text-center p-3"><span class="text-red-400 font-semibold">Off / 0</span></td>
+        <td class="p-3 text-foreground/80">Obscures targets</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Upscaling & Frame-Gen
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-2">
+      <div class="text-xl">🟢</div>
+      <div class="text-sm font-semibold text-primary">NVIDIA</div>
+    </div>
+    <p class="text-xs text-foreground/80">DLSS <span class="text-fs-gold font-semibold">Quality</span> (or DLAA with headroom) for clarity + FPS.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-2">
+      <div class="text-xl">🔴</div>
+      <div class="text-sm font-semibold text-primary">AMD</div>
+    </div>
+    <p class="text-xs text-foreground/80">FSR <span class="text-fs-gold font-semibold">Quality</span>.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-2">
+      <div class="text-xl">🔵</div>
+      <div class="text-sm font-semibold text-primary">Intel</div>
+    </div>
+    <p class="text-xs text-foreground/80">XeSS <span class="text-fs-gold font-semibold">Quality</span>.</p>
+  </div>
+</div>
+
+<Callout variant="warning" title="Avoid Frame Generation for Competitive">
+Frame-Gen adds latency. Prefer native / DLAA if your GPU sustains the capped FPS, and upscale only to *hit* the cap. Set enemy/team colors for max contrast where the option exists, and disable anything that muddies target reads.
+</Callout>
+
+<Callout variant="info">
+Competitive-standard config, community consensus. Exact menu labels shift per patch.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <MousePointer2 className="inline-block mr-2 mb-1" size={28} /> Mouse & Keyboard / Input
+
+<div class="space-y-6 mb-8">
+
+The number that matters is **eDPI = DPI × in-game sensitivity.** Match it across your games; don't chase a "correct" DPI. Common COD/Warzone range is roughly **2400–4800 eDPI**.
+
+</div>
+
+<div class="p-8 bg-gradient-to-br from-primary/10 via-card/50 to-primary/5 rounded-lg border-2 border-primary/30 mb-8">
+  <div class="flex items-center justify-between mb-6 pb-4 border-b border-primary/20">
+    <div>
+      <h3 class="text-xl font-bold text-foreground mb-1">Recommended Starting Point</h3>
+      <p class="text-sm text-foreground/60">Controlled · tracking-friendly · good for 35+ M&K vs. fast movement</p>
+    </div>
+    <div class="text-right">
+      <div class="text-4xl font-bold text-fs-gold">3200</div>
+      <div class="text-xs text-foreground/60">eDPI</div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <div class="flex justify-between items-center text-sm p-3 bg-card/50 rounded border border-border">
+      <span class="text-foreground/70">DPI</span>
+      <span class="text-fs-gold font-bold">3200</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/50 rounded border border-border">
+      <span class="text-foreground/70">In-Game Sens</span>
+      <span class="text-fs-gold font-bold">1.0</span>
+    </div>
+    <div class="flex justify-between items-center text-sm p-3 bg-card/50 rounded border border-border">
+      <span class="text-foreground/70">eDPI</span>
+      <span class="text-fs-gold font-bold">3200</span>
+    </div>
+  </div>
+</div>
+
+### ADS & Transition
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Setting</th>
+        <th class="text-left p-3 text-primary font-semibold">Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">ADS Sensitivity Type</td>
+        <td class="p-3"><span class="text-fs-gold font-semibold">Relative</span> (common comp default) or Legacy — pick one and stay</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">ADS Sens Multiplier</td>
+        <td class="p-3"><span class="text-fs-gold font-semibold">0.80–1.00</span> (start 0.90; drop to 0.80 if overshooting at range)</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Monitor Distance Coefficient</td>
+        <td class="p-3"><span class="text-fs-gold font-semibold">1.0</span></td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Mouse Acceleration</td>
+        <td class="p-3"><span class="text-red-400 font-semibold">Off</span> — in-game <strong>and</strong> Windows</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Mouse Smoothing / Filtering</td>
+        <td class="p-3"><span class="text-red-400 font-semibold">Off</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Tuning — Change One Variable at a Time
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-2">CAN'T TURN FAST ENOUGH IN CQB</div>
+    <p class="text-sm text-foreground/80">Raise in-game to <span class="text-fs-gold font-semibold">1.2–1.5</span> (3840–4800 eDPI).</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-xs text-primary font-semibold mb-2">OVERSHOOTING AT RANGE</div>
+    <p class="text-sm text-foreground/80">Drop to <span class="text-fs-gold font-semibold">0.9</span> (2880 eDPI).</p>
+  </div>
+</div>
+
+### Keybinds (M&K, Current Movement)
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30 mb-8">
+  <ul class="text-sm space-y-2 text-foreground/80">
+    <li>✓ Separate binds for <span class="text-fs-gold font-semibold">slide</span> and <span class="text-fs-gold font-semibold">dive</span> if the game allows — don't leave both on one context key.</li>
+    <li>✓ <span class="text-fs-gold font-semibold">Tac-sprint</span> on a reliable key (or auto-tac-sprint on, preference).</li>
+    <li>✓ <span class="text-fs-gold font-semibold">Mantle / jump</span> accessible for movement tech.</li>
+    <li>✓ <span class="text-fs-gold font-semibold">Mount</span> disabled or rebound if it interferes with ADS-against-cover.</li>
+    <li>✓ Interact / reload prioritization set so reload doesn't eat interacts in loot scrambles.</li>
+  </ul>
+</div>
+
+<Callout variant="info">
+eDPI framing and accel-off are hard competitive standards. Specific multipliers are preference within the stated range.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Move className="inline-block mr-2 mb-1" size={28} /> Movement — What Changed in ~12 Months
+
+<div class="space-y-6 mb-8">
+
+This is the section a returning player needs most. The movement system evolved, the aggressive meta shifted away from slide-cancels, and tac-sprint moved. Confidence is a mix of Activision-confirmed patch notes and community-tested numbers — flagged per item.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl flex-shrink-0">🤸</div>
+      <h3 class="text-base font-semibold text-primary">Omnimovement (BO7 "Next-Level")</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-2">Omnidirectional sprint/slide/dive, <span class="text-fs-gold font-semibold">wall-jump</span>, <span class="text-fs-gold font-semibold">combat roll</span>, and move-while-mounted. Faster and more expressive than what you left.</p>
+    <div class="text-xs text-green-400">Confidence: Activision-confirmed feature set (feel community-characterized)</div>
+  </div>
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl flex-shrink-0">🏃</div>
+      <h3 class="text-base font-semibold text-primary">Tactical Sprint — Moved</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-2">Tac-sprint is now tied to the <span class="text-fs-gold font-semibold">Sprinter perk</span> rather than being universal-default. Plan your perk choice around it.</p>
+    <div class="text-xs text-yellow-400">Confidence: community-reported — verify current perk table</div>
+  </div>
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl flex-shrink-0">🛝</div>
+      <h3 class="text-base font-semibold text-primary">Sliding — Nerfed</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-2">Season&nbsp;3 applied a <span class="text-red-400 font-semibold">Slide ADS −30% penalty</span>, killing slide-cancel spam and pushing the aggressive meta toward <span class="text-fs-gold font-semibold">bunny-hopping / jump-shots</span>. Slide is still fine for repositioning, weaker as a gunfight tech.</p>
+    <div class="text-xs text-yellow-400">Confidence: community-tested numbers; direction confirmed by patch trend</div>
+  </div>
+  <div class="p-6 bg-card/50 rounded-lg border border-border hover:border-primary/50 transition-colors">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xl flex-shrink-0">🧗</div>
+      <h3 class="text-base font-semibold text-primary">Mantling</h3>
+    </div>
+    <p class="text-sm text-foreground/80 mb-2">Mantle/ledge-grab remains; no full auto-mantle overhaul, but movement flows into mantles faster. Mantle-cancel tech exists at the margins for advanced players.</p>
+    <div class="text-xs text-yellow-400">Confidence: community-characterized</div>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">🪂 Wingsuit / Redeploy</div>
+    <ul class="text-xs text-foreground/80 space-y-1">
+      <li>• <strong>M&K wingsuit fix on Avalon</strong> — earlier M&K-specific control jank addressed. <span class="text-green-400">(Patch-noted.)</span></li>
+      <li>• <strong>Verdansk removed Redeploy Balloons</strong> — rotations rely more on vehicles / ziplines there. <span class="text-green-400">(Patch-noted.)</span></li>
+    </ul>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">⬇️ Jump / Drop-Shot Viability</div>
+    <p class="text-xs text-foreground/80">Bunny-hop / jump-shot is the current aggressive tech of choice post-slide-nerf; drop-shot is situational. On M&K these are executable but demanding — <strong>don't feel obligated</strong> to adopt them to be competitive at your bracket.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Headphones className="inline-block mr-2 mb-1" size={28} /> Audio
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">🎧 Mix Preset</div>
+    <p class="text-xs text-foreground/80">Use the <span class="text-fs-gold font-semibold">footstep-priority / headphones</span> preset. Prioritize directional clarity over a cinematic mix.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">🔉 Sliders</div>
+    <p class="text-xs text-foreground/80">Reduce music/ambience; keep effects and footsteps prominent.</p>
+  </div>
+</div>
+
+<Callout variant="info">
+Standard comp guidance; exact preset names are patch-dependent.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <LayoutDashboard className="inline-block mr-2 mb-1" size={28} /> HUD, Interface & Gunplay-Feel
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">🗺️ Minimap</div>
+    <p class="text-xs text-foreground/80">Square/expanded if available — maximize info.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">🎨 Enemy Color</div>
+    <p class="text-xs text-foreground/80">Set colorblind/enemy color for max contrast even if not colorblind — pure visibility play.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">✛ Reticle</div>
+    <p class="text-xs text-foreground/80">Minimal, high-contrast crosshair.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">🔁 Interact Priority</div>
+    <p class="text-xs text-foreground/80">Tune so revives/plates/loot don't misfire in chaos.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">🌫️ Weapon Motion Blur</div>
+    <p class="text-xs text-foreground/80"><span class="text-red-400 font-semibold">Off.</span> Keep the ADS transition type consistent.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">⏱️ Sprint-to-Fire</div>
+    <p class="text-xs text-foreground/80">Be aware of sprint-to-fire delays at the build level — the <a href="/call-of-duty/meta-weapons" class="text-primary hover:underline">meta builds</a> account for this.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Cpu className="inline-block mr-2 mb-1" size={28} /> PC Performance & System Prep
+
+<div class="p-6 rounded-lg border-2 border-primary/20 bg-card/30 mb-8">
+  <ul class="text-sm space-y-2 text-foreground/80">
+    <li>✓ <span class="text-fs-gold font-semibold">Secure Boot + TPM&nbsp;2.0 on</span> (mandatory — see Step 0).</li>
+    <li>✓ Update GPU drivers; clear/rebuild <span class="text-fs-gold font-semibold">shader cache</span> after major patches (stutter fix).</li>
+    <li>✓ Set the game to <span class="text-fs-gold font-semibold">High Performance</span> GPU + power plan.</li>
+    <li>✓ Close overlays that add latency; keep one (Reflex handles latency, not overlays).</li>
+    <li>✓ Verify game integrity after big patches if you get texture/stutter issues.</li>
+  </ul>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Rocket className="inline-block mr-2 mb-1" size={28} /> Crew Rollout (Staged)
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">1</div>
+    <div class="text-sm font-semibold text-foreground mb-1">BIOS Pass</div>
+    <p class="text-xs text-foreground/80">Every PC: Secure Boot + TPM&nbsp;2.0. Confirm MAA passes in a Casual match first.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">2</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Baseline Settings</div>
+    <p class="text-xs text-foreground/80">Everyone applies graphics + input, then individually dials eDPI.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">3</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Movement Re-Orient</div>
+    <p class="text-xs text-foreground/80">One firing-range/Rebirth session for omnimovement, the slide nerf, bunny-hop rhythm.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">4</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Audio + HUD</div>
+    <p class="text-xs text-foreground/80">Apply presets, confirm footstep clarity.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">5</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Commit to BR</div>
+    <p class="text-xs text-foreground/80">Then run BR / Black Ops Royale nights.</p>
+  </div>
+</div>
+
+<Callout variant="warning" title="On the Horizon — MW4 Integration (Oct 23, 2026)">
+The MW4 integration will reshape the Warzone meta, movement tuning, and weapon pool at its Season&nbsp;1. Treat the current config as stable-for-now but expect a re-tune when MW4 lands — hold major spending decisions until then.
+</Callout>
+
+<Callout variant="success" title="Confidence Summary">
+Anti-cheat gate & patch-noted movement items — **Activision-confirmed**. Sensitivity/latency/visibility config — **competitive-standard consensus**. Specific movement numbers (slide −30%, tac-sprint perk) — **community-tested, re-verify per patch**. Snapshot as of July&nbsp;3, 2026.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a
+    href="#"
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>

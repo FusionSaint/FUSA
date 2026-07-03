@@ -43,6 +43,12 @@ export const side_nav_menu_order: string[] = [
   "Battlefield6/redsec/tactics",
   "Battlefield6/redsec/redsecinfo",
 
+  // Call of Duty (Warzone / Black Ops 7 Season 4)
+  "call-of-duty",
+  "call-of-duty/settings",
+  "call-of-duty/meta-weapons",
+  "call-of-duty/black-ops-royale",
+
   // Company of Heroes - NOTE: lowercase 'o' in "of"
   "Companyofheroes",
   "Companyofheroes/compare",

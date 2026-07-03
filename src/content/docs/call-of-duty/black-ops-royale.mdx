@@ -1,0 +1,357 @@
+---
+title: Black Ops Royale Guide
+hide_breadcrumbs: false
+---
+
+import Callout from "@/components/Callout.astro";
+import { Waves, Crosshair, Sparkles, Map, RotateCcw, Package, Move, Users } from "lucide-react";
+
+<div class="space-y-6 mb-8">
+
+**Black Ops Royale (BOR) is the no-loadout, ground-loot battle royale in the Black Ops 7 Season&nbsp;4 rotation** — a Blackout-inspired (Black Ops 4 lineage) mode on the **Avalon** map. 100 players, **Quads (4-max squads)**, developed by Treyarch / Raven under Activision. It's a Warzone mode, not a separate purchase.
+
+This is a complete PC / M&K crew guide for a free-to-play group of 5–8 splitting across quads. The core mental shift: **loot decisions replace buy decisions.** You aren't building a gun — you're finding one, committing to it, and climbing its rarity. Snapshot as of **July&nbsp;3, 2026** and subject to playlist rotation.
+
+</div>
+
+<Callout variant="warning" title="Status Check — Is It Even Live?">
+**Yes — BOR is live in the July 2026 rotation, as a Quads-only playlist.** Solos was removed at Season&nbsp;4 launch. The mode cycles, so **confirm it's in the playlist before a crew night**; if it's rotated out, the fallback is standard BR on Avalon / Verdansk. *(Community-tracked / playlist-dependent — verify in-client.)*
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## What Black Ops Royale Actually Is
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-xl">❌</div>
+      <div class="text-sm font-semibold text-foreground">Removed vs. Standard Warzone</div>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-2">
+      <li>• No custom loadouts</li>
+      <li>• No Gulag</li>
+      <li>• No Buy Stations</li>
+      <li>• No in-match cash economy</li>
+    </ul>
+  </div>
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/40">
+    <div class="flex items-center gap-2 mb-4">
+      <div class="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center text-xl">🎒</div>
+      <div class="text-sm font-semibold text-primary">What You Drop In With</div>
+    </div>
+    <ul class="text-sm text-foreground/80 space-y-2">
+      <li>• Jäger 45 pistol</li>
+      <li>• A knife</li>
+      <li>• 2 armor plates</li>
+      <li>• A wingsuit</li>
+    </ul>
+    <p class="text-xs text-foreground/60 mt-3">Everything else is scavenged.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Crosshair className="inline-block mr-2 mb-1" size={28} /> Weapons — You're NOT Prioritizing the Same Guns
+
+<div class="space-y-6 mb-8">
+
+Your standard-Warzone [meta builds](/call-of-duty/meta-weapons) **do not apply here.** No attachments to pick, no Gunsmith, no leveling in Plunder. Every looted weapon comes **pre-built** with 1–5 fixed attachments determined by its rarity and locked to a **Build Archetype.**
+
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">Rarity Tier</th>
+        <th class="text-left p-3 text-primary font-semibold">Color</th>
+        <th class="text-center p-3 text-primary font-semibold">Attachments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Common</td>
+        <td class="p-3 text-foreground/70">⬜ Grey</td>
+        <td class="text-center p-3"><span class="text-fs-gold font-semibold">1</span></td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Uncommon</td>
+        <td class="p-3 text-green-400">🟩 Green</td>
+        <td class="text-center p-3"><span class="text-fs-gold font-semibold">2</span></td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Rare</td>
+        <td class="p-3 text-blue-400">🟦 Blue</td>
+        <td class="text-center p-3"><span class="text-fs-gold font-semibold">3</span></td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Epic</td>
+        <td class="p-3 text-purple-400">🟪 Purple</td>
+        <td class="text-center p-3"><span class="text-fs-gold font-semibold">4</span></td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Legendary</td>
+        <td class="p-3 text-orange-400">🟧 Orange</td>
+        <td class="text-center p-3"><span class="text-fs-gold font-semibold">5 (fully built)</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="info" title="Archetype Over Gun Name">
+Guns are role-locked by **Build Archetype** (CQB, Raider, Covert, Viper, Heavy Metal, Stalker, Recon, etc.). The archetype — not the raw gun name — tells you the job: close-range pressure, mid-range beam, long-range, stealth, or mobility.
+</Callout>
+
+### Current Pickup Priority (Season 4)
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary shadow-lg shadow-primary/20">
+    <div class="text-xs text-primary font-semibold mb-2">✓ CURRENT META</div>
+    <ul class="text-sm text-foreground/80 space-y-2">
+      <li><span class="text-fs-gold font-semibold">Long / mid-range:</span> a <strong>Recon-archetype AR</strong> is the backbone pickup — your primary beam.</li>
+      <li><span class="text-fs-gold font-semibold">Close range:</span> <strong>MK.78 "Heavy Metal" LMG</strong> — the standout close-to-mid bruiser, high mag, forgiving for holding angles.</li>
+    </ul>
+    <div class="mt-3 p-3 bg-card/50 rounded border border-border">
+      <div class="text-xs text-foreground/60 mb-1">S4 Reloaded loot to watch</div>
+      <p class="text-xs text-foreground/80">AN-94, VX Compact, CBRS-3, KRS-7.62 are in the current ground-loot pool.</p>
+    </div>
+  </div>
+  <div class="p-6 bg-card/30 rounded-lg border border-border">
+    <div class="text-xs text-red-400 font-semibold mb-2">✗ OUTDATED</div>
+    <p class="text-sm text-foreground/80">The old March–May pairing (<strong>M8A1 marksman + Carbon 57 "Stalker" SMG</strong>) is no longer the meta. Don't default to it out of habit.</p>
+    <div class="mt-4 p-3 bg-green-500/10 rounded border border-green-500/30">
+      <div class="text-xs text-green-400 font-semibold mb-1">M&K NOTE</div>
+      <p class="text-xs text-foreground/80">Favor Recon / low-recoil archetypes for range control. Avoid committing to hyper-mobile CQB bullet-hoses as your *only* gun — that's where controller aim assist hurts you most.</p>
+    </div>
+  </div>
+</div>
+
+<Callout variant="info">
+Weapon-tier specifics are community-tested (WZStats-style + creators), **not Activision-confirmed**. Meta shifts fast; re-verify each patch.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Sparkles className="inline-block mr-2 mb-1" size={28} /> Attachment Kits & Rarity Strategy
+
+<div class="space-y-6 mb-8">
+
+Attachment Kits (**purple glow**, easy to spot) are the real power curve. Each kit raises the **currently held** weapon one rarity tier and unlocks its next fixed attachment.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-sm font-semibold text-primary mb-2">1 · Hold, Then Grab</div>
+    <p class="text-xs text-foreground/80">Hold the weapon you're committing to <strong>before</strong> grabbing the kit. Kits upgrade the gun in your hands — never waste one on a throwaway.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-sm font-semibold text-primary mb-2">2 · Commit Early, Feed It</div>
+    <p class="text-xs text-foreground/80">Swapping guns resets your rarity investment. A Legendary gun that fits your role beats a "better" gun stuck at Common.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-sm font-semibold text-primary mb-2">3 · Archetype First, Rarity Second</div>
+    <p class="text-xs text-foreground/80">Match the archetype to your squad role first, then climb rarity. Chase the role you need filled, not a gun name.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-sm font-semibold text-primary mb-2">4 · Check the Upgrade Path</div>
+    <p class="text-xs text-foreground/80">Use the <strong>Upgrade Path</strong> tab on the Tac-Map to see what your held weapon still needs.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Map className="inline-block mr-2 mb-1" size={28} /> Avalon — Map, Drops & Rotations
+
+<div class="space-y-6 mb-8">
+
+Large-scale map (originally BO7's Endgame map), reworked for BR: reduced water, added sandbars / land corridors, ziplines, boats. Season 3+ changes keep reshaping tidal flats and crossings — re-check drops after big patches.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-2xl mb-2">🔫</div>
+    <div class="text-sm font-semibold text-primary mb-2">Land on Guns, Not Chests</div>
+    <p class="text-xs text-foreground/80">Prioritize visible ground weapons over racing a squad to one supply box.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-2xl mb-2">📍</div>
+    <div class="text-sm font-semibold text-primary mb-2">Ping Before the Ramp</div>
+    <p class="text-xs text-foreground/80">Ping the drop so all four angle their wingsuit correctly.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border border-border">
+    <div class="text-2xl mb-2">🏚️</div>
+    <div class="text-sm font-semibold text-primary mb-2">Outer for Safe Starts</div>
+    <p class="text-xs text-foreground/80">Learn the map on outer compounds; hit hot POIs once you have plates + rifles.</p>
+  </div>
+</div>
+
+<div class="overflow-x-auto mb-8">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b-2 border-primary/30">
+        <th class="text-left p-3 text-primary font-semibold">POI / Zone</th>
+        <th class="text-left p-3 text-primary font-semibold">Character</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Low Town</td>
+        <td class="p-3 text-foreground/80">Central, contested — marina + rooftops</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Colosseum (NE)</td>
+        <td class="p-3 text-foreground/80">High-tier loot, always hot</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Winery / Mountain Village</td>
+        <td class="p-3 text-foreground/80">Marksman country, long sightlines</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Golf Club</td>
+        <td class="p-3 text-foreground/80">Micro-cover, retreat fights</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors">
+        <td class="p-3 font-medium text-foreground">Residences</td>
+        <td class="p-3 text-foreground/80">Vehicle rotations</td>
+      </tr>
+      <tr class="border-b border-border/50 hover:bg-card/30 transition-colors bg-primary/5">
+        <td class="p-3 font-medium text-foreground">Cradle Breaches</td>
+        <td class="p-3 text-foreground/80">Blackout zombie-zone successors — best gear, but attract fights and spawn red-gas zombie pressure</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<Callout variant="tip" title="Activities (Contract Equivalents)">
+**Strongboxes, Relays, Bounties, Surveillance Drone, Surprise Shipment** — use them early to stabilize gear and intel before you commit to fights.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <RotateCcw className="inline-block mr-2 mb-1" size={28} /> Redeploy & Survival — No Gulag
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">🎟️ Redeploy Token</div>
+    <p class="text-xs text-foreground/80">You start with 1, carry only 1 at a time. Auto-redeploys you after a short delay on death. Loot more as you go.</p>
+  </div>
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-2">🗼 Redeployment Tower</div>
+    <p class="text-xs text-foreground/80">Teammate-activated; strong but a predictable pressure magnet. Don't capture blind — check high ground, use smoke / Sensor Dart, assign a cover man.</p>
+  </div>
+</div>
+
+<Callout variant="danger" title="Death Is More Punishing Than Standard BR">
+A careless death with **no token in the bank** is a hard out until a teammate can tower-revive. Always bank a Redeploy Token before pushing.
+</Callout>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Package className="inline-block mr-2 mb-1" size={28} /> Perks & Equipment
+
+<div class="space-y-6 mb-8">
+
+Perks are **temporary lootable consumables** (~2–4 min each), hold up to 5, **manually activated**, and shareable with teammates. Bank them and pop for a specific push / revive / rotation / late-zone fight rather than treating them as always-on.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-3">⭐ Priority Perks</div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li><span class="text-fs-gold font-semibold">Medic</span> — faster revives / heals</li>
+      <li><span class="text-fs-gold font-semibold">Paranoia</span> — threat awareness</li>
+      <li><span class="text-fs-gold font-semibold">Iron Lungs</span> — steadier long-range holds</li>
+    </ul>
+  </div>
+  <div class="p-6 bg-card/50 rounded-lg border border-border">
+    <div class="text-sm font-semibold text-primary mb-3">🎒 Equipment Caps (no duplicates)</div>
+    <ul class="text-xs text-foreground/80 space-y-2">
+      <li>2 lethals · 2 tacticals · 2 field upgrades · 2 killstreaks</li>
+      <li class="text-fs-gold">Always keep one reset/escape tool: smoke, Grappling Hook, Trauma Kit, or Sensor Dart.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Move className="inline-block mr-2 mb-1" size={28} /> Movement & M&K
+
+<div class="space-y-6 mb-8">
+
+Movement uses the BO7 system — wingsuit insertion, Grappling Hook, and omnimovement on the ground. Aim assist / input balance mirrors standard Warzone: **no input-based matchmaking separates you from controllers.** Plan around it, don't expect protection from it.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="p-6 bg-primary/10 rounded-lg border-2 border-primary/40">
+    <div class="text-xs text-green-400 font-semibold mb-2">WHERE YOU WIN</div>
+    <p class="text-sm text-foreground/80"><strong>Range, through tracking and recoil control.</strong> Play power positions and pre-aim lanes.</p>
+  </div>
+  <div class="p-6 bg-card/30 rounded-lg border border-red-500/30">
+    <div class="text-xs text-red-400 font-semibold mb-2">WHERE YOU LOSE</div>
+    <p class="text-sm text-foreground/80"><strong>Chaotic CQB</strong>, where controller rotational aim assist is strongest. Use cover, angles, and utility to reset — don't take unnecessary close brawls.</p>
+  </div>
+</div>
+
+<div class="my-12 border-t-2 border-primary/30"></div>
+
+## <Users className="inline-block mr-2 mb-1" size={28} /> First-Session Plan (5–8 Crew, Quads)
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">1</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Confirm Rotation</div>
+    <p class="text-xs text-foreground/80">Check BOR is in the playlist before committing the night.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">2</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Verify the Gate</div>
+    <p class="text-xs text-foreground/80">Every PC passes MAA (TPM&nbsp;2.0 + Secure Boot) so nobody drags the party to Casual.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">3</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Split Two Quads</div>
+    <p class="text-xs text-foreground/80">Balance the squads — see the Private Match note below.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">4</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Assign Roles</div>
+    <p class="text-xs text-foreground/80">Per quad: Recon AR anchor, Heavy Metal bruiser, utility/redeploy manager, flex.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">5</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Drop Outer</div>
+    <p class="text-xs text-foreground/80">Learn the map, then rotate into contested POIs once geared.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">6</div>
+    <div class="text-sm font-semibold text-foreground mb-1">One Gun, Fed</div>
+    <p class="text-xs text-foreground/80">Drill the "hold-then-grab" kit rule until it's automatic.</p>
+  </div>
+  <div class="p-5 bg-card/50 rounded-lg border-l-4 border-primary">
+    <div class="text-3xl font-bold text-fs-gold mb-2">7</div>
+    <div class="text-sm font-semibold text-foreground mb-1">Bank Before Pushing</div>
+    <p class="text-xs text-foreground/80">Have a Redeploy Token and a reset tool before pushing anything.</p>
+  </div>
+</div>
+
+<Callout variant="warning" title="Playing With All 8? You Need a Private Match">
+Two public quads are **opponents, not allies** in the same lobby — they can and will be matched *against* each other or into separate lobbies. To play *with* all 8 cooperatively, you must run a **Private Match**.
+</Callout>
+
+<Callout variant="success" title="Free-to-Play & Confidence Summary">
+Nothing in BOR is gated behind owning BO7 — it's all ground loot, so the entire weapon pool is available to your free crew in-match. The Season&nbsp;4 PC gate still applies. **Mode status & structure** — community/playlist-verified; **weapon meta** — community-tested, re-verify per patch; **systems (kits, redeploy, perks)** — Activision-confirmed via the callofduty.com Avalon guide. Snapshot as of July&nbsp;3, 2026.
+</Callout>
+
+<div class="text-center mt-16 mb-8">
+  <a
+    href="#"
+    class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+  >
+    ↑ Back to Top
+  </a>
+</div>
