@@ -26,6 +26,7 @@ jobs:
         uses: withastro/action@v2
         with:
           package-manager: pnpm@latest
+          node-version: 22
           # uncomment if you ever see the frozen lockfile error again:
           # install-flags: --no-frozen-lockfile
 
