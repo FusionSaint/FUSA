@@ -25,7 +25,9 @@ jobs:
       - name: Install, build, and upload
         uses: withastro/action@v2
         with:
-          package-manager: pnpm@latest
+          # No package-manager input: the action detects pnpm from pnpm-lock.yaml and
+          # uses the version pinned in package.json "packageManager" (pnpm@latest drifted
+          # to a major that breaks setup-node's cache save, failing the build job)
           node-version: 22
           # uncomment if you ever see the frozen lockfile error again:
           # install-flags: --no-frozen-lockfile

@@ -17,7 +17,9 @@ const archiveRedirects = Object.fromEntries(
         .replace(/(^|\/)index$/, "")
         .toLowerCase();
       return [`/${slug}`, `/archive/${slug}`];
-    }),
+    })
+    // archive/index.mdx has an empty slug; skip it so "/" (the home page) isn't redirected
+    .filter(([from]) => from !== "/"),
 );
 
 // https://astro.build/config
