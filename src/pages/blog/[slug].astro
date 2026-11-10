@@ -2,6 +2,7 @@
 // src/pages/blog/[slug].astro
 import { getCollection } from 'astro:content';
 import BlogLayout from '@/layouts/BlogLayout.astro';
+import Callout from '@/components/Callout.astro';
 
 // This function runs at build time to generate a page for each blog post
 export async function getStaticPaths() {
@@ -66,6 +67,14 @@ const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
   </div>
 )}
     </div>
+
+    {post.data.archived && (
+      <div class="mb-8">
+        <Callout variant="warning" title="Archived post">
+          This post is no longer maintained and may be outdated. See the <a href="/archive" class="underline">Archive</a> for details.
+        </Callout>
+      </div>
+    )}
 
     <!-- The actual blog post content rendered from MDX -->
     <article class="prose prose-invert max-w-none">

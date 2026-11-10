@@ -11,6 +11,12 @@ const allPosts = await getCollection('blog');
 const sortedPosts = allPosts.sort((a, b) => 
   b.data.pubDate.getTime() - a.data.pubDate.getTime()
 );
+
+// Current posts first, then archived (no longer maintained) posts under their own heading
+const sections = [
+  { heading: null, posts: sortedPosts.filter(post => !post.data.archived) },
+  { heading: "Archived Posts", posts: sortedPosts.filter(post => post.data.archived) },
+].filter(section => section.posts.length > 0);
 ---
 
 <BlogLayout 
@@ -27,8 +33,16 @@ const sortedPosts = allPosts.sort((a, b) =>
     </div>
 
     <!-- List of blog posts as cards -->
+    {sections.map(section => (
+    <section class="mb-12">
+      {section.heading && (
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold text-foreground/80 mb-2">{section.heading}</h2>
+          <p class="text-foreground/60">These posts are no longer maintained and may be outdated.</p>
+        </div>
+      )}
     <div class="space-y-6">
-      {sortedPosts.map(post => {
+      {section.posts.map(post => {
         // Format the date for each post
         const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
           year: 'numeric',
@@ -84,5 +98,7 @@ const sortedPosts = allPosts.sort((a, b) =>
         );
       })}
     </div>
+    </section>
+    ))}
   </div>
 </BlogLayout>

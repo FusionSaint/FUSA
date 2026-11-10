@@ -16,69 +16,31 @@ export const LOCALE = {
 
 export const menu_items: { title: string; href: string }[] = [
   { title: "Home", href: "/getting-started" },
-  { title: "Blog", href: "/blog" },
 ];
 
 export const side_nav_menu_order: string[] = [
+  // Slugs are lowercase: Astro lowercases folder and file names when it builds the site
   "getting-started",
-  
-  // Battlefield 6
-  "Battlefield6",
-  "Battlefield6/experience",
-  "Battlefield6/tipsntricks",
-  "Battlefield6/xpfarm",
-  "Battlefield6/settings/gamesettings",
-  "Battlefield6/settings/hud-optimization",
-  "Battlefield6/weapons/index",
-  "Battlefield6/weapons/loadouts",
-  "Battlefield6/weapons/weapon-customization",
-  "Battlefield6/weapons/lrweaponttk",
-  "Battlefield6/weapons/srweaponttk",
-  "Battlefield6/patchnotes/index",
-  "Battlefield6/patchnotes/launchpatch",
-  "Battlefield6/patchnotes/patch1110",
-  "Battlefield6/redsec/index",
-  "Battlefield6/redsec/firestorm",
-  "Battlefield6/redsec/loot",
-  "Battlefield6/redsec/tactics",
-  "Battlefield6/redsec/redsecinfo",
 
-  // Call of Duty (Warzone / Black Ops 7 Season 4)
-  "call-of-duty",
-  "call-of-duty/settings",
-  "call-of-duty/meta-weapons",
-  "call-of-duty/black-ops-royale",
+  // Company of Heroes
+  "companyofheroes",
+  "companyofheroes/compare",
+  "companyofheroes/soviets",
+  "companyofheroes/uk",
+  "companyofheroes/usa",
+  "companyofheroes/waffenss",
+  "companyofheroes/wehrmacht",
 
-  // Company of Heroes - NOTE: lowercase 'o' in "of"
-  "Companyofheroes",
-  "Companyofheroes/compare",
-  "Companyofheroes/soviets",
-  "Companyofheroes/uk",
-  "Companyofheroes/usa",
-  "Companyofheroes/waffenss",
-  "Companyofheroes/Wehrmacht",
-  
   // Dune
-  "Dune",
-  "Dune/factions",
-  "Dune/strategies",
-  
-  // Helldivers 2
-  "Helldivers2",
-  "Helldivers2/loadout",
-  "Helldivers2/mines",
-  "Helldivers2/shipmodules",
-  "Helldivers2/stratagem",
-  "Helldivers2/weapons",
-  "Helldivers2/factionstrategies",
-  "Helldivers2/factionstrategies/automatons",
-  "Helldivers2/factionstrategies/terminids",
-  "Helldivers2/factionstrategies/illuminate",
-  "Helldivers2/warbonds",
-  "Helldivers2/warbonds/comparison",
-  "Helldivers2/warbonds/faq",
-  "Helldivers2/warbonds/priority",
-  "Helldivers2/patchnotes/410Patch",
+  "dune",
+  "dune/factions",
+  "dune/strategies",
+
+  // Archive (no longer maintained) - always last
+  "archive",
+  "archive/battlefield6",
+  "archive/call-of-duty",
+  "archive/helldivers2",
 ];
 
 // Blog tag taxonomy

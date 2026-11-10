@@ -27,6 +27,7 @@ const blog = defineCollection({
     author: z.string().default('FusionSaint Team'),
     tags: z.array(z.string()).optional(),
     game: z.string().optional(),
+    archived: z.boolean().default(false),
   }),
 });
 
