@@ -126,16 +126,28 @@ const factionColors = {
   </div>
 </div>
 
-<script define:vars={{ doctrineData, categories, factionColors }}>
-  // Wait for DOM to be ready
-  document.addEventListener('DOMContentLoaded', function() {
-    // Import Chart.js from CDN
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js';
-    script.onload = initChart;
-    document.head.appendChild(script);
-  });
-  
+<!-- data-astro-rerun: view transitions otherwise run an inline script only once per visit,
+     leaving the chart dead when you navigate back to this page -->
+<script define:vars={{ doctrineData, categories, factionColors }} data-astro-rerun>
+  // This inline script runs right after the markup above, both on a full page load and
+  // each time Astro's view transitions swap this page in (where DOMContentLoaded never
+  // fires), so start immediately instead of waiting for a page-load event.
+  function loadChartJs() {
+    if (typeof Chart !== 'undefined') {
+      initChart();
+      return;
+    }
+    // Load Chart.js from the CDN once; later visits reuse it (or the tag still loading)
+    let script = document.getElementById('chartjs-cdn');
+    if (!script) {
+      script = document.createElement('script');
+      script.id = 'chartjs-cdn';
+      script.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js';
+      document.head.appendChild(script);
+    }
+    script.addEventListener('load', initChart, { once: true });
+  }
+
   let chart = null;
   let comparisonMode = false;
   let selectedDoctrines = [];
@@ -183,7 +195,10 @@ const factionColors = {
       console.log('Chart.js not loaded yet or canvas not found');
       return;
     }
-    
+
+    // Never stack two charts on one canvas
+    Chart.getChart(ctx)?.destroy();
+
     chart = new Chart(ctx, {
       type: 'radar',
       data: {
@@ -359,6 +374,8 @@ const factionColors = {
       infoDiv.classList.add('hidden');
     }
   }
+
+  loadChartJs();
 </script>
 
 <style>
