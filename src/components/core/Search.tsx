@@ -15,22 +15,19 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { Search as SearchIcon } from "lucide-react";
 
-import type { DocsEntry } from "@/lib/types";
 import { capitalizeFirstLetter } from "@/lib/utils";
 
-function extractHeaders(body: string): string[] {
-  const headers = [];
-  const lines = body.split("\n");
-  for (const line of lines) {
-    const match = line.match(/^(#{1,6})\s+(.*)/);
-    if (match) {
-      headers.push(match[2]);
-    }
-  }
-  return headers;
-}
+// Shape of each entry in /search-index.json (built by src/pages/search-index.json.ts)
+type SearchDoc = {
+  slug: string;
+  title: string;
+  description: string;
+  tags: string;
+  headers: string;
+  body: string;
+};
 
-const options: IFuseOptions<DocsEntry> = {
+const options: IFuseOptions<SearchDoc> = {
   includeScore: true,
   threshold: 0.5,
   location: 0,
@@ -40,42 +37,34 @@ const options: IFuseOptions<DocsEntry> = {
   useExtendedSearch: true,
   findAllMatches: true,
   keys: [
-    { name: "id", weight: 2.5 },
     { name: "slug", weight: 2.5 },
+    { name: "title", weight: 2 },
+    { name: "headers", weight: 2 },
+    { name: "description", weight: 1.75 },
+    { name: "tags", weight: 1.5 },
     { name: "body", weight: 1 },
-    {
-      name: "title",
-      weight: 2,
-      getFn: (docs: DocsEntry) => docs.data.title,
-    },
-    {
-      name: "description",
-      weight: 1.75,
-      getFn: (docs: DocsEntry) => docs.data.description || "",
-    },
-    {
-      name: "tags",
-      weight: 1.5,
-      getFn: (docs: DocsEntry) => docs.data.tags.join(" ") || "",
-    },
-    {
-      name: "headers",
-      weight: 2,
-      getFn: (docs: DocsEntry) => extractHeaders(docs.body).join(" "),
-    },
   ],
 };
 
-// ✅ NOW IT ACCEPTS DOCS AS A PROP!
-interface SearchProps {
-  docs: DocsEntry[];
-}
-
-export function Search({ docs }: SearchProps) {
+export function Search() {
   const [open, setOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const fuse: Fuse<DocsEntry> = useMemo(() => new Fuse(docs, options), [docs]);
-  const results: FuseResult<DocsEntry>[] = useMemo(
+  const [docs, setDocs] = useState<SearchDoc[] | null>(null);
+
+  // Load the index the first time the dialog opens, not on every page load
+  useEffect(() => {
+    if (!open || docs) return;
+    fetch("/search-index.json")
+      .then((res) => res.json())
+      .then(setDocs)
+      .catch(() => setDocs([]));
+  }, [open, docs]);
+
+  const fuse: Fuse<SearchDoc> = useMemo(
+    () => new Fuse(docs ?? [], options),
+    [docs],
+  );
+  const results: FuseResult<SearchDoc>[] = useMemo(
     () => fuse.search(searchValue),
     [fuse, searchValue],
   );
@@ -123,9 +112,12 @@ export function Search({ docs }: SearchProps) {
                             key={refIndex}
                             className=" no-underline hover:text-primary-foreground"
                           >
-                            {item.data.title
-                              ? capitalizeFirstLetter(item.data.title)
-                              : capitalizeFirstLetter(item.slug.split("/")[-1])}
+                            {item.title
+                              ? capitalizeFirstLetter(item.title)
+                              : capitalizeFirstLetter(item.slug.split("/").pop() || "")}
+                            {item.slug.startsWith("archive/") && (
+                              <span className="ml-2 text-xs opacity-70">(Archive)</span>
+                            )}
                           </a>
                         </li>
                       ))}

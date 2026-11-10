@@ -67,6 +67,7 @@ export interface HeadingHierarchy extends MarkdownHeading {
 export type MenuItem = {
   title?: string;
   slug: string;
+  hasPage?: boolean; // false for folders with no index page of their own
   children: MenuItem[];
 };
 
@@ -75,6 +76,7 @@ export type MenuItemWithDraft = {
   title?: string;
   slug: string;
   draft: boolean;
+  hasPage?: boolean; // false for folders with no index page of their own
   children: MenuItemWithDraft[];
 };
 

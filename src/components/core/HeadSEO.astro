@@ -15,14 +15,15 @@ const { title: pageTitle, description: pageDesc, ogImage: pageOgImage } =
 const canonicalURL = new URL(Astro.url);
 
 // Fallbacks from SITE config
-const fullTitle = pageTitle ? `${pageTitle} • ${SITE.title}` : SITE.title;
+const fullTitle =
+  pageTitle && pageTitle !== SITE.title ? `${pageTitle} • ${SITE.title}` : SITE.title;
 const desc = pageDesc ?? SITE.desc;
 
-// Allow both absolute and root-relative ogImage
-const ogImage =
-  pageOgImage ??
-  SITE.ogImage ??
-  "/og/fusionsaint_ogimage.png"; // final fallback if missing
+// Social platforms need an absolute image URL, so resolve root-relative paths against the site
+const ogImage = new URL(
+  pageOgImage ?? SITE.ogImage ?? "/og/fusionsaint_ogimage.png",
+  Astro.site ?? SITE.website,
+).href;
 ---
 
 <meta charset="utf-8" />

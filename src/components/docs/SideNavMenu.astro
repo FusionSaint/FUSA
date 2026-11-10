@@ -59,18 +59,25 @@ const { class: className } = Astro.props;
 
         return (
           <li class="w-full">
-            <a
-              href={`/${item.slug}`}
-              class={`
-                block py-1.5 leading-tight w-full no-underline
-                hover:text-primary hover:font-semibold transition-colors
-                ${indentClass}
-                ${textStyle}
-                ${activeStyle}
-              `.trim()}
-            >
-              {label}
-            </a>
+            {item.hasPage === false ? (
+              // Folder with no page of its own (e.g. Dune): a label, not a link to a 404
+              <span class={`block py-1.5 leading-tight w-full ${indentClass} ${textStyle}`}>
+                {label}
+              </span>
+            ) : (
+              <a
+                href={`/${item.slug}`}
+                class={`
+                  block py-1.5 leading-tight w-full no-underline
+                  hover:text-primary hover:font-semibold transition-colors
+                  ${indentClass}
+                  ${textStyle}
+                  ${activeStyle}
+                `.trim()}
+              >
+                {label}
+              </a>
+            )}
             
             {hasChildren && (
               <div class="mt-1">

@@ -1,10 +1,6 @@
 ---
-import { getCollection } from "astro:content";
 import { Search } from "./Search";
-
-// ✅ Fetch docs on the SERVER (Astro components run server-side)
-const docs = await getCollection("docs");
 ---
 
-<!-- Pass the docs as props to the client-side React component -->
-<Search client:load docs={docs} />
+<!-- The search index is fetched from /search-index.json when the dialog first opens -->
+<Search client:load />

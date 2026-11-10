@@ -8,12 +8,16 @@ import {
 
 import type { BreadcrumbsProps } from "@/lib/types";
 import { buildBreadcrumbs } from "@/lib/utils";
+import { getCollection } from "astro:content";
 
 // Get the current document's slug from route params
 const slug: string = Astro.url.pathname;
 
 // Build the breadcrumb trail
 const breadcrumbs: BreadcrumbsProps = buildBreadcrumbs(slug || "");
+
+// Only link crumbs that have a page; folders like /dune have none and would 404
+const pageLinks = new Set((await getCollection("docs")).map((entry) => `/${entry.slug}`));
 
 // To pass the tailwindcss classes to the astro component
 const { class: className } = Astro.props;
@@ -25,7 +29,7 @@ const { class: className } = Astro.props;
       {
         breadcrumbs.map((breadcrumb, index) => (
           <BreadcrumbItem>
-            {index < breadcrumbs.length - 1 ? (
+            {index < breadcrumbs.length - 1 && pageLinks.has(breadcrumb.link) ? (
               <BreadcrumbLink href={breadcrumb.link} className="no-underline">
                 {breadcrumb.title}
               </BreadcrumbLink>

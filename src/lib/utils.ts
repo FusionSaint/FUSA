@@ -105,6 +105,7 @@ export function buildMenu(items: DocsEntry[]): MenuItem[] {
               : capitalizeFirstLetter(part),
           slug: parts.slice(0, index + 1).join("/"),
           draft: item.data.draft,
+          hasPage: index === parts.length - 1,
           children: [],
         };
         currentLevel.push(existingItem);
@@ -112,6 +113,7 @@ export function buildMenu(items: DocsEntry[]): MenuItem[] {
         // Update title if necessary
         if (index === parts.length - 1) {
           existingItem.title = capitalizeFirstLetter(item.data.title || "");
+          existingItem.hasPage = true;
         }
       }
 

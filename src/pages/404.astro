@@ -1,13 +1,28 @@
 ---
-import { Image } from "astro:assets";
-
 import BaseLayout from "@/layouts/BaseLayout.astro";
-
-import error404 from "@/assets/404 Error.svg";
 ---
 
-<BaseLayout>
-  <div class="flex justify-center align-middle">
-    <Image src={error404} alt="A description of my image." class="h-[50dvh]" />
+<BaseLayout title="Page Not Found" description="This page doesn't exist.">
+  <div class="flex flex-col items-center justify-center text-center gap-4 px-6 py-24 min-h-[60dvh]">
+    <p class="text-7xl md:text-8xl font-bold text-fs-gold">404</p>
+    <h1 class="text-2xl md:text-3xl font-semibold text-fs-blue">Page not found</h1>
+    <p class="max-w-md text-foreground/70">
+      This page doesn't exist or has moved. Older Battlefield 6, Call of Duty, and
+      Helldivers 2 guides now live in the archive.
+    </p>
+    <div class="flex flex-wrap justify-center gap-3 pt-2">
+      <a
+        href="/getting-started"
+        class="inline-flex items-center justify-center rounded-lg text-sm font-medium h-10 px-6 bg-fs-gold text-black hover:bg-fs-gold/90 no-underline"
+      >
+        Back to the guides
+      </a>
+      <a
+        href="/archive"
+        class="inline-flex items-center justify-center rounded-lg text-sm font-medium h-10 px-6 border border-border text-foreground hover:bg-muted no-underline"
+      >
+        Browse the archive
+      </a>
+    </div>
   </div>
 </BaseLayout>

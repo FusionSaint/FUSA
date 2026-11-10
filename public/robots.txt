@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fusionsaint.com/sitemap.xml

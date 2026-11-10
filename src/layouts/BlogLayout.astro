@@ -21,7 +21,7 @@ const { title, description } = Astro.props;
   <head>
     <!-- Uses your existing HeadSEO component for meta tags and SEO -->
     <HeadSEO
-      title={`${capitalizeFirstLetter(title)} | ${SITE.title}`}
+      title={capitalizeFirstLetter(title)}
       description={description}
     />
   </head>
